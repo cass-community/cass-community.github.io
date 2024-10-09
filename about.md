@@ -42,9 +42,9 @@ Most of the work of CASS is carried out within **Working Groups**, which are cre
 <br>
 **Officers:**
 
-* Chair: David Bernholdt
-* Vice-chair: Terry Turton
-* Secretary: Todd Munson
+* Chair: David Bernholdt (ORNL)
+* Vice-chair: Terry Turton (LANL)
+* Secretary: Todd Munson (ANL)
 
 ## Targeted Scientific Software Ecosystem
 

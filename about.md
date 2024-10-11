@@ -52,4 +52,4 @@ The founding members of CASS are software stewardship projects funded by the [U.
 
 ## Join Us!
 
-CASS seeks to expand beyond its initial membership to include other projects and organizations focused on the stewardship and advancement of scientific software to reach a larger portion of the scientific software ecosystem.  If you're interested, contact the [CASS Steering Committee](mailto:cass-steering-committee@email.ornl.gov){: .text-pink-500 underline}.
+CASS seeks to expand beyond its initial membership to include other projects and organizations focused on the stewardship and advancement of scientific software to reach a larger portion of the scientific software ecosystem.  Projects and organizations outside of the DOE are welcome! If you're interested, contact the [CASS Steering Committee](mailto:cass-steering-committee@email.ornl.gov){: .text-pink-500 underline}.

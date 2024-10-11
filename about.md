@@ -29,13 +29,13 @@ Most of the work of CASS is carried out within **Working Groups**, which are cre
 | Organization Name | Steering Committee Representative | Project Lead Principal Investigator(s)
 |:------------------|:------------------------|:-------
 | ***Core Members***
-| [Center for Open-Source Research Software Stewardship and Advancement](https://corsa.center/){: .text-pink-500 underline} (CORSA) | Greg Watson | Greg Watson (ORNL)
-| [Frameworks, Algorithms and Scalable Technologies for Mathematics](https://scidac5-fastmath.lbl.gov/){: .text-pink-500 underline} (FASTMath) | Todd Munson | Esmond Ng (LBNL)
-| [Partnering for Scientific-Software Ecosystem Opportunities](https://pesoproject.org/){: .text-pink-500 underline} (PESO) | Jim Willenbring |Lois Curfman McInnes (ANL) and  Mike Heroux (Paratools)
-| [RAPIDS2: A SciDAC Institute for Computer Science, Data, and Artificial Intelligence](https://rapids.lbl.gov/){: .text-pink-500 underline} | Lenny Oliker | Rob Ross (ANL)
-| [Stewardship for Programming Systems and Tools](https://s4pst.org/){: .text-pink-500 underline} (S4PST) | Seyong Lee | Keita Teranishi (ORNL)
-| [Software Tools Ecosystem Project](https://ascr-step.org/){: .text-pink-500 underline} (STEP) | Terry Jones | Terry Jones (ORNL)
-| ***Affiliate Members*** | David Bernholdt |
+| [Center for Open-Source Research Software Stewardship and Advancement](https://corsa.center/){: .text-pink-500 underline} (CORSA) | Greg Watson (ORNL) | Greg Watson (ORNL)
+| [Frameworks, Algorithms and Scalable Technologies for Mathematics](https://scidac5-fastmath.lbl.gov/){: .text-pink-500 underline} (FASTMath) | Todd Munson (ANL) | Esmond Ng (LBNL)
+| [Partnering for Scientific-Software Ecosystem Opportunities](https://pesoproject.org/){: .text-pink-500 underline} (PESO) | Jim Willenbring (SNL) |Lois Curfman McInnes (ANL) and  Mike Heroux (Paratools)
+| [RAPIDS2: A SciDAC Institute for Computer Science, Data, and Artificial Intelligence](https://rapids.lbl.gov/){: .text-pink-500 underline} | Lenny Oliker (LBNL) | Rob Ross (ANL)
+| [Stewardship for Programming Systems and Tools](https://s4pst.org/){: .text-pink-500 underline} (S4PST) | Seyong Lee (ORNL) | Keita Teranishi (ORNL)
+| [Software Tools Ecosystem Project](https://ascr-step.org/){: .text-pink-500 underline} (STEP) | Terry Jones (ORNL) | Terry Jones (ORNL)
+| ***Affiliate Members*** | David Bernholdt (ORNL) |
 | Collaboration for Better Software (for Science) (COLABS) | | Anshu Dubey (ANL)
 | [Center for Sustaining Workflows and Application Services](https://swas.center/){: .text-pink-500 underline} (SWAS) | | Rafael Ferreira da Silva (ORNL)
 

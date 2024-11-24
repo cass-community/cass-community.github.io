@@ -18,21 +18,80 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Consortium for the Advancement of Scientific Software
+email: cass-steering-committee@email.ornl.gov
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+  A federation of member organizations dedicated to the stewardship and advancement of the scientific software ecosystem.
+baseurl: "/new" # the subpath of your site, e.g. /blog
+url: "https://cass-community.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
+github_username:  CASS-Community
 
 # Build settings
-theme: minima
+#theme: minima
+theme: minimal-mistakes-jekyll
+
+# Many configuration items for Minimal Mistakes.
+# See https://mmistakes.github.io/minimal-mistakes/docs/configuration/ for details.
+
+#minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "air"
+
+# This subtitle is too long
+#subtitle:   A federation of member organizations dedicated to the stewardship and advancement of the scientific software ecosystem.
+name: The CASS Community
+
+repository: cass-community/cass-community-new
+
+teaser: /assets/images/cass-small-logo.png
+logo: /assets/images/cass-logo.png
+og_image: /assets/images/cass-logo.png
+
+# Add site search, eventually
+# Add web analytics, eventually
+
+collections:
+  wg:
+    output: true
+    permalink: /:collection/:slug
+  sw:
+    output: true
+    permalink: /:collection/:slug
+
+defaults:
+  # wg -- working groups
+  - scope:
+      path: ""
+      type: "wg"
+    values:
+      layout: "single"
+      author_profile: true
+      comments: false
+  # sw -- software products
+  - scope:
+      path: ""
+      type: "sw"
+    values:
+      layout: "single"
+      author_profile: false
+      comments: false
+
+footer:
+  links:
+    - label: "Email Us"
+      icon: "fas fa-envelope"
+      url:  "mailto:cass-steering-committee@email.ornl.gov"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/CASS-Community"
+
+# This is needed to generate output for future events
+future: true
+
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,3 +112,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Mute some deprecation warnings from older versions of jekyll-sass-converter
+# as suggested by https://github.com/mmistakes/minimal-mistakes/issues/4054#issuecomment-1396536483
+sass:
+  quiet_deps: true

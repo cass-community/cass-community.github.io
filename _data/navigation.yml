@@ -1,0 +1,13 @@
+main:
+  - title: "Software"
+    description: "Software Products"
+    url: /software/
+  - title: Events
+    description: "Events organized by CASS"
+    url: /events/
+  - title: "Working Groups"
+    description: "CASS Working Groups"
+    url: /working-groups/
+  - title: "About"
+    description: "About the CASS Consortium"
+    url: /about/

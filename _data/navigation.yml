@@ -1,4 +1,7 @@
 main:
+  - title: "Impacts"
+    description: "Impacts of CASS-stewarded software on science"
+    url: /impacts/
   - title: "Software"
     description: "Software Products"
     url: /software/
@@ -8,9 +11,6 @@ main:
   - title: "Working Groups"
     description: "CASS Working Groups"
     url: /working-groups/
-  - title: "Impacts"
-    description: "Impacts of CASS-stewarded software on science"
-    url: /impacts/
   - title: "About"
     description: "About the CASS Consortium"
     url: /about/

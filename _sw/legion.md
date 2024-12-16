@@ -39,7 +39,7 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: Legion
-area: pmd
+area: pmr
 cass_member: s4pst
 description: A task-based programming model and runtime.
 long_description: |

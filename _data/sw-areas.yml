@@ -1,0 +1,21 @@
+# These are the "areas" used in the software catalog
+# At present, they are the areas used in ECP ST (https://www.exascaleproject.org/research/#software)
+
+dataviz:
+  name: Data and Visualization
+
+# Since it seems to be a common mistake, we'll accept `datavis` as well as `dataviz`
+datavis:
+  name: Data and Visualization
+
+devtools:
+  name: Development Tools
+
+mathlibs:
+  name: Mathematical Libraries
+
+pmr:
+  name: Programming Models and Runtimes
+
+sweco :
+  name: Software Ecosystem and Delivery

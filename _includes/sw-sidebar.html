@@ -1,0 +1,42 @@
+<div class="sidebar sticky">
+
+{% if page.area %}
+{% if site.data.sw-areas[page.area] %}
+    {% assign sarea = site.data.sw-areas[page.area] %}
+    {% assign area = sarea.name %}
+{% else %}
+    {% assign area = page.area | prepend: '<font color="red">' | append: '</font>' %}
+{% endif %}
+<h3><i class="fa-regular fa-folder-open"></i> Area</h3>
+<ul style="list-style: none; padding: 0">
+    <li>{{ area }}</li>
+</ul>
+{% endif %}
+
+{% if page.e4s_product or page.spack_name %}
+    <h2 id="package-links"><i class="fa-solid fa-box-open"></i> Package Links</h2>
+    <ul style="list-style: none; padding: 0">
+    {% if page.e4s_product %}
+    {% assign e4s = page.e4s_product | upcase | prepend: "https://e4s-project.github.io/DocPortal.html?search=" %}
+    <li>E4S: <a href="{{ e4s }}">{{ page.e4s_product }}</a></li>
+    {% endif %}
+    {% if page.spack_name %}
+    {% assign spack = page.spack_name | prepend: "https://packages.spack.io/package.html?name=" %}
+    <li>Spack: <a href="{{ spack }}">{{ page.spack_name }}</a></li>
+    {% endif %}
+    </ul>
+{% endif %}
+
+{% if page.cass_member %}
+{% if site.data.members[page.cass_member] %}
+    {% assign smember = site.data.members[page.cass_member] %}
+    {% assign member = smember.short_name %}
+{% else %}
+    {% assign member = page.cass_member | prepend: '<font color="red">' | append: '</font>' %}
+{% endif %}
+<h3><i class="fa-solid fa-hand-holding-hand"></i> Supporting Member</h3>
+<ul style="list-style: none; padding: 0">
+<li>{{ member }}</li>
+</ul>
+{% endif %}
+</div>

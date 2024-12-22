@@ -73,9 +73,12 @@ defaults:
       path: ""
       type: "sw"
     values:
-      layout: "single"
+      layout: "sw-product"
+      classes: wide
       author_profile: false
       comments: false
+      toc: false
+      toc_sticky: false
 
 footer:
   links:
@@ -113,6 +116,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - _sw/PRODUCT_TEMPLATE.md
 
 # Mute some deprecation warnings from older versions of jekyll-sass-converter
 # as suggested by https://github.com/mmistakes/minimal-mistakes/issues/4054#issuecomment-1396536483

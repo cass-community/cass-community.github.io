@@ -3,7 +3,7 @@
 #
 # INSTRUCTIONS
 #   This is a Jekyll Markdown file, which starts with YAML "frontmatter." For the product 
-#   catalog, we will be using only the YAML frontmatter (between the "---" seperators).  
+#   catalog, we will be using only the YAML frontmatter (between the "---" separators).  
 #   Please leave the main body empty.  
 #
 #   Please name the file itself for the software product: <name>.md
@@ -38,34 +38,23 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: HPCToolkit Performance Tools
-area: devtools
-cass_member: step
-description: Toolkit that supports measurement, analysis, attribution, and inspection of application performance on CPU and GPU-accelerated architectures.
+name: zip
+area: dataviz
+cass_member: rapids
+description: zfp is an open-source library for compressed floating-point and integer arrays that support high throughput read and write random access
 long_description: |
-    HPCToolkit is an integrated suite of tools for measurement and
-    analysis of program performance on computers ranging from
-    multicore desktop systems to GPU-accelerated supercomputers.
-    By using statistical sampling of timers and hardware performance
-    counters on CPUs, HPCToolkit measures a program's CPU work, resource consumption, and inefficiency.
-    It attributes performance metrics to the full calling context in which they
-    occur. By monitoring GPU operations, gathering instruction-level
-    metrics within GPU kernels, and attributing the costs of GPU
-    work to heterogeneous calling contexts, HPCToolkit provides
-    insight into the performance of GPU-accelerated codes. HPCToolkit
-    works with multilingual, fully optimized, dynamically-linked applications. 
-    HPCToolkit is designed for
-    use on large parallel systems. HPCToolkit's presentation tools
-    enable rapid analysis of a program's execution costs, inefficiency,
-    and scaling characteristics both within and across nodes of a
-    parallel system. HPCToolkit supports measurement and analysis
-    of serial codes, multithreaded codes (e.g. pthreads, OpenMP), MPI,
-    and hybrid (MPI+threads) parallel codes, as well as GPU-accelerated
-    codes that offload computation to AMD, Intel, or NVIDIA GPUs.
+    One of zfp's unique features is its support for efficient in-memory representation of 
+    multidimensional numerical data for computations like differential equation solvers, data 
+    analysis, and visualization, with significant reductions in memory usage. zfp is primarily 
+    written in C and C++ but also has Python, Fortran, and other bindings.
 target_audience: |
-    HPCToolkit is designed for use by developers working on parallel
-    applications, frameworks, runtime systems, and tools for CPU and GPU-accelerated systems. 
-#
+    While zfp can be used in a variety of scenarios, zfp is perfect for teams wishing to 
+    integrate lossy compression into codes. For example, zfp includes a set of classes that 
+    implement storage and manipulation of a multidimensional array data type. zfp arrays support 
+    high-speed read and write random access to individual array elements and are a drop-in 
+    replacement for std::vector and native C/C++ arrays. zfp arrays provide accessors like proxy 
+    pointers, iterators, and views. zfp arrays allow specifying an exact memory footprint or an 
+    error tolerance.
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:
@@ -74,8 +63,8 @@ target_audience: |
 #   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
-e4s_product: hpctoolkit
-spack_name:  hpctoolkit
+e4s_product: ZFP
+spack_name: zfp
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These OPTIONAL keys will allow your catalog entry to link to further information that visitors may find useful
@@ -85,8 +74,8 @@ spack_name:  hpctoolkit
 #   documentation:  (URL) Publicly available documention page/site for the product
 #   website:        (URL) Public website for the product
 #
-repository: https://gitlab.com/hpctoolkit/hpctoolkit
-source: https://gitlab.com/hpctoolkit/hpctoolkit
-documentation: https://hpctoolkit.org/manual/HPCToolkit-users-manual.pdf
-website: https://hpctoolkit.org
+repository: https://github.com/LLNL/zfp
+source: https://github.com/LLNL/zfp/releases
+documentation: https://zfp.readthedocs.io/en/release1.0.1/
+website: https://computing.llnl.gov/projects/zfp
 ---

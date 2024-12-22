@@ -3,7 +3,7 @@
 #
 # INSTRUCTIONS
 #   This is a Jekyll Markdown file, which starts with YAML "frontmatter." For the product 
-#   catalog, we will be using only the YAML frontmatter (between the "---" seperators).  
+#   catalog, we will be using only the YAML frontmatter (between the "---" separators).  
 #   Please leave the main body empty.  
 #
 #   Please name the file itself for the software product: <name>.md
@@ -38,33 +38,14 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: HPCToolkit Performance Tools
-area: devtools
-cass_member: step
-description: Toolkit that supports measurement, analysis, attribution, and inspection of application performance on CPU and GPU-accelerated architectures.
+name: HDF5
+area: datavis
+cass_member: rapids
+description: Parallel I/O library for high performance access to self-describing HDF5 datasets
 long_description: |
-    HPCToolkit is an integrated suite of tools for measurement and
-    analysis of program performance on computers ranging from
-    multicore desktop systems to GPU-accelerated supercomputers.
-    By using statistical sampling of timers and hardware performance
-    counters on CPUs, HPCToolkit measures a program's CPU work, resource consumption, and inefficiency.
-    It attributes performance metrics to the full calling context in which they
-    occur. By monitoring GPU operations, gathering instruction-level
-    metrics within GPU kernels, and attributing the costs of GPU
-    work to heterogeneous calling contexts, HPCToolkit provides
-    insight into the performance of GPU-accelerated codes. HPCToolkit
-    works with multilingual, fully optimized, dynamically-linked applications. 
-    HPCToolkit is designed for
-    use on large parallel systems. HPCToolkit's presentation tools
-    enable rapid analysis of a program's execution costs, inefficiency,
-    and scaling characteristics both within and across nodes of a
-    parallel system. HPCToolkit supports measurement and analysis
-    of serial codes, multithreaded codes (e.g. pthreads, OpenMP), MPI,
-    and hybrid (MPI+threads) parallel codes, as well as GPU-accelerated
-    codes that offload computation to AMD, Intel, or NVIDIA GPUs.
+    HDF5 consists of a file format for storing HDF5 data, a data model for logically organizing and accessing HDF5 data from an application, and the software (libraries, language interfaces, and tools) for working with this format. An HDF5 file (an object in itself) can be thought of as a container (or group) that holds a variety of heterogeneous data objects (or datasets). The datasets can be images, tables, graphs, and even documents, such as PDF or Excel.
 target_audience: |
-    HPCToolkit is designed for use by developers working on parallel
-    applications, frameworks, runtime systems, and tools for CPU and GPU-accelerated systems. 
+    HDF5 is the most widely used parallel I/O library in the DOE SciDAC community. Science teams interested in a convenient parallel interface for storing and retrieving structured data, as well as passing data between codes, should consider HDF5.
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
@@ -74,8 +55,8 @@ target_audience: |
 #   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
-e4s_product: hpctoolkit
-spack_name:  hpctoolkit
+e4s_product: hdf5
+spack_name: hdf5
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These OPTIONAL keys will allow your catalog entry to link to further information that visitors may find useful
@@ -85,8 +66,8 @@ spack_name:  hpctoolkit
 #   documentation:  (URL) Publicly available documention page/site for the product
 #   website:        (URL) Public website for the product
 #
-repository: https://gitlab.com/hpctoolkit/hpctoolkit
-source: https://gitlab.com/hpctoolkit/hpctoolkit
-documentation: https://hpctoolkit.org/manual/HPCToolkit-users-manual.pdf
-website: https://hpctoolkit.org
+repository: https://github.com/HDFGroup/hdf5
+source: https://www.hdfgroup.org/download-hdf5/
+documentation: https://support.hdfgroup.org/documentation/
+website: https://www.hdfgroup.org/solutions/hdf5/
 ---

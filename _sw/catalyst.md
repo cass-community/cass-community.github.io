@@ -3,7 +3,7 @@
 #
 # INSTRUCTIONS
 #   This is a Jekyll Markdown file, which starts with YAML "frontmatter." For the product 
-#   catalog, we will be using only the YAML frontmatter (between the "---" seperators).  
+#   catalog, we will be using only the YAML frontmatter (between the "---" separators).  
 #   Please leave the main body empty.  
 #
 #   Please name the file itself for the software product: <name>.md
@@ -38,33 +38,14 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: HPCToolkit Performance Tools
-area: devtools
-cass_member: step
-description: Toolkit that supports measurement, analysis, attribution, and inspection of application performance on CPU and GPU-accelerated architectures.
+name: ParaView Catalyst
+area: datavis
+cass_member: rapids
+description: ParaView Catalyst is a tool for in situ data visualization at scale.
 long_description: |
-    HPCToolkit is an integrated suite of tools for measurement and
-    analysis of program performance on computers ranging from
-    multicore desktop systems to GPU-accelerated supercomputers.
-    By using statistical sampling of timers and hardware performance
-    counters on CPUs, HPCToolkit measures a program's CPU work, resource consumption, and inefficiency.
-    It attributes performance metrics to the full calling context in which they
-    occur. By monitoring GPU operations, gathering instruction-level
-    metrics within GPU kernels, and attributing the costs of GPU
-    work to heterogeneous calling contexts, HPCToolkit provides
-    insight into the performance of GPU-accelerated codes. HPCToolkit
-    works with multilingual, fully optimized, dynamically-linked applications. 
-    HPCToolkit is designed for
-    use on large parallel systems. HPCToolkit's presentation tools
-    enable rapid analysis of a program's execution costs, inefficiency,
-    and scaling characteristics both within and across nodes of a
-    parallel system. HPCToolkit supports measurement and analysis
-    of serial codes, multithreaded codes (e.g. pthreads, OpenMP), MPI,
-    and hybrid (MPI+threads) parallel codes, as well as GPU-accelerated
-    codes that offload computation to AMD, Intel, or NVIDIA GPUs.
+    ParaView and Catalyst form the backbone of DOE’s production visualization at scale capability. Together they provide a set of C++ libraries for general-purpose visualization, a production visualization tool, and an in situ infrastructure. 
 target_audience: |
-    HPCToolkit is designed for use by developers working on parallel
-    applications, frameworks, runtime systems, and tools for CPU and GPU-accelerated systems. 
+    Science teams interested in integrating robust scientific visualization into their scientific workflows should consider ParaView Catalyst, which is leveraged across numerous projects in the DOE SciDAC community.
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
@@ -74,8 +55,8 @@ target_audience: |
 #   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
-e4s_product: hpctoolkit
-spack_name:  hpctoolkit
+e4s_product: paraview
+spack_name: libcatalyst
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These OPTIONAL keys will allow your catalog entry to link to further information that visitors may find useful
@@ -85,8 +66,8 @@ spack_name:  hpctoolkit
 #   documentation:  (URL) Publicly available documention page/site for the product
 #   website:        (URL) Public website for the product
 #
-repository: https://gitlab.com/hpctoolkit/hpctoolkit
-source: https://gitlab.com/hpctoolkit/hpctoolkit
-documentation: https://hpctoolkit.org/manual/HPCToolkit-users-manual.pdf
-website: https://hpctoolkit.org
+repository: https://gitlab.kitware.com/paraview/catalyst
+source: https://gitlab.kitware.com/paraview/catalyst/-/releases
+documentation: https://catalyst-in-situ.readthedocs.io/en/latest/index.html
+website: https://www.paraview.org/Wiki/ParaView/Catalyst/Overview
 ---

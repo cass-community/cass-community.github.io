@@ -6,7 +6,7 @@
 #   catalog, we will be using only the YAML frontmatter (between the "---" seperators).  
 #   Please leave the main body empty.  
 #
-#   Please name the file itself for the software product: <name>.md
+#   Please name the file itself for the software product: <name>.md (all lowercase)
 #
 #   We've tried to require the minimum, but anything optional you choose to add will enrich your
 #   product's entry in the catalog.  To provide optional items, please uncomment the keys and complete
@@ -55,9 +55,14 @@ target_audience: |
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:
 #   e4s_product:    (string) Needed if the E4S name for your product is different than your preferred `name` of the product.
-#                   If your product is not in E4S, uncomment and set the value to `nil`
+#                   If your product is not in E4S, uncomment and set the value to `null` (without quotes)
 #   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
-#                   If your product does not have a Spack package, uncomment and set the value to `nil`
+#                   If your product does not have a Spack package, uncomment and set the value to `null` (without quotes).
+#                   If your product has multiple Spack packages, list them using YAML syntax:
+#                   spack_name:
+#                       - package1
+#                       - package2
+#                       - package3
 #
 #e4s_product: 
 #spack_name:  

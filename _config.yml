@@ -79,6 +79,8 @@ defaults:
       comments: false
       toc: false
       toc_sticky: false
+      # header:
+      #   overlay_color: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
 
 footer:
   links:

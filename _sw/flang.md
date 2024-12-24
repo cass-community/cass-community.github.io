@@ -38,9 +38,9 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name:LLVM Flang
-Area: pmr
-Cass_member: s4pst
+name: LLVM Flang
+area: pmr
+cass_member: s4pst
 description: Fortran compiler
 long_description: |
     Flang is the LLVM Compiler Infrastructure projects frontend for the Fortran programming language.

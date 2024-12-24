@@ -13,8 +13,8 @@ target_audience: |
     runtime developers that already target HIP or CUDA and
     want to target a platform that supports OpenCL or
     Level-Zero, such as Intel GPUs.
-e4s_product: nil
-spack_name: nil
+e4s_product: null
+spack_name: null
 repository: https://github.com/CHIP-SPV/chipStar
 source: https://github.com/CHIP-SPV/chipStar/releases/download/v1.2.1/chipStar-v1.2.1.tar.gz
 documentation: https://github.com/CHIP-SPV/chipStar/blob/main/README.md

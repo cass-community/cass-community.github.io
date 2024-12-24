@@ -1,11 +1,12 @@
 {% comment %}
     CHANGES FROM DEFAULT DOCUMENTS-COLLECTION INCLUDE
-    * Call sw-archive-single.html inclde 
+    * Use sort_natural (case insensitive) instead of sort (case sensitive)
+    * Call sw-archive-single.html include
 {% endcomment %}
 {% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
 
 {% if include.sort_by %}
-  {% assign entries = entries | sort: include.sort_by %}
+  {% assign entries = entries | sort_natural: include.sort_by %}
 {% endif %}
 
 {% if include.sort_order == 'reverse' %}

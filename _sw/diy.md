@@ -61,7 +61,7 @@ target_audience: |
 #   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
-#e4s_product: 
+e4s_product: null
 spack_name: diy
 #
 # ADDITIONAL PRODUCT INFORMATION

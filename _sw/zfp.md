@@ -38,7 +38,7 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: zip
+name: zfp
 area: dataviz
 cass_member: rapids
 description: zfp is an open-source library for compressed floating-point and integer arrays that support high throughput read and write random access

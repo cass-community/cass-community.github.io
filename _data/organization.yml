@@ -1,0 +1,101 @@
+# CASS organizational information: members, steering committee, officers
+
+# CASS member organizations
+#
+# Required fields:
+#   short_name: acronym or shorthand name by which the organization is known.  This
+#     is the primary key to the list structure
+#   name: full name of the organization
+#   membership_level: core, affiliate, or former
+# Optional fields:
+#   website: URL of the organization's website
+#   lead: list of organization (co-)leads with institutional affiliation in
+#     parenthesis, as in "- name (affiliation)"
+#   sc_reps: list of steering committe representatives with institutional 
+#     affiliation in parenthesis, as in "- name (affiliation)".  Note that
+#     according to the CASS by-laws, core members have only one SC rep, while
+#     affiliates may have multiple (one per five affiliate members).
+#
+#     For affiliates, expect that a list of steering committee members will be
+#     the concatenation of the unique sc_reps values from the affiliate member
+#     entries.  So you can safely duplicate sc_reps or just have one per every
+#     five affiliates.
+#
+members: 
+  - short_name: COLABS
+    name: "Collaboration for Better Software (for Science)"
+    membership_level: affiliate
+    leads: 
+      - Anshu Dubey (ANL)
+    sc_reps:
+      - David Bernholdt (ORNL)
+  - short_name: CORSA
+    name: Center for Open-Source Research Software Stewardship and Advancement
+    website: https://corsa.center/
+    membership_level: core
+    leads: 
+      - Greg Watson (ORNL)
+    sc_reps:
+      - Greg Watson (ORNL)
+  - short_name: FASTMath
+    name: Frameworks, Algorithms and Scalable Technologies for Mathematics
+    website: https://scidac5-fastmath.lbl.gov/
+    membership_level: core
+    leads: 
+      - Esmond Ng (LBNL)
+    sc_reps:
+      - Todd Munson (ANL)
+  - short_name: PESO
+    name: Partnering for Scientific-Software Ecosystem Opportunities
+    website: https://pesoproject.org/
+    membership_level: core
+    leads: 
+      - Lois Curfman McInnes (ANL)
+      - Mike Heroux (ParaTools)
+    sc_reps: 
+      - Jim Willenbring (SNL)
+  - short_name: RAPIDS
+    name: "RAPIDS2: A SciDAC Institute for Computer Science, Data, and Artificial Intelligence"
+    website: https://rapids.lbl.gov/
+    membership_level: core
+    leads: 
+      - Rob Ross (ANL)
+    sc_reps:
+      - Lenny Oliker (LBNL)
+  - short_name: S4PST
+    name: Stewardship for Programming Systems and Tools
+    website: https://s4pst.org/
+    membership_level: core
+    leads: 
+      - Keita Teranishi (ORNL)
+    sc_reps:
+      - Seyong Lee (ORNL)
+  - short_name: STEP
+    name: Software Tools Ecosystem Project
+    website: https://ascr-step.org/
+    membership_level: core
+    leads: 
+      - Terry Jones (ORNL)
+    sc_reps:
+      - Terry Jones (ORNL)
+  - short_name: SWAS
+    name: Center for Sustaining Workflows and Application Services
+    website: https://swas.center/
+    membership_level: affiliate
+    leads: 
+      - Rafael Ferreira da Silva (ORNL)
+    sc_reps:
+      - David Bernholdt (ORNL)
+
+# CASS officers
+# There are three, and they have a one year term (renewable)
+officers:
+  - position: Chair
+    name: David Bernholdt (ORNL)
+    term_expires: 2025-10-06
+  - position: Vice-Chair
+    name: Terry Turton (LANL)
+    term_expires: 2025-10-06
+  - position: Secretary
+    name: Todd Munson (ANL)
+    term_expires: 2025-10-06

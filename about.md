@@ -5,7 +5,6 @@ permalink: /about/
 toc: true
 toc_sticky: true
 ---
-
 The **Consortium for the Advancement of Scientific Software** (CASS) is a federation of member organizations committed to the stewardship and advancement of the current and future ecosystem of scientific computing software.
 
 Our member organizations exist to support specific communities or to provide crosscutting capabilities related to scientific software stewardship. Member organizations may be categorized as core members, who take an active role in consortium governance, or affiliate members, who are in solidarity with the mission of the consortium but do not take an active role in consortium governance. Member organizations coordinate and cooperate as a Consortium to maximize benefit to the ecosystem as a whole.
@@ -27,25 +26,49 @@ Most of the work of CASS is carried out within **Working Groups**, which are cre
 
 ## Current CASS Members and Leadership
 
-| Organization Name | Steering Committee Representative | Project Lead Principal Investigator(s)
+| Organization Name | Organization Lead(s) | Steering Committee Representative 
 |:------------------|:------------------------|:-------
-| ***Core Members***
-| [Center for Open-Source Research Software Stewardship and Advancement](https://corsa.center/) (CORSA) | Greg Watson (ORNL) | Greg Watson (ORNL)
-| [Frameworks, Algorithms and Scalable Technologies for Mathematics](https://scidac5-fastmath.lbl.gov/) (FASTMath) | Todd Munson (ANL) | Esmond Ng (LBNL)
-| [Partnering for Scientific-Software Ecosystem Opportunities](https://pesoproject.org/) (PESO) | Jim Willenbring (SNL) |Lois Curfman McInnes (ANL) and  Mike Heroux (Paratools)
-| [RAPIDS2: A SciDAC Institute for Computer Science, Data, and Artificial Intelligence](https://rapids.lbl.gov/) | Lenny Oliker (LBNL) | Rob Ross (ANL)
-| [Stewardship for Programming Systems and Tools](https://s4pst.org/) (S4PST) | Seyong Lee (ORNL) | Keita Teranishi (ORNL)
-| [Software Tools Ecosystem Project](https://ascr-step.org/) (STEP) | Terry Jones (ORNL) | Terry Jones (ORNL)
-| ***Affiliate Members*** | David Bernholdt (ORNL) |
-| Collaboration for Better Software (for Science) (COLABS) | | Anshu Dubey (ANL)
-| [Center for Sustaining Workflows and Application Services](https://swas.center/) (SWAS) | | Rafael Ferreira da Silva (ORNL)
+| ***Core Members*** | |
+{% assign members = site.data.organization.members | where: "membership_level", "core" -%}
+{% for m in members -%}
+    {% assign org = m.name | default: m.short_name | default: "*missing data*" -%}
+    {% if m.website -%}
+        {% assign org = org | prepend: "[" | append: "](" | append: m.website | append: ")" -%}
+    {% endif -%}
+    {% if m.name and m.short_name -%}
+        {% assign org = org | append: " (" | append: m.short_name | append: ")" -%}
+    {% endif -%}
+    {% assign scr = "" -%}
+    {% if m.sc_reps -%}
+        {% assign scr = m.sc_reps | join: ", " -%}
+    {% endif -%}
+| {{ org }} | {% if m.leads %}{{ m.leads | join: ", " }}{% endif %} | {{ scr }} 
+{% endfor -%}
+{% assign members = site.data.organization.members | where: "membership_level", "affiliate" -%}
+{% assign scr_array = nil -%}
+{% for m in members -%}
+    {% assign scr_array = scr_array | concat: m.sc_reps -%}
+{% endfor -%}
+{% assign scr = scr_array | uniq | join: ", " -%}
+| ***Affiliate Members*** | | {{ scr }} 
+{% for m in members -%}
+    {% assign org = m.name | default: m.short_name | default: "*missing data*" -%}
+    {% if m.website -%}
+        {% assign org = org | prepend: "[" | append: "](" | append: m.website | append: ")" -%}
+    {% endif -%}
+    {% if m.name and m.short_name -%}
+        {% assign org = org | append: " (" | append: m.short_name | append: ")" -%}
+    {% endif -%}
+| {{ org }} | {% if m.leads %}{{ m.leads | join: ", " }}{% endif %} |
+{% endfor %}
 
-<br>
-**Officers:**
+## Officers
 
-* Chair: David Bernholdt (ORNL)
-* Vice-chair: Terry Turton (LANL)
-* Secretary: Todd Munson (ANL)
+| Position | Person | Current Term Ends
+|:---------|:-------|:-----------------
+{% for o in site.data.organization.officers -%}
+| {% if o.position %}{{ o.position }}{% endif %} | {% if o.name %}{{ o.name }}{% endif %} | {% if o.term_expires %}{{ o.term_expires }}{% endif %}
+{% endfor %}
 
 ## Targeted Scientific Software Ecosystem
 

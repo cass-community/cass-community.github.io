@@ -61,7 +61,10 @@ target_audience: |
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
 e4s_product: DARSHAN
-spack_name: darshan-runtime,darshan-util,py-darshan
+spack_name: 
+    - darshan-runtime
+    - darshan-util
+    - py-darshan
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These OPTIONAL keys will allow your catalog entry to link to further information that visitors may find useful

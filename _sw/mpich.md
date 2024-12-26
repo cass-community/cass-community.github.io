@@ -40,7 +40,7 @@
 #
 name: MPICH
 area: pmr
-cass_member: s4pst, peso
+cass_member: s4pst
 description: A High Performance Open-Source Implementation of Message Passing Interface (MPI).
 long_description: |
     MPICH is a widely used, open­-source implementation of the MPI

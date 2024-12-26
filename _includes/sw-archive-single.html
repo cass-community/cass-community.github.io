@@ -33,14 +33,18 @@
     {% include page__meta.html type=include.type %}
     {% if post.description %}<p class="archive__item-excerpt" itemprop="description">{{ post.description | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
 
-    {% if post.area %}
-    {% if site.data.sw-areas[post.area] %}
-        {% assign sarea = site.data.sw-areas[post.area] %}
-        {% assign area = sarea.name %}
+    {% comment %}
+    `area` is required, so if it isn't present, we'll show the
+    heading with a red "missing data" marker.
+
+    Also, if `area` is not one of the short_names in `site.data.sw-areas`, then we display it in red to call out the error.
+    {% endcomment %}
+    {% assign areas = site.data.sw-areas | where: "short_name", post.area %}
+    {% if areas.size != 1 %}
+      {% assign a = post.area | default: "missing data" | prepend: '<em><font color="red">' | append: '</font></em>' %}
     {% else %}
-        {% assign area = post.area | prepend: '<font color="red">' | append: '</font>' %}
+      {% assign a = areas[0].name %}
     {% endif %}
-    <p class="archive__item-excerpt" itemprop="area"><i class="fa-regular fa-folder-open"></i> {{ area }}</p>
-    {% endif %}
+    <p class="archive__item-excerpt" itemprop="area"><i class="fa-regular fa-folder-open"></i> {{ a }}</p>
   </article>
 </div>

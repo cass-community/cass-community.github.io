@@ -1,21 +1,37 @@
 # These are the "areas" used in the software catalog
 # At present, they are the areas used in ECP ST (https://www.exascaleproject.org/research/#software)
 
-dataviz:
+- short_name: dataviz
   name: Data and Visualization
-
 # Since it seems to be a common mistake, we'll accept `datavis` as well as `dataviz`
-datavis:
+- short_name: datavis
   name: Data and Visualization
-
-devtools:
+- short_name: devtools
   name: Development Tools
-
-mathlibs:
+- short_name: mathlibs
   name: Mathematical Libraries
-
-pmr:
+- short_name: pmr
   name: Programming Models and Runtimes
-
-sweco :
+- short_name: sweco 
   name: Software Ecosystem and Delivery
+#
+# Also adding the areas values used in e4s.yml files.
+# Based on those observed as of 2024-12-26.  Might need
+# to update periodically.
+#
+- short_name: PMR
+  name: Programming Models and Runtimes
+- short_name: Data & Viz
+  name: Data and Visualization
+- short_name: Math libraries
+  name: Mathematical Libraries
+- short_name: AI
+  name: AI and Machine Learning
+- short_name: Development tools
+  name: Development Tools
+- short_name: Tools # This seems like an error, should be Development tools
+  name: Development Tools
+- short_name: Software Ecosystem
+  name: Software Ecosystem and Delivery
+- short_name: Simulation
+  name: Modeling and Simulation

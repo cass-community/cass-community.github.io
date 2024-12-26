@@ -1,17 +1,21 @@
 <div class="sidebar sticky">
 
-{% if page.area %}
-{% if site.data.sw-areas[page.area] %}
-    {% assign sarea = site.data.sw-areas[page.area] %}
-    {% assign area = sarea.name %}
+{% comment %}
+    `area` is required, so if it isn't present, we'll show the
+    heading with a red "missing data" marker.
+
+    Also, if `area` is not one of the short_names in `site.data.sw-areas`, then we display it in red to call out the error.
+{% endcomment %}
+{% assign areas = site.data.sw-areas | where: "short_name", page.area %}
+{% if areas.size != 1 %}
+    {% assign a = page.area | default: "missing data" | prepend: '<em><font color="red">' | append: '</font></em>' %}
 {% else %}
-    {% assign area = page.area | prepend: '<font color="red">' | append: '</font>' %}
+    {% assign a = areas[0].name %}
 {% endif %}
 <h3><i class="fa-regular fa-folder-open"></i> Area</h3>
 <ul style="list-style: none; padding: 0">
-    <li>{{ area }}</li>
+    <li>{{ a }}</li>
 </ul>
-{% endif %}
 
 {% if page.e4s_product or page.spack_name %}
     <h2 id="package-links"><i class="fa-solid fa-box-open"></i> Package Links</h2>
@@ -34,16 +38,20 @@
     </ul>
 {% endif %}
 
-{% if page.cass_member %}
-{% if site.data.members[page.cass_member] %}
-    {% assign smember = site.data.members[page.cass_member] %}
-    {% assign member = smember.short_name %}
+{% comment %}
+    `cass_member` is required, so if it isn't present, we'll show the
+    heading with a red "missing data" marker.
+
+    Also, if `cass_member` is not one of the short_names in `site.data.organization`.members, then we display it in red to call out the error.
+{% endcomment %}
+{% assign members = site.data.organization.members | where: "short_name", page.cass_member %}
+{% if members.size != 1 %}
+    {% assign m = page.cass_member | default: "missing data" | prepend: '<em><font color="red">' | append: '</font></em>' %}
 {% else %}
-    {% assign member = page.cass_member | prepend: '<font color="red">' | append: '</font>' %}
+    {% assign m = members[0].short_name %}
 {% endif %}
 <h3><i class="fa-solid fa-hand-holding-hand"></i> Supporting Member</h3>
 <ul style="list-style: none; padding: 0">
-<li>{{ member }}</li>
+<li>{{ m }}</li>
 </ul>
-{% endif %}
 </div>

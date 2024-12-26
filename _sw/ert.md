@@ -66,15 +66,28 @@ target_audience: |
 #spack_name:  
 #
 # ADDITIONAL PRODUCT INFORMATION
-#   These OPTIONAL keys will allow your catalog entry to link to further information that visitors may find useful
+#   This is an OPTIONAL list of resource links that you can provide to make your catalog entry more useful.
+#   The typical set includes: Website, Repository, Downloads, and Documentation, but all of these are optional, and
+#   you can also add other labels.
 #
-#   repository:     (URL) Public repository for the product
-#   source:         (URL) Public source code download for the product
-#   documentation:  (URL) Publicly available documention page/site for the product
-#   website:        (URL) Public website for the product
+#   The essential inputs are structured as follows:
+#     - label: Resource label           # REQUIRED
+#       url: https://example.com        # REQUIRED
+#       note: (additional info)         # OPTIONAL
+#       icon: fa-solid fa-font-awesome # OPTIONAL, a FontAwesome icon identifier
 #
-repository: https://bitbucket.org/berkeleylab/cs-roofline-toolkit/src/master/ 
-#source: 
-documentation: https://bitbucket.org/berkeleylab/cs-roofline-toolkit/raw/09663aad764d3c6cefa4d9de1f1213b5f03af9df/Empirical_Roofline_Tool-1.1.0/ERT_Users_Manual.pdf
-website: https://crd.lbl.gov/divisions/amcr/computer-science-amcr/par/research/roofline/software/ert/
+#   Which would appear as (in pseudo-markdown):
+#     {{ icon }} [{{ label }}]({{ url }}) {{ note }}
+#
+# For additional information, see _sw/README.md.
+
+additional_resource_links:
+  - label: Website
+    url: https://crd.lbl.gov/divisions/amcr/computer-science-amcr/par/research/roofline/software/ert/
+  - label: Repository
+    url: https://bitbucket.org/berkeleylab/cs-roofline-toolkit/src/master/
+  # - label: Downloads
+  #   url: 
+  - label: Documentation
+    url: https://bitbucket.org/berkeleylab/cs-roofline-toolkit/raw/09663aad764d3c6cefa4d9de1f1213b5f03af9df/Empirical_Roofline_Tool-1.1.0/ERT_Users_Manual.pdf
 ---

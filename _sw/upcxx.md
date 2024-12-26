@@ -63,15 +63,28 @@ e4s_product: upcxx
 spack_name:  upcxx
 #
 # ADDITIONAL PRODUCT INFORMATION
-#   These OPTIONAL keys will allow your catalog entry to link to further information that visitors may find useful
+#   This is an OPTIONAL list of resource links that you can provide to make your catalog entry more useful.
+#   The typical set includes: Website, Repository, Downloads, and Documentation, but all of these are optional, and
+#   you can also add other labels.
 #
-#   repository:     (URL) Public repository for the product
-#   source:         (URL) Public source code download for the product
-#   documentation:  (URL) Publicly available documention page/site for the product
-#   website:        (URL) Public website for the product
+#   The essential inputs are structured as follows:
+#     - label: Resource label           # REQUIRED
+#       url: https://example.com        # REQUIRED
+#       note: (additional info)         # OPTIONAL
+#       icon: fa-solid fa-font-awesome # OPTIONAL, a FontAwesome icon identifier
 #
-repository: https://bitbucket.org/berkeleylab/upcxx.git
-#source:
-documentation: https://upcxx.lbl.gov/training
-website: https://upcxx.lbl.gov
+#   Which would appear as (in pseudo-markdown):
+#     {{ icon }} [{{ label }}]({{ url }}) {{ note }}
+#
+# For additional information, see _sw/README.md.
+
+additional_resource_links:
+  - label: Website
+    url: https://upcxx.lbl.gov
+  - label: Repository
+    url: https://bitbucket.org/berkeleylab/upcxx.git
+  # - label: Downloads
+  #   url: 
+  - label: Documentation
+    url: https://upcxx.lbl.gov/training
 ---

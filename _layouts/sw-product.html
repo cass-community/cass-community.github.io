@@ -70,21 +70,26 @@ layout: default
         {{ page.target_audience }}
         {% endif %}
 
-        {% if page.repository or page.source or page.documentation or page.website %}
+        {% if page.additional_resource_links %}
         <h2 id="additional-resources">Additional resources</h2>
         <ul style="list-style: none; padding: 0">
-        {% if page.website %}
-          <li><i class="fa-solid fa-globe"></i> <a href="{{ page.website }}">Website</a></li>
-        {% endif %}
-        {% if page.repository %}
-          <li><i class="fa-solid fa-code"></i> <a href="{{ page.repository }}">Repository</a></li>
-        {% endif %}
-        {% if page.source %}
-          <li><i class="fa-solid fa-file-arrow-down"></i> <a href="{{ page.source }}">Source Code</a></li>
-        {% endif %}
-        {% if page.documentation %}
-          <li><i class="fa-regular fa-file-lines"></i> <a href="{{ page.documentation }}">Documentation</a></li>
-        {% endif %}
+          {% for r in page.additional_resource_links %}
+          <li>
+            {% if r.icon %}
+              {% assign i = r.icon %}
+            {% else %}
+              {% assign map = site.data.resource-icon-map | where: "label", r.label %}
+              {% assign i = map[0].icon %}
+            {% endif %}
+            <i class="{{ i }}"></i>
+            {% if r.url %}
+              <a href="{{ r.url }}">{{ r.label }}</a>
+            {% else %}
+              {{ r.label }}
+            {% endif %}
+            {% if r.note %} {{ r.note }}{% endif %}
+          </li>
+          {% endfor %}
         </ul>
         {% endif %}
 

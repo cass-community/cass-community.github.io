@@ -28,9 +28,14 @@ target_audience: |
     packages to Spack to make them more easily available to their user base.
 e4s_product: spack
 spack_name: spack
-repository: https://github.com/spack/spack
-# I don't know what "source" is for if "repository" exists.
-#   source:         (URL) Public source code download for the product
-documentation: https://spack.readthedocs.io
-website: https://spack.io/
+
+additional_resource_links:
+  - label: Website
+    url: https://spack.io/
+  - label: Repository
+    url: https://github.com/spack/spack
+  # - label: Downloads
+  #   url: 
+  - label: Documentation
+    url: https://spack.readthedocs.io
 ---

@@ -23,7 +23,7 @@
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".  
 #   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "fastmath", "peso", "rapids", "s4pst", "step".
+#                           organization) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: colabs, corsa, swas)
 #   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
 #                           "subtitle", following the `name`.
@@ -40,7 +40,7 @@
 #
 name: HPCToolkit Performance Tools
 area: devtools
-cass_member: step
+cass_member: STEP
 description: Toolkit that supports measurement, analysis, attribution, and inspection of application performance on CPU and GPU-accelerated architectures.
 long_description: |
     HPCToolkit is an integrated suite of tools for measurement and

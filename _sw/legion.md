@@ -23,7 +23,7 @@
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".  
 #   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "fastmath", "peso", "rapids", "s4pst", "step".
+#                           organization) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: colabs, corsa, swas)
 #   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
 #                           "subtitle", following the `name`.
@@ -40,7 +40,7 @@
 #
 name: Legion
 area: pmr
-cass_member: s4pst
+cass_member: S4PST
 description: A task-based programming model and runtime.
 long_description: |
     Legion is an implicitly parallel task-based programming model and runtime.  The key features of Legion are: implicit

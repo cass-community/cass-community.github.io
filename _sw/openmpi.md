@@ -23,7 +23,7 @@
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".  
 #   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "fastmath", "peso", "rpids", "s4pst", "step".
+#                           organization) you are associated with. Values include: "fastmath", "PESO", "rpids", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: colabs, corsa, swas)
 #   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
 #                           "subtitle", following the `name`.
@@ -40,7 +40,7 @@
 #
 name: Open MPI
 area: pmr
-cass_member: s4pst
+cass_member: S4PST
 description: A high performance open source Message Passing Interface (MPI) implementation
 long_description: |
     An open source Message Passing Interface implementation. The Open MPI

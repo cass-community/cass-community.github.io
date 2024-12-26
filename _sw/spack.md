@@ -1,7 +1,7 @@
 ---
 name: Spack
 area: sweco
-cass_member: peso
+cass_member: PESO
 description: |
     A flexible package manager that supports multiple versions, configurations, platforms,
     and compilers.

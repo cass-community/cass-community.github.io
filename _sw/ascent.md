@@ -23,7 +23,7 @@
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".  
 #   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "fastmath", "peso", "rapids", "s4pst", "step".
+#                           organization) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: colabs, corsa, swas)
 #   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
 #                           "subtitle", following the `name`.
@@ -40,7 +40,7 @@
 #
 name: Ascent
 area: dataviz
-cass_member: rapids
+cass_member: RAPIDS
 description: Ascent is a featherweight in situ visualization and analysis tool designed to be integrated with applications to reduce I/O overhead
 long_description: |
     Ascent is an easy-to-use flyweight in situ visualization and analysis library for HPC simulations. It supports making pictures, 

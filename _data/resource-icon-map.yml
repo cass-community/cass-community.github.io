@@ -1,0 +1,16 @@
+# A "standard" mapping of resource labels to icons to use when displaying them,
+# for use throughout the site (but especially in the software catalog)
+#
+# The icon entry should be a reference to a FontAwesome icon that will be rendered
+# as `<i class-"{{ icon }}"></i>`
+
+- label: Website
+  icon: fa-solid fa-globe
+- label: Repository
+  icon: fa-solid fa-code
+- label: Downloads
+  icon: fa-solid fa-file-arrow-down
+- label: Documentation
+  icon: fa-regular fa-file-lines
+- label: Area
+  icon: fa-regular fa-folder-open

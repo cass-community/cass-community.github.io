@@ -48,3 +48,11 @@ Icons in the resource list should come from [FontAwesome](https://fontawesome.co
 ## Site-wide label to icon mapping
 
 The file <https://github.com/cass-community/new/blob/main/_data/resource-icon-map.yml> provides a list of labels and icons which, ideally, will help them to be used consistently throughout the site (appropriate coding required).  The maintainers of the site are open to proposals for new mappings.
+
+## Best practices
+
+* Documentation links (especially ReadTheDocs) should generally be to the "latest" version rather than a specific version
+* Website links should not be used to link to a repository.  Use (only) a Repository link
+* For Downloads, it is better to link to a download (or releases) *page* rather than a specific file.
+* For Downloads, it is better to link to a generic "latest" rather than a specific version
+* Don't use the same URL with multiple labels -- pick the most appropriate (specific) one only.

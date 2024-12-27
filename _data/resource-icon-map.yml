@@ -14,3 +14,30 @@
   icon: fa-regular fa-file-lines
 - label: Area
   icon: fa-regular fa-folder-open
+
+# Additional ideas (not yet implemented), mostly inspired by
+# https://www.osgeo.org/projects/
+#
+# Classes: End-user resources, Developer resources
+#
+# Info sheet
+# Blog
+# Mailing list(s)
+# Support (life preserver)
+# Issue tracker(s) (checklist)
+# Quickstart
+# Demo
+# Contributors
+# Metrics
+# Pulse
+# Roadmap
+# Meetings/events
+
+# More additional ideas
+#
+# License (certificate or award or similar)
+# Tutorial(s) (is this just Documentation?)
+# Social channels (Maybe MM theme has many of these already? RSS, X/Twitter, LinkedIn, Instagram, TickTok, Bluesky, Mastadon, Facebook, YouTube channel, Slack, ...?)
+# Relevant standards (???)
+# Contributor guide
+# Maintainer(s) (maybe not resource links, maybe internal to the md file rather than public?)

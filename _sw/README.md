@@ -56,3 +56,9 @@ The file <https://github.com/cass-community/new/blob/main/_data/resource-icon-ma
 * For Downloads, it is better to link to a download (or releases) *page* rather than a specific file.
 * For Downloads, it is better to link to a generic "latest" rather than a specific version
 * Don't use the same URL with multiple labels -- pick the most appropriate (specific) one only.
+* `target_audience` should lead with indicating the target audience.  If you want to cite current users, do that after describing the actual general target audience.
+* `name` should not include extra words -- put them in `description` if they're necessary
+* `description` should be constructed as the completion of "{{ name }}: {{ description }}"
+  * It should not repeat the product `name`
+  * It should be written in sentence case, starting with a capital letter
+  * It does not need to be a complete sentence and should *not* end with a period, regardless

@@ -1,0 +1,42 @@
+<div class="sidebar sticky">
+
+{% comment %}
+  Get the icon for areas
+{% endcomment %}
+{% capture area_icon %}{% include emit-icon-area %}{% endcapture %}
+
+{% comment %}
+  Assemble the list of software areas actually being used in the catalog
+{% endcomment %}
+
+{% assign areas_used = "" | split: ","" %}
+{% for p in site.sw %}
+  {% assign areas_used = areas_used | push: p.area %}
+{% endfor %}
+{% assign areas_used = areas_used | uniq %}
+
+{% comment %}
+  Convert the short names into full names, remove duplicates, and sort it
+
+  Note that the way we're currently managing the areas, multiple short_names
+  can map to the same full name, hence the possible duplications.
+{% endcomment %}
+
+{% assign area_names = "" | split: "," %}
+{% for au in areas_used %}
+  {% assign a = site.data.sw-areas | where: "short_name", au %}
+  {% assign a0 = a[0].name %}
+  {% assign area_names = area_names | push: a0 %}
+{% endfor %}
+{% assign area_names = area_names | uniq | sort_natural %}
+
+<h3>Topical Areas</h3>
+<ul style="list-style: none; padding: 0">
+  {% for a in area_names %}
+    {% assign d = site.data.sw-areas | where: "name", a | first %}
+    <li><strong>{{ area_icon }} {{ a }}</strong></li>
+    {% if d %}<p>{{ d.description }}</p>{% endif %}
+  {% endfor %}
+</ul>
+
+</div>

@@ -78,10 +78,10 @@ layout: default
             {% if r.icon %}
               {% assign i = r.icon %}
             {% else %}
-              {% assign map = site.data.resource-icon-map | where: "label", r.label %}
+              {% assign map = site.data.icon-map | where: "label", r.label %}
               {% assign i = map[0].icon %}
             {% endif %}
-            <i class="{{ i }}"></i>
+            {{ i }}
             {% if r.url %}
               <a href="{{ r.url }}">{{ r.label }}</a>
             {% else %}

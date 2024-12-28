@@ -34,6 +34,11 @@
     {% if post.description %}<p class="archive__item-excerpt" itemprop="description">{{ post.description | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
 
     {% comment %}
+      Get the icon for areas
+    {% endcomment %}
+    {% capture area_icon %}{% include emit-icon-area %}{% endcapture %}
+  
+    {% comment %}
     `area` is required, so if it isn't present, we'll show the
     heading with a red "missing data" marker.
 
@@ -45,6 +50,6 @@
     {% else %}
       {% assign a = areas[0].name %}
     {% endif %}
-    <p class="archive__item-excerpt" itemprop="area"><i class="fa-regular fa-folder-open"></i> {{ a }}</p>
+    <p class="archive__item-excerpt" itemprop="area">{{ area_icon }} {{ a }}</p>
   </article>
 </div>

@@ -1,4 +1,8 @@
 <div class="sidebar sticky">
+{% comment %}
+    Get the icon for areas
+{% endcomment %}
+{% capture area_icon %}{% include emit-icon-area %}{% endcapture %}
 
 {% comment %}
     `area` is required, so if it isn't present, we'll show the
@@ -12,7 +16,7 @@
 {% else %}
     {% assign a = areas[0].name %}
 {% endif %}
-<h3><i class="fa-regular fa-folder-open"></i> Area</h3>
+<h3>{{ area_icon }} Area</h3>
 <ul style="list-style: none; padding: 0">
     <li>{{ a }}</li>
 </ul>

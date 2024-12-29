@@ -9,11 +9,7 @@
   Assemble the list of software areas actually being used in the catalog
 {% endcomment %}
 
-{% assign areas_used = "" | split: ","" %}
-{% for p in site.sw %}
-  {% assign areas_used = areas_used | push: p.area %}
-{% endfor %}
-{% assign areas_used = areas_used | uniq %}
+{% assign areas_used = site.sw | map: "area" | uniq %}
 
 {% comment %}
   Convert the short names into full names, remove duplicates, and sort it

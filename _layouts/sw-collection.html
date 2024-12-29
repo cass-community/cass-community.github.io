@@ -9,6 +9,14 @@ layout: sw-archive
     
 {{ content }}
 
+{% comment %}
+An experiement in filtering the collection (implemented in sw-documents-collection.html)
+
+{% assign filter = "" | split: "," %}
+{% assign filter = filter | push: "area|datavis,dataviz,devtools" %}
+{% assign filter = filter | push: "cass_member|PESO" %}
+{% endcomment %}
+
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% include sw-documents-collection.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}

@@ -1,9 +1,31 @@
 {% comment %}
     CHANGES FROM DEFAULT DOCUMENTS-COLLECTION INCLUDE
     * Use sort_natural (case insensitive) instead of sort (case sensitive)
+    * Add ability to filter based on area names
     * Call sw-archive-single.html include
 {% endcomment %}
 {% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
+
+{% comment %}
+  Filter collection, if requested
+
+  A filter is an array of pairs of elements.  The first in the pair is the key
+  in the collection, the second is the values of interest.  Multiple values should
+  be separated by commas.  (Of course this implies that the values cannot *contain* commas.)
+{% endcomment %}
+
+{% if include.filter %}
+  {% assign filtered_entries = "" | split: "," %}
+  {% for f in include.filter %}
+    {% assign k = f | split: "|" | first %}
+    {% assign v = f | split: "|" | last | split: "," %}
+    {% for ve in v %}
+      {% assign e = entries | where: k, ve %}
+      {% assign filtered_entries = filtered_entries | push: e %}
+    {% endfor %}
+  {% endfor %}
+  {% assign entries = filtered_entries | uniq %}
+{% endif %}
 
 {% if include.sort_by %}
   {% assign entries = entries | sort_natural: include.sort_by %}

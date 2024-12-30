@@ -2,7 +2,7 @@
 
 This document is intended to provide guidance for contributing to the software catalog and individual software product entries on the <https://cass.community> website.  It is very much a work in progress.  If things are wrong, unclear, or missing, please file an [issue](https://github.com/cass-community/new/issues).
 
-Most of the information here is organized by the specific keys in the [PRODUCT_TEMPLATE.md](PRODUCT_TEMPLATE.md) file.  *But please also note the [Best Practices](#best-practices) guidance*.
+Most of the information here is organized by the specific keys in the [PRODUCT_TEMPLATE.md](PRODUCT_TEMPLATE.md) file.  *But please also note and follow the [Best Practices](#best-practices) guidance*.
 
 If you're working on the rendering of the site, the top-level [README.md](../README.md) also provides relevant information.
 
@@ -26,13 +26,23 @@ Note that multiple `short_name`s may map to the same `name` and `description`.  
 
 Note that the `Area` key (note capitalization) in the `e4s.yml` file is similar to our `area` (lowercase), but it does not use the short_names that we do, and is not a controlled vocabulary.  In the future, we plan to discuss with the E4S DocPortal team how to merge this information.
 
-## `cass_member`
+## `cass_member` *(controlled vocabulary)*
 
-## `description`
+## `description` *(string)*
 
-## `long_description`
+The `description` should be a short string of text that provides enough information about the product to determine whether or not it might interest them.  The `description` is always shown immediately after the `name` and they should be considered together as, in effect constructing a sentence-length description of the product with the form `name: desciption`.  However it does not need to be a complete sentence in the grammatical sense.
 
-## `target_audience`
+The description is used in small areas (such as the grid view of the catalog, and as a subtitle on the product page) and should be kept short.  Give the reader enough information to encourage them to click into the product page to get the details (or be confident that they don't want to).
+
+The `description` should *not* repeat the `name`.
+
+The `description` should be in sentence case.
+
+The `description` should *not* end with a period.
+
+## `long_description` *(paragraph text)*
+
+## `target_audience` *(paragraph text)*
 
 
 ## Resource link lists
@@ -59,11 +69,11 @@ You can think of the `icon` as the bullet at the start of the entry.  The site h
 
 The most common use case for the `note` key is if you want to list, for example, multiple items with the `Repository` label, pointing to different URLs.  The `note` can be added to each item to differentiate them.  Alternatively, you could include the differentiating information in the `label`, but then you lose the convenience of automatically picking up the default icon.
 
-## Icons
+### Icons
 
 Icons in the resource list should come from [FontAwesome](https://fontawesome.com/v6/search?o=r&m=free) (only the free set).  FontAwesome icons have a two-part identifier, of the form `fa-<class> fa-<specific>`.  Make sure you get both parts.
 
-## Site-wide label to icon mapping
+### Site-wide label to icon mapping
 
 The file `_data/icon-map.yml` provides a list of labels and icons which, ideally, will help them to be used consistently throughout the site (appropriate coding required).  The maintainers of the site are open to proposals for new mappings.
 
@@ -72,6 +82,10 @@ The file `_data/icon-map.yml` provides a list of labels and icons which, ideally
 * Keys are case sensitive.
 * Be aware that some keys use controlled vocabularies, as noted above.  Values that aren't in the controlled vocabulary may be flagged (usually with "missing data", in red text), or ignored, depending on the specific key.
 * The `name` field should be very short -- just the name or acronym by which your software is known.  Extra descriptive words should be worked into the `description` field rather than included here. If your software is known by an acronym, put the expansion in the `description` or `long_description` fields, or vice versa.
+* The `description` field should be thought of together with the `name`, in the form `name: description`.
+  * It should *not* repeat the `name`.
+  * It should be in sentence case.
+  * It should *not* end with a period.
 
 * Documentation links (especially ReadTheDocs) should generally be to the "latest" version rather than a specific version
 * Website links should not be used to link to a repository.  Use (only) a Repository link

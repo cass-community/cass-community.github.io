@@ -41,7 +41,7 @@
 name: GASNet
 area: pmr
 cass_member: S4PST
-description: GASNet is network-independent, high-performance communications middleware.
+description: A network-independent, high-performance communications middleware
 long_description: |
     GASNet is a language-independent, networking middleware layer that
     provides network-independent, high-performance communication primitives

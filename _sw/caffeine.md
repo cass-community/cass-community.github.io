@@ -41,7 +41,7 @@
 name: Caffeine
 area: pmr
 cass_member: S4PST
-description: Caffeine is the CoArray Fortran Framework of Efficient Interfaces to Network Environments. 
+description: The CoArray Fortran Framework of Efficient Interfaces to Network Environments 
 long_description: |
     Caffeine is a parallel runtime library that aims to support LLVM Flang and other Fortran compilers by implementing the 
     Parallel Runtime Interface for Fortran (PRIF).

@@ -38,10 +38,10 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: Dyninst Binary Analysis and Instrumentation Toolkit
+name: Dyninst
 area: devtools
 cass_member: STEP
-description: Toolkit that provides analysis, instrumentation, and code modification across a variety of CPU and GPU architectures.
+description: A toolkit for binary analysis, instrumentation, and code modification across a variety of CPU and GPU architectures
 long_description: |
     Dyninst is a toolkit for performing analysis, instrumentation, and code modification of binary code.
     It can operate on a wide variety of binaries, providing the ability to instrument code for purposes

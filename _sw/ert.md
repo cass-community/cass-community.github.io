@@ -38,7 +38,7 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: Empirical Roofline Tool (ERT)
+name: Empirical Roofline Tool
 area: devtools
 cass_member: RAPIDS
 description: Automates generation of roofline model for architecture-specific performance analysis and optimization 

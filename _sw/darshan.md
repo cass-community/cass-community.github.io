@@ -41,7 +41,7 @@
 name: Darshan
 area: devtools
 cass_member: STEP
-description: Darshan is a lightweight I/O characterization tool that transparently captures I/O access pattern information from HPC applications.
+description: A lightweight I/O characterization tool that transparently captures I/O access pattern information from HPC applications
 long_description: |
     Darshan is a lightweight I/O characterization tool designed for HPC applications.
     It captures a concise summary of I/O behavior for every job it instruments,

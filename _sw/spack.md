@@ -2,9 +2,7 @@
 name: Spack
 area: sweco
 cass_member: PESO
-description: |
-    A flexible package manager that supports multiple versions, configurations, platforms,
-    and compilers.
+description: A flexible package manager that supports multiple versions, configurations, platforms, and compilers
 long_description: |
     Spack is a multi-platform, language-agnostic package manager that builds and
     installs multiple versions and configurations of software. It works on Linux, macOS,

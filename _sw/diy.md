@@ -41,7 +41,7 @@
 name: DIY
 area: dataviz
 cass_member: RAPIDS
-description: Block-parallel library for writing scalable parallel algorithms
+description: A block-parallel library for writing scalable parallel algorithms
 long_description: |
     DIY is a block-parallel library for writing scalable distributed- and shared-memory parallel algorithms that can 
     run both in- and out-of-core. The same program can be executed with one or more threads per MPI process and with 

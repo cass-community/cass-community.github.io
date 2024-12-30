@@ -41,7 +41,7 @@
 name: PAPI
 area: devtools
 cass_member: STEP
-description: A universal interface for hardware counters to monitor software performance.
+description: A universal interface for hardware counters to monitor software performance
 long_description: |
     The Performance API (PAPI) is a software library that offers a 
     universal interface for accessing hardware counters, enabling the 

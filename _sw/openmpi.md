@@ -41,7 +41,7 @@
 name: Open MPI
 area: pmr
 cass_member: S4PST
-description: A high performance open source Message Passing Interface (MPI) implementation
+description: A high performance open-source implementation of the Message Passing Interface (MPI) standard
 long_description: |
     An open source Message Passing Interface implementation. The Open MPI
     Project is an open source Message Passing Interface implementation that

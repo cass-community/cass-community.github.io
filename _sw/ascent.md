@@ -41,7 +41,7 @@
 name: Ascent
 area: dataviz
 cass_member: RAPIDS
-description: Ascent is a featherweight in situ visualization and analysis tool designed to be integrated with applications to reduce I/O overhead
+description: A featherweight in situ visualization and analysis tool designed to be integrated with applications to reduce I/O overhead
 long_description: |
     Ascent is an easy-to-use flyweight in situ visualization and analysis library for HPC simulations. It supports making pictures, 
     transforming data, and capturing data for use outside of ascent. It provides a simple infrastructure to integrate custom analysis 

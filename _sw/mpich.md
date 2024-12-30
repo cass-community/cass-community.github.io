@@ -41,7 +41,7 @@
 name: MPICH
 area: pmr
 cass_member: S4PST
-description: A High Performance Open-Source Implementation of Message Passing Interface (MPI).
+description: A high performance open-source implementation of the Message Passing Interface (MPI) standard
 long_description: |
     MPICH is a widely used, open­-source implementation of the MPI
     message passing standard. It has been ported to many platforms and

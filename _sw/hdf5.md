@@ -41,7 +41,7 @@
 name: HDF5
 area: datavis
 cass_member: RAPIDS
-description: Parallel I/O library for high performance access to self-describing HDF5 datasets
+description: A parallel I/O library for high performance access to self-describing HDF5 datasets
 long_description: |
     HDF5 consists of a file format for storing HDF5 data, a data model for logically organizing and accessing HDF5 data from an application, and the software (libraries, language interfaces, and tools) for working with this format. An HDF5 file (an object in itself) can be thought of as a container (or group) that holds a variety of heterogeneous data objects (or datasets). The datasets can be images, tables, graphs, and even documents, such as PDF or Excel.
 target_audience: |

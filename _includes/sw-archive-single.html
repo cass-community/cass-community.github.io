@@ -39,17 +39,11 @@
     {% capture area_icon %}{% include emit-icon-area %}{% endcapture %}
   
     {% comment %}
-    `area` is required, so if it isn't present, we'll show the
-    heading with a red "missing data" marker.
-
-    Also, if `area` is not one of the short_names in `site.data.sw-areas`, then we display it in red to call out the error.
+    `area` is required, so if it isn't present or isn't one of the recognized areas from 
+    `_data/sw-areas.yml`, we'll show the heading with a red "missing data" marker.
     {% endcomment %}
-    {% assign areas = site.data.sw-areas | where: "short_name", post.area %}
-    {% if areas.size != 1 %}
-      {% assign a = post.area | default: "missing data" | prepend: '<em><font color="red">' | append: '</font></em>' %}
-    {% else %}
-      {% assign a = areas[0].name %}
-    {% endif %}
+    {% capture a %}{% include sw-areas-lookup values = post.area input="short_name" output="name" %}{% endcapture %}
+    {% assign a = a | strip_newlines | split: "|" | default: '<em><font color="red">missing data</font></em>' %}
     <p class="archive__item-excerpt" itemprop="area">{{ area_icon }} {{ a }}</p>
   </article>
 </div>

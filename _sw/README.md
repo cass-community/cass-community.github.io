@@ -6,17 +6,22 @@ This document is intended to provide guidance for contributing to and maintainin
 
 Areas are the term we're using for the topical category of the software product.  For the present, we're using the same ones employed by [ECP ST](https://www.exascaleproject.org/research/#software) except that what was *NNSA Software* under ECP should now be categorized under the more appropriate topical area.
 
-Areas are documented in the product entries using a shorthand.  The mapping from the shorthand to a human-friendly `name` is defined in `/_data/sw-areas.yml`.  Some specific points:
+Areas are documented in the product entries using a shorthand.  The mapping from the shorthand to a human-friendly `name` is defined in `_data/sw-areas.yml`.  Some specific points:
 
 * Processing considerations
-    * When rendering the site, the `area` shorthand should look up and present the corresponding `site.data.sw-areas[page.area]`.
+  * When rendering the site, use `_include/sw-areas-lookup` to access the `site.data.sw-areas` structure systematically.  The function takes a specification of the `input` key, the `values` to lookup, and the key to `output` the corresponding values from.  Any of the keys in the structure can be used as inputs or outputs (currently `short_name`, `name`, and `description`).  Note that because of limitations of Jekyll and Liquid, the result returned is not an array, but a text string which must be converted into an array.
+      The general use case looks like this:
+      ```
+      {% capture a %}{% include sw-areas-lookup values=values input="name" output="short_name" sep="|" %}{% endcapture %}
+      {% assign a = a | strip_newlines | split: "|" %}
+      ```
     * If there is no mapping for the given `area`, it should be rendered as given, in red font to call out that there's a problem.
-    * The icon that we use for Areas is defined in `/_data/icon-map.yml` under the `label` Area.
+    * The icon that we use for Areas is defined in `_data/icon-map.yml` under the `label` Area.
     * To be sure the same icon is used consistently, the following code will set the `area_icon` variable to the value from the icon map: `{% capture area_icon %}{% include emit-icon-area %}{% endcapture %}`
-    * For an example of this processing, see `/_includes/sw-sidebar.html`
+    * For examples of this processing, see `_includes/sw-sidebar.html` and `_includes/sw-areas-sidebar.html`
 * Notes on the mappings
     * Note that we currently support both `dataviz` and `datavis` for the *Data and Visualization* area because we got multiple submissions using each (despite the documentation in the template).
-    * When adding or changing areas, the `/_data/sw-areas.yml` must be updated accordingly.
+    * When adding or changing areas, the `_data/sw-areas.yml` must be updated accordingly.
 
 ## Resource link lists
 
@@ -48,7 +53,7 @@ Icons in the resource list should come from [FontAwesome](https://fontawesome.co
 
 ## Site-wide label to icon mapping
 
-The file `/_data/icon-map.yml` provides a list of labels and icons which, ideally, will help them to be used consistently throughout the site (appropriate coding required).  The maintainers of the site are open to proposals for new mappings.
+The file `_data/icon-map.yml` provides a list of labels and icons which, ideally, will help them to be used consistently throughout the site (appropriate coding required).  The maintainers of the site are open to proposals for new mappings.
 
 ## Best practices
 

@@ -1,27 +1,39 @@
-# Software Catalog README
+# Software Catalog Contributor README
 
-This document is intended to provide guidance for contributing to and maintaining the software catalog and individual software product entries on the <https://cass.community> website.  It is very much a work in progress.  If things are wrong, unclear, or missing, please file an [issue](https://github.com/cass-community/new/issues).
+This document is intended to provide guidance for contributing to the software catalog and individual software product entries on the <https://cass.community> website.  It is very much a work in progress.  If things are wrong, unclear, or missing, please file an [issue](https://github.com/cass-community/new/issues).
 
-## Areas
+Most of the information here is organized by the specific keys in the [PRODUCT_TEMPLATE.md](PRODUCT_TEMPLATE.md) file.  *But please also note the [Best Practices](#best-practices) guidance*.
 
-Areas are the term we're using for the topical category of the software product.  For the present, we're using the same ones employed by [ECP ST](https://www.exascaleproject.org/research/#software) except that what was *NNSA Software* under ECP should now be categorized under the more appropriate topical area.
+If you're working on the rendering of the site, the top-level [README.md](../README.md) also provides relevant information.
 
-Areas are documented in the product entries using a shorthand.  The mapping from the shorthand to a human-friendly `name` is defined in `_data/sw-areas.yml`.  Some specific points:
+## `name` *(string)*
 
-* Processing considerations
-  * When rendering the site, use `_include/sw-areas-lookup` to access the `site.data.sw-areas` structure systematically.  The function takes a specification of the `input` key, the `values` to lookup, and the key to `output` the corresponding values from.  Any of the keys in the structure can be used as inputs or outputs (currently `short_name`, `name`, and `description`).  Note that because of limitations of Jekyll and Liquid, the result returned is not an array, but a text string which must be converted into an array.
-      The general use case looks like this:
-      ```
-      {% capture a %}{% include sw-areas-lookup values=values input="name" output="short_name" sep="|" %}{% endcapture %}
-      {% assign a = a | strip_newlines | split: "|" %}
-      ```
-    * If there is no mapping for the given `area`, it should be rendered as given, in red font to call out that there's a problem.
-    * The icon that we use for Areas is defined in `_data/icon-map.yml` under the `label` Area.
-    * To be sure the same icon is used consistently, the following code will set the `area_icon` variable to the value from the icon map: `{% capture area_icon %}{% include icon-map-lookup label="Area" %}{% endcapture %}`
-    * For examples of this processing, see `_includes/sw-sidebar.html` and `_includes/sw-areas-sidebar.html`
-* Notes on the mappings
-    * Note that we currently support both `dataviz` and `datavis` for the *Data and Visualization* area because we got multiple submissions using each (despite the documentation in the template).
-    * When adding or changing areas, the `_data/sw-areas.yml` must be updated accordingly.
+This is the name you want to be shown for your software product.  It should be short and simple -- generally just the name or acronym by which your product is known to the public, not a "title"-like string. Extra descriptive words should be worked into the `description` field rather than included here. If your software is known by an acronym, put the expansion in the `description` or `long_description` fields, or vice versa.
+
+Generally, the value of the `name` field will be rendered as a heading or a title, but the next line will be the `description` field.
+
+## `area` *(controlled vocabulary)*
+
+Area is the term we're using for the topical category of the software product.  For the present, we're using the same ones employed by [ECP ST](https://www.exascaleproject.org/research/#software) except that what was *NNSA Software* under ECP should now be categorized under the more appropriate topical area.
+
+Areas are a *controlled vocabulary*, defined in the file `_data/sw-areas.yml`. We use the `short_name` values for the product's `area`, which the site will map to appropriate `name`s and `description`s. Values that are not recognized will generally be rendered as "missing data" in red to indicate an error.
+
+Each product is expected to be in *exactly one area*.  If this needs to change, please work with the [point of contact](../README.md#point-of-contact) for the website on the necessary enhancements.
+
+If you need an area that is not already defined, please work with the [point of contact](../README.md#point-of-contact) for the website on the necessary enhancements.
+
+Note that multiple `short_name`s may map to the same `name` and `description`.  This is another convenience for the contributor.  If you want to help with consistency, the first `short_name` is the preferred one.
+
+Note that the `Area` key (note capitalization) in the `e4s.yml` file is similar to our `area` (lowercase), but it does not use the short_names that we do, and is not a controlled vocabulary.  In the future, we plan to discuss with the E4S DocPortal team how to merge this information.
+
+## `cass_member`
+
+## `description`
+
+## `long_description`
+
+## `target_audience`
+
 
 ## Resource link lists
 
@@ -56,6 +68,10 @@ Icons in the resource list should come from [FontAwesome](https://fontawesome.co
 The file `_data/icon-map.yml` provides a list of labels and icons which, ideally, will help them to be used consistently throughout the site (appropriate coding required).  The maintainers of the site are open to proposals for new mappings.
 
 ## Best practices
+
+* Keys are case sensitive.
+* Be aware that some keys use controlled vocabularies, as noted above.  Values that aren't in the controlled vocabulary may be flagged (usually with "missing data", in red text), or ignored, depending on the specific key.
+* The `name` field should be very short -- just the name or acronym by which your software is known.  Extra descriptive words should be worked into the `description` field rather than included here. If your software is known by an acronym, put the expansion in the `description` or `long_description` fields, or vice versa.
 
 * Documentation links (especially ReadTheDocs) should generally be to the "latest" version rather than a specific version
 * Website links should not be used to link to a repository.  Use (only) a Repository link

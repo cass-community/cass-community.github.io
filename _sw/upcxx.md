@@ -41,7 +41,7 @@
 name: UPC++
 area: pmr
 cass_member: S4PST
-description: UPC++ is a C++ library that supports Partitioned Global Address Space (PGAS) programming
+description: A C++ library that supports Partitioned Global Address Space (PGAS) programming
 long_description: |
     UPC++ is a C++ library that supports Partitioned Global Address Space (PGAS) programming, and is designed to interoperate
      smoothly and efficiently with MPI, OpenMP, CUDA, ROCm/HIP and AMTs. It leverages GASNet-EX to deliver low-overhead,

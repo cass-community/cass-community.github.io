@@ -41,7 +41,7 @@
 name: ParaView Catalyst
 area: datavis
 cass_member: RAPIDS
-description: ParaView Catalyst is a tool for in situ data visualization at scale.
+description: A tool for in situ data visualization at scale
 long_description: |
     ParaView and Catalyst form the backbone of DOE’s production visualization at scale capability. Together they provide a set of C++ libraries for general-purpose visualization, a production visualization tool, and an in situ infrastructure. 
 target_audience: |

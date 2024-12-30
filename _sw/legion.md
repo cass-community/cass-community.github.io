@@ -41,7 +41,7 @@
 name: Legion
 area: pmr
 cass_member: S4PST
-description: A task-based programming model and runtime.
+description: A task-based programming model and runtime
 long_description: |
     Legion is an implicitly parallel task-based programming model and runtime.  The key features of Legion are: implicit
     parallelism (users do not to schedule computations and data movement), a flexible sublanguage for data partitioning

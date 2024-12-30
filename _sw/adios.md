@@ -41,7 +41,7 @@
 name: ADIOS
 area: datavis
 cass_member: RAPIDS
-description: ADIOS provides a simple, flexible way for scientists to describe the data in their code that may need to be written, read, or processed
+description: Provides a simple, flexible way for scientists to describe the data in their code that may need to be written, read, or processed
 long_description: |
     The Adaptable IO System (ADIOS) provides a simple, flexible way for scientists to describe 
     the data in their code that may need to be written, read, or processed outside of the 

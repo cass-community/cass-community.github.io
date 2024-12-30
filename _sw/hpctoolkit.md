@@ -38,10 +38,10 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: HPCToolkit Performance Tools
+name: HPCToolkit
 area: devtools
 cass_member: STEP
-description: Toolkit that supports measurement, analysis, attribution, and inspection of application performance on CPU and GPU-accelerated architectures.
+description: A toolkit that supports measurement, analysis, attribution, and inspection of application performance on CPU and GPU-accelerated architectures
 long_description: |
     HPCToolkit is an integrated suite of tools for measurement and
     analysis of program performance on computers ranging from

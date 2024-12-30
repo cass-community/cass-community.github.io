@@ -41,7 +41,7 @@
 name: TAU
 area: devtools
 cass_member: STEP
-description: Performance evaluation tool that supports GPUs from multiple vendors for HPC and AI applications. 
+description: A performance evaluation tool that supports GPUs from multiple vendors for HPC and AI applications
 long_description: |
     TAU is a versatile performance evaluation toolkit supporting both profiling and tracing modes of measurement. 
     It supports performance evaluation of applications running on CPUs and GPUs and supports runtime-preloading 

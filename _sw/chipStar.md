@@ -2,7 +2,7 @@
 name: chipStar
 area: pmr
 cass_member: S4PST
-description: chipStar is a tool for compiling and running HIP/CUDA on SPIR-V via OpenCL or Level Zero APIs.
+description: A tool for compiling and running HIP/CUDA on SPIR-V via OpenCL or Level Zero APIs
 long_description: |
     chipStar enables compiling and running HIP and CUDA
     applications on platforms which support SPIR-V as the

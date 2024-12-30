@@ -41,7 +41,7 @@
 name: PnetCDF
 area: datavis
 cass_member: RAPIDS
-description: Parallel I/O library for high performance access to self-describing netCDF datasets
+description: An I/O library for high-performance parallel access to self-describing netCDF datasets
 long_description: |
     PnetCDF is a parallel I/O library for accessing NetCDF files, a file format widely used in the climate research communities, among others. PnetCDF simplifies scientific data access and storage by providing a convenient interface for reading and writing multidimensional, typed datasets to POSIX files, along with supporting metadata. When used appropriately, PnetCDF can provide high performance I/O for the largest scale application runs.
 target_audience: |

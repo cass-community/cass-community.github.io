@@ -41,7 +41,7 @@
 name: zfp
 area: dataviz
 cass_member: RAPIDS
-description: zfp is an open-source library for compressed floating-point and integer arrays that support high throughput read and write random access
+description: An open-source library for compressed floating-point and integer arrays that support high-throughput random access read and write 
 long_description: |
     One of zfp's unique features is its support for efficient in-memory representation of 
     multidimensional numerical data for computations like differential equation solvers, data 

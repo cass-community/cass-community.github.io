@@ -41,7 +41,7 @@
 name: VTK-m
 area: datavis
 cass_member: RAPIDS
-description: VTK-m is a performance portable visualization library leveraged by production tools such as ParaView and VisIt
+description: A performance-portable visualization library leveraged by production tools such as ParaView and VisIt
 long_description: |
     VTK-m is a toolkit of scientific visualization algorithms for emerging processor 
     architectures. VTK-m supports the fine-grained concurrency for data analysis and 

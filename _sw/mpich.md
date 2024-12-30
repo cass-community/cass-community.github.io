@@ -52,7 +52,7 @@ long_description: |
     hardware including GPUs and accelerators.
 target_audience: |
     The scientist relies on Message Passing Interface (MPI) to create
-    portable softwares. MPICH and MPICH-derived vendor MPI librarties
+    portable software. MPICH and MPICH-derived vendor MPI librarties
     offers the best performance and scalability on some of the largest
     supercomputers today. It allows scientists and developers to write
     their applications once, and move them to different HPC systems with

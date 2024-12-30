@@ -50,7 +50,7 @@ long_description: |
     ouput the instrumented binary file. It can also operate dynamically (dynamic instrumentation),
     analyzing the code in a running program (process) and then modifying the code on the fly. Dyninst
     is opportunistic in that it can use the full debug information available in a binary or it can
-    run on completely stripped binaries. Dyninst provides a vareity of toolkits that include instruction
+    run on completely stripped binaries. Dyninst provides a variety of toolkits that include instruction
     decoding, control flow analysis, dataflow analysis, code generation, code patching, stack walking,
     and process control. It currently supports analysis and instrumentation for the x86-64,
     ARM (32 and 64 bit), and Power architectures. Dyninst also supports code analysis of AMD GPU

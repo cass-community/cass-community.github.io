@@ -43,7 +43,7 @@ area: pmr
 cass_member: S4PST
 description: A Fortran compiler
 long_description: |
-    Flang is the LLVM Compiler Infrastructure projects frontend for the Fortran programming language.
+    Flang is the LLVM Compiler Infrastructure project's frontend for the Fortran programming language.
     It is often referred to as LLVM Flang to differentiate it from Classic Flang -- these are two separate and independent Fortran compilers. 
     LLVM Flang is under active development. 
     While it is capable of generating executables for a number of examples, some functionality is still missing.

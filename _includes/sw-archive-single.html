@@ -36,7 +36,7 @@
     {% comment %}
       Get the icon for areas
     {% endcomment %}
-    {% capture area_icon %}{% include emit-icon-area %}{% endcapture %}
+    {% capture area_icon %}{% include icon-map-lookup label="Area" %}{% endcapture %}
   
     {% comment %}
     `area` is required, so if it isn't present or isn't one of the recognized areas from 

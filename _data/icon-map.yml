@@ -1,6 +1,8 @@
 # A "standard" mapping of resource labels to icons to use when displaying them,
 # for use throughout the site (but especially in the software catalog)
 #
+# Multi-word labels should be in SENTENCE case
+#
 # The icon entry should be an HTML reference to a FontAwesome icon of the
 # form `<i class-"fa-something fa-else"></i>`
 
@@ -12,8 +14,16 @@
   icon: <i class="fa-solid fa-file-arrow-down"></i>
 - label: Documentation
   icon: <i class="fa-regular fa-file-lines"></i>
+#
+# Also use this structure to uniformly lookup icons used
+# elsewhere on the site (i.e. not in resource link lists)
+#
 - label: Area
   icon: <i class="fa-regular fa-folder-open"></i>
+- label: Supporting member
+  icon: <i class="fa-solid fa-hand-holding-hand"></i>
+- label: Package links
+  icon: <i class="fa-solid fa-box-open"></i>
 
 # Additional ideas (not yet implemented), mostly inspired by
 # https://www.osgeo.org/projects/

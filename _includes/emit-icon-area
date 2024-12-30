@@ -1,5 +1,0 @@
-{% comment %}
-    Look up and display the icon for "Area" from the icon-map structure
-{% endcomment %}
-{% assign map = site.data.icon-map | where: "label", "Area"" %}
-{{ map[0].icon}}

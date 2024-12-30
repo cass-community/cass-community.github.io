@@ -17,7 +17,7 @@ Areas are documented in the product entries using a shorthand.  The mapping from
       ```
     * If there is no mapping for the given `area`, it should be rendered as given, in red font to call out that there's a problem.
     * The icon that we use for Areas is defined in `_data/icon-map.yml` under the `label` Area.
-    * To be sure the same icon is used consistently, the following code will set the `area_icon` variable to the value from the icon map: `{% capture area_icon %}{% include emit-icon-area %}{% endcapture %}`
+    * To be sure the same icon is used consistently, the following code will set the `area_icon` variable to the value from the icon map: `{% capture area_icon %}{% include icon-map-lookup label="Area" %}{% endcapture %}`
     * For examples of this processing, see `_includes/sw-sidebar.html` and `_includes/sw-areas-sidebar.html`
 * Notes on the mappings
     * Note that we currently support both `dataviz` and `datavis` for the *Data and Visualization* area because we got multiple submissions using each (despite the documentation in the template).

@@ -1,0 +1,19 @@
+{% comment %}
+  icon-map-lookup
+
+  Looks up provided `label` in the corresponding key of `site.data.icon-map` and outputs
+  the content of the `icon` key.
+
+  We assume the icon-map is 1:1 so there is a single input string produces a single output string
+
+  Suggested usage: 
+    {% capture i %}{% include icon-map-lookup label="Area" %}{% endcapture %}
+ 
+  Parameters
+    label: label to look up (required)
+  
+  Output
+    the `icon` string corresponding to the provided `label`
+{% endcomment -%}
+{% assign map = site.data.icon-map | where: "label", include.label -%}
+{{ map[0].icon}}

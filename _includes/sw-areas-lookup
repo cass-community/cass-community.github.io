@@ -1,0 +1,34 @@
+{% comment %}
+  sw-areas-lookup
+
+  Looks up provided `values` array in the key of `site.data.sw-areas` named by the
+  `input` parameter and emit a list of the corresponding entries in the key named by
+  the `output` parameter.  The result is a list (not an array) separated by the value
+  of the `sep` parameter. Values that don't match entries in `site.data.sw-areas` 
+  are ignored.
+
+  Suggested usage (turns the output into an array, a): 
+    {% capture a %}{% include sw-areas-lookup values=values input="name" output="short_name" sep="|" %}{% endcapture %}
+    {% assign a = a | strip_newlines | split: "|" %}
+  
+  You might also want to uniq and/or sort the result.  Remember that multiple short_names can map to the same name,
+  so many lookups may result in duplicates in the output.
+
+  Parameters
+    values: array of values to look up (required)
+    input: name of sw-areas key to use for lookup (optional, default: "short_name")
+    output: name of sw-areas key entries to output (optional, default: "name")
+    sep: separator for output list (optional, default: "|")
+  
+  Output
+    comma-separated list of corresponding output entries
+{% endcomment %}
+{% assign input = include.input | default: "short_name" -%}
+{% assign output = include.output | default: "name" -%}
+{% assign sep = include.sep | default: "|" -%}
+{% assign out = "" | split: "," -%}
+{% for v in include.values -%}
+  {% assign o = site.data.sw-areas | where: input, v | map: output %}
+  {% assign out = out | concat: o -%}
+{% endfor -%}
+{{ out | join: sep }}

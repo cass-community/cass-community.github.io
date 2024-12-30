@@ -46,7 +46,7 @@ long_description: |
     TAU is a versatile performance evaluation toolkit supporting both profiling and tracing modes of measurement. 
     It supports performance evaluation of applications running on CPUs and GPUs and supports runtime-preloading 
     of a Dynamic Shared Object (DSO) that allows users to measure the performance without modifying the source code or build system.
-    It can instrument and rewrite application binaries and DSOs using Dyninst. It support automatic instrumentation of programs 
+    It can instrument and rewrite application binaries and DSOs using Dyninst. It supports automatic instrumentation of programs 
     written in Python, C++, C, Fortran, UPC, and Chapel. It supports instrumentation of MPI, CUDA, ROCm, OpenMP, OpenACC, OpenCL, and Kokkos
     runtime systems. It supports tracking the idle time spent in implicit barriers within MPI collective operations. 
 target_audience: |

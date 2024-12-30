@@ -4,7 +4,7 @@
 {% endcomment %}
 {% capture area_icon %}{% include icon-map-lookup label="Area" %}{% endcapture %}
 {% capture package_icon %}{% include icon-map-lookup label="Package links" %}{% endcapture %}
-{% capture member_icon %}{% include icon-map-lookup label="Supporting member" %}{% endcapture %}
+{% capture member_icon %}{% include icon-map-lookup label="CASS member" %}{% endcapture %}
 
 {% comment %}
     `area` is required, so if it isn't present or isn't one of the recognized areas from 
@@ -50,7 +50,7 @@
 {% else %}
     {% assign m = members[0].short_name %}
 {% endif %}
-<h3>{{ member_icon }} Supporting member</h3>
+<h3>{{ member_icon }} CASS member</h3>
 <ul style="list-style: none; padding: 0">
 <li><a href={{ "/about/#current-cass-members-and-leadership" | relative_url }}>{{ m }}<a/></li>
 </ul>

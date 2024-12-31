@@ -65,9 +65,11 @@ defaults:
       path: ""
       type: "wg"
     values:
-      layout: "single"
-      author_profile: true
+      layout: "wg-page"
+      classes: wide
+      author_profile: false
       comments: false
+      toc: false
   # sw -- software products
   - scope:
       path: ""
@@ -78,7 +80,6 @@ defaults:
       author_profile: false
       comments: false
       toc: false
-      toc_sticky: false
       # header:
       #   overlay_color: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
 

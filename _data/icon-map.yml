@@ -24,6 +24,18 @@
   icon: <i class="fa-solid fa-hand-holding-hand"></i>
 - label: Package links
   icon: <i class="fa-solid fa-box-open"></i>
+- label: Email
+  icon: <i class="fas fa-envelope"></i>
+- label: Meetings
+  icon: <i class="fa-regular fa-calendar-days"></i>
+- label: Shared documents
+  icon: <i class="fa-solid fa-folder-tree"></i>
+- label: Slack channel
+  icon: <i class="fa-brands fa-slack"></i>
+- label: Chair
+  icon: <i class="fa-solid fa-chair"></i>
+- label: Info
+  icon: <i class="fa-solid fa-circle-info"></i>
 
 # Additional ideas (not yet implemented), mostly inspired by
 # https://www.osgeo.org/projects/

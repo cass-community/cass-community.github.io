@@ -51,7 +51,6 @@ logistical_resources:
   - label: Slack channel
     note: "#wg-impact-framework"
     url: https://softwareecosy-91t5745.slack.com/archives/C075W0ZMJQJ
-
 #
 # A way of easily providing additional resource/links
 #

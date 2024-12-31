@@ -5,9 +5,12 @@ main:
   - title: "Software"
     description: "Software Products"
     url: /software/
-  - title: Events
-    description: "Events organized by CASS"
-    url: /events/
+#
+# Coming attractions...
+#
+  # - title: Events
+  #   description: "Events organized by CASS"
+  #   url: /events/
   - title: "Working Groups"
     description: "CASS Working Groups"
     url: /working-groups/

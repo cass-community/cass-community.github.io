@@ -2,7 +2,6 @@
     CHANGES FROM DEFAULT ARCHIVE-SINGLE INCLUDE
     * Comment out teaser code (images take a lot of space)
     * post.excerpt --> post.description
-    * Add area information
 {% endcomment %}
 {% comment %}
 {% if post.header.teaser %}
@@ -34,18 +33,5 @@
     </h2>
     {% include page__meta.html type=include.type %}
     {% if post.description %}<p class="archive__item-excerpt" itemprop="description">{{ post.description | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
-
-    {% comment %}
-      Get the icon for areas
-    {% endcomment %}
-    {% capture area_icon %}{% include icon-map-lookup label="Area" %}{% endcapture %}
-  
-    {% comment %}
-    `area` is required, so if it isn't present or isn't one of the recognized areas from 
-    `_data/sw-areas.yml`, we'll show the heading with a red "missing data" marker.
-    {% endcomment %}
-    {% capture a %}{% include sw-areas-lookup values = post.area input="short_name" output="name" %}{% endcapture %}
-    {% assign a = a | strip_newlines | split: "|" | default: '<em><font color="red">missing data</font></em>' %}
-    <p class="archive__item-excerpt" itemprop="area">{{ area_icon }} {{ a }}</p>
   </article>
 </div>

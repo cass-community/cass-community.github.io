@@ -1,0 +1,41 @@
+---
+layout: archive
+---
+{% comment %}
+    CHANGES FROM DEFAULT COLLECTION LAYOUT
+    * Set entries from collection
+    * Add filtering capability
+    * Use wg-archive layout instead of archive
+    * Call wg-documents-collection.html include
+      - Use entries instead of collection argument
+{% endcomment %}
+
+{% assign entries = site[page.collection] | where_exp: "post", "post.hidden != true" %}
+
+{{ content }}
+
+{% comment %}
+  Filter collection, if requested
+
+  A filter is an array of pairs of elements.  The first in the pair is the key
+  in the collection, the second is the values of interest.  Multiple values should
+  be separated by commas.  (Of course this implies that the values cannot *contain* commas.)
+{% endcomment %}
+
+{% if filter %}
+  {% assign filtered_entries = "" | split: "," %}
+  {% for f in filter %}
+    {% assign k = f | split: "|" | first %}
+    {% assign v = f | split: "|" | last | split: "," %}
+    {% for ve in v %}
+      {% assign e = entries | where: k, ve %}
+      {% assign filtered_entries = filtered_entries | push: e %}
+    {% endfor %}
+  {% endfor %}
+  {% assign entries = filtered_entries | uniq %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include wg-documents-collection.html entries=entries sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}
+</div>

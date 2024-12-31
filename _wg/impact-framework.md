@@ -48,6 +48,10 @@ logistical_resources:
     note: (we're not actually providing the link)
   - label: Slack channel
     note: "#wg-impact-framework (again, no link)"
+  - label: "#wg-impact-framework"
+    url: https://softwareecosy-91t5745.slack.com/archives/C075W0ZMJQJ
+    note: Slack channel
+    icon: <i class="fa-brands fa-slack"></i>
 #
 # A way of easily providing additional resource/links
 #

@@ -44,9 +44,15 @@ name: The CASS Community
 
 repository: cass-community/cass-community-new
 
-teaser: /assets/images/cass-small-logo.png
+# Set the logo image
+#
+
 logo: /assets/images/cass-logo.png
 og_image: /assets/images/cass-logo.png
+#
+# The site.teaser, however appears in places we
+# don't really want it, so we avoid setting it.
+#teaser: /assets/images/cass-small-logo.png
 
 # Add site search, eventually
 # Add web analytics, eventually

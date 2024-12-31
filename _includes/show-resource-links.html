@@ -1,0 +1,56 @@
+{% comment %}
+  show-resource-links.html
+
+  A convenience stript to render a common data structure in HTML.
+  We call the data structure a "resource link list", and it has
+  the following structure in YAML:
+  ```
+  resource_link_name:
+    - label: Resource label                          # REQUIRED
+      url: https://example.com                       # EXPECTED
+      note: (additional info)                        # OPTIONAL
+      icon: <i class="fa-solid fa-font-awesome"></i> # OPTIONAL
+  ```
+  The list can have as many entries as you like.  The url key is
+  denoted as "expected" because normally, the URL is the point of
+  this data structure, but this script will do the sensible thing
+  if it is not present: display the label value as plain text.
+
+  If an icon is not provided, we will look for an entry with the
+  corresponding label in the site.data.icon-map structure.
+
+  Usage example:
+  ```
+  <ul style="list-style: none; padding: 0">
+    {% include show-resource-links.html links=resources start_tag="<li>" end_tag="</li>" %}
+  </ul>
+  ```
+
+  Parameters
+    links: A resource link list data structure (REQUIRED)
+    start_tag: The HTML tag to be used at the beginning of
+      the each resource line (OPTIONAL, default: "<li>")
+    end_tag: The HTML tag to be use at the end of each
+      resource line. (OPTIONAL, default: "</li>")
+    icons: A source for "standard" label-icon mappings (OPTIONAL, default: site.data.icon-map)
+{% endcomment %}
+{% assign links = include.links -%}
+{% assign start_tag = include.start_tag | default: "<li>" | strip -%}
+{% assign end_tag = include.end_tag | default: "</li>" | strip -%}
+{% assign icons = include.icons | default: site.data.icon-map -%}
+{% for l in links -%}
+  {% capture i -%}
+    {% if l.icon %}{{ l.icon | strip }}
+    {% else %}{% assign map = icons | where: "label", l.label %}{{ map[0].icon }}
+    {% endif %}
+  {% endcapture -%}
+  {% capture t -%}
+    {% if l.url %}<a href="{{ l.url }}">{{ l.label }}</a>
+    {% else %}{{ l.label }}
+    {% endif %}
+  {% endcapture -%}
+  {% capture n -%}
+    {% if l.note %}{{ l.note }}{% endif %}
+  {% endcapture -%}
+  {{ start_tag }}{{ i | strip }} {{ t | strip }}{% if n %} {{ n | strip  }}{% endif %}{{ end_tag }}
+{% endfor %}

@@ -1,15 +1,13 @@
 {% comment %}
     CHANGES FROM DEFAULT ARCHIVE-SINGLE INCLUDE
-    * Comment out teaser code (images take a lot of space)
     * post.excerpt --> post.description
 {% endcomment %}
-{% comment %}
+
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
   {% assign teaser = site.teaser %}
 {% endif %}
-{% endcomment %}
 
 {% if post.id %}
   {% assign title = post.name | markdownify | remove: "<p>" | remove: "</p>" %}

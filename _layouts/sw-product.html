@@ -64,11 +64,11 @@ layout: default
 
         {% if page.long_description %}
         <h2 id="description">Description</h2>
-        {{ page.long_description }}
+        {{ page.long_description | markdownify }}
         {% endif %}
         {% if page.target_audience %}
         <h2 id="target-audience">Target audience</h2>
-        {{ page.target_audience }}
+        {{ page.target_audience | markdownify }}
         {% endif %}
 
         {% if page.additional_resource_links %}

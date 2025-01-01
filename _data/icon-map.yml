@@ -36,6 +36,8 @@
   icon: <i class="fa-solid fa-chair"></i>
 - label: Info
   icon: <i class="fa-solid fa-circle-info"></i>
+- label: License
+  icon: <i class="fa-solid fa-scale-balanced"></i>
 
 # Additional ideas (not yet implemented), mostly inspired by
 # https://www.osgeo.org/projects/
@@ -57,7 +59,6 @@
 
 # More additional ideas
 #
-# License (certificate or award or similar)
 # Tutorial(s) (is this just Documentation?)
 # Social channels (Maybe MM theme has many of these already? RSS, X/Twitter, LinkedIn, Instagram, TickTok, Bluesky, Mastadon, Facebook, YouTube channel, Slack, ...?)
 # Relevant standards (???)

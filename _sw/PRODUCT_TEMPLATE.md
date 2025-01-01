@@ -69,9 +69,10 @@ target_audience: |
 #spack_name:  
 #
 # ADDITIONAL PRODUCT INFORMATION
-#   This is an OPTIONAL list of resource links that you can provide to make your catalog entry more useful.
+#   These are OPTIONAL lists of resource links that you can provide to make your catalog entry more useful.
 #   The typical set includes: Website, Repository, Downloads, and Documentation, but all of these are optional, and
-#   you can also add other labels.
+#   you can also add other labels.   `additional_resource_links` is a general category; `end_user_resource_links` and
+#   `developer_resource_links` are meant to target the named groups more specifically.  Use them as you like.
 #
 #   The essential inputs are structured as follows:
 #     - label: Resource label           # REQUIRED
@@ -92,5 +93,17 @@ target_audience: |
 #   - label: Downloads
 #     url: 
 #   - label: Documentation
+#     url: 
+#
+# A set of resources specifically aimed at users of the software (OPTIONAL)
+#
+# end_user_resource_links:
+#   - label: 
+#     url: 
+#
+# A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)
+#
+# developer_resource_links:
+#   - label: 
 #     url: 
 ---

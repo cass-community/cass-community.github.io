@@ -78,6 +78,20 @@ layout: default
         </ul>
         {% endif %}
 
+        {% if page.end_user_resource_links %}
+        <h2 id="end-user-resources">End-user resources</h2>
+        <ul style="list-style: none; padding: 0">
+          {% include show-resource-links.html links=page.end_user_resource_links %}
+        </ul>
+        {% endif %}
+
+        {% if page.developer_resource_links %}
+        <h2 id="developer-resources">Developer resources</h2>
+        <ul style="list-style: none; padding: 0">
+          {% include show-resource-links.html links=page.developer_resource_links %}
+        </ul>
+        {% endif %}
+
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

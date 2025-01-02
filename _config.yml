@@ -64,6 +64,9 @@ collections:
   sw:
     output: true
     permalink: /:collection/:slug
+  highlights:
+    output: true
+    permalink: /:collection/:slug
 
 defaults:
   # wg -- working groups
@@ -88,6 +91,16 @@ defaults:
       toc: false
       # header:
       #   overlay_color: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
+  # highlights
+  - scope:
+      path: ""
+      type: "highlights"
+    values:
+      layout: "single"
+      classes: wide
+      author_profile: false
+      comments: false
+      toc: false
 
 footer:
   links:
@@ -129,6 +142,10 @@ plugins:
 exclude:
   - _sw/PRODUCT_TEMPLATE.md
   - _sw/README.md
+  - _wg/TEMPLATE.md
+  - _wg/README.md
+  - _highlights/TEMPLATE.md
+  - _highlights/README.md
 
 # Configure jekyll-link-attributes plugin
 external_links:

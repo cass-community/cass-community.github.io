@@ -1,5 +1,5 @@
 ---
-name: Impact Framework WG
+name: Impact Framework
 description: Curating the CASS Impact Framework process
 #
 status: Active # Values can be "Active" or "Retired"

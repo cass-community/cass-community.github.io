@@ -12,9 +12,7 @@
 #   product's entry in the catalog.  To provide optional items, please uncomment the keys and complete
 #   the value appropriately.
 #
-#   Some keys are specifically chosen to match those in the e4s.yaml schema (ignoring case) 
-#   with the expectation that they should have the same content (and probably will eventually be merged).
-#
+#   Please see the accompanying README.md for more detailed information and guidance.
 #
 # BASIC PRODUCT INFORMATION (ALL REQUIRED)
 #   name:                   (string) REQUIRED The name under which your product should appear in the catalog
@@ -26,8 +24,11 @@
 #   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
 #                           organization) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
-#   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
-#                           "subtitle", following the `name`.
+#   description:            (string) REQUIRED A short description of your software.  The `description` is always shown immediately 
+#                           after the `name` and they should be considered together as, in effect constructing a sentence-length 
+#                           description of the product with the form `name: desciption`.  However it does not need to be a complete 
+#                           sentence in the grammatical sense.  Key points: The `description` should *not* repeat the `name`, it 
+#                           should be in sentence case, and it should *not* end with a period.
 #   long_description:       (multiline string) REQUIRED A one-paragraph description of your software. A brief, moderately technical description 
 #                           of your software's primary features and capabilities.
 #   target_audience:        (multiline string) REQUIRED A one-paragraph description of who should be interested in your software.  This should be
@@ -53,20 +54,18 @@ target_audience: |
     until it hits outdented text (a key or a comment).
 #
 # PACKAGING INFORMATION
-#   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
-#   needed under certain conditions:
-#   e4s_product:    (string) Needed if the E4S name for your product is different than your preferred `name` of the product.
-#                   If your product is not in E4S, uncomment and set the value to `null` (without quotes)
-#   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
-#                   If your product does not have a Spack package, uncomment and set the value to `null` (without quotes).
-#                   If your product has multiple Spack packages, list them using YAML syntax:
+#   This information is used to connect your product with its E4S and Spack packages, if available.
+#   e4s_product:    (string) If your product is in E4S, list its e4S name here (may be different than `name`). If your
+#                   product is not in E4S, comment out this entry.
+#   spack_name:     (string) The name of your spack package(s), if available.  If you don't have a Spack package, comment out this
+#                   entry. If your product has multiple Spack packages, list them using YAML list syntax:
 #                   spack_name:
 #                       - package1
 #                       - package2
 #                       - package3
 #
-#e4s_product: 
-#spack_name:  
+e4s_product: 
+spack_name:  
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These are OPTIONAL lists of resource links that you can provide to make your catalog entry more useful.
@@ -84,7 +83,7 @@ target_audience: |
 #     {{ icon }} [{{ label }}]({{ url }}) {{ note }}
 #
 # For additional information, see _sw/README.md.
-
+#
 # additional_resource_links:
 #   - label: Website
 #     url: 

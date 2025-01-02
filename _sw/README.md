@@ -2,7 +2,7 @@
 
 This document is intended to provide guidance for contributing to the software catalog and individual software product entries on the <https://cass.community> website.  It is very much a work in progress.  If things are wrong, unclear, or missing, please file an [issue](https://github.com/cass-community/new/issues).
 
-Most of the information here is organized by the specific keys in the [PRODUCT_TEMPLATE.md](PRODUCT_TEMPLATE.md) file.  *But please also note and follow the [Best Practices](#best-practices) guidance*.
+Most of the information here is organized by the specific keys in the [TEMPLATE.md](TEMPLATE.md) file.  *But please also note and follow the [Best Practices](#best-practices) guidance*.
 
 Note that both keys and values are *case sensitive* unless otherwise stated.
 

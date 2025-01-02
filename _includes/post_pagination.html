@@ -1,0 +1,23 @@
+{% comment %}
+    CHANGES FROM DEFAULT POST_PAGINATION.HTML
+    * Replace page.{previous,next}.title with .name for tooltip
+    * Chevrons from FontAwesome to Previous/Next text
+    * Add style attributes to left/right align previous/next text
+
+    Notes: Tried adding the name of the previous/next page, but it
+    ends up looking odd because the lengths of the names are different.
+{% endcomment %}
+{% if page.previous or page.next %}
+  <nav class="pagination">
+    {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html | strip}}" style="text-align: left"><i class="fa-solid fa-chevron-left"></i>&ensp;{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled" style="text-align: left"><i class="fa-solid fa-chevron-left"></i>&ensp;{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+    {% endif %}
+    {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html | strip}}" style="text-align: right">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}&ensp;<i class="fa-solid fa-chevron-right"></i></a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled" style="text-align: right">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}&ensp;<i class="fa-solid fa-chevron-right"></i></a>
+    {% endif %}
+  </nav>
+{% endif %}

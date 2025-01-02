@@ -9,7 +9,6 @@ layout: default
   * Copied excerpt code from _include/page__hero.html
   * Added code to display page.long_description and page.target_audience
   * Added Additional resources section
-  * Replace post_pagination.html with sw-post_pagination.html
 {% endcomment %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -106,7 +105,7 @@ layout: default
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 
-      {% include sw-post_pagination.html %}
+      {% include post_pagination.html %}
     </div>
 
     {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}

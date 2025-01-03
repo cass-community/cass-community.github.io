@@ -38,6 +38,12 @@
   icon: <i class="fa-solid fa-circle-info"></i>
 - label: License
   icon: <i class="fa-solid fa-scale-balanced"></i>
+- label: Software
+  icon: <i class="fa-solid fa-square-binary"></i>
+- label: Highlights
+  icon: <i class="fa-solid fa-highlighter"></i> # Ha, ha, visual pun
+  # icon: <i class="fa-solid fa-gem"></i> # Maybe more serious?
+  # icon: <i class="fa-solid fa-medal"></i> # Another option?
 
 # Additional ideas (not yet implemented), mostly inspired by
 # https://www.osgeo.org/projects/

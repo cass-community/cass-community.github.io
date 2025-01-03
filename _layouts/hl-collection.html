@@ -1,0 +1,15 @@
+---
+layout: archive
+---
+{% comment %}
+    CHANGES FROM DEFAULT COLLECTION LAYOUT
+    * Use wg-archive layout instead of archive
+    * Call hl-documents-collection.html include
+{% endcomment %}
+
+{{ content }}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include hl-documents-collection.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}
+</div>

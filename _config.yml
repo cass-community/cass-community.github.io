@@ -60,13 +60,10 @@ og_image: /assets/images/cass-logo.png
 collections:
   wg:
     output: true
-    permalink: /:collection/:slug
   sw:
     output: true
-    permalink: /:collection/:slug
   highlights:
     output: true
-    permalink: /:collection/:slug
 
 defaults:
   # wg -- working groups
@@ -96,7 +93,7 @@ defaults:
       path: ""
       type: "highlights"
     values:
-      layout: "single"
+      layout: "hl-page"
       classes: wide
       author_profile: false
       comments: false
@@ -119,6 +116,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-include-cache
   - jekyll-link-attributes
+#  - liquid_pluralize # We use it, but not as a gem
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -3,13 +3,16 @@ layout: default
 ---
 {% comment %}}
   CHANGES FROM DEFAULT SINGLE LAYOUT
+  * Set date_format based on site config
   * Replace sidebar.html with sw-sidebar.html
   * page.title --> page.name
   * page.excerpt --> page.description
   * Copied excerpt code from _include/page__hero.html
   * Added code to display page.long_description and page.target_audience
   * Added Additional resources section
+  * Added Highlights section
 {% endcomment %}
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -91,6 +94,19 @@ layout: default
         </ul>
         {% endif %}
 
+        {% comment %}
+          Lookup any highlights that mention the product and link to them
+        {% endcomment %}
+        {% assign highlights = site.highlights | where_exp: "item", "item.software_mentioned contains page.name" | sort: "date" | reverse %}
+        {% if highlights.size > 0 %}
+        <h2 id="highlights">Highlights</h2>
+        <ul style="list-style: none; padding: 0">
+          {% for h in highlights %}
+          <li><a href="{{ h.url | relative_url }}">{{ h.title }}{% if h.date %} ({{ h.date | date: date_format }}){% endif %}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

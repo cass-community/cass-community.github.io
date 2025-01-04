@@ -6,7 +6,7 @@
   * Add discovery of highlight teaser images (not currently used)
   * Add date output above excerpt in list format
   * Change to h3 from h2
-  * Extend excerpt to 500 from 160
+  * Change excerpt to count words, truncate at 50 (~3 lines?)
 
   WISHLIST
   * Display teaser in list layout.  Should be small, aligned right, side by side
@@ -51,6 +51,6 @@
     </h3>
     {% include page__meta.html type=include.type %}
     {% if post.date %}<p class="archive__item-excerpt" itemprop="date">Date: {{ post.date | date: date_format }}</p>{% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 500 }}</p>{% endif %}
+    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncatewords: 50 }}</p>{% endif %}
   </article>
 </div>

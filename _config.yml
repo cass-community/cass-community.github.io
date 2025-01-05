@@ -138,7 +138,7 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 exclude:
-  - _sw/PRODUCT_TEMPLATE.md
+  - _sw/TEMPLATE.md
   - _sw/README.md
   - _wg/TEMPLATE.md
   - _wg/README.md

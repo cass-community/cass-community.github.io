@@ -6,27 +6,17 @@
 {% capture area_icon %}{% include icon-map-lookup label="Area" %}{% endcapture %}
 
 {% comment %}
-  Assemble the list of software areas actually being used in the catalog
+  Assemble the list of software area names actually being used in the catalog
 {% endcomment %}
-
-{% assign areas_used = site.sw | map: "area" | uniq %}
-
-{% comment %}
-  Convert the short names into full names, remove duplicates, and sort it
-
-  Note that the way we're currently managing the areas, multiple short_names
-  can map to the same full name, hence the possible duplications.
-{% endcomment %}
-
-{% capture area_names %}{% include sw-areas-lookup values=areas_used input="short_name" output="name" %}{% endcapture %}
-{% assign area_names = area_names | strip_newlines | split: "|" | uniq | sort_natural %}
+{% include sw-areas-used %}
 
 <h3>{{ area_icon }} Areas</h3>
+<p><em>Number of products in parenthesis</em></p>
 <ul style="list-style: none; padding: 0">
   {% for a in area_names %}
     {% capture d %}{% include sw-areas-lookup values=a input="name" output="description" sep="|" %}{% endcapture %}
     {% assign d = d | strip_newlines | split: "|" | first %}
-    <li><strong>{{ a }}</strong></li>
+    <li><strong>{{ a }} ({{ area_counts[forloop.index0] }})</strong></li>
     <p><em>{{ d }}</em></p>
   {% endfor %}
 </ul>

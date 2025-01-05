@@ -1,0 +1,41 @@
+{% comment %}
+  Assemble the list of software areas actually being used in the catalog
+  Also count the number of entries in each area
+{% endcomment %}
+
+{% assign collection = include.collection | default: "sw" %}
+{% assign entries = include.entries | default: site[collection] | where_exp: "post", "post.hidden != true" %}
+
+{% comment %}
+  Extract the area information (short_names)
+{% endcomment %}
+{% assign area_sn_used = entries | map: "area" | compact | uniq | sort %}
+
+{% comment %}
+  Map short_names to full names
+{% endcomment %}
+
+{% capture area_names %}{% include sw-areas-lookup values=area_sn_used input="short_name" output="name" %}{% endcapture %}
+{% assign area_names = area_names | strip_newlines | split: "|" | uniq | sort_natural %}
+
+{% comment %}
+  Now we get counts by full name
+
+  Which, annoyingly, requires us to map the name back to the short_names (maybe more than one)
+  and sum up the counts of each short_name in the collection entries.  We have to do it this
+  way because there's no good way to count the short_names and add them up based on the name
+  they map to.  Liquid doesn't provide any way of getting the index of the array that matches
+  a query value.  Sigh.
+{% endcomment %}
+
+{% assign area_counts = "" | split: "," %}
+{% for n in area_names %}
+  {% capture sn %}{% include sw-areas-lookup values=n input="name" output="short_name" %}{% endcapture %}
+  {% assign sn = sn | strip_newlines | split: "|" | uniq | sort_natural %}
+  {% assign n_count = 0 %}
+  {% for s in sn %}
+    {% assign s_count = entries | where: "area", s | size %}
+    {% assign n_count = n_count | plus: s_count %}
+  {% endfor %}
+  {% assign area_counts = area_counts | push: n_count %}
+{% endfor %}

@@ -1,3 +1,10 @@
+{% comment %}
+  By default, the link the area entries the appropriate 
+  anchor on the software-areas page
+{% endcomment %}
+{% assign links = include.links | default: true %}
+{% assign link_target = "/software-areas" %}
+
 <div class="sidebar sticky">
 
 {% comment %}
@@ -16,7 +23,13 @@
   {% for a in area_names %}
     {% capture d %}{% include sw-areas-lookup values=a input="name" output="description" sep="|" %}{% endcapture %}
     {% assign d = d | strip_newlines | split: "|" | first %}
-    <li><strong>{{ a }} ({{ area_counts[forloop.index0] }})</strong></li>
+    {% if links %}
+      {% assign u = a | slugify | prepend: "#" | prepend: link_target | relative_url %}
+      {% capture h %}<a href="{{ u }}">{{ a }}</a>{% endcapture %}
+    {% else %}
+      {% capture h %}{{ a }}{% endcapture %}
+    {% endif %}
+    <li><strong>{{ h }}</strong> ({{ area_counts[forloop.index0] }})</li>
     <p><em>{{ d }}</em></p>
   {% endfor %}
 </ul>

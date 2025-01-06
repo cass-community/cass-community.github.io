@@ -1,9 +1,16 @@
 ---
-layout: single
 title: About Us
 permalink: /about/
 toc: true
 toc_sticky: true
+# layout: single
+layout: splash # Default: home, but that includes a list of posts
+classes: wide
+header:
+#   overlay_color: "#000"
+#  overlay_filter: "0.60"
+  overlay_filter: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
+  overlay_image: /assets/images/cass-logo.png
 ---
 The **Consortium for the Advancement of Scientific Software** (CASS) is a federation of member organizations committed to the stewardship and advancement of the current and future ecosystem of scientific computing software.
 

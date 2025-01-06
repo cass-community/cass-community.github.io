@@ -1,7 +1,7 @@
 ---
-title: Software Catalog
-layout: sw-collection
-permalink: /software/
+title: Software Catalog (by Areas)
+layout: sw-collection-areas
+permalink: /software-areas/
 collection: sw
 sort_by: name
 entries_layout: grid

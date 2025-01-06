@@ -1,0 +1,79 @@
+---
+layout: sw-archive
+---
+{% comment %}
+    CHANGES FROM SW-COLLECTION LAYOUT
+    * Add code to get area names (and counts)
+    * Add code to loop over area names, filter collection, and display subset
+{% endcomment %}
+
+{% assign entries = site[page.collection] | where_exp: "post", "post.hidden != true" %}
+
+{{ content }}
+
+<p align="right"><em><a href="{{ "/software/" | relative_url }}" class="btn btn--inverse">Switch to Alphabetical view</a></p>
+
+{% comment %}
+An experiement in filtering the collection (implemented in sw-documents-collection.html)
+
+{% assign filter = "" | split: "," %}
+{% assign filter = filter | push: "area|datavis,dataviz,devtools" %}
+{% assign filter = filter | push: "cass_member|PESO" %}
+{% endcomment %}
+
+{% comment %}
+  Filter collection, if requested
+
+  A filter is an array of pairs of elements.  The first in the pair is the key
+  in the collection, the second is the values of interest.  Multiple values should
+  be separated by commas.  (Of course this implies that the values cannot *contain* commas.)
+{% endcomment %}
+
+{% if filter %}
+  {% assign filtered_entries = "" | split: "," %}
+  {% for f in filter %}
+    {% assign k = f | split: "|" | first %}
+    {% assign v = f | split: "|" | last | split: "," %}
+    {% for ve in v %}
+      {% assign e = entries | where: k, ve %}
+      {% assign filtered_entries = filtered_entries | push: e %}
+    {% endfor %}
+  {% endfor %}
+  {% assign entries = filtered_entries | uniq %}
+{% endif %}
+
+{% comment %}
+  Assemble the list of software area names actually being used in the catalog.
+  Also returns the counts for each area.
+
+  We need to loop over the names and map to the short_names to filter the collection.
+{% endcomment %}
+{% include sw-areas-used %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+
+{% for a in area_names %}
+  {% assign count = area_counts[forloop.index0] %}
+  {% assign filtered_entries = "" | split: "," %}
+  {% capture sn %}{% include sw-areas-lookup values=a input="name" output="short_name" %}{% endcapture %}
+  {% assign sn = sn | strip_newlines | split: "|" | uniq | sort_natural %}
+  {% for s in sn %}
+    {% assign e = entries | where: "area", s %}
+    {% assign filtered_entries = filtered_entries | concat: e | compact %}
+  {% endfor %}
+  {% if page.sort_by %}
+    {% assign filtered_entries = filtered_entries | sort_natural: page.sort_by %}
+  {% endif %}
+  {% if page.sort_order == 'reverse' %}
+    {% assign filtered_entries = filtered_entries | reverse %}
+  {% endif %}
+  <section id="{{ a | slugify }}" class="taxonomy__section">
+    <h2 class="archive__subtitle">{{ a }} <span class="taxonomy__count">({{ count }})</span></h2>
+    <div class="entries-{{ entries_layout }}">
+      {% for post in filtered_entries %}
+        {% include sw-archive-single.html type=entries_layout %}
+      {% endfor %}
+    </div>
+    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+  </section>
+{% endfor %}

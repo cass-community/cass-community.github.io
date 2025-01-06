@@ -8,13 +8,66 @@ Note that both keys and values are *case sensitive* unless otherwise stated.
 
 If you're working on the rendering of the site, the top-level [README.md](../README.md) also provides relevant information.
 
+## `name` *(string)*
+
+The name of the working group.  It should *not* include the words "Working Group" or "WG".
+
+Generally, the value of the `name` field will be rendered as a heading or a title, but the next line will be the `description` field.
+
+## `description` *(string)*
+
+A brief description of the working group. The `description` is always shown immediately after the `name` and they should be considered together as, in effect constructing a sentence-length description of the working group with the form `name: desciption`.  However it does not need to be a complete sentence in the grammatical sense.
+
+The description is used in small areas (such as the grid view of the working group collection page, and as a subtitle on the individual working group page) and should be kept short.  Give the reader enough information to encourage them to click into the working group page to get the details (or be confident that they don't want to).
+
+**Important guidance:**
+
+* The `description` *should not* repeat the `name`.
+* The description` *should* be in sentence case.
+* The `description` *should not* end with a period.
+
+## `status` *(controlled vocabulary)*
+
+The `status` of the working group can be "Active" or "Retired".
+
+## `status_date` *(ISO date)*
+
+The effective date of the current `status`, in YYYY-MM-DD format.
+
+## `charter` *(multiparagraph text)*
+
+The by-laws require that every working group have a charter. It should include:
+
+* Purpose
+* Relationship to other working groups (as needed, not required by by-laws)
+* Lifetime
+* Expected membership
+* Reporting expectations
+* Additional information (as needed)
+
+Input for this field should generally use the YAML syntax for a multi-line string, denoted by the pipe ("|") character on the line with the key. Each section should have a run-in header in italics, for example `*Purpose*`.
+
+## `charter_status` *(string)*
+
+The `charter_status` should be either "Provisional" or "Approved" and should also mention the date of that status.  For example `Provisional, since 2024-09-17`.
+
+## `chair` *(list)*
+
+The by-laws require that every working group have a chair.  This field should be a YAML list with information about one or more chairs.
+
+```yaml
+chair:
+  - name Firstname Lastname (Affiliation) # REQUIRED
+    email: first.last@example.com         # REQUiRED
+```
+
+The email is needed because the readers are advised to contact the chair(s) to learn more about or join the working group.
 
 ## Resource link lists
 
-What we're calling "resource link lists" are generic data structure that makes it easy to express links to resources or artifacts in a simple, but flexible manner.  The catalog currently supports three such lists:
+What we're calling "resource link lists" are generic data structure that makes it easy to express links to resources or artifacts in a simple, but flexible manner.  The workging group page currently supports two such lists:
+* `logistical_resources`
 * `additional_resource_links`
-* `end_user_resource_links`
-* `developer_resource_links`
 
 Each of these has fundamentally the same schema, they are are just labeled differently when rendered on the site.  The intent is to allow the contributor to identify resources that specifically target end-users of the product, or developers of the product, or more generic resources without such connotations.
 
@@ -34,13 +87,7 @@ Which would be rendered (approximately) as:<br>
 &#x2615; [Label 1](https://example.com) additional text here<br>
 [Label 2](https://example.org)
 
-A basic set of labels that would be appropriate for most products to provide include:
-* `Website`
-* `Repository`
-* `Downloads`
-* `Documentation`
-
-But the labels are arbitrary, and therefore completely flexible.  No particular label is required, and you can add any label that fits your needs.
+The labels are arbitrary, and therefore completely flexible.  No particular label is required, and you can add any label that fits your needs.
 
 You can think of the `icon` as the bullet at the start of the entry.  The site has defaults for the "typical" labels. If you use a label that doesn't have a default icon and don't provide one, the label text starts the line. For further details, see below.
 
@@ -65,11 +112,21 @@ To faciliate the consistent use of specific icons across the site, the file `_da
 
 The maintainers of the site are open to proposals for new mappings.
 
+## `logistical_resources` *(resource link)*
+
+It is not clear how useful this.  This is meant to be information about meetings and collaborative tools used by the working group.  But for security reasons, we don't want to publicize links.
+
 ## Best practices
 
 * Keys are case sensitive.
 
 * Be aware that some keys use controlled vocabularies, as noted above.  Values that aren't in the controlled vocabulary may be flagged (usually with "missing data", in red text), or ignored, depending on the specific key.
+
+* The `description` *should not* repeat the `name`.
+
+* The description` *should* be in sentence case.
+
+* The `description` *should not* end with a period.
 
 * Don't use the same URL with multiple labels. Instead, either pick the most appropriate (most specific) label that makes sense, and have one entry only, or, for example, if a webpage includes sections for both Downloads and Documentation, use the appropriate anchors to differentiate the URLs (e.g., <https://example.com/#downloads> and <https://example.com/#documentation>).
 

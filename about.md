@@ -10,7 +10,8 @@ header:
 #   overlay_color: "#000"
 #  overlay_filter: "0.60"
   overlay_filter: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
-  overlay_image: /assets/images/cass-logo.png
+  overlay_image: /assets/images/thisisengineering-p5wrlynJR4A-unsplash.jpg
+  caption: 'Photo by <a href="https://unsplash.com/@thisisengineering">ThisisEngineering</a> on <a href="https://unsplash.com/photos/man-in-blue-dress-shirt-and-woman-in-black-long-sleeve-shirt-p5wrlynJR4A">Unsplash</a>'
 ---
 The **Consortium for the Advancement of Scientific Software** (CASS) is a federation of member organizations committed to the stewardship and advancement of the current and future ecosystem of scientific computing software.
 

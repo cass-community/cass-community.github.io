@@ -12,7 +12,7 @@ header:
 #   overlay_color: "#000"
 #  overlay_filter: "0.60"
   overlay_filter: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
-  overlay_image: /assets/images/cass-logo.png
+  overlay_image: /assets/images/warpx-transparent.png
 ---
 {% assign featured_highlights = "" | split: "," %}
 

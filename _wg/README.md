@@ -116,6 +116,10 @@ The maintainers of the site are open to proposals for new mappings.
 
 It is not clear how useful this.  This is meant to be information about meetings and collaborative tools used by the working group.  But for security reasons, we don't want to publicize links.
 
+## Content *(markdown)*
+
+The content of the working group entry is completely up to the contributor.  This is the primary location where the working group would be expected to "report" outputs and accomplishments.
+
 ## Best practices
 
 * Keys are case sensitive.

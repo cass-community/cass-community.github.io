@@ -1,10 +1,16 @@
 ---
 title: Working Groups
-layout: wg-collection
 permalink: /working-groups/
 collection: wg
 entries_layout: grid
+layout: wg-collection
+# layout: splash # Default: home, but that includes a list of posts
 classes: wide
+header:
+#   overlay_color: "#000"
+#  overlay_filter: "0.60"
+  overlay_filter: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
+  overlay_image: /assets/images/cass-logo.png
 ---
 CASS operates on the voluntary contributions of effort and resources by its member organizations and others in the community.  Working groups are the primary means by which we organize members of the CASS community to get things done.  Below, you'll find both logistical information about the various CASS working groups, as well as outputs they are sharing with the public.
 

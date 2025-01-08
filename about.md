@@ -1,10 +1,11 @@
 ---
 title: About Us
 permalink: /about/
-toc: true
-toc_sticky: true
+# toc: true
+# toc_sticky: true
+layout: about-page
 # layout: single
-layout: splash # Default: home, but that includes a list of posts
+# layout: splash 
 classes: wide
 header:
 #   overlay_color: "#000"
@@ -90,8 +91,10 @@ Based on its current membership, CASS focuses primarily on the ASCR scientific s
 
 Details of the software in the "CASS ecosystem" can be found in the **[Software]({{ "/software/" | relative_url }})** section of the site.
 
+{% comment %}
 ## Join us!
 
 CASS seeks to expand beyond its initial membership to include other projects and organizations focused on the stewardship and advancement of scientific software to reach a larger portion of the scientific software ecosystem.  Projects and organizations outside of the DOE are welcome! 
 
 If you're interested, contact the [CASS Steering Committee](mailto:cass-steering-committee@email.ornl.gov).
+{% endcomment %}

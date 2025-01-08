@@ -8,11 +8,11 @@
 
 - short_name: dataviz
   name: Data and Visualization
-  description: Provide capabilities for compressing, analyzing, moving, and managing data
+  description: Provide capabilities for analyzing, visualizing, compressing, moving, and managing data
 # Since it seems to be a common mistake, we'll accept `datavis` as well as `dataviz`
 - short_name: datavis
   name: Data and Visualization
-  description: Provide capabilities for compressing, analyzing, moving, and managing data
+  description: Provide capabilities for analyzing, visualizing, compressing, moving, and managing data
 - short_name: devtools
   name: Development Tools
   description: Help address performance challenges and faciliate efficient support of the latest HPC node architectures 

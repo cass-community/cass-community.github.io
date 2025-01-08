@@ -25,7 +25,7 @@ additional_resource_links:
   - label: Repository
     url: https://github.com/CHIP-SPV/chipStar
   - label: Downloads
-    url: https://github.com/CHIP-SPV/chipStar/releases/download/v1.2.1/chipStar-v1.2.1.tar.gz
+    url: https://github.com/CHIP-SPV/chipStar/releases
   - label: Documentation
     url: https://github.com/CHIP-SPV/chipStar/blob/main/README.md
 ---

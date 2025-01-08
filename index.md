@@ -17,7 +17,7 @@ The **Consortium for the Advancement of Scientific Software (CASS)** is a federa
 
 ## Software
 
-The current members of CASS are focused on the corner of the scientific software ecosystem that uses high-performance parallel computing, and on software which has received support from the U.S. Department of Energy [Office of Advanced Scientific Computing Research](https://www.energy.gov/science/ascr/advanced-scientific-computing-research), and the [Software Technologies](https://www.exascaleproject.org/research/#software) element of the [Exascale Computing Project](https://www.exascaleproject.org/).
+The current members of CASS are focused on the corner of the scientific software ecosystem that uses high-performance parallel computing, and on software which has received support from the U.S. Department of Energy [Office of Advanced Scientific Computing Research](https://www.energy.gov/science/ascr/advanced-scientific-computing-research), and the [Software Technologies](https://www.exascaleproject.org/research/#software) focus area of the [Exascale Computing Project](https://www.exascaleproject.org/).
 [Learn more...]({{ "/software/" | relative_url }}){: .btn .btn--inverse .align-right}
 
 ## Impacts
@@ -27,5 +27,5 @@ In addition to embodying advanced research and development in computer science, 
 
 ## Working groups
 
-CASS operates on the voluntary contributions of effort and resources by its member organizations and others in the community. Working groups are the primary means by which we organize members of the CASS community to get things done. Most CASS working groups welcome public participation.
+CASS operates on the voluntary contributions of effort and resources by its member organizations and others in the community. Working groups are the primary means by which we organize members of the CASS community to advance our stewardship efforts. Most CASS working groups welcome public participation.
 [Learn more...]({{ "/working-groups/" | relative_url }}){: .btn .btn--inverse .align-right}

@@ -41,9 +41,9 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: AMReX
-area: Co-design
+area: mathlibs # Original submission: Co-design
 cass_member: FASTMath
-description: Software Framework for Block Structured AMR
+description: Software framework for block structured AMR
 long_description: |
     AMReX is a C++-based software framework that supports the development of
     structured mesh algorithms for solving systems of partial differential

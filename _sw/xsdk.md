@@ -43,9 +43,9 @@
 name: xSDK
 area: mathlibs
 cass_member: FASTMath
-description: Extreme-scale Scientific Software Development Kit
+description: The Extreme-scale Scientific Software Development Kit
 long_description: |
-    xSDK - a collection of related, complimentary, and interoperable math libraries installable via spack package manager. The current xSDK release includes 26 math libraries: AMReX, ArborX, ButterFlyPACK, DataTransferKit, deal.ii, ExaGO, Ginkgo, heFFTe, HiOp, hypre, libEnsemble, MAGMA, MFEM, Omega_h, PETSc/TAO, PHIST, PLASMA, preCICE, PUMI, SLATE, SLEPc, STRUMPACK, SUNDIALS, SuperLU, TASMANIAN, and Trilinos.
+    xSDK is a collection of related, complimentary, and interoperable math libraries installable via spack package manager. The current xSDK release includes 26 math libraries: AMReX, ArborX, ButterFlyPACK, DataTransferKit, deal.ii, ExaGO, Ginkgo, heFFTe, HiOp, hypre, libEnsemble, MAGMA, MFEM, Omega_h, PETSc/TAO, PHIST, PLASMA, preCICE, PUMI, SLATE, SLEPc, STRUMPACK, SUNDIALS, SuperLU, TASMANIAN, and Trilinos.
 target_audience: |
     Computational Scientists and Engineers;
     Numerical Analysts;
@@ -64,7 +64,7 @@ target_audience: |
 #                       - package2
 #                       - package3
 #
-e4s_product: 
+#e4s_product: 
 spack_name: xsdk
 #
 # ADDITIONAL PRODUCT INFORMATION
@@ -91,14 +91,15 @@ additional_resource_links:
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #
 end_user_resource_links:
-  - label: Installation Instructions
+  - label: Documentation
+    note: (installation instructions)
     url: https://xsdk.info/installing-the-software/
-  - label: Issue Tracker
+  - label: Issue tracker
     url: https://github.com/xsdk-project/xsdk-issues/issues
 #
 # A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)
 #
 developer_resource_links:
-  - label: Website
+  - label: Repository
     url: https://github.com/xsdk-project
 ---

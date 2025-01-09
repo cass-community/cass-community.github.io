@@ -91,31 +91,34 @@ additional_resource_links:
    - label: Repository
      url: https://github.com/mfem/mfem
    - label: Downloads
-     url: https://mfem.org/downloads
+     url: https://mfem.org/download
    - label: Documentation
-     url: https://docs.mfem.org/4.7
+     url: https://docs.mfem.org/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #
 end_user_resource_links:
-   - label: Example Codes
-     url: https://mfem.org/examples
-   - label: Tutorial
-     url: https://mfem.org/tutorial
-   - label: Videos
-     url: https://mfem.org/videos
-   - label: Workshop
-     url: https://mfem.org/workshop
-   - label: Seminar
-     url: https://mfem.org/seminar
+  - label: Examples
+    url: https://mfem.org/examples
+  - label: Tutorials
+    url: https://mfem.org/tutorial
+  - label: Videos
+    url: https://mfem.org/videos
+  - label: Workshop
+    url: https://mfem.org/workshop
+  - label: Seminars
+    url: https://mfem.org/seminar
 #
 # A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)
 #
-# developer_resource_links:
-   - label: Contribution Guidelines
-     url: https://github.com/mfem/mfem/blob/master/CONTRIBUTING.md
-   - label: How-to Articles
-     url: https://mfem.org/howto/howto-index/
-   - label: Doxygen Documentation
-     url: https://docs.mfem.org
+developer_resource_links:
+  - label: Contributor guide
+    url: https://github.com/mfem/mfem/blob/master/CONTRIBUTING.md
+  - label: How-to articles
+    url: https://mfem.org/howto/howto-index/
+  #
+  # Duplicates a resource above
+  # - label: Documentation
+  #   note:  (Doxygen)
+  #   url: https://docs.mfem.org
 ---

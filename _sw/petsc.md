@@ -41,7 +41,7 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: PETSc/TAO
-area: Mathematical Libraries
+area: mathlibs
 cass_member: FASTMath
 description: The Portable, Extensible Toolkit for Scientific Computation
 long_description: |
@@ -98,9 +98,9 @@ additional_resource_links:
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #
 end_user_resource_links:
-  - label: Discord Server
+  - label: Discord
     url: https://discord.gg/Fqm8r6Gcyb
-  - label: Mailing Lists
+  - label: Mailing lists
     url: https://petsc.org/release/community/mailing/#mailing-lists
 #
 # A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)

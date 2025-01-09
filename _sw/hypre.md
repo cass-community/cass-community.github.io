@@ -105,6 +105,7 @@ additional_resource_links:
 # A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)
 #
 developer_resource_links:
-  - label: 
+  - label: Documentation
+    note: for developers
     url: https://github.com/hypre-space/hypre/wiki
 ---

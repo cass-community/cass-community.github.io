@@ -22,6 +22,10 @@
   icon: <i class="fa-regular fa-file-lines"></i>
 - label: Contributor's guide
   icon: <i class="fa-regular fa-file-lines"></i>
+- label: Developer guide
+  icon: <i class="fa-regular fa-file-lines"></i>
+- label: Developer's guide
+  icon: <i class="fa-regular fa-file-lines"></i>
 - label: How-to articles
   icon: <i class="fa-regular fa-file-lines"></i>
 - label: Examples

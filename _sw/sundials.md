@@ -43,7 +43,7 @@
 name: SUNDIALS
 area: mathlibs
 cass_member: FASTMath
-description:  The SUNDIALS library of time integrators and nonlinear solvers provides robust and efficient numerical methods for ordinary differential equations (ODEs), differential-algebraic equations (DAEs), and nonlinear algebraic systems.
+description:  A library of time integrators and nonlinear solvers for ordinary differential equations (ODEs), differential-algebraic equations (DAEs), and nonlinear algebraic systems
 long_description: |
     The SUNDIALS library of time integrators and nonlinear solvers provides robust and efficient numerical methods for ordinary differential equations (ODEs), differential-algebraic equations (DAEs), and nonlinear algebraic systems. SUNDIALS is freely available and developed on GitHub. SUNDIALS is comprised of following packages: ARKODE, a solver with one-step methods for stiff, nonstiff, mixed stiff-nonstiff, and multirate ODE systems; CVODE, a solver with Adams and BDF methods for stiff and nonstiff ODE systems; CVODES, an extension of CVODE with forward and adjoint sensitivity analysis capabilities for stiff and nonstiff ODE systems; IDA, a solver with BDF methods for DAE systems; IDAS, an extension of IDA with forward and adjoint sensitivity analysis capabilities for DAE systems; KINSOL, a solver for nonlinear algebraic systems. The SUNDIALS packages share many components and are organized as a family built on a common infrastructure including abstract interfaces for vectors, matrices, and algebraic solvers. Several implementations of these interfaces are provided with SUNDIALS supporting a range of parallel computing paradigms including shared-memory, distributed memory, and GPU computing.
 target_audience: |
@@ -82,28 +82,31 @@ spack_name: sundials
 #
 additional_resource_links:
   - label: Website
-    url: https://computing-staging.llnl.gov/projects/sundials
+    url: https://computing.llnl.gov/projects/sundials
   - label: Repository
     url: https://github.com/LLNL/sundials
   - label: Downloads
     url: https://computing.llnl.gov/projects/sundials/sundials-software
-  - label: Documentation
-    url: https://sundials.readthedocs.io/en/latest/index.html#
+  #
+  # Duplicates a an end-user link, so favor that one
+  #
+  # - label: Documentation
+  #   url: https://sundials.readthedocs.io/en/latest/index.html#
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #
 end_user_resource_links:
   - label: Documentation
     url: https://sundials.readthedocs.io/en/latest/index.html#
-  - label: Issue Tracker
+  - label: Issue tracker
     url: https://github.com/LLNL/sundials/issues
-  - label: User Support Mailing List Archive
+  - label: Mailing list
     url: https://groups.google.com/g/sundials-users
 #
 # A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)
 #
 developer_resource_links:
-  - label: Developer Guide
+  - label: Developer guide
     url: https://sundials.readthedocs.io/en/latest/developers/index.html
-  - label: Contributing Guide
+  - label: Contributor guide
     url: https://sundials.readthedocs.io/en/latest/contributing/index.html
 ---

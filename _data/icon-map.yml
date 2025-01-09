@@ -46,6 +46,8 @@
   icon: <i class="fa-brands fa-discord"></i>
 - label: Issue tracker
   icon: <i class="fa-solid fa-list-check"></i>
+- label: Test coverage
+  icon: <i class="fa-solid fa-clipboard-check"></i>
 #
 # Also use this structure to uniformly lookup icons used
 # elsewhere on the site (i.e. not in resource link lists)
@@ -62,6 +64,8 @@
   icon: <i class="fa-regular fa-calendar-days"></i>
 - label: Shared documents
   icon: <i class="fa-solid fa-folder-tree"></i>
+- label: Slack
+  icon: <i class="fa-brands fa-slack"></i>
 - label: Slack channel
   icon: <i class="fa-brands fa-slack"></i>
 - label: Chair

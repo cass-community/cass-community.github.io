@@ -14,6 +14,34 @@
   icon: <i class="fa-solid fa-file-arrow-down"></i>
 - label: Documentation
   icon: <i class="fa-regular fa-file-lines"></i>
+- label: User guide
+  icon: <i class="fa-regular fa-file-lines"></i>
+- label: User's guide
+  icon: <i class="fa-regular fa-file-lines"></i>
+- label: Contributor guide
+  icon: <i class="fa-regular fa-file-lines"></i>
+- label: Contributor's guide
+  icon: <i class="fa-regular fa-file-lines"></i>
+- label: How-to articles
+  icon: <i class="fa-regular fa-file-lines"></i>
+- label: Examples
+  icon: <i class="fa-regular fa-file-code"></i>
+- label: Videos
+  icon: <i class="fa-solid fa-video"></i>
+- label: Tutorials
+  icon: <i class="fa-solid fa-person-chalkboard"></i>
+- label: Workshop
+  icon: <i class="fa-solid fa-users-line"></i>
+- label: Seminars
+  icon: <i class="fa-solid fa-person-chalkboard"></i>
+- label: Mailing list
+  icon: <i class="fas fa-envelope"></i>
+- label: Mailing lists
+  icon: <i class="fas fa-envelope"></i>
+- label: Discord
+  icon: <i class="fa-brands fa-discord"></i>
+- label: Issue tracker
+  icon: <i class="fa-solid fa-list-check"></i>
 #
 # Also use this structure to uniformly lookup icons used
 # elsewhere on the site (i.e. not in resource link lists)
@@ -52,7 +80,6 @@
 #
 # Info sheet
 # Blog
-# Mailing list(s)
 # Support (life preserver)
 # Issue tracker(s) (checklist)
 # Quickstart
@@ -68,5 +95,4 @@
 # Tutorial(s) (is this just Documentation?)
 # Social channels (Maybe MM theme has many of these already? RSS, X/Twitter, LinkedIn, Instagram, TickTok, Bluesky, Mastadon, Facebook, YouTube channel, Slack, ...?)
 # Relevant standards (???)
-# Contributor guide
 # Maintainer(s) (maybe not resource links, maybe internal to the md file rather than public?)

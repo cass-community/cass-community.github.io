@@ -86,27 +86,6 @@ spack_name: ginkgo
 #
 # For additional information, see _sw/README.md.
 #
-# additional_resource_links:
-#   - label: Website
-#     url: 
-#   - label: Repository
-#     url: 
-#   - label: Downloads
-#     url: 
-#   - label: Documentation
-#     url: 
-#
-# A set of resources specifically aimed at users of the software (OPTIONAL)
-#
-# end_user_resource_links:
-#   - label: 
-#     url: 
-#
-# A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)
-#
-# developer_resource_links:
-#   - label: 
-#     url: 
 additional_resource_links:
   - label: Website
     url: https://ginkgo-project.github.io 
@@ -117,5 +96,4 @@ additional_resource_links:
 end_user_resource_links:
   - label: User guide
     url: https://github.com/ginkgo-project/ginkgo/wiki
-    icon: fa-solid fa-circle-info
 ---

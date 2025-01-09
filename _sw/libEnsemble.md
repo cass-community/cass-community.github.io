@@ -43,16 +43,18 @@
 name: libEnsemble
 area: mathlibs
 cass_member: FASTMath
-description: A Python toolkit for coordinating asynchronous and dynamic ensembles of calculations.
+description: A Python toolkit for coordinating asynchronous and dynamic ensembles of calculations
 long_description: |
   Adaptive, portable, and scalable software for connecting "deciders" to experiments or simulations.
-      Dynamic ensembles: Generate parallel tasks on-the-fly based on previous computations.
-      Extreme portability and scaling: Run on or across laptops, clusters, and leadership-class machines.
-      Heterogeneous computing: Dynamically and portably assign CPUs, GPUs, or multiple nodes.
-      Application monitoring: Ensemble members can run, monitor, and cancel apps.
-      Data-flow between tasks: Running ensemble members can send and receive data.
-      Low start-up cost: No additional background services or processes required.
   libEnsemble is effective at solving design, decision, and inference problems on parallel resources.
+  Features include: 
+    - Dynamic ensembles: Generate parallel tasks on-the-fly based on previous computations.
+    - Extreme portability and scaling: Run on or across laptops, clusters, and leadership-class machines.
+    - Heterogeneous computing: Dynamically and portably assign CPUs, GPUs, or multiple nodes.
+    - Application monitoring: Ensemble members can run, monitor, and cancel apps.
+    - Data-flow between tasks: Running ensemble members can send and receive data.
+    - Low start-up cost: No additional background services or processes required.
+  
 target_audience: |
     Computational Scientists and Engineers;
     Numerical Optimization Users;
@@ -94,26 +96,26 @@ spack_name: py-libensemble
 additional_resource_links:
   - label: Repository
     url: https://github.com/Libensemble/libensemble
-  - label: Community Examples
+  - label: Examples
     url: https://github.com/Libensemble/libe-community-examples
   - label: Documentation
     url: https://libensemble.readthedocs.io/en/main/
-  - label: Releases
+  - label: Downloads
     url: https://github.com/Libensemble/libensemble/releases
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #
 end_user_resource_links:
-  - label: Slack Page
+  - label: Slack
     url: https://libensemble.slack.com/
-  - label: Mailing List
+  - label: Mailing list
     url: https://lists.mcs.anl.gov/mailman/listinfo/libensemble 
 #
 # A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)
 #
 developer_resource_links:
-  - label: Contributing Guidelines 
+  - label: Contributor guide 
     url: https://github.com/Libensemble/libensemble/blob/main/CONTRIBUTING.rst
-  - label: Coverage
+  - label: Test coverage
     url: https://app.codecov.io/github/Libensemble/libensemble
 ---

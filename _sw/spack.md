@@ -32,8 +32,8 @@ additional_resource_links:
     url: https://spack.io/
   - label: Repository
     url: https://github.com/spack/spack
-  # - label: Downloads
-  #   url: 
+  - label: Downloads
+    url: https://github.com/spack/spack/releases
   - label: Documentation
     url: https://spack.readthedocs.io
 ---

@@ -82,13 +82,13 @@ spack_name:  legion
 #
 # For additional information, see _sw/README.md.
 
-# additional_resource_links:
-#   - label: Website
-#     url: 
-#   - label: Repository
-#     url: 
+ additional_resource_links:
+   - label: Website
+     url: https://legion.stanford.edu/
+   - label: Repository
+     url: https://github.com/StanfordLegion/legion
 #   - label: Downloads
 #     url: 
-#   - label: Documentation
-#     url: 
+   - label: Documentation
+     url: https://legion.stanford.edu/documentation/
 ---

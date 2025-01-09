@@ -41,7 +41,7 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: SuperLU
-area: Mathmatical Libraries
+area: mathlibs
 cass_member: FASTMath
 description: Sparse direct solver and preconditioner based on supernodal sparse LU factorization
 long_description: |
@@ -50,8 +50,8 @@ long_description: |
   particularly efficient for non-symmetric sparsity. In addition to sparse LU and
   triangular solves,  the library provides error bounds, condition estimation,
   and easy-to-use interface for repeated solutions with same sparsity pattern, etc.
-  Serial SuperLU package also contains numerical threshold-based ILU routines.
-  It is written in C with MPI/OpenMP paralleliztion, and CUDA (Nvidia) and HIP (AMD)
+  The Serial SuperLU package also contains numerical threshold-based ILU routines.
+  It is written in C with MPI/OpenMP paralleliztion, and CUDA (NVIDIA) and HIP (AMD)
   GPU acceleration. It also contains bindings to Fortran, Julia and Python.
     
 target_audience: |
@@ -76,7 +76,7 @@ target_audience: |
 e4s_product: SuperLU
 spack_name:
     - superlu
-    - superlu_dist
+    - superlu-dist
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These are OPTIONAL lists of resource links that you can provide to make your catalog entry more useful.
@@ -96,16 +96,21 @@ spack_name:
 # For additional information, see _sw/README.md.
 #
 additional_resource_links:
-   - label: Website
-     url: https://portal.nersc.gov/project/sparse/superlu/
-   - label: Repository
-     url: https://github.com/xiaoyeli/superlu_dist
-     url: https://github.com/xiaoyeli/superlu
-     url: https://github.com/xiaoyeli/superlu_MT
-   - label: Downloads
-     url: https://github.com/xiaoyeli/superlu_dist/releases
-   - label: Documentation
-     url: https://portal.nersc.gov/project/sparse/superlu/ug.pdf
+  - label: Website
+    url: https://portal.nersc.gov/project/sparse/superlu/
+  - label: Repository
+    note: (superlu_dist -- distributed-memory parallel)
+    url: https://github.com/xiaoyeli/superlu_dist
+  - label: Repository
+    note: (superlu -- serial)
+    url: https://github.com/xiaoyeli/superlu
+  - label: Repository
+    note: (superlu_MT -- shared-memory parallel)
+    url: https://github.com/xiaoyeli/superlu_MT
+  - label: Downloads
+    url: https://github.com/xiaoyeli/superlu_dist/releases
+  - label: Documentation
+    url: https://portal.nersc.gov/project/sparse/superlu/ug.pdf
 
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

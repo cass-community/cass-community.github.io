@@ -41,7 +41,7 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: STRUMPACK
-area: Mathmatical Libraries
+area: mathlibs
 cass_member: FASTMath
 description: Low-rank STRUctured Matrix PACKage for both dense and sparse matrices.
 long_description: |
@@ -103,11 +103,14 @@ spack_name:  strumpack
 #
 additional_resource_links:
   - label: Website
-    url: https://portal.nersc.gov/project/sparse/strumpack//index.html
+    url: https://portal.nersc.gov/project/sparse/strumpack/
   - label: Repository
     url: https://github.com/pghysels/STRUMPACK
-  - label: Downloads
-    url: https://github.com/pghysels/STRUMPACK
+  #
+  # Commenting out for now, since it duplicates the repo link
+  #
+  # - label: Downloads
+  #   url: https://github.com/pghysels/STRUMPACK
   - label: Documentation
     url: https://portal.nersc.gov/project/sparse/strumpack/v7.1.0/index.html
 #

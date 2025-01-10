@@ -22,17 +22,6 @@
     Validate values provided for cass_member so we can identify bad data
   {% endcomment %}
   {% if page.cass_members %}
-  <h3>{{ member_icon }} <a href={{ "/about/#current-members-and-leadership" | relative_url }}>CASS {{ page.cass_members.size | pluralize: "member", "members" }}</a></h3>
-  <ul style="list-style: none; padding: 0">
-    {% for cm in page.cass_members %}
-      {% assign members = site.data.organization.members | where: "short_name", cm %}
-      {% if members.size == 1 %}
-        {% assign m = members[0].short_name %}
-      {% else %}
-        {% assign m = cm | default: "missing data" | prepend: '<em><font color="red">' | append: '</font></em>' %}
-      {% endif %}
-      <li>{{ m }}</li>
-    {% endfor %}
-    </ul>
+    {% include show-cass-member.html cass_members=page.cass_members %}
   {% endif %}
 </div>

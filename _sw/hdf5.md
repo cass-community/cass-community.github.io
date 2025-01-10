@@ -22,8 +22,8 @@
 #                           the areas that were used by ECP ST, except that anything that was categorized as
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".  
-#   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
+#                           organizations) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: colabs, corsa, swas)
 #   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
 #                           "subtitle", following the `name`.
@@ -40,7 +40,8 @@
 #
 name: HDF5
 area: datavis
-cass_member: RAPIDS
+cass_members:
+  - RAPIDS
 description: A parallel I/O library for high performance access to self-describing HDF5 datasets
 long_description: |
     HDF5 consists of a file format for storing HDF5 data, a data model for logically organizing and accessing HDF5 data from an application, and the software (libraries, language interfaces, and tools) for working with this format. An HDF5 file (an object in itself) can be thought of as a container (or group) that holds a variety of heterogeneous data objects (or datasets). The datasets can be images, tables, graphs, and even documents, such as PDF or Excel.

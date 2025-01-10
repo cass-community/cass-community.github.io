@@ -38,20 +38,10 @@
     </ul>
 {% endif %}
 
-{% comment %}
-    `cass_member` is required, so if it isn't present, we'll show the
-    heading with a red "missing data" marker.
-
-    Also, if `cass_member` is not one of the short_names in `site.data.organization`.members, then we display it in red to call out the error.
-{% endcomment %}
-{% assign members = site.data.organization.members | where: "short_name", page.cass_member %}
-{% if members.size != 1 %}
-    {% assign m = page.cass_member | default: "missing data" | prepend: '<em><font color="red">' | append: '</font></em>' %}
-{% else %}
-    {% assign m = members[0].short_name %}
-{% endif %}
-<h3>{{ member_icon }} CASS member</h3>
-<ul style="list-style: none; padding: 0">
-<li><a href={{ "/about/#current-cass-members-and-leadership" | relative_url }}>{{ m }}<a/></li>
-</ul>
+  {% comment %}
+    Validate values provided for cass_member so we can identify bad data
+  {% endcomment %}
+  {% if page.cass_members %}
+    {% include show-cass-member.html cass_members=page.cass_members %}
+  {% endif %}
 </div>

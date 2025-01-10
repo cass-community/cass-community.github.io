@@ -28,9 +28,9 @@ Note that multiple `short_name`s may map to the same `name` and `description`.  
 
 Note that the `Area` key (note capitalization) in the `e4s.yml` file is similar to our `area` (lowercase), but it does not use the short_names that we do, and is not a controlled vocabulary.  In the future, we plan to discuss with the E4S DocPortal team how to merge this information.
 
-## `cass_member` *(controlled vocabulary)*
+## `cass_members` *(controlled vocabulary)*
 
-This field should be the CASS member organization (also known as software stewardship organizations, or SSOs) which is providing stewardship support for the product.
+This field should be a YAML list of the the CASS member organization(s) (also known as software stewardship organization(s), or SSOs) which are providing stewardship support for the product.  In most cases, there is only one such SSO, but it is possible for there to be more.  Using the list structure supports this.  Note that you *cannot* use the form `cass_members: SSO` -- the SSO will not be picked up properly.
 
 The SSO names are a *controlled vocabulary*, defined in `members` structure in the file `_data/organization.yml`. We use the `short_name` values for the product's `cass_member` values, which the site will usually display as-is, but via the `members` structure, can also map into other information.  The `short_name` values correspond to the acronyms used by the member organizations and are case sensitive (e.g. "S4PST", not "s4pst").
 

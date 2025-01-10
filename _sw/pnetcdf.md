@@ -22,8 +22,8 @@
 #                           the areas that were used by ECP ST, except that anything that was categorized as
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".  
-#   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
+#                           organizations) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: colabs, corsa, swas)
 #   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
 #                           "subtitle", following the `name`.
@@ -40,7 +40,8 @@
 #
 name: PnetCDF
 area: datavis
-cass_member: RAPIDS
+cass_members:
+  - RAPIDS
 description: An I/O library for high-performance parallel access to self-describing netCDF datasets
 long_description: |
     PnetCDF is a parallel I/O library for accessing NetCDF files, a file format widely used in the climate research communities, among others. PnetCDF simplifies scientific data access and storage by providing a convenient interface for reading and writing multidimensional, typed datasets to POSIX files, along with supporting metadata. When used appropriately, PnetCDF can provide high performance I/O for the largest scale application runs.

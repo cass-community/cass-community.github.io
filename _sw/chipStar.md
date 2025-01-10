@@ -1,7 +1,8 @@
 ---
 name: chipStar
 area: pmr
-cass_member: S4PST
+cass_members:
+  - S4PST
 description: A tool for compiling and running HIP/CUDA on SPIR-V via OpenCL or Level Zero APIs
 long_description: |
     chipStar enables compiling and running HIP and CUDA

@@ -21,8 +21,8 @@
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
 #                           We also support the values used in e4s.yml files, though we prefer those above. 
-#   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
+#                           organizations) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
 #   description:            (string) REQUIRED A short description of your software.  The `description` is always shown immediately 
 #                           after the `name` and they should be considered together as, in effect constructing a sentence-length 
@@ -42,7 +42,8 @@
 #
 name: xSDK
 area: mathlibs
-cass_member: FASTMath
+cass_members:
+  - FASTMath
 description: The Extreme-scale Scientific Software Development Kit
 long_description: |
     xSDK is a collection of related, complimentary, and interoperable math libraries installable via spack package manager. The current xSDK release includes 26 math libraries: AMReX, ArborX, ButterFlyPACK, DataTransferKit, deal.ii, ExaGO, Ginkgo, heFFTe, HiOp, hypre, libEnsemble, MAGMA, MFEM, Omega_h, PETSc/TAO, PHIST, PLASMA, preCICE, PUMI, SLATE, SLEPc, STRUMPACK, SUNDIALS, SuperLU, TASMANIAN, and Trilinos.

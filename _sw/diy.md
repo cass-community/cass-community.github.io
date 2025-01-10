@@ -22,8 +22,8 @@
 #                           the areas that were used by ECP ST, except that anything that was categorized as
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".  
-#   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
+#                           organizations) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: colabs, corsa, swas)
 #   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
 #                           "subtitle", following the `name`.
@@ -40,7 +40,8 @@
 #
 name: DIY
 area: dataviz
-cass_member: RAPIDS
+cass_members:
+  - RAPIDS
 description: A block-parallel library for writing scalable parallel algorithms
 long_description: |
     DIY is a block-parallel library for writing scalable distributed- and shared-memory parallel algorithms that can 

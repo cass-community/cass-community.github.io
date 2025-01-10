@@ -21,8 +21,8 @@
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
 #                           We also support the values used in e4s.yml files, though we prefer those above. 
-#   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The name(s) of the CASS member organization(s) (aka software stewardship
+#                           organization(s)) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
 #   description:            (string) REQUIRED A short description of your software.  The `description` is always shown immediately 
 #                           after the `name` and they should be considered together as, in effect constructing a sentence-length 

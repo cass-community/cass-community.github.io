@@ -101,6 +101,9 @@ defaults:
 
 footer:
   links:
+    - label: "Announcement list signup"
+      icon: "fas fa-envelope"
+      url: http://eepurl.com/iRiSnY
     - label: "Email Us"
       icon: "fas fa-envelope"
       url:  "mailto:cass-steering-committee@email.ornl.gov"

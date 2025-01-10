@@ -3,7 +3,7 @@ name: User-Developer Experience
 description: Promote improved user-developer experiences
 #
 status: Active # Values can be "Active" or "Retired"
-status_date: 2024-12-16 # The date the group went active or retired; FIXME
+status_date: 2025-01-10 # The date the group went active or retired; FIXME
 #
 # Charter information: according to the by-laws, the following info is expected:
 #   Purpose
@@ -15,19 +15,19 @@ status_date: 2024-12-16 # The date the group went active or retired; FIXME
 #
 charter: |
   *Purpose:*
-  Our goals are to develop a white paper with examples of leveraging User Experience (UX) methods and a curriculum around User-Developer Experience (UDX).
+  The User-Developer Experience (UDX) Working Group (WG) brings together groups and individuals interested in science of scientific software development and use.  The UDX WG provides a forum for discussions on understanding and improving how users and developers interact with and experience scientific software. The UDX WG discussions focus on both the libraries and tools used while creating code as well as the software produced through those efforts. Topics include how documentation is presented and maintained; how applications are updated and installed; how code contributions from dispersed developers are managed and integrated; how tasks are arranged into workflows; how web, desktop, and command line interfaces are leveraged; how organizational policies are navigated, and beyond.
 
-  *Relationship to other working groups:* To be determined
+  *Relationship to other working groups:* We will interact with the [Metrics](metrics) and [Impact Framework](impact-framework) WGs if we discover information that could inform efforts of these WGs or can ourselves benefit from their progress.
 
-  *Lifetime:* To be determined
+  *Lifetime:* Standing. Subject to annual review of needs and purpose.
 
-  *Membership:* To be determined
+  *Membership:* Open
 
-  *Reporting:* To be determined
+  *Reporting:* Annually
 #
 # Charter status may be Provisional or Approved and should include a date
 #
-charter_status: Provisional, Stay tuned
+charter_status: Provisional, 2025-01-10
 #
 chair: # Can be more than one person
   - name: Hannah Cohoon (LBNL)

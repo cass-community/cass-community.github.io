@@ -42,7 +42,8 @@
 #
 name:
 area:
-cass_member:
+cass_members:
+    - SSO
 description:
 long_description: |
     This key should provide a more detailed description of the product -- about a paragraph.

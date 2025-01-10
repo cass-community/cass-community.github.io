@@ -21,8 +21,8 @@
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
 #                           We also support the values used in e4s.yml files, though we prefer those above.
-#   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
+#                           organizations) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
 #   description:            (string) REQUIRED A short description of your software.  The `description` is always shown immediately
 #                           after the `name` and they should be considered together as, in effect constructing a sentence-length
@@ -42,7 +42,8 @@
 #
 name: PETSc/TAO
 area: mathlibs
-cass_member: FASTMath
+cass_members:
+  - FASTMath
 description: The Portable, Extensible Toolkit for Scientific Computation
 long_description: |
     PETSc, the Portable, Extensible Toolkit for Scientific Computation, includes a large suite of scalable parallel linear and nonlinear equation solvers, ordinary differential equation (ODE) integrators for application codes written in C, C++, Fortran, and Python. PETSc also contains TAO, the Toolkit for Advanced Optimization, software library. PETSc contains interfaces to many third-party packages including hypre, SuperLU, ML, and Zoltan as well as most open source numerical libraries including ParMETIS and MUMPS. PETSc is also used by many simulation frameworks including Deal.II, MOOSE, libMesh, Fluidity, FEniCS, pyClaw, and PetIGA. PETSc supports MPI, and GPUs through CUDA, HIP, Kokkos, as well as hybrid MPI-GPU parallelism.

@@ -21,8 +21,8 @@
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
 #                           We also support the values used in e4s.yml files, though we prefer those above.
-#   cass_member:            (string) REQUIRED The name of the CASS member organization (aka software stewardship
-#                           organization) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
+#                           organizations) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
 #   description:            (string) REQUIRED A short description of your software.  The `description` is always shown immediately
 #                           after the `name` and they should be considered together as, in effect constructing a sentence-length
@@ -42,7 +42,8 @@
 #
 name: SUNDIALS
 area: mathlibs
-cass_member: FASTMath
+cass_members:
+  - FASTMath
 description:  A library of time integrators and nonlinear solvers for ordinary differential equations (ODEs), differential-algebraic equations (DAEs), and nonlinear algebraic systems
 long_description: |
     The SUNDIALS library of time integrators and nonlinear solvers provides robust and efficient numerical methods for ordinary differential equations (ODEs), differential-algebraic equations (DAEs), and nonlinear algebraic systems. SUNDIALS is freely available and developed on GitHub. SUNDIALS is comprised of following packages: ARKODE, a solver with one-step methods for stiff, nonstiff, mixed stiff-nonstiff, and multirate ODE systems; CVODE, a solver with Adams and BDF methods for stiff and nonstiff ODE systems; CVODES, an extension of CVODE with forward and adjoint sensitivity analysis capabilities for stiff and nonstiff ODE systems; IDA, a solver with BDF methods for DAE systems; IDAS, an extension of IDA with forward and adjoint sensitivity analysis capabilities for DAE systems; KINSOL, a solver for nonlinear algebraic systems. The SUNDIALS packages share many components and are organized as a family built on a common infrastructure including abstract interfaces for vectors, matrices, and algebraic solvers. Several implementations of these interfaces are provided with SUNDIALS supporting a range of parallel computing paradigms including shared-memory, distributed memory, and GPU computing.

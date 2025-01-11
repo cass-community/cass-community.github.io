@@ -72,6 +72,8 @@
   icon: <i class="fa-solid fa-chair"></i>
 - label: Info
   icon: <i class="fa-solid fa-circle-info"></i>
+- label: Status
+  icon: <i class="fa-solid fa-circle-info"></i>
 - label: License
   icon: <i class="fa-solid fa-scale-balanced"></i>
 - label: Software

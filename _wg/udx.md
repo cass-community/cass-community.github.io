@@ -35,35 +35,23 @@ chair: # Can be more than one person
   - name: Drew Paine (LBNL)
     email: pained@lbl.gov
 #
-# Give people an idea of the resources we're using for collaboration.
-#
-# For security reasons, we don't actually share the links.  Is this
-# useful?  Maybe the only thing potentially useful here is the
-# meeting information -- so people know what to expect?  If that's the only thing
-# maybe we should just have a dedicated field for meeting info?
-#
-logistical_resources:
-  - label: Meetings
-    note: Monthly, To be determined
-  - label: Shared documents
-    note: (we're not actually providing the link)
-  - label: Slack channel
-    note: "#wg-udx"
-    url: https://softwareecosy-91t5745.slack.com/archives/C076WTT3BPB
+meeting_schedule: to be announced
 #
 # A way of easily providing additional resource/links
 #
 additional_resource_links:
+  - label: CASS Slack channel
+    note: "#wg-udx"
+    url: https://softwareecosy-91t5745.slack.com/archives/C076WTT3BPB
+    icon: <i class="fa-brands fa-slack"></i>
   - label: US-RSE Slack channel
     note: "#wg-ux"
     url: https://usrse.slack.com/archives/C0664AMJBKQ
     icon: <i class="fa-brands fa-slack"></i>
-  - label: US-RSE Links and Resources
+  - label: "US-RSE #wg-ux Links and Resources"
     url: https://usrse.slack.com/canvas/C0664AMJBKQ?focus_section_id=VaZ9CA1ONGa
-    icon: <i class="fa-solid fa-circle-info"></i>
-  - label: US-RSE Ways to Get Involved
-    note: They are the ***best***!
+    icon: <i class="fa-regular fa-file-lines"></i>
+  - label: "US-RSE #wg-ux Ways to Get Involved"
     url: https://usrse.slack.com/canvas/C0664AMJBKQ?focus_section_id=temp:C:VaZ842fac9ea4954c8b84b1c4638
-    icon: <i class="fa-solid fa-circle-info"></i>
+    icon: <i class="fa-regular fa-file-lines"></i>
 ---
-Stay tuned

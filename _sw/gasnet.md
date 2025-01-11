@@ -62,8 +62,8 @@ target_audience: |
 #   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
-e4s_product: null
-spack_name: null
+e4s_product: gasnet
+spack_name: gasnet
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   This is an OPTIONAL list of resource links that you can provide to make your catalog entry more useful.
@@ -86,8 +86,8 @@ additional_resource_links:
     url: https://gasnet.lbl.gov/
   - label: Repository
     url: https://bitbucket.org/berkeleylab/gasnet.git
-  # - label: Downloads
-  #   url: 
+  - label: Downloads
+    url: https://gasnet.lbl.gov/#download
   # - label: Documentation
   #   url: 
 ---

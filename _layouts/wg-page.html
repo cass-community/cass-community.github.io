@@ -3,12 +3,12 @@ layout: default
 ---
 {% comment %}}
   CHANGES FROM DEFAULT SINGLE LAYOUT
+  * Call wg-sidebar.html instead of sidebar.html
   * page.title --> page.name
   * page.excerpt --> page.description
   * Copied excerpt code from _include/page__hero.html
-  * Added code to display charter, status info, chair, members
-  * Added Logistical resources section
-  * Added Additional resources section
+  * Added code to display charter
+   * Added Additional resources section
 {% endcomment %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -28,7 +28,7 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
-  {% include sidebar.html %}
+  {% include wg-sidebar.html %}
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
     {% if page.name %}<meta itemprop="headline" content="{{ page.name | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -61,10 +61,6 @@ layout: default
           </aside>
         {% endif %}
 
-        {% if page.status %}
-          <p><strong>Status:</strong> {{ page.status }}{% if page.status_date %} since {{ page.status_date }}{% endif %}</p>
-        {% endif %}
-
         {% if page.charter %}
           <h2 id="charter">Charter</h2>
           {{ page.charter | markdownify }}
@@ -72,29 +68,6 @@ layout: default
           {% if page.charter_status %}
             <p><strong>Charter status:</strong> {{ page.charter_status }}</p>
           {% endif %}
-        {% endif %}
-
-        {% capture chair_icon %}{% include icon-map-lookup label="Chair" %}{% endcapture %}
-
-        {% if page.chair %}
-          {% if page.chair.size > 1 %}
-            <h2 id="chair">Co-chairs</h2>
-          {% else %}
-          <h2 id="chair">Chair</h2>
-          {% endif %}
-          <ul style="list-style: none; padding: 0">
-          {% for c in page.chair %}
-            <li>{{ chair_icon }} <a href="mailto:{{ c.email }}">{{ c.name }}</a></li>
-          {% endfor %}
-          </ul>
-        {% endif %}
-
-        {% if page.logistical_resources %}
-        <h2 id="logistical-resources">Logistical resources</h2>
-        <p><em>Contact a working group chair to obtain access.</em></p>
-        <ul style="list-style: none; padding: 0">
-          {% include show-resource-links.html links=page.logistical_resources %}
-        </ul>
         {% endif %}
 
         {% if page.additional_resource_links %}

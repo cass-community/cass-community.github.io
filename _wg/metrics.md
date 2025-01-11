@@ -40,38 +40,14 @@ chair: # Can be more than one person
   - name: Greg Watson (ORNL)
     email: watsongr@ornl.gov
 #
-# Give people an idea of the resources we're using for collaboration.
-#
-# For security reasons, we don't actually share the links.  Is this
-# useful?  Maybe the only thing potentially useful here is the
-# meeting information -- so people know what to expect?  If that's the only thing
-# maybe we should just have a dedicated field for meeting info?
-#
-logistical_resources:
-  - label: Meetings
-    note: 4:00-5:00pm ET Wednesdays, bi-weekly from 2025-01-08
-  # - label: Shared documents
-  #   note: (we're not actually providing the link)
-  # - label: Slack channel
-  #   note: "#wg-metrics (again, no link)"
-  # - label: Slack channel
-  #   note: "#wg-metrics"
-  #   url: https://softwareecosy-91t5745.slack.com/archives/C078FEAQ58S
+meeting_schedule: "4:00pm-5:00pm ET Wednesdays, bi-weekly from 2025-01-08"
 #
 # A way of easily providing additional resource/links
 #
-# additional_resource_links:
-#   - label: We like robots
-#     url: https://example.com
-#     icon: <i class="fa-solid fa-robot"></i>
-#     note: (we can add notes that aren't part of the link)
-#   - label: But snowmen are better!
-#     url: https://example.org
-#     icon: <i class="fa-solid fa-snowman"></i>
-#   - label: Cookies!
-#     note: They are the ***best***!
-#     url: https://en.wikipedia.org/wiki/Cookie_Monster
-#     icon: <i class="fa-solid fa-cookie-bite"></i>
+additional_resource_links:
+  - label: Slack channel
+    note: "#wg-metrics"
+    url: https://softwareecosy-91t5745.slack.com/archives/C078FEAQ58S
 ---
 ## News
 

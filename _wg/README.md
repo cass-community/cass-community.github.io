@@ -47,6 +47,14 @@ The by-laws require that every working group have a charter. It should include:
 
 Input for this field should generally use the YAML syntax for a multi-line string, denoted by the pipe ("|") character on the line with the key. Each section should have a run-in header in italics, for example `*Purpose*`.
 
+*Relationship to other working groups* is not required by the by-laws, but can be used to capture specific relationships that some WGs might have (e.g., Impact Framework and Metrics).
+
+*Lifetime* will often be "Standing", but other durations may be appropriate in some cases
+
+*Expected membership* will often be "Open", which includes the possibility of people not affiliated with CASS member organizations joining.  However some WGs may have other memberships, such as "One representative from each CASS member organization."
+
+*Reporting expectations* are likely to be things like Quarterly, Seminannual, Annual, as appropriate to the topic.  The by-laws require annual review of working groups by the Steering Committee, so that would be the longest cycle.
+
 ## `charter_status` *(string)*
 
 The `charter_status` should be either "Provisional" or "Approved" and should also mention the date of that status.  For example `Provisional, since 2024-09-17`.
@@ -63,13 +71,22 @@ chair:
 
 The email is needed because the readers are advised to contact the chair(s) to learn more about or join the working group.
 
+## `meeting_schedule` *(string)*
+
+If the group is holding meetings on a regular basis, this field should be provided to let readers know.  It should be a simple text string describing the meeting time, date, and recurrence, as appropriate.  It probably needs to be quoted, since times generally include colons. For bi-weekly or 4-weekly (or similar) meetings, you should include a reference date from which the counting of weeks starts.
+
+**Important guidance:**
+
+* If your meeting schedule is bi-weekly or 4-weekly (or similar), include a reference date from which the counting of weeks starts.
+* If the meetings are held, but not on a regular basis, consider using "irregular" or "irregular monthly" or similar.
+* If the group plans to hold regular meetings, but hasn't scheduled them yet, consider using "to be announced" or commenting out this field.
+
 ## Resource link lists
 
-What we're calling "resource link lists" are generic data structure that makes it easy to express links to resources or artifacts in a simple, but flexible manner.  The workging group page currently supports two such lists:
-* `logistical_resources`
+What we're calling "resource link lists" are generic data structure that makes it easy to express links to resources or artifacts in a simple, but flexible manner.  The workging group page currently supports one such list:
 * `additional_resource_links`
 
-Each of these has fundamentally the same schema, they are are just labeled differently when rendered on the site.  The intent is to allow the contributor to identify resources that specifically target end-users of the product, or developers of the product, or more generic resources without such connotations.
+All resource link lists has fundamentally the same schema, they are are just labeled differently when rendered on the site.  The intent is to allow the contributor to identify resources that specifically target end-users of the product, or developers of the product, or more generic resources without such connotations.
 
 The general structure of a resource link list is as follows:
 
@@ -101,6 +118,12 @@ The most common use case for the `note` key is if you want to list, for example,
   * Link to a page of, e.g., releases or documentation, rather than a specific file.
   * If you have to link to something more specific, look for a generic "latest" version rather than linking to a specific version.  These are often provided for downloads and sometimes for documentation.
   * Note that the Read the Docs service generally provides a "latest" link, but you may have to select it to get the appropriate link to put in your product entry.
+  * For working groups, the most common additional resources might be links to Slack channels.  The convention for marking up these would be
+    ```yaml
+    - label: Slack channel
+      note: "#channel-name" # quotes required to override treatment as comment
+      url: https://...
+    ```
 
 ### Icons
 
@@ -112,11 +135,9 @@ To faciliate the consistent use of specific icons across the site, the file `_da
 
 The maintainers of the site are open to proposals for new mappings.
 
-## `logistical_resources` *(resource link)*
-
-It is not clear how useful this.  This is meant to be information about meetings and collaborative tools used by the working group.  But for security reasons, we don't want to publicize links.
-
 ## Content *(markdown)*
+
+OPTIONAL
 
 The content of the working group entry is completely up to the contributor.  This is the primary location where the working group would be expected to "report" outputs and accomplishments.
 
@@ -132,7 +153,11 @@ The content of the working group entry is completely up to the contributor.  Thi
 
 * The `description` *should not* end with a period.
 
-* Don't use the same URL with multiple labels. Instead, either pick the most appropriate (most specific) label that makes sense, and have one entry only, or, for example, if a webpage includes sections for both Downloads and Documentation, use the appropriate anchors to differentiate the URLs (e.g., <https://example.com/#downloads> and <https://example.com/#documentation>).
+* If your meeting schedule is bi-weekly or 4-weekly (or similar), include a reference date from which the counting of weeks starts.
+* If the meetings are held, but not on a regular basis, consider using "irregular" or "irregular monthly" or similar.
+* If the group plans to hold regular meetings, but hasn't scheduled them yet, consider using "to be announced" or commenting out this field.
+
+* Don't use the same URL with multiple labels in resource lists. Instead, either pick the most appropriate (most specific) label that makes sense, and have one entry only, or, for example, if a webpage includes sections for both Downloads and Documentation, use the appropriate anchors to differentiate the URLs (e.g., <https://example.com/#downloads> and <https://example.com/#documentation>).
 
 * Don't use the `Website` label for links to the code repository, use the `Repository` label instead.
 

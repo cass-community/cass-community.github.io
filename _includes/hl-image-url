@@ -1,0 +1,11 @@
+{% comment %}
+  hl-image-url
+
+  Given the name of a highlight image file, return the full relative URL.
+
+  Parameters
+    image: base name of image file (REQUIRED)
+    dir: directory name for image file (optional, default: site.highlight_image_dir)
+{% endcomment -%}
+{% assign dir = include.dir | default: site.highlight_image_dir -%}
+{{ include.image | prepend: dir | relative_url -}}

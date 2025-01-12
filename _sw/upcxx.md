@@ -83,7 +83,7 @@ additional_resource_links:
   - label: Website
     url: https://upcxx.lbl.gov
   - label: Repository
-    url: https://bitbucket.org/berkeleylab/upcxx.git
+    url: https://bitbucket.org/berkeleylab/upcxx/src/
   # - label: Downloads
   #   url: 
   - label: Documentation

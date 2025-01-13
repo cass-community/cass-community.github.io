@@ -44,7 +44,7 @@ cass_members:
   - S4PST
 description: A network-independent, high-performance communications middleware
 long_description: |
-    GASNet is a language-independent, networking middleware layer that
+    GASNet-EX (or simply "GASNet") is a language-independent, networking middleware layer that
     provides network-independent, high-performance communication primitives
     including Remote Memory Access (RMA) and Active Messages (AM). It has been
     used to implement parallel programming models and libraries such as UPC,

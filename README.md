@@ -13,7 +13,15 @@ If you're familiar with Jekyll and the GitHub pull request process, feel free to
 ## Content conventions
 
 * (Page) Titles should be in title case
+
 * All other headings should be in sentence case
+
+* Refer to "CASS member organizations", not "SSOs" or such 
+  * The phrase "software stewardship organization" should only be used in describing the type of projects/organizations that are members of CASS.
+
+* We must avoid the appearance that we are a "DOE-only" organization.  It happens that all of the founding members are DOE-funded projects, but we are open to any project/organization with a software stewardship mission compatible with our Charter joining.  Don't use DOE-specific or exclusive language.
+
+* When linking to papers and such, use DOIs wherever possible.
 
 ## Key data files and their usage
 

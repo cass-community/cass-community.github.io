@@ -15,13 +15,13 @@ excerpt: The Department of Defense (DoD) High-Performance Computing (HPC) Modern
 ---
 ## Overview
 
- In close collaboration with CASS and its member teams, the PESO Project collaborates to support and evolve a **scientific software ecosystem** comprised of a large number of advanced scientific libraries and tools delivered. Building on the legacy of the U.S. Exascale Computing Project, we are advancing a comprehensive, advanced scientific software ecosystem that empowers researchers, developers, and computing organizations and their progress in the fast-evolving world of artificial intelligence, modeling and simulation, and high-performance computing (HPC) for scientific discovery,
+ In close collaboration with CASS and its member teams, the PESO Project supports and evolves a **scientific software ecosystem** comprised of a large number of advanced scientific libraries and tools delivered. Building on the legacy of the U.S. Exascale Computing Project, we are advancing a comprehensive, advanced scientific software ecosystem that supports researchers, developers, and computing organizations and their progress in the fast-evolving world of artificial intelligence, modeling and simulation, and high-performance computing (HPC) for scientific discovery.
 
 {% capture img %}{% include hl-image-path image="2025-01-14-sw-ecosystem-power-images/powers-of-10.png" %}{% endcapture %}
 {% include figure popup=true image_path=img alt="Image showing a stack of software ecosystem benefits" caption="The benefits of a software ecosystem are multi-faceted and involve many technical and community advantages.  The value of the ecosystem is much more than just a collection of independent libraries and tools.  This diagram shows some of the most important benefits." %}
 
 ## The Scientific Software Ecosystem: Benefits and Scale
-Defining and refining what constitutes a scientific software ecosystem is an ongoing endeavor for PESO and CASS. At its essence, this ecosystem fosters collaboration, efficiency, and innovation across a broad spectrum of scientific computing activities. Here is a breakdown of its key benefits:
+Defining and refining what constitutes a scientific software ecosystem is an ongoing endeavor. At its essence, this ecosystem fosters collaboration, efficiency, and innovation across a broad spectrum of scientific computing activities. Here is a breakdown of its key benefits:
 
 1. Performance Portability: At the foundation of the ecosystem is its ability to simplify cross-platform development. Tools like Kokkos enable software teams to write code once and run it efficiently on diverse HPC systems, including GPUs from NVIDIA and AMD. This approach ensures scalability and adaptability, saving significant development time and effort.
 1. Accelerated Builds: Using the Spack/E4S software ecosystem, developers can leverage binary caches of previously compiled builds. This innovation reduces rebuild times by a factor of 10, transforming multi-hour builds into minutes.
@@ -31,5 +31,5 @@ Defining and refining what constitutes a scientific software ecosystem is an ong
 1. Code Savings and Quality Advancements: Leveraging established libraries and tools instead of creating custom code saves organizations hundreds of thousands or even millions of lines of code. This approach allows library and tool teams to focus on improving algorithms, interfaces, and software quality, driving scientific discovery forward.
 
 ## Going forward
-PESO and CASS efforts exemplify the transformative potential of a robust scientific software ecosystem. By fostering collaboration across agencies, organizations, and international partners, they are reshaping how scientific discovery is pursued. The projects underscore the value of shared tools, community-driven innovation, and a commitment to advancing high-end computing capabilities.
-As we continue to push the boundaries of scientific computing, PESO and CASS efforts represent a foundation for progress, ensuring that researchers and developers have the resources they need to tackle the most complex scientific challenges of our time.
+Our efforts exemplify the transformative potential of a robust scientific software ecosystem. By fostering collaboration across agencies, organizations, and international partners, they are reshaping how scientific discovery is pursued. Our approach underscores the value of shared tools, community-driven innovation, and a commitment to advancing high-end computing capabilities.
+As we continue to push the boundaries of scientific computing, our efforts represent a foundation for progress, ensuring that researchers and developers have the resources they need to tackle the most complex scientific challenges of our time.

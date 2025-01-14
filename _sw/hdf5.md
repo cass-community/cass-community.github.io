@@ -46,7 +46,7 @@ description: A parallel I/O library for high performance access to self-describi
 long_description: |
     HDF5 consists of a file format for storing HDF5 data, a data model for logically organizing and accessing HDF5 data from an application, and the software (libraries, language interfaces, and tools) for working with this format. An HDF5 file (an object in itself) can be thought of as a container (or group) that holds a variety of heterogeneous data objects (or datasets). The datasets can be images, tables, graphs, and even documents, such as PDF or Excel.
 target_audience: |
-    HDF5 is the most widely used parallel I/O library in the DOE SciDAC community. Science teams interested in a convenient parallel interface for storing and retrieving structured data, as well as passing data between codes, should consider HDF5.
+    Science teams interested in a convenient parallel interface for storing and retrieving structured data, as well as passing data between codes, should consider HDF5. It is the most widely used parallel I/O library in the DOE SciDAC community.
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only

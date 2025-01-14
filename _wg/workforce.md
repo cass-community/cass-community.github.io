@@ -1,11 +1,4 @@
 ---
-title: Workforce Group
-status: provisional
-author: "Lois McInnes"
----
-This page is for the Workforce Working Group
-
----
 name: Workforce
 #
 #   description: A short description of your working group.  The `description` is always shown immediately 

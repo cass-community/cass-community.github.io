@@ -46,7 +46,7 @@ description: An I/O library for high-performance parallel access to self-describ
 long_description: |
     PnetCDF is a parallel I/O library for accessing NetCDF files, a file format widely used in the climate research communities, among others. PnetCDF simplifies scientific data access and storage by providing a convenient interface for reading and writing multidimensional, typed datasets to POSIX files, along with supporting metadata. When used appropriately, PnetCDF can provide high performance I/O for the largest scale application runs.
 target_audience: |
-    PnetCDF is widely used in the climate and weather communities, as well as in the fusion energy sciences. Science teams interested in a convenient parallel interface for storing and retrieving structured data should consider PnetCDF.
+    Science teams interested in a convenient parallel interface for storing and retrieving structured data should consider PnetCDF. It is widely used in the climate and weather communities, as well as in the fusion energy sciences.
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only

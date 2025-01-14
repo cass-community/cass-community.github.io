@@ -60,10 +60,13 @@ og_image: /assets/images/cass-logo.png
 collections:
   wg:
     output: true
+    sort_by: name
   sw:
     output: true
+    sort_by: name
   highlights:
     output: true
+    sort_by: date
 
 defaults:
   # wg -- working groups

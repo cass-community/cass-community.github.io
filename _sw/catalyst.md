@@ -42,9 +42,9 @@ name: ParaView Catalyst
 area: datavis
 cass_members:
   - RAPIDS
-description: A tool for in situ data visualization at scale
+description: A tool for in situ data analysis and visualization at scale
 long_description: |
-    ParaView and Catalyst form the backbone of DOE’s production visualization at scale capability. Together they provide a set of C++ libraries for general-purpose visualization, a production visualization tool, and an in situ infrastructure. 
+    ParaView is part of the backbone of DOE’s production visualization at scale capability. It provides a set of C++ libraries for general-purpose visualization, a production visualization tool, and an in situ infrastructure. ParaView Catalyst is the in situ component of ParaView.  It enables the tight integration of data analysis and visualization capabilities with simulation codes. This is achieved by linking the simulation code with the Catalyst library which executes ParaView pipelines during the simulation execution.
 target_audience: |
     Science teams interested in integrating robust scientific visualization into their scientific workflows should consider ParaView Catalyst, which is leveraged across numerous projects in the DOE SciDAC community.
 #
@@ -77,11 +77,7 @@ spack_name: libcatalyst
 
 additional_resource_links:
   - label: Website
-    url: https://www.paraview.org/Wiki/ParaView/Catalyst/Overview
+    url: https://docs.paraview.org/en/latest/Catalyst/index.html
   - label: Repository
-    url: https://gitlab.kitware.com/paraview/catalyst
-  - label: Downloads
-    url: https://gitlab.kitware.com/paraview/catalyst/-/releases
-  - label: Documentation
-    url: https://catalyst-in-situ.readthedocs.io/en/latest/index.html
+    url: https://gitlab.kitware.com/paraview/paraview
 ---

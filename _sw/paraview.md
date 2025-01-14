@@ -38,19 +38,15 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: Ascent
-area: dataviz
+name: ParaView
+area: datavis
 cass_members:
   - RAPIDS
-description: A featherweight in situ visualization and analysis tool designed to be integrated with applications to reduce I/O overhead
+description: A tool for data analysis and visualization at scale
 long_description: |
-    Ascent is an easy-to-use flyweight in situ visualization and analysis library for HPC simulations. It supports making pictures, 
-    transforming data, and capturing data for use outside of ascent. It provides a simple infrastructure to integrate custom analysis 
-    via C++, C, Python, and Fortran APIs.
+    ParaView is part of the backbone of DOE’s production visualization at scale capability. It provides a set of C++ libraries for general-purpose visualization, a production visualization tool, and an in situ infrastructure. The end-user tool and the scripting interface enables the interactive exploration of scientific datasets at large scales. ParaView can be run on many different platforms and scales ranging from laptops to supercomputers. Its client-server architecture supports analysis on large systems while interacting on local resources.
 target_audience: |
-    Ascent focuses on ease of use and reducing integration burden for simulation code teams wanting to enable in situ visualization
-    and analysis. Ascent is integrated with a number of DOE applications including WarpX, Nyx and AMR-Wind. It is deployed at all 
-    major DOE compute facilities and are used daily for analysis and visualization.
+    Scientists and science teams interested in the exploration of scientific datasets of various types, especially 2D and 3D spatial datasets. ParaView is widely used for applications ranging from fusion science to material science.
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
@@ -60,8 +56,8 @@ target_audience: |
 #   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
-e4s_product: ASCENT
-spack_name: ascent
+e4s_product: paraview
+spack_name: paraview
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   This is an OPTIONAL list of resource links that you can provide to make your catalog entry more useful.
@@ -81,10 +77,11 @@ spack_name: ascent
 
 additional_resource_links:
   - label: Website
-    url: https://ascent.readthedocs.io/en/latest/
+    url: https://paraview.org
   - label: Repository
-    url: https://github.com/Alpine-DAV/ascent
+    url: https://gitlab.kitware.com/paraview/paraview
   - label: Downloads
-    url: https://github.com/Alpine-DAV/ascent/releases 
+    url: https://www.paraview.org/download/
+  - label: Documentation
+    url: https://docs.paraview.org/en/latest/
 ---
-

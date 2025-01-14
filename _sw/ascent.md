@@ -86,7 +86,5 @@ additional_resource_links:
     url: https://github.com/Alpine-DAV/ascent
   - label: Downloads
     url: https://github.com/Alpine-DAV/ascent/releases 
-  - label: Documentation
-    url: https://ascent.readthedocs.io/en/latest/
 ---
 

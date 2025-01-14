@@ -15,20 +15,13 @@ excerpt: The Department of Defense (DoD) High-Performance Computing (HPC) Modern
 ---
 ## Overview
 
-In the fast-evolving world of artificial intelligence, modeling and simulation, and high-performance computing (HPC) for scientific discovery, the PESO Project in close collaboration with CASS and its member teams produce a large number of advanced scientific libraries and tools delivered as part of a **scientific software ecosystem**. Building on the legacy of the U.S. Exascale Computing Project, PESO, in collaboration with CASS and its other members, are advancing a comprehensive, advanced scientific software ecosystem that empowers researchers, developers, and organizations alike.
+ In close collaboration with CASS and its member teams, the PESO Project collaborates to support and evolve a **scientific software ecosystem** comprised of a large number of advanced scientific libraries and tools delivered. Building on the legacy of the U.S. Exascale Computing Project, we are advancing a comprehensive, advanced scientific software ecosystem that empowers researchers, developers, and computing organizations and their progress in the fast-evolving world of artificial intelligence, modeling and simulation, and high-performance computing (HPC) for scientific discovery,
 
 {% capture img %}{% include hl-image-path image="2025-01-14-sw-ecosystem-power-images/powers-of-10.png" %}{% endcapture %}
 {% include figure popup=true image_path=img alt="Image showing a stack of software ecosystem benefits" caption="The benefits of a software ecosystem are multi-faceted and involve many technical and community advantages.  The value of the ecosystem is much more than just a collection of independent libraries and tools.  This diagram shows some of the most important benefits." %}
 
-## What is PESO and its relationship to CASS?
-The PESO Project is dedicated to sponsoring and evolving an ecosystem approach to developing and using scientific software libraries and tools. These resources are particularly vital to the U.S. Department of Energy (DOE) Advanced Scientific Computing Research Office and its leadership computing facilities.
-
-PESO has a broad range of engagements with CASS.  PESO funds the efforts of the current CASS chair (David Bernholdt) and vice-chair (Terry Turton).  PESO team members lead many of the CASS working groups. Finally, the PESO team includes many people who are also funded by other CASS members, fostering communication across member teams. 
-
-The impact of PESO and CASS extend far beyond DOE. Our efforts align with the needs of numerous U.S. agencies, including the National Science Foundation (NSF) Computing Facilities, the Department of Defense High-Performance Computing Modernization Program, and the NOAA Weather and Climate Communities. Moreover, CASS and PESO collaborate with HPC system vendors and an international community of scientists, creating a network of shared innovation and progress.
-
 ## The Scientific Software Ecosystem: Benefits and Scale
-Defining and refining what constitutes a scientific software ecosystem is an ongoing endeavor for PESO and CASS. At its essence, this ecosystem fosters collaboration, efficiency, and innovation across a broad spectrum of scientific computing activities. Here’s a breakdown of its key benefits:
+Defining and refining what constitutes a scientific software ecosystem is an ongoing endeavor for PESO and CASS. At its essence, this ecosystem fosters collaboration, efficiency, and innovation across a broad spectrum of scientific computing activities. Here is a breakdown of its key benefits:
 
 1. Performance Portability: At the foundation of the ecosystem is its ability to simplify cross-platform development. Tools like Kokkos enable software teams to write code once and run it efficiently on diverse HPC systems, including GPUs from NVIDIA and AMD. This approach ensures scalability and adaptability, saving significant development time and effort.
 1. Accelerated Builds: Using the Spack/E4S software ecosystem, developers can leverage binary caches of previously compiled builds. This innovation reduces rebuild times by a factor of 10, transforming multi-hour builds into minutes.

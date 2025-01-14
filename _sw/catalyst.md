@@ -80,8 +80,4 @@ additional_resource_links:
     url: https://docs.paraview.org/en/latest/Catalyst/index.html
   - label: Repository
     url: https://gitlab.kitware.com/paraview/paraview
-  - label: Downloads
-    url: https://gitlab.kitware.com/paraview/paraview
-  - label: Documentation
-    url: https://docs.paraview.org/en/latest/Catalyst/index.html
 ---

@@ -50,6 +50,9 @@ long_description: |
     models for data and execution that can be applied to a variety of algorithms across many 
     different processor architectures.
 target_audience: |
+    Developers of visualization tools and workflows that need to support parallelism on
+    many core architectures. Researchers and analysists that want to develop data parallel
+    algorithms in a performance portable way.
     VTK-m is broadly used across the DOE HPC community, most often employed through its 
     integration into the ParaView, ParaView Catalyst, and Visit analysis and visualization 
     packages.

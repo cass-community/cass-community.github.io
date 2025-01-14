@@ -38,15 +38,15 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: ParaView Catalyst
+name: ParaView
 area: datavis
 cass_members:
   - RAPIDS
-description: A tool for in situ data analysis and visualization at scale
+description: A tool for data analysis and visualization at scale
 long_description: |
-    ParaView is part of the backbone of DOE’s production visualization at scale capability. It provides a set of C++ libraries for general-purpose visualization, a production visualization tool, and an in situ infrastructure. ParaView Catalyst is the in situ component of ParaView.  It enables the tight integration of data analysis and visualization capabilities with simulation codes. This is achieved by linking the simulation code with the Catalyst library which executes ParaView pipelines during the simulation execution.
+    ParaView is part of the backbone of DOE’s production visualization at scale capability. It provides a set of C++ libraries for general-purpose visualization, a production visualization tool, and an in situ infrastructure. The end-user tool and the scripting interface enables the interactive exploration of scientific datasets at large scales. ParaView can be run on many different platforms and scales ranging from laptops to supercomputers. Its client-server architecture supports analysis on large systems while interacting on local resources.
 target_audience: |
-    Science teams interested in integrating robust scientific visualization into their scientific workflows should consider ParaView Catalyst, which is leveraged across numerous projects in the DOE SciDAC community.
+    Scientists and science teams interested in the exploration of scientific datasets of various types, especially 2D and 3D spatial datasets. ParaView is widely used for applications ranging from fusion science to material science.
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
@@ -57,7 +57,7 @@ target_audience: |
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
 e4s_product: paraview
-spack_name: libcatalyst
+spack_name: paraview
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   This is an OPTIONAL list of resource links that you can provide to make your catalog entry more useful.
@@ -77,11 +77,11 @@ spack_name: libcatalyst
 
 additional_resource_links:
   - label: Website
-    url: https://docs.paraview.org/en/latest/Catalyst/index.html
+    url: https://paraview.org
   - label: Repository
     url: https://gitlab.kitware.com/paraview/paraview
   - label: Downloads
-    url: https://gitlab.kitware.com/paraview/paraview
+    url: https://www.paraview.org/download/
   - label: Documentation
-    url: https://docs.paraview.org/en/latest/Catalyst/index.html
+    url: https://docs.paraview.org/en/latest/
 ---

@@ -17,10 +17,11 @@ excerpt: The Department of Defense (DoD) High-Performance Computing (HPC) Modern
 
  In close collaboration with CASS and its member teams, the PESO Project supports and evolves a **scientific software ecosystem** comprised of a large number of advanced scientific libraries and tools delivered. Building on the legacy of the U.S. Exascale Computing Project, we are advancing a comprehensive, advanced scientific software ecosystem that supports researchers, developers, and computing organizations and their progress in the fast-evolving world of artificial intelligence, modeling and simulation, and high-performance computing (HPC) for scientific discovery.
 
+## The Scientific Software Ecosystem: Benefits and Scale
+
 {% capture img %}{% include hl-image-path image="2025-01-14-sw-ecosystem-power-images/powers-of-10.png" %}{% endcapture %}
 {% include figure class="align-right" width="60%" popup=true image_path=img alt="Image showing a stack of software ecosystem benefits" caption="The benefits of a software ecosystem are multi-faceted and involve many technical and community advantages.  The value of the ecosystem is much more than just a collection of independent libraries and tools.  This diagram shows some of the most important benefits." %}
 
-## The Scientific Software Ecosystem: Benefits and Scale
 Defining and refining what constitutes a scientific software ecosystem is an ongoing endeavor. At its essence, this ecosystem fosters collaboration, efficiency, and innovation across a broad spectrum of scientific computing activities. Here is a breakdown of its key benefits:
 
 1. **Performance Portability:** At the foundation of the ecosystem is its ability to simplify cross-platform development. Tools like Kokkos enable software teams to write code once and run it efficiently on diverse HPC systems, including GPUs from NVIDIA and AMD. This approach ensures scalability and adaptability, saving significant development time and effort.

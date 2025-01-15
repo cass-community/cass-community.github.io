@@ -1,0 +1,25 @@
+{% comment %}
+  CHANGES TO DEFAULT FIGURE INCLUDE
+  * Add separate width argument, which is used as a style attribute.
+      This will get around the fact that the CSS has figcaption taking 100% of the width regardless.
+  * Extend to support two images
+      Parameters: popup{1,2}, image_path{1,2}, alt{1,2}, width{1,2}
+      class, width, caption
+{% endcomment %}
+<figure class="{{ include.class }}" {% if include.width %}style="width: {{ include.width }}"{% endif %}>
+  {%- if include.popup1 -%}<a href="{{ include.image_path1 | relative_url }}" class="image-popup"{% if include.caption %} title="{{ include.caption | markdownify | strip_html }}"{% endif %}>{%- endif -%}
+  <img src="{{ include.image_path1 | relative_url }}"
+       alt="{% if include.alt1 %}{{ include.alt1 | escape_once }}{% endif %}"
+       {% if include.width1 %}style="width: {{ include.width1 }}"{% endif %}>
+  {%- if include.popup1 -%}</a>{%- endif -%}
+  {%- if include.popup2 -%}<a href="{{ include.image_path2 | relative_url }}" class="image-popup"{% if include.caption %} title="{{ include.caption | markdownify | strip_html }}"{% endif %}>{%- endif -%}
+    <img src="{{ include.image_path2 | relative_url }}"
+         alt="{% if include.alt2 %}{{ include.alt2 | escape_once }}{% endif %}"
+         {% if include.width2 %}style="width: {{ include.width2 }}"{% endif %}>
+    {%- if include.popup2 -%}</a>{%- endif -%}
+  {%- if include.caption -%}
+    <figcaption>
+      {{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}
+    </figcaption>
+  {%- endif -%}
+</figure>

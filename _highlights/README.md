@@ -47,6 +47,7 @@ If you're working on the rendering of the site, the top-level [README.md](../REA
 ### Software mentions
 
 * When mentioning products included in the CASS software product catalog, the mention in the body text should be **bolded** and the package name should be included in the `software_mentioned` list in the frontmatter of the highlight.  The body text should *not* be linked to anything.
+* Ideally, the `sofware_mentioned` list should be in the same order that the products are named in the body.
 * Mentions of software products *not* included in the CASS software product catalog should generally be minimized.  Where present, they should *not* be bolded.  Nor should they be linked, unless there is a strong reason.
 
 ### CASS member mentions
@@ -65,9 +66,10 @@ If you're working on the rendering of the site, the top-level [README.md](../REA
   * Images should generally be science-related
   * They must include an explanatory caption
   * Image acknowledgements should be included (at the end of the caption) where requested by the image source
-  * Where feasible, they should be implemented in the source with the `figure` or `figure2` include function.  This will ensure consistency of presentation.
-  * Figures should generally be sized to cover *at most* 50% of the textwidth.  The `figure` and figure2` functions include a "popup" magnification capability that allows readers to get a closer look at the image if desired.
-  * Figures should use the `align-right` class.
+* Where feasible, they should be implemented in the source with the `figure` or `figure2` include function.  This will ensure consistency of presentation.
+* Figures should generally be sized to cover *at most* 50% of the textwidth.  The `figure` and figure2` functions include a "popup" magnification capability that allows readers to get a closer look at the image if desired.
+* Figures should use the `align-right` class.  The body text will wrap around the left side of the figure.
+* In the source, figures that are not full-width generally need to be positioned *before* the text that is related to them for the positioning to work out optimally.
 
 Style issues in question:
 

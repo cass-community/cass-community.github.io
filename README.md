@@ -12,9 +12,13 @@ If you're familiar with Jekyll and the GitHub pull request process, feel free to
 
 ## Content conventions
 
-* (Page) Titles should be in title case
+* (Page) Titles (h1) should be in title case
 
-* All other headings should be in sentence case
+* All other headings (h2+) should be in sentence case
+
+* Heading levels should be used in sequence (e.g., h4 inside h3 inside h2).  Don't skip levels because you don't like how a heading level is rendered.  This impedes accessibility.
+
+* Generally avoid going deep in headings unless there is a strong reason.  If you think you need h4 or higher, give it some more thought.
 
 * Refer to "CASS member organizations", not "SSOs" or such 
   * The phrase "software stewardship organization" should only be used in describing the type of projects/organizations that are members of CASS.
@@ -22,6 +26,7 @@ If you're familiar with Jekyll and the GitHub pull request process, feel free to
 * We must avoid the appearance that we are a "DOE-only" organization.  It happens that all of the founding members are DOE-funded projects, but we are open to any project/organization with a software stewardship mission compatible with our Charter joining.  Don't use DOE-specific or exclusive language.
 
 * When linking to papers and such, use DOIs wherever possible.
+  * Note that many publisher sites list the DOI and provide a link, but often that link is to a publisher site, not to the DOI resolver (`https://doi.org/`).  We should only link to the DOI resolver site.
 
 ## Key data files and their usage
 

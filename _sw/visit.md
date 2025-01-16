@@ -50,8 +50,7 @@ long_description: |
     interface is often run locally on a Windows, Linux, or macOS desktop computer while its compute engine component runs in
     parallel on a remote computer. VisIt’s distributed architecture allows VisIt to visualize simulation data where it was
     generated, eliminating the need to move the data to a visualization server. VisIt can be controlled by its Graphical User
-    Interface (GUI), through the Python and Java programming languages, or from a custom user interface you develop yourself. More
-    information about VisIt can be found online at https://visit.llnl.gov/.
+    Interface (GUI), through the Python and Java programming languages, or from a custom user interface you develop yourself.
 target_audience: |
     VisIt is a scalable production visualization and analysis tool widely used throughout DOE. It is designed to support visualization at scale.
 #

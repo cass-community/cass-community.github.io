@@ -1,5 +1,5 @@
 ---
-title: Advancing Scientific Discovery - The Value of a Scientific Software Ecosystem
+title: The Value of a Scientific Software Ecosystem in Advancing Scientific Discovery
 date: 2025-01-14
 teaser: 2025-01-14-powers-of-10-transparent.png
 software_mentioned:
@@ -19,12 +19,12 @@ cass_members:
 
 Defining and refining what constitutes a scientific software ecosystem is an ongoing endeavor. At its essence, this ecosystem fosters collaboration, efficiency, and innovation across a broad spectrum of scientific computing activities. Here is a breakdown of its key benefits:
 
-1. **Performance portability** At the foundation of the ecosystem is its ability to simplify cross-platform development. Tools like **Kokkos** enable software teams to write code once and run it efficiently on diverse HPC systems, including GPUs from NVIDIA and AMD. This approach ensures scalability and adaptability, saving significant development time and effort.
-1. **Accelerated builds:** Using the **Spack/E4S** software ecosystem, developers can leverage binary caches of previously compiled builds. This innovation reduces rebuild times by a factor of 10, transforming multi-hour builds into minutes.
-1. **GPU-accelerated performance:** The shift to GPU-enabled computing has revolutionized scientific applications. Our ecosystem, built on lessons from the Exascale Computing Project, facilitates application reconstruction to harness GPU power, delivering 100x performance improvements compared to traditional methods.
-1. **Community collaboration:** A vibrant ecosystem benefits from the collective knowledge of its participants. With over 1,000 code teams contributing and utilizing libraries and tools, the ecosystem fosters knowledge sharing, innovation, and reduced redundancy.
-1. **Broad engagement:** Beyond developers, the ecosystem supports a diverse community engaged in training, software improvement, and community building. This collaboration ensures the preparation of the next generation of scientific software developers and users, expanding the ecosystem’s impact.
-1. **Code savings and quality advancements:** Leveraging established libraries and tools instead of creating custom code saves organizations hundreds of thousands or even millions of lines of code. This approach allows library and tool teams to focus on improving algorithms, interfaces, and software quality, driving scientific discovery forward.
+- **Performance portability** At the foundation of the ecosystem is its ability to simplify cross-platform development. Tools like **Kokkos** enable software teams to write code once and run it efficiently on diverse HPC systems, including GPUs from NVIDIA and AMD. This approach ensures scalability and adaptability, saving significant development time and effort.
+- **Accelerated builds:** Using the **Spack/E4S** software ecosystem, developers can leverage binary caches of previously compiled builds. This innovation reduces rebuild times by a factor of 10, transforming multi-hour builds into minutes.
+- **GPU-accelerated performance:** The shift to GPU-enabled computing has revolutionized scientific applications. Our ecosystem, built on lessons from the Exascale Computing Project, facilitates application reconstruction to harness GPU power, delivering 100x performance improvements compared to traditional methods.
+- **Community collaboration:** A vibrant ecosystem benefits from the collective knowledge of its participants. With over 1,000 code teams contributing and utilizing libraries and tools, the ecosystem fosters knowledge sharing, innovation, and reduced redundancy.
+- **Broad engagement:** Beyond developers, the ecosystem supports a diverse community engaged in training, software improvement, and community building. This collaboration ensures the preparation of the next generation of scientific software developers and users, expanding the ecosystem’s impact.
+- **Code savings and quality advancements:** Leveraging established libraries and tools instead of creating custom code saves organizations hundreds of thousands or even millions of lines of code. This approach allows library and tool teams to focus on improving algorithms, interfaces, and software quality, driving scientific discovery forward.
 
 ## Going forward
 

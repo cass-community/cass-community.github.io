@@ -47,8 +47,8 @@ cass_members:
 description:
 long_description: |
     OpenACC is a directive-based programming model that targets both CPUs and accelerators with a goal to either run a given code on multicore platforms or to offload portions of the code to accelerators. 
-    The project focsues on building validation and verification testsuites to test the validity of the implementations, conformance to the standard specification and provide feedback to the standard organization.  
-    to accelerators.
+    The project focsues on building validation and verification testsuites to test the validity of the implementations, conformance to the standard specification and provide feedback to the standard organization.  We have also been working on using LLMs to automate tests generation. 
+   
 target_audience: |
     All software developers who would develop compiler implementations and all application developers who would use the programming  model
 

@@ -100,7 +100,7 @@ additional_resource_links:
   - label: Repository
     url: https://gitlab.com/hpctoolkit/hpctoolkit
   - label: Downloads
-    url: https://gitlab.com/hpctoolkit/hpctoolkit
+    url: https://hpctoolkit.org/software.html
   - label: Documentation
-    url: https://hpctoolkit.org/manual/HPCToolkit-users-manual.pdf
+    url: https://hpctoolkit.org/documentation.html
 ---

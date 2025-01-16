@@ -50,7 +50,9 @@ long_description: |
     elements, their types, and how you wish to process them this run, the routines in the host code 
     (either Fortran or C) can transparently change how they process the data.
 target_audience: |
-    ADIOS is widely used in the fusion energy sciences, as well as in the high energy physics and environmental research communities. Science teams interested in a convenient parallel interface for storing and retrieving structured data, as well as passing data between codes, should consider ADIOS.
+    Science teams interested in a convenient parallel interface for storing and retrieving structured data, as well as passing data between codes, should consider ADIOS. It is widely used in the fusion energy sciences, as well as in the high energy physics and environmental research communities.
+
+
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only

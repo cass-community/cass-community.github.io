@@ -46,8 +46,7 @@ cass_members:
     - S4PST 
 description:
 long_description: |
-    OpenMP is a directive-based programming model that targets both CPUs and accelerators with a goal to either run a given code on multicore platforms or to offload portions of the code to accelerators. The project works closely with LLVM to enable compiler implementations but also build validation and verification testsuites to test the validity of the implementations, conformance to the standard specification and provide feedback to the standard organization.  
-    to accelerators
+    OpenMP is a directive-based programming model that targets both CPUs and accelerators with a goal to either run a given code on multicore platforms or to offload portions of the code to accelerators. The project builds validation and verification testsuites to test the validity of the implementations, conformance to the standard specification and provide feedback to the standard organization.  We have been also exploring the usability of LLMs for automating tests generation. 
 target_audience: |
     All software developers who would develop compiler implementations and all application developers who would use the programming  model
 

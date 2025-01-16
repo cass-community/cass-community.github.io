@@ -13,50 +13,37 @@ header:
 #  overlay_filter: "0.60"
   overlay_filter: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
   overlay_image: /assets/images/warpx-transparent.png
+#
+# These are the "featured stories" at the top of the page
+#
+featured_stories:
+  - /highlights/2025-01-10-warpx
+  - /highlights/2025-01-14-dod-hpc
+  - /highlights/2025-01-14-sw-ecosystem-power
 ---
-{% assign featured_highlights = "" | split: "," %}
-
 We *do* science (computer science, applied math), and our science enables *other* science (fundamental research).  We want to present some examples where we can talk about the science we're doing (on the computing side), and how it enables advances in fundamental research.  Preferrably examples where we can tie back to multiple software products.  And/or advances on the computing side enabling advances in multiple areas of fundamental research.
 
+{% if page.featured_stories %}
 ## Featured stories
 
-{% assign url = "/highlights/2025-01-02-warpx" %}
-{% assign query = "item.url contains '" | append: url | append: "'" %}
+{% for s in page.featured_stories %}
+{% assign query = "item.url contains '" | append: s | append: "'" %}
 {% assign hl = site[page.collection] | where_exp: "item", query %}
-{% assign featured_highlights = featured_highlights | push: hl[0].title %}
-
+{% assign teaser = hl[0].teaser | prepend: "/assets/highlights/" | relative_url %}
 ### {{ hl[0].title }}
 
-![Teaser image]({{ hl[0].teaser | prepend: "/assets/highlights/" | relative_url }}){: .align-right width="25%" }
+<a href="{{ teaser }}" class="image-popup"><img src="{{ teaser }}" class="align-right" style="width: 15%"></a>
+{{ hl[0].excerpt }} 
 
-*Summary text here*
-
-[Learn more...]({{ url | relative_url }}){: .btn .btn--inverse}
-
-### WDMApp (fusion)
-
-[Learn more...](#){: .btn .btn--inverse} (currently non-functional)
-
-### EXAALT (molecular dynamics)
-
-[Learn more...](#){: .btn .btn--inverse} (currently non-functional)
-
-### Combustion-PELE
-
-[Learn more...](#){: .btn .btn--inverse} (currently non-functional)
-
-### Industry
-
-[Learn more...](#){: .btn .btn--inverse} (currently non-functional)
-
-### Other government agencies
-
-[Learn more...](#){: .btn .btn--inverse} (currently non-functional)
+[Learn more...]({{ hl[0].url | relative_url }}){: .btn .btn--inverse .align-left}
+<br>
+{% endfor %}
 
 <hr>
+{% endif %}
 
 ## Complete list of highlights
 {% comment %}
-  Need to filter the featured_highlights out of the collection
-  or else change this to "All highlights"
+  Should we filter the featured_highlights out of the collection?
+  Which would make the title Additional highlights
 {% endcomment %}

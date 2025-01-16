@@ -1,7 +1,7 @@
 ---
 title: The Value of a Scientific Software Ecosystem in Advancing Scientific Discovery
 date: 2025-01-14
-teaser: 2025-01-14-powers-of-10-transparent.png
+teaser: 2025-01-14-sw-ecosystem-power-images/powers-of-10-transparent.png
 software_mentioned:
   - Kokkos
   - Spack

@@ -40,7 +40,7 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: OpenMP 
+name: OpenMP Validation and Verification Testsuite
 area:
 cass_members:
     - S4PST 
@@ -84,13 +84,13 @@ spack_name:
 #
 # additional_resource_links:
 #   - label: Website
-#     url: 
+#     url: https://crpl.cis.udel.edu/ompvv/
 #   - label: Repository
-#     url: 
+#     url: https://github.com/OpenMP-Validation-and-Verification/OpenMP_VV
 #   - label: Downloads
 #     url: 
 #   - label: Documentation
-#     url: 
+#     url: https://crpl.cis.udel.edu/ompvv/documentation/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

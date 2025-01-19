@@ -1,6 +1,7 @@
 ---
 title: Consortium for the Advancement of Scientific Software
-excerpt:  A federation of member organizations dedicated to the stewardship and advancement of the scientific software ecosystem
+#excerpt:  A federation of member organizations dedicated to the stewardship and advancement of the scientific software ecosystem
+excerpt: Helping steward high-performance parallel software that enables computational science and engineering applications which are advancing scientific discovery
 layout: splash # Default: home, but that includes a list of posts
 classes: wide
 header:

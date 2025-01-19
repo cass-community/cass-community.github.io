@@ -40,15 +40,15 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: OpenMP Validation and Verification Testsuite
-area:
+name: OpenMP Validation and Verification Test Suite
+area: pmr
 cass_members:
     - S4PST 
-description:
+description: A test suite for OpenMP implementations
 long_description: |
-    OpenMP is a directive-based programming model that targets both CPUs and accelerators with a goal to either run a given code on multicore platforms or to offload portions of the code to accelerators. The project builds validation and verification testsuites to test the validity of the implementations, conformance to the standard specification and provide feedback to the standard organization.  We have been also exploring the usability of LLMs for automating tests generation. 
+    OpenMP is a directive-based programming model that targets both CPUs and accelerators with a goal to either run a given code on multicore platforms or to offload portions of the code to accelerators. The project builds validation and verification test suites to test the validity of the implementations, conformance to the standard specification and provide feedback to the standard organization.  We have been also exploring the usability of LLMs for automating tests generation. 
 target_audience: |
-    All software developers who would develop compiler implementations and all application developers who would use the programming  model
+    Developers implementing OpenMP compilers, and application developers seeking a better understanding of the OpenMP implementations they are using.
 
 #
 # PACKAGING INFORMATION
@@ -82,15 +82,15 @@ spack_name:
 #
 # For additional information, see _sw/README.md.
 #
-# additional_resource_links:
-#   - label: Website
-#     url: https://crpl.cis.udel.edu/ompvv/
-#   - label: Repository
-#     url: https://github.com/OpenMP-Validation-and-Verification/OpenMP_VV
+additional_resource_links:
+  - label: Website
+    url: https://crpl.cis.udel.edu/ompvv/
+  - label: Repository
+    url: https://github.com/OpenMP-Validation-and-Verification/OpenMP_VV
 #   - label: Downloads
 #     url: 
-#   - label: Documentation
-#     url: https://crpl.cis.udel.edu/ompvv/documentation/
+  - label: Documentation
+    url: https://crpl.cis.udel.edu/ompvv/documentation/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

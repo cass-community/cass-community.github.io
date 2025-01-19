@@ -41,17 +41,16 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: OpenACC Verification and Validation Test Suite 
-area:
+area: pmr
 cass_members:
     - S4PST 
-description:
+description: A test suite for OpenACC implementations
 long_description: |
     OpenACC is a directive-based programming model that targets both CPUs and accelerators with a goal to either run a given code on multicore platforms or to offload portions of the code to accelerators. 
-    The project focsues on building validation and verification testsuites to test the validity of the implementations, conformance to the standard specification and provide feedback to the standard organization.  We have also been working on using LLMs to automate tests generation. 
+    The project focuses on building validation and verification test suites to test the validity of the implementations, conformance to the standard specification and provide feedback to the standard organization.  We have also been working on using LLMs to automate tests generation. 
    
 target_audience: |
-    All software developers who would develop compiler implementations and all application developers who would use the programming  model
-
+    Developers implementing OpenACC compilers, and application developers seeking a better understanding of the OpenACC implementations they are using.
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
@@ -64,8 +63,8 @@ target_audience: |
 #                       - package2
 #                       - package3
 #
-e4s_product: 
-spack_name:  
+# e4s_product: 
+# spack_name:  
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These are OPTIONAL lists of resource links that you can provide to make your catalog entry more useful.
@@ -84,15 +83,15 @@ spack_name:
 #
 # For additional information, see _sw/README.md.
 #
-# additional_resource_links:
-#   - label: Website
-#     url: https://crpl.cis.udel.edu/oaccvv/
-#   - label: Repository
-#     url: https://crpl.cis.udel.edu/oaccvv/github/
+additional_resource_links:
+  - label: Website
+    url: https://crpl.cis.udel.edu/oaccvv/
+  - label: Repository
+    url: https://github.com/OpenACCUserGroup/OpenACCV-V
 #   - label: Downloads
 #     url: 
-#   - label: Documentation
-#     url: https://crpl.cis.udel.edu/oaccvv/github/
+  - label: Documentation
+    url: https://crpl.cis.udel.edu/oaccvv/github/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

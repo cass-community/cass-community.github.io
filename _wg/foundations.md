@@ -7,7 +7,7 @@ name: Foundations
 #   sentence in the grammatical sense.  Key points: The `description` should *not* repeat the `name`, it 
 #   should be in sentence case, and it should *not* end with a period.
 # 
-description: An open forum for projects to meet and share experiences with joining or membership in an open-source software foundation (e.g., NumFOCUS, High Performance Software Foundation, etc.)
+description: An open forum for projects to meet and share experiences with joining or membership in an open-source software foundation
 #
 status: Active # Values can be "Active" or "Retired"
 status_date: 2024-10-30 # The date the group went active or retired

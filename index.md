@@ -35,6 +35,6 @@ CASS operates on the voluntary contributions of effort and resources by its memb
 There are many ways individuals or organizations can work with CASS to help steward the scientific software ecosystem.  DOE sponsorship is <em>not</em> required.
 [Learn more...]({{ "/about/#join-us" | relative_url }}){: .btn .btn--inverse .align-right}
 
-## Support
+## Sponsors
 {% capture funding %}{% include funding-ack-content em=false %}{% endcapture %}
 {{ funding | strip | markdownify }}

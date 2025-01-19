@@ -29,3 +29,12 @@ In addition to embodying advanced research and development in computer science, 
 
 CASS operates on the voluntary contributions of effort and resources by its member organizations and others in the community. Working groups are the primary means by which we organize members of the CASS community to advance our stewardship efforts. Most CASS working groups welcome public participation.
 [Learn more...]({{ "/working-groups/" | relative_url }}){: .btn .btn--inverse .align-right}
+
+## Join us!
+
+There are many ways individuals or organizations can work with CASS to help steward the scientific software ecosystem.  DOE sponsorship is <em>not</em> required.
+[Learn more...]({{ "/about/#join-us" | relative_url }}){: .btn .btn--inverse .align-right}
+
+## Support
+{% capture funding %}{% include funding-ack-content em=false %}{% endcapture %}
+{{ funding | strip | markdownify }}

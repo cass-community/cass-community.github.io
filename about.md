@@ -81,9 +81,8 @@ Most of the work of CASS is carried out within **[Working Groups]({{ "/working-g
 
 CASS operates on in-kind contributions of effort and other resources from member organizations.  As such, it has no budget of its own, and no direct sponsors.  
 
-Member organizations, of course, have their own funding sources.  The current members of CASS are pleased to acknowledge support from the [U.S. Department of Energy](https://www.energy.gov/) (DOE) [Office of Advanced Scientific Computing Research](https://www.energy.gov/science/ascr/advanced-scientific-computing-research) (ASCR) through the Next-Generation Scientific Software Technologies (NGSST) and [Scientific Discovery through Advanced Computing](https://www.scidac.gov/) (SciDAC) programs. 
-
-![DOE Office of Science logo]({{ "/assets/images/doe-sc-logo.png" | relative_url }}){: .align-center width="33%"}
+{% capture funding %}{% include funding-ack-content logos=true %}{% endcapture %}
+Member organizations, of course, have their own funding sources. {{ funding | strip }}
 
 ## Targeted scientific software ecosystem
 

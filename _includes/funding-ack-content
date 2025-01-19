@@ -1,0 +1,9 @@
+{% comment %}
+  Text for the funding acknowledgements of CASS members, so that we can use the same text in multiple places
+{% endcomment -%}
+{% assign logos = include.logos | default: false -%}
+{% assign em = include.em | default: false -%}
+{% if em %}*{% endif -%}The current members of CASS are pleased to acknowledge support from the [U.S. Department of Energy](https://www.energy.gov/) (DOE) [Office of Advanced Scientific Computing Research](https://www.energy.gov/science/ascr/advanced-scientific-computing-research) (ASCR) through the Next-Generation Scientific Software Technologies (NGSST) and [Scientific Discovery through Advanced Computing](https://www.scidac.gov/) (SciDAC) programs.{% if em %}*{% endif -%}
+{% if logos %}
+![DOE Office of Science logo]({{ "/assets/images/doe-sc-logo.png" | relative_url }}){: .align-center width="33%"}
+{% endif -%}

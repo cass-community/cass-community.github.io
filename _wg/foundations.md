@@ -7,7 +7,7 @@ name: Foundations
 #   sentence in the grammatical sense.  Key points: The `description` should *not* repeat the `name`, it 
 #   should be in sentence case, and it should *not* end with a period.
 # 
-description: an open forum for projects to meet and share experiences with joining or membership in an open-source software foundation (e.g., NumFOCUS, High Performance Software Foundation, etc.)
+description: an open forum for projects to meet and share experiences with joining or membership in an open-source software foundation
 #
 status: Active # Values can be "Active" or "Retired"
 status_date: 2024-10-30 # The date the group went active or retired
@@ -54,7 +54,7 @@ additional_resource_links:
   - label: Slack channel
     note: "#wg-foundations"
     url: https://softwareecosy-91t5745.slack.com/archives/C078CH645N1
-  - label: Detailed info
-    note: "more detailed information, including agendas for future meetings, and notes and recordings of past meetings"
+  - label: More detailed information
+    note: "including agendas for future meetings, and notes and recordings of past meetings"
     url: https://corsa.center/meetings/foundations-wg.html
 ---

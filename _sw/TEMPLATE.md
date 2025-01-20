@@ -20,7 +20,6 @@
 #                           the areas that were used by ECP ST, except that anything that was categorized as
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
-#                           We also support the values used in e4s.yml files, though we prefer those above. 
 #   cass_member:            (list) REQUIRED The name(s) of the CASS member organization(s) (aka software stewardship
 #                           organization(s)) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)

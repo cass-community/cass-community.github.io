@@ -24,9 +24,7 @@ Each product is expected to be in *exactly one area*.  If this needs to change, 
 
 If you need an area that is not already defined, please work with the [point of contact](../README.md#point-of-contact) for the website on the necessary enhancements.
 
-Note that multiple `short_name`s may map to the same `name` and `description`.  This is another convenience for the contributor.  If you want to help with consistency, the first `short_name` is the preferred one.
-
-Note that the `Area` key (note capitalization) in the `e4s.yml` file is similar to our `area` (lowercase), but it does not use the short_names that we do, and is not a controlled vocabulary.  In the future, we plan to discuss with the E4S DocPortal team how to merge this information.
+Note that the `Area` key (note capitalization) in the `e4s.yml` file is similar to our `area` (lowercase), but it does not use the same short_names that we do, and is not a controlled vocabulary.  In the future, we plan to discuss with the E4S DocPortal team how to merge this information.
 
 ## `cass_members` *(controlled vocabulary)*
 

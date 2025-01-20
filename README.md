@@ -42,9 +42,9 @@ This file contains the "areas" used in the software catalog.  The list is keyed 
 
 #### Data structure details
 
-Multiple `short_name`s may map to the same `name`.  For example "dataviz" and "dataviz".  This is mostly a convenience for contributors.  It does complicate the processing that needs to be done to render the information well.
+In the initial implementation of the site, we allowed multiple `short_name`s to map to the same area `name`.  We've since changed to limit it to a 1:1 mapping so that we can have the default sort for the sw collection be by `area`.  Some of the processing code still supports the many-to-one mapping, but we'll eliminate that over time in favor of simpler code.
 
-All occurrences of the same `name` should be accompanied by the same `description` text.  No guarantees as to which instance will be used.
+The `name` values should be in sentence case
 
 #### Rendering details
 

@@ -21,9 +21,8 @@
   name: Software ecosystem and delivery
   description: Provide software build, test, and integration tools, and containers environments 
 #
-# Potentially adding the areas values used in e4s.yml files.
-# Based on those observed as of 2024-12-26.  Might need
-# to update periodically.
+# FYI, the following values are used in e4s.yml files (as observed 2024-12-26).
+# Note that many of these conflict with areas we already have.
 #
 # - short_name: PMR
 #   name: Programming Models and Runtimes

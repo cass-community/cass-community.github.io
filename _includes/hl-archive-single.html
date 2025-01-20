@@ -35,6 +35,27 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% comment %}
+  Identify stories which are featured
+{% endcomment %}
+{% capture featured_icon %}{% include icon-map-lookup label="Featured" %}{% endcapture %}
+{% assign featured = false %}
+{% for s in page.featured_stories %}
+  {% if post.url contains s %}{% assign featured = true %}{% endif %}
+{% endfor %}
+
+{% comment %}
+  Extract teaser image
+  Could be a real teaser or a slide -- teaser takes priority
+{% endcomment %}
+{% if post.slide %}
+{% assign teaser = post.slide[0].image | prepend: "/assets/highlights/" | relative_url %}
+{% endif %}
+{% if post.teaser %}
+{% assign teaser = post.teaser | prepend: "/assets/highlights/" | relative_url %}
+{% endif %}
+
+
 <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
     {% if include.type == "grid" and teaser %}
@@ -44,13 +65,15 @@
     {% endif %}
     <h3 class="archive__item-title no_toc" itemprop="headline">
       {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        <a href="{{ post.link }}">{{ title }}{% if featured %}{{ featured_icon }}{% endif %}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
-        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}{% if featured %}{{ featured_icon }}{% endif %}</a>
       {% endif %}
     </h3>
     {% include page__meta.html type=include.type %}
-    {% if post.date %}<p class="archive__item-excerpt" itemprop="date">Date: {{ post.date | date: date_format }}</p>{% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncatewords: 50 }}</p>{% endif %}
+    {% if post.date %}
+    {% if post.date %}<p class="archive__item-excerpt" itemprop="date">Date: {{ post.date | date: date_format }}{% endif %}</p>{% endif %}
+    {% if post.excerpt %}<p class="archive__item-excerpt clearfix" itemprop="description"><a href="{{ teaser }}" class="image-popup"><img src="{{ teaser }}" class="align-right" style="max-width: 15%; max-height: 99px"></a>
+      {{ post.excerpt | markdownify | strip_html | truncatewords: 50 }}</p>{% endif %}
   </article>
 </div>

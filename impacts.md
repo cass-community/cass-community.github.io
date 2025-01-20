@@ -53,3 +53,5 @@ These highlights illustrate ways in which software in the CASS ecosystem is used
   Should we filter the featured_highlights out of the collection?
   Which would make the title Additional highlights
 {% endcomment %}
+{% capture featured_icon %}{% include icon-map-lookup label="Featured" %}{% endcapture %}
+*Stories featured above are noted with a {{ featured_icon }}*

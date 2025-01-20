@@ -39,7 +39,7 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: VisIt
-area: datavis
+area: dataviz
 cass_members:
   - RAPIDS
 description: An open source, interactive, scalable, visualization, animation and analysis tool.

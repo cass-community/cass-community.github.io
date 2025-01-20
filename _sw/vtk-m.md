@@ -39,7 +39,7 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: VTK-m
-area: datavis
+area: dataviz
 cass_members:
   - RAPIDS
 description: A performance-portable visualization library leveraged by production tools such as ParaView and VisIt

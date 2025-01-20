@@ -39,7 +39,7 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: ParaView
-area: datavis
+area: dataviz
 cass_members:
   - RAPIDS
 description: A tool for data analysis and visualization at scale

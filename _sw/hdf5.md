@@ -39,7 +39,7 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: HDF5
-area: datavis
+area: dataviz
 cass_members:
   - RAPIDS
 description: A parallel I/O library for high performance access to self-describing HDF5 datasets

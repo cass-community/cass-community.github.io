@@ -39,7 +39,7 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: ADIOS
-area: datavis
+area: dataviz
 cass_members:
   - RAPIDS
 description: Provides a simple, flexible way for scientists to describe the data in their code that may need to be written, read, or processed

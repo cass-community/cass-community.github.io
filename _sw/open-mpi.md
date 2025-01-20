@@ -3,7 +3,7 @@
 #
 # INSTRUCTIONS
 #   This is a Jekyll Markdown file, which starts with YAML "frontmatter." For the product 
-#   catalog, we will be using only the YAML frontmatter (between the "---" separators).  
+#   catalog, we will be using only the YAML frontmatter (between the "---" seperators).  
 #   Please leave the main body empty.  
 #
 #   Please name the file itself for the software product: <name>.md
@@ -23,7 +23,7 @@
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".  
 #   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
-#                           organizations) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
+#                           organizations) you are associated with. Values include: "fastmath", "PESO", "rpids", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: colabs, corsa, swas)
 #   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
 #                           "subtitle", following the `name`.
@@ -38,15 +38,23 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: ParaView Catalyst
-area: datavis
+name: Open MPI
+area: pmr
 cass_members:
-  - RAPIDS
-description: A tool for in situ data analysis and visualization at scale
+  - S4PST
+description: A high performance open-source implementation of the Message Passing Interface (MPI) standard
 long_description: |
-    ParaView is part of the backbone of DOE’s production visualization at scale capability. It provides a set of C++ libraries for general-purpose visualization, a production visualization tool, and an in situ infrastructure. ParaView Catalyst is the in situ component of ParaView.  It enables the tight integration of data analysis and visualization capabilities with simulation codes. This is achieved by linking the simulation code with the Catalyst library which executes ParaView pipelines during the simulation execution.
+    The Open MPI Project is an open source Message Passing Interface implementation that
+    is developed and maintained by a consortium of academic, research, and
+    industry partners. Open MPI is therefore able to combine the expertise,
+    technologies, and resources from all across the High Performance
+    Computing community in order to build the best MPI library available.
+    Open MPI offers advantages for system and software vendors, application
+    developers and computer science researchers.
 target_audience: |
-    Science teams interested in integrating robust scientific visualization into their scientific workflows should consider ParaView Catalyst, which is leveraged across numerous projects in the DOE SciDAC community.
+    This software is designed for parallel programming using the Message
+    Passing Interface (MPI) standard. It supports point-to-point
+    communication, collective operations, one-sided communication, and more.
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
@@ -56,8 +64,8 @@ target_audience: |
 #   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
-e4s_product: paraview
-spack_name: libcatalyst
+e4s_product: openmpi
+spack_name:  openmpi
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   This is an OPTIONAL list of resource links that you can provide to make your catalog entry more useful.
@@ -77,7 +85,11 @@ spack_name: libcatalyst
 
 additional_resource_links:
   - label: Website
-    url: https://docs.paraview.org/en/latest/Catalyst/index.html
+    url: https://www.open-mpi.org/
   - label: Repository
-    url: https://gitlab.kitware.com/paraview/paraview
+    url: https://github.com/open-mpi/ompi/
+  - label: Downloads
+    url: https://www.open-mpi.org/software/
+  - label: Documentation
+    url: https://docs.open-mpi.org/
 ---

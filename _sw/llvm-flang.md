@@ -3,7 +3,7 @@
 #
 # INSTRUCTIONS
 #   This is a Jekyll Markdown file, which starts with YAML "frontmatter." For the product 
-#   catalog, we will be using only the YAML frontmatter (between the "---" separators).  
+#   catalog, we will be using only the YAML frontmatter (between the "---" seperators).  
 #   Please leave the main body empty.  
 #
 #   Please name the file itself for the software product: <name>.md
@@ -38,15 +38,21 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: ParaView
-area: dataviz
+name: LLVM Flang
+area: pmr
 cass_members:
-  - RAPIDS
-description: A tool for data analysis and visualization at scale
+  - S4PST
+description: A Fortran compiler
 long_description: |
-    ParaView is part of the backbone of DOE’s production visualization at scale capability. It provides a set of C++ libraries for general-purpose visualization, a production visualization tool, and an in situ infrastructure. The end-user tool and the scripting interface enables the interactive exploration of scientific datasets at large scales. ParaView can be run on many different platforms and scales ranging from laptops to supercomputers. Its client-server architecture supports analysis on large systems while interacting on local resources.
+    Flang is the LLVM Compiler Infrastructure project's frontend for the Fortran programming language.
+    It is often referred to as LLVM Flang to differentiate it from Classic Flang -- these are two separate and independent Fortran compilers. 
+    LLVM Flang is under active development. 
+    While it is capable of generating executables for a number of examples, some functionality is still missing.
+    S4PST contributes to LLVM Flang by writing unit tests, developing a multi-image parallel runtime interface (PRIF), writing the first PRIF implementation (Caffeine), and collaborating with industry on translating Fortran syntax to PRIF calls and on supporting the automatic parallelization of AI algorithms for science.
 target_audience: |
-    Scientists and science teams interested in the exploration of scientific datasets of various types, especially 2D and 3D spatial datasets. ParaView is widely used for applications ranging from fusion science to material science.
+   All software developers and integrators whose projects include or depend upon Fortran source code.   
+
+
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
@@ -56,8 +62,8 @@ target_audience: |
 #   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
-e4s_product: paraview
-spack_name: paraview
+e4s_product: null # Originally llvm
+spack_name:  null # Originally llvm+flang
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   This is an OPTIONAL list of resource links that you can provide to make your catalog entry more useful.
@@ -77,11 +83,11 @@ spack_name: paraview
 
 additional_resource_links:
   - label: Website
-    url: https://paraview.org
+    url: https://flang.llvm.org
   - label: Repository
-    url: https://gitlab.kitware.com/paraview/paraview
+    url: https://github.com/llvm/llvm-project
   - label: Downloads
-    url: https://www.paraview.org/download/
+    url: https://releases.llvm.org
   - label: Documentation
-    url: https://docs.paraview.org/en/latest/
+    url: https://flang.llvm.org
 ---

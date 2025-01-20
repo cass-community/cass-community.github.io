@@ -39,7 +39,7 @@
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: PnetCDF
-area: datavis
+area: dataviz
 cass_members:
   - RAPIDS
 description: An I/O library for high-performance parallel access to self-describing netCDF datasets

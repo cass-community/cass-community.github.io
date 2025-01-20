@@ -11,13 +11,11 @@ layout: sw-archive
 
 {{ content }}
 
-<p align="right"><em><a href="{{ "/software/" | relative_url }}" class="btn btn--inverse">Switch to Alphabetical view</a></p>
-
 {% comment %}
 An experiement in filtering the collection (implemented in sw-documents-collection.html)
 
 {% assign filter = "" | split: "," %}
-{% assign filter = filter | push: "area|datavis,dataviz,devtools" %}
+{% assign filter = filter | push: "area|dataviz,dataviz,devtools" %}
 {% assign filter = filter | push: "cass_member|PESO" %}
 {% endcomment %}
 
@@ -62,7 +60,7 @@ An experiement in filtering the collection (implemented in sw-documents-collecti
     {% assign filtered_entries = filtered_entries | concat: e | compact %}
   {% endfor %}
   {% if page.sort_by %}
-    {% assign filtered_entries = filtered_entries | sort_natural: page.sort_by %}
+    {% assign filtered_entries = filtered_entries | sort: page.sort_by %}
   {% endif %}
   {% if page.sort_order == 'reverse' %}
     {% assign filtered_entries = filtered_entries | reverse %}

@@ -1,7 +1,7 @@
 ---
 title: Software Catalog
-
-permalink: /software/
+excerpt: Alphabetical view
+permalink: /software-alpha/
 collection: sw
 sort_by: name
 entries_layout: grid
@@ -16,3 +16,5 @@ header:
   caption: 'Photo by <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/photos/a-computer-screen-with-a-lot-of-text-on-it-fN6HM1hrgxk">Unsplash</a>'
 ---
 {% include sw-page-content %}
+
+<p align="right"><a href="{{ "/software/" | relative_url }}" class="btn btn--inverse">Switch to view by Areas</a></p>

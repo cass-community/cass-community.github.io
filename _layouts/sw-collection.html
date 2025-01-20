@@ -14,14 +14,11 @@ layout: sw-archive
 
 {{ content }}
 
-<p align="right"><em><a href="{{ "/software-areas/" | relative_url }}" class="btn btn--inverse">Switch to view by Areas</a></p>
-
-
 {% comment %}
 An experiement in filtering the collection (implemented in sw-documents-collection.html)
 
 {% assign filter = "" | split: "," %}
-{% assign filter = filter | push: "area|datavis,dataviz,devtools" %}
+{% assign filter = filter | push: "area|dataviz,dataviz,devtools" %}
 {% assign filter = filter | push: "cass_member|PESO" %}
 {% endcomment %}
 

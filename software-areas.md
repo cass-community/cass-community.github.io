@@ -1,8 +1,9 @@
 ---
-title: Software Catalog (by Areas)
-permalink: /software-areas/
+title: Software Catalog
+excerpt: View by Areas
+permalink: /software/
 collection: sw
-sort_by: name
+sort_by: area
 entries_layout: grid
 layout: sw-collection-areas
 # layout: splash # Default: home, but that includes a list of posts
@@ -15,3 +16,5 @@ header:
   caption: 'Photo by <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/photos/a-computer-screen-with-a-lot-of-text-on-it-fN6HM1hrgxk">Unsplash</a>'
 ---
 {% include sw-page-content %}
+
+<p align="right"><a href="{{ "/software-alpha/" | relative_url }}" class="btn btn--inverse">Switch to Alphabetical view</a></p>

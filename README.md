@@ -42,7 +42,7 @@ This file contains the "areas" used in the software catalog.  The list is keyed 
 
 #### Data structure details
 
-Multiple `short_name`s may map to the same `name`.  For example "datavis" and "dataviz".  This is mostly a convenience for contributors.  It does complicate the processing that needs to be done to render the information well.
+Multiple `short_name`s may map to the same `name`.  For example "dataviz" and "dataviz".  This is mostly a convenience for contributors.  It does complicate the processing that needs to be done to render the information well.
 
 All occurrences of the same `name` should be accompanied by the same `description` text.  No guarantees as to which instance will be used.
 

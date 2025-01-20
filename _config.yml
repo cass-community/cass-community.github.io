@@ -63,7 +63,7 @@ collections:
     sort_by: name
   sw:
     output: true
-    sort_by: name
+    sort_by: area
   highlights:
     output: true
     sort_by: date

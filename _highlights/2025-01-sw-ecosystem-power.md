@@ -1,7 +1,7 @@
 ---
 title: The Value of a Scientific Software Ecosystem in Advancing Scientific Discovery
 date: 2025-01-14
-teaser: 2025-01-14-sw-ecosystem-power-images/powers-of-10-transparent.png
+teaser: 2025-01-sw-ecosystem-power/powers-of-10-transparent.png
 software_mentioned:
   - Kokkos
   - Spack
@@ -14,7 +14,7 @@ cass_members:
 
 ## The scientific software ecosystem benefits and scale
 
-{% capture img %}{% include hl-image-path image="2025-01-14-sw-ecosystem-power-images/powers-of-10-transparent.png" %}{% endcapture %}
+{% capture img %}{% include hl-image-path image="2025-01-sw-ecosystem-power/powers-of-10-transparent.png" %}{% endcapture %}
 {% include figure class="align-right" width="50%" popup=true image_path=img alt="Image showing a stack of software ecosystem benefits" caption="The benefits of a software ecosystem are multi-faceted and involve many technical and community advantages.  The value of the ecosystem is much more than just a collection of independent libraries and tools.  This diagram shows some of the most important benefits." %}
 
 Defining and refining what constitutes a scientific software ecosystem is an ongoing endeavor. At its essence, this ecosystem fosters collaboration, efficiency, and innovation across a broad spectrum of scientific computing activities. Here is a breakdown of its key benefits:

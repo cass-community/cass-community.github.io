@@ -17,9 +17,9 @@ header:
 # These are the "featured stories" at the top of the page
 #
 featured_stories:
-  - /highlights/2025-01-10-warpx
-  - /highlights/2025-01-14-dod-hpc
-  - /highlights/2025-01-14-sw-ecosystem-power
+  - /highlights/2025-01-warpx
+  - /highlights/2025-01-dod-hpc
+  - /highlights/2025-01-sw-ecosystem-power
 ---
 
 Computing is central to the advancement of modern science. In experimental and observational research, computers and software are used to design and control apparatuses and collect and analyze data, which is increasingly voluminous and complex. However, computational science (and engineering) has also come into its own, using modeling and simulation to understand and predict physical phenomena. A large and diverse scientific software ecosystem supports and enables scientific advances across all fronts.
@@ -28,14 +28,15 @@ The portion of the scientific software ecosystem that is currently the focus of 
 
 These highlights illustrate ways in which software in the CASS ecosystem is used by other computational scientists, or even other organizations, to facilitate advances in their fundamental research, as well as advances in computer science and applied math embodied in those software products themselves.
 
-
 {% if page.featured_stories %}
 ## Featured stories
 
 {% for s in page.featured_stories %}
 {% assign query = "item.url contains '" | append: s | append: "'" %}
 {% assign hl = site[page.collection] | where_exp: "item", query %}
-{% assign teaser = hl[0].teaser | prepend: "/assets/highlights/" | relative_url %}
+{% assign img = hl[0].teaser %}
+{% capture teaser %}{% include hl-image-path image=img %}{% endcapture %}
+{% assign teaser = teaser | relative_url %}
 ### {{ hl[0].title }}
 
 <a href="{{ teaser }}" class="image-popup"><img src="{{ teaser }}" class="align-right" style="width: 15%"></a>

@@ -85,11 +85,11 @@ We support two basic styles of highlights: free-form and slide-based.  Both vers
 
 ## Filenames
 
-We expect to publish many highlights, and the easiest way to identify which are the most recent is to include the date in the filename.  Consequently, all highlight files should have names of the form `YYYY-MM-DD-topic.md`.  The date in the filename doesn't have to *exactly* correspond to the date of publication, but it should be close, and it should ensure that highlights on the same `topic` sort into the correct chronological order.
+We expect to publish many highlights, and the easiest way to identify which are the most recent is to include the date in the filename.  Consequently, all highlight files should have names of the form `YYYY-MM-topic.md`.  The date in the filename doesn't have to *exactly* correspond to the date of publication, but it should be close, and it should ensure that highlights on the same `topic` sort into the correct chronological order.
 
 ## Assets
 
-Highlights are generally accompanied by images and other files.  They should be placed in `/assets/highlights/` and to facilitate management of the files, the asset filename(s) should start with the same string as the highlight filename itself.
+Highlights are generally accompanied by images and other files.  They should be placed in `/assets/highlights/` and should be given a filename(s) that start with the same string as the highlight filename itself.  If there is more than one asset associated with a highlight, it is probably most convenient to create a directory in `/assets/highlights/` with *exactly* the same name as the highlight file itself, and then put then individual assets in that directory.  For a single file the directory is optional.
 
 ## `title` *(string)*
 

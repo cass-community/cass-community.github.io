@@ -43,6 +43,12 @@ If you're working on the rendering of the site, the top-level [README.md](../REA
 * Unless there is a strong reason, we should only highlight software that is part of the CASS software catalog
 * We prefer to organize presentation of the CASS products by the topical areas.  These should be h3 heading using exactly the same string used in software catalog for the area.
 * We prefer to discuss CASS software in terms of what it brings to the science or the application, as opposed to a generic "product X does A, B, and C" that is the same as found in the software catalog description. Where possible, it is good to mention capabilities the product implmented to support the application/science, and even better if it is possible to draw a line directly from the product to some science accomplishment.  These are ways of "personalizing" the content of the highlight to the application and the science so that highlights do not all end up reading the same.
+* Name the authors of the highlight and, where appropriate, acknowledge significant contributions from others (e.g., the application team).  These should be at the end of the highlight, in italic font, and with the Author(s) and Acknowledgment(s) on adjacent lines (using an HTML `<br>` tag).  Neither should end with a period. In Markdown, they might look like this:
+
+```markdown
+*Authors: Terry Turton, David Bernholdt and Lois Curfman McInnes*<br>
+*Acknowledgment: Jean-Luc Vay and the WarpX team*
+```
 
 ### Software mentions
 

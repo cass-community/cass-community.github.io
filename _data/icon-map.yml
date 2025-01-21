@@ -48,6 +48,10 @@
   icon: <i class="fa-solid fa-list-check"></i>
 - label: Test coverage
   icon: <i class="fa-solid fa-clipboard-check"></i>
+- label: Continuous integration
+  icon: <i class="fa-solid fa-gears"></i>
+- label: Code of conduct
+  icon: <i class="fa-solid fa-handshake-simple"></i>
 #
 # Also use this structure to uniformly lookup icons used
 # elsewhere on the site (i.e. not in resource link lists)

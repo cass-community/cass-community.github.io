@@ -57,6 +57,9 @@ og_image: /assets/images/cass-logo.png
 # Add site search, eventually
 # Add web analytics, eventually
 
+# We will need to make some changes to collection names and such before we can enable this
+#breadcrumbs: true
+
 collections:
   wg:
     output: true

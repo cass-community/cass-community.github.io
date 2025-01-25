@@ -14,17 +14,17 @@ header:
   overlay_image: /assets/images/thisisengineering-p5wrlynJR4A-unsplash.jpg
   caption: 'Photo by <a href="https://unsplash.com/@thisisengineering">ThisisEngineering</a> on <a href="https://unsplash.com/photos/man-in-blue-dress-shirt-and-woman-in-black-long-sleeve-shirt-p5wrlynJR4A">Unsplash</a>'
 ---
-The Consortium for the Advancement of Scientific Software (CASS) is a federation of member organizations committed to the stewardship and advancement of the current and future ecosystem of scientific computing software. Our member organizations support specific scientific communities or provide crosscutting capabilities related to scientific software stewardship. Member organizations coordinate and cooperate through the Consortium to maximize benefit to the ecosystem as a whole.
+The Consortium for the Advancement of Scientific Software (CASS) is a federation of member organizations committed to the stewardship and advancement of the current and future ecosystem of scientific computing software. Our members support specific scientific communities or provide crosscutting capabilities related to scientific software stewardship. Member organizations coordinate and cooperate through the Consortium to maximize benefit to the ecosystem as a whole.
 
 ## Targeted scientific software ecosystem
 
-Based on its current membership, CASS focuses primarily on software which has been supported by the [U.S. Department of Energy](https://www.energy.gov/) (DOE) [Office of Advanced Scientific Computing Research](https://www.energy.gov/science/ascr/advanced-scientific-computing-research) (ASCR), with an emphasis on supporting large-scale high-performance parallel computers and computations, including the [Software Technologies](https://www.exascaleproject.org/research/#software) developed in the [Exascale Computing Project](https://www.exascaleproject.org/) (ECP). 
+Based on its current membership, CASS focuses primarily on software which has been supported by the [U.S. Department of Energy](https://www.energy.gov/) (DOE) [Office of Advanced Scientific Computing Research](https://www.energy.gov/science/ascr/advanced-scientific-computing-research) (ASCR), with an emphasis on supporting large-scale high-performance parallel computers and computations, including the [Software Technologies](https://www.exascaleproject.org/research/#software) developed in the [Exascale Computing Project](https://www.exascaleproject.org/) (ECP).
 
 Details of the software in the "CASS ecosystem" can be found in the [Software]({{ "/software/" | relative_url }}) section of the site.
 
 ## CASS organizational structure
 
-Member organizations may be categorized as core members, who take an active role in consortium governance, or affiliate members, who are in solidarity with the mission of the consortium but do not take an active role in consortium governance. 
+Member organizations may be categorized as core members, who take an active role in consortium governance, or affiliate members, who are in solidarity with the mission of the consortium but do not take an active role in consortium governance. The Consortium is open to new members. DOE sponsorship is *not* required.
 
 CASS is governed by a Steering Committee appointed by the members.  Core members each have one representative on the Steering Committee, while the affiliate members have one representative for every five affiliates.  The Steering Committee is assisted by three officers: a Chair, Vice-Chair, and a Secretary.  The Steering Committee is committed to openness and transparency in its governance processes.
 

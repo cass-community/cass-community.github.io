@@ -108,10 +108,10 @@ defaults:
 footer:
   links:
     - label: "Announcement list signup"
-      icon: "fas fa-envelope"
+      icon: "fas fa-fw fa-envelopes-bulk"
       url: http://eepurl.com/iRiSnY
     - label: "Email Us"
-      icon: "fas fa-envelope"
+      icon: "fas fa-fw fa-envelope"
       url:  "mailto:cass-steering-committee@email.ornl.gov"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"

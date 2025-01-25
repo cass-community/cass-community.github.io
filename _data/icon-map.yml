@@ -7,87 +7,87 @@
 # form `<i class-"fa-something fa-else"></i>`
 
 - label: Website
-  icon: <i class="fa-solid fa-globe"></i>
+  icon: <i class="fa-solid fa-fw fa-globe"></i>
 - label: Repository
-  icon: <i class="fa-solid fa-code"></i>
+  icon: <i class="fa-solid fa-fw fa-code"></i>
 - label: Downloads
-  icon: <i class="fa-solid fa-file-arrow-down"></i>
+  icon: <i class="fa-solid fa-fw fa-file-arrow-down"></i>
 - label: Documentation
-  icon: <i class="fa-regular fa-file-lines"></i>
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: User guide
-  icon: <i class="fa-regular fa-file-lines"></i>
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: User's guide
-  icon: <i class="fa-regular fa-file-lines"></i>
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Contributor guide
-  icon: <i class="fa-regular fa-file-lines"></i>
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Contributor's guide
-  icon: <i class="fa-regular fa-file-lines"></i>
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Developer guide
-  icon: <i class="fa-regular fa-file-lines"></i>
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Developer's guide
-  icon: <i class="fa-regular fa-file-lines"></i>
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: How-to articles
-  icon: <i class="fa-regular fa-file-lines"></i>
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Examples
-  icon: <i class="fa-regular fa-file-code"></i>
+  icon: <i class="fa-regular fa-fw fa-file-code"></i>
 - label: Videos
-  icon: <i class="fa-solid fa-video"></i>
+  icon: <i class="fa-solid fa-fw fa-video"></i>
 - label: Tutorials
-  icon: <i class="fa-solid fa-person-chalkboard"></i>
+  icon: <i class="fa-solid fa-fw fa-person-chalkboard"></i>
 - label: Workshop
-  icon: <i class="fa-solid fa-users-line"></i>
+  icon: <i class="fa-solid fa-fw fa-users-line"></i>
 - label: Seminars
-  icon: <i class="fa-solid fa-person-chalkboard"></i>
+  icon: <i class="fa-solid fa-fw fa-person-chalkboard"></i>
 - label: Mailing list
-  icon: <i class="fas fa-envelope"></i>
+  icon: <i class="fas fa-fw fa-envelope"></i>
 - label: Mailing lists
-  icon: <i class="fas fa-envelope"></i>
+  icon: <i class="fas fa-fw fa-envelope"></i>
 - label: Discord
-  icon: <i class="fa-brands fa-discord"></i>
+  icon: <i class="fa-brands fa-fw fa-discord"></i>
 - label: Issue tracker
-  icon: <i class="fa-solid fa-list-check"></i>
+  icon: <i class="fa-solid fa-fw fa-list-check"></i>
 - label: Test coverage
-  icon: <i class="fa-solid fa-clipboard-check"></i>
+  icon: <i class="fa-solid fa-fw fa-clipboard-check"></i>
 - label: Continuous integration
-  icon: <i class="fa-solid fa-gears"></i>
+  icon: <i class="fa-solid fa-fw fa-gears"></i>
 - label: Code of conduct
-  icon: <i class="fa-solid fa-handshake-simple"></i>
+  icon: <i class="fa-solid fa-fw fa-handshake-simple"></i>
 #
 # Also use this structure to uniformly lookup icons used
 # elsewhere on the site (i.e. not in resource link lists)
 #
 - label: Area
-  icon: <i class="fa-regular fa-folder-open"></i>
+  icon: <i class="fa-regular fa-fw fa-folder-open"></i>
 - label: CASS member
-  icon: <i class="fa-solid fa-hand-holding-hand"></i>
+  icon: <i class="fa-solid fa-fw fa-hand-holding-hand"></i>
 - label: Package links
-  icon: <i class="fa-solid fa-box-open"></i>
+  icon: <i class="fa-solid fa-fw fa-box-open"></i>
 - label: Email
-  icon: <i class="fas fa-envelope"></i>
+  icon: <i class="fas fa-fw fa-envelope"></i>
 - label: Meetings
-  icon: <i class="fa-regular fa-calendar-days"></i>
+  icon: <i class="fa-regular fa-fw fa-calendar-days"></i>
 - label: Shared documents
-  icon: <i class="fa-solid fa-folder-tree"></i>
+  icon: <i class="fa-solid fa-fw fa-folder-tree"></i>
 - label: Slack
-  icon: <i class="fa-brands fa-slack"></i>
+  icon: <i class="fa-brands fa-fw fa-slack"></i>
 - label: Slack channel
-  icon: <i class="fa-brands fa-slack"></i>
+  icon: <i class="fa-brands fa-fw fa-slack"></i>
 - label: Chair
-  icon: <i class="fa-solid fa-chair"></i>
+  icon: <i class="fa-solid fa-fw fa-chair"></i>
 - label: Info
-  icon: <i class="fa-solid fa-circle-info"></i>
+  icon: <i class="fa-solid fa-fw fa-circle-info"></i>
 - label: Status
-  icon: <i class="fa-solid fa-circle-info"></i>
+  icon: <i class="fa-solid fa-fw fa-circle-info"></i>
 - label: License
-  icon: <i class="fa-solid fa-scale-balanced"></i>
+  icon: <i class="fa-solid fa-fw fa-scale-balanced"></i>
 - label: Software
-  icon: <i class="fa-solid fa-square-binary"></i>
+  icon: <i class="fa-solid fa-fw fa-square-binary"></i>
 - label: Highlights
-  icon: <i class="fa-solid fa-highlighter"></i> # Ha, ha, visual pun
+  icon: <i class="fa-solid fa-fw fa-highlighter"></i> # Ha, ha, visual pun
   # icon: <i class="fa-solid fa-gem"></i> # Maybe more serious?
   # icon: <i class="fa-solid fa-medal"></i> # Another option?
 - label: Featured
-  icon: <i class="fa-solid fa-star"></i>
+  icon: <i class="fa-solid fa-fw fa-star"></i>
 
 # Additional ideas (not yet implemented), mostly inspired by
 # https://www.osgeo.org/projects/

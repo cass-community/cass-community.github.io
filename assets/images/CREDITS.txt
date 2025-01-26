@@ -10,6 +10,7 @@ pawel-chu-ULh0i2txBCY-unsplash.jpg				Photo by <a href="https://unsplash.com/@pa
 
 thisisengineering-p5wrlynJR4A-unsplash.jpg			Photo by <a href="https://unsplash.com/@thisisengineering">ThisisEngineering</a> on <a href="https://unsplash.com/photos/man-in-blue-dress-shirt-and-woman-in-black-long-sleeve-shirt-p5wrlynJR4A">Unsplash</a>
 
-warpx.png							NEED CREDIT (probably WarpX team/ECP, ask Terry Turton)
-      
+warpx-long-efield-ascent-vtkm-v2.jpg				Credit: Axel Huebl (Berkeley Lab)
+								Caption: WarpX: longitudinal electric field in a laser-plasma accelerator rendered with the ECP software libraries Ascent & VTK-m as the simulation was running.
+
       

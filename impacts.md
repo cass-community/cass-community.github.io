@@ -12,7 +12,8 @@ header:
 #   overlay_color: "#000"
 #  overlay_filter: "0.60"
   overlay_filter: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
-  overlay_image: /assets/images/warpx-transparent.png
+  overlay_image: /assets/images/warpx-long-efield-ascent-vtkm-v2.jpg
+  caption: "Credit: Axel Huebl (Berkeley Lab)"
 #
 # These are the "featured stories" at the top of the page
 #

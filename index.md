@@ -9,7 +9,40 @@ header:
 #  overlay_filter: "0.60"
   overlay_filter: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
   overlay_image: /assets/images/cass-word-1280x384-transparent.png
+#
+#   An initial exploration of using the Jekyll Codex carousel.  Needs (a lot) of work for our needs.
+#
+# carousels:
+#   - images:
+#     - image: /new/assets/highlights/2025-01-wdmapp/wdmapp-coupled-turbulence.jpg
+#     - image: /new/assets/highlights/2025-01-warpx/warpx-amrex.png
+#     - image: /new/assets/highlights/2025-01-sw-ecosystem-power/powers-of-10-transparent.png
+#     - image: /new/assets/highlights/2025-01-dod-hpc/spack-e4s-logos-qr-codes.png
+#     - image: /new/assets/highlights/2024-12-13-pnetcdf.jpg
+#
+# Try using the MM "feature row" capability as a carousel alternative
+#
+# feature_row:
+#   - image_path: /assets/highlights/2025-01-wdmapp/wdmapp-coupled-turbulence.jpg
+#     title: "Whole Device Modeling of Magnetically Confined Fusion Plasma"
+#     excerpt: "Magnetically confined fusion plasmas are being designed within the International Tokamak Experimental Reactor (ITER) and other projects that will operate in physics regimes only recently achieved through experiment. Modeling and simulation activities are required to design and optimize these new facilities. The fusion community is developing an approach to whole device modeling that will provide predictive numerical simulations of the physics required for magnetically confined fusion plasmas to enable design optimization and fill in the experimental gaps for ITER and future fusion devices."
+#   - image_path: /assets/highlights/2025-01-warpx/warpx-amrex.png
+#     title: "WarpX Enables Computational Design of Next-Generation Plasma-Based Accelerators"
+#     excerpt: "WarpX is a particle-in-cell (PIC) simulation code that models the motion of charged particles or plasma. WarpX is used to model chains of plasma-based particle accelerators for future high-energy physics colliders – table-top particle accelerators. These table-top accelerators can be used in both scientific and medical applications."
+#     url: "#test-link"
+#   - image_path: /assets/highlights/2024-12-13-pnetcdf.jpg
+#     title: "I/O in WRF: Evaluating Modern Parallel I/O Techniques"
+#     excerpt: "This work presents a comparative study of several parallel I/O implementations in the Weather Research and Forecasting model (WRF). The I/O libraries under study include PnetCDF, HDF5 via NetCDF4, and ADIOS. Our evaluation and performance analysis can guide I/O strategies for modern parallel codes."
 ---
+{% comment %}
+  An initial exploration of using the Jekyll Codex carousel.  Needs (a lot) of work for our needs.
+{% include carousel.html height="50" unit="%" duration="7" number="1" %}
+{% endcomment %}
+
+{% comment %}
+  An initial exploration of the MM theme "feature_row" capability.  Needs work too.
+{% include feature_row %}
+{% endcomment %}
 
 ## About
 

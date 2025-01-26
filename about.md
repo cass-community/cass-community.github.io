@@ -24,7 +24,7 @@ Details of the software in the "CASS ecosystem" can be found in the [Software]({
 
 ## CASS organizational structure
 
-Member organizations may be categorized as core members, who take an active role in consortium governance, or affiliate members, who are in solidarity with the mission of the consortium but do not take an active role in consortium governance. The Consortium is open to new members. DOE sponsorship is *not* required.
+Member organizations may be categorized as core members, who take an active role in consortium governance, or affiliate members, who are in solidarity with the mission of the consortium but do not take an active role in consortium governance. The Consortium is open to new members. DOE sponsorship is *not* required. [Email us](mailto:cass-steering-committee@email.ornl.gov?subject=Membership interest) for more information.
 
 CASS is governed by a Steering Committee appointed by the members.  Core members each have one representative on the Steering Committee, while the affiliate members have one representative for every five affiliates.  The Steering Committee is assisted by three officers: a Chair, Vice-Chair, and a Secretary.  The Steering Committee is committed to openness and transparency in its governance processes.
 

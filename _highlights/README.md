@@ -43,12 +43,6 @@ If you're working on the rendering of the site, the top-level [README.md](../REA
 * Unless there is a strong reason, we should only highlight software that is part of the CASS software catalog
 * We prefer to organize presentation of the CASS products by the topical areas.  These should be h3 heading using exactly the same string used in software catalog for the area.
 * We prefer to discuss CASS software in terms of what it brings to the science or the application, as opposed to a generic "product X does A, B, and C" that is the same as found in the software catalog description. Where possible, it is good to mention capabilities the product implmented to support the application/science, and even better if it is possible to draw a line directly from the product to some science accomplishment.  These are ways of "personalizing" the content of the highlight to the application and the science so that highlights do not all end up reading the same.
-* Name the authors of the highlight and, where appropriate, acknowledge significant contributions from others (e.g., the application team).  These should be at the end of the highlight, in italic font, and with the Author(s) and Acknowledgment(s) on adjacent lines (using an HTML `<br>` tag).  Neither should end with a period. In Markdown, they might look like this:
-
-```markdown
-*Authors: Terry Turton, David Bernholdt and Lois Curfman McInnes*<br>
-*Acknowledgment: Jean-Luc Vay and the WarpX team*
-```
 
 ### Software mentions
 
@@ -97,15 +91,23 @@ We expect to publish many highlights, and the easiest way to identify which are 
 
 Highlights are generally accompanied by images and other files.  They should be placed in `/assets/highlights/` and should be given a filename(s) that start with the same string as the highlight filename itself.  If there is more than one asset associated with a highlight, it is probably most convenient to create a directory in `/assets/highlights/` with *exactly* the same name as the highlight file itself, and then put then individual assets in that directory.  For a single file the directory is optional.
 
-## `title` *(string)*
+## Frontmatter for highlights
+
+### `title` *(string)*
 
 The title of the highlight.
 
-## `date` *(ISO date)*
+### `date` *(ISO date)*
 
 The date on which the highlight was published.  It will appear in the "Last updated" field at the bottom of the highlight page, as well as in the list of highlights.
 
-## `slide` *(list)*
+### `teaser` *(image reference)*
+
+The teaser is an image used as eye candy when the highlight is presented in a list of highlights or carousel.  It is typically, but not necessarily, an image that is also used in the body of the highlight.  The file must reside in `/assets/highlights`.
+
+A `slide.image` entry will take precedence over a `teaser` if both are present.
+
+### `slide` *(list)*
 
 For highlights that are based on a Powerpoint slide, this list provides the base filenames for the image and PDF versions of the file.  The files must reside in `/assets/highlights/`.
 
@@ -115,7 +117,28 @@ slide:
   - file: file2.pdf
 ```
 
-## `software_mentioned` *(list)*
+A `slide.image` entry will take precedence over a `teaser` if both are present.
+
+### `authors` *(list)*
+
+The name(s) of the authors of the highlight, in the form of a YAML list.  The authors are displayed at the bottom of the page, with the `acknowledgment`.
+
+```markdown
+authors:
+  - Name One
+  - Name Two
+  - Name Three
+```
+
+### `acknowledgment` *(string)*
+
+Acknowledgment of significant contributions from others (e.g., the application team), if appropriate. The acknowledgment is displayed at the bottom of the page, with the `authors`.
+
+**Important guidance:**
+
+  - The `acknowledgment` should *not* end with a period.
+
+### `software_mentioned` *(list)*
 
 A list of software products mentioned in the highlight.  These are generally expected to be products in the software catalog, but don't have to be.  In the current implementation of the site, entries that match product names will be linked to the product page, while those that don't will be displayed as plain text.
 
@@ -130,7 +153,7 @@ software_mentioned:
 
 * `software_mentioned` entries must match the `name` field in the `sw` collection, including capitalization.
 
-## `cass_members` *(controlled vocabulary)*
+### `cass_members` *(controlled vocabulary)*
 
 This field should be a list of CASS member organizations (also known as software stewardship organizations, or SSOs) which is providing stewardship support for the product.
 

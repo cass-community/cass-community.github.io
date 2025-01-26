@@ -5,6 +5,7 @@ layout: default
   CHANGES FROM DEFAULT SINGLE LAYOUT
   * Replace sidebar.html with hl-sidebar.html
   * Add highlight slide image below content
+  * Add authors and achnowledgment at the bottom
 {% endcomment %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -61,6 +62,18 @@ layout: default
           {% assign f = s[1].file | prepend: "/assets/highlights/" | relative_url %}
           <p id="highlight-slide"><strong>Highlight slide</strong></p>
           <a href="{{ f }}"><img src="{{ i }}" alt="Image of highlight slide"></a>
+        {% endif %}
+
+        {% if page.authors or page.acknowledgment %}
+        <p>
+        {% if page.authors %}
+        <em>{{ page.authors.size | pluralize: "Author:", "Authors:" }} {{ page.authors | array_to_sentence_string }}</em>
+        {% endif %}
+        {% if page.authors and page.acknowledgment %}<br>{% endif %}
+        {% if page.acknowledgment %}
+        <em>Acknowledgement: {{ page.acknowledgment }}</em>
+        {% endif %}
+        </p>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}

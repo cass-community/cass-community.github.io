@@ -1,7 +1,12 @@
 ---
 title: The Value of a Scientific Software Ecosystem in Advancing Scientific Discovery
 date: 2025-01-14
+#
 teaser: 2025-01-sw-ecosystem-power/powers-of-10-transparent.png
+#
+authors: 
+  - Michael A. Heroux
+#
 software_mentioned:
   - Kokkos
   - Spack
@@ -30,5 +35,3 @@ Defining and refining what constitutes a scientific software ecosystem is an ong
 
 Our efforts exemplify the transformative potential of a robust scientific software ecosystem. By fostering collaboration across agencies, organizations, and international partners, they are reshaping how scientific discovery is pursued. Our approach underscores the value of shared tools, community-driven innovation, and a commitment to advancing high-end computing capabilities.
 As we continue to push the boundaries of scientific computing, our efforts represent a foundation for progress, ensuring that researchers and developers have the resources they need to tackle the most complex scientific challenges of our time.
-
-*Author: Michael A. Heroux*

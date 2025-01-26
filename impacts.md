@@ -19,6 +19,7 @@ header:
 #
 featured_stories:
   - /highlights/2025-01-warpx
+  - /highlights/2025-01-wdmapp
   - /highlights/2025-01-dod-hpc
   - /highlights/2025-01-sw-ecosystem-power
 ---

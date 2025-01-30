@@ -18,7 +18,7 @@
 {% include sw-areas-used %}
 
 <h3>{{ area_icon }} Areas</h3>
-<p><em>Number of products in parenthesis</em></p>
+<p><em>Number of products in parentheses</em></p>
 <ul style="list-style: none; padding: 0">
   {% for a in area_names %}
     {% capture d %}{% include sw-areas-lookup values=a input="name" output="description" sep="|" %}{% endcapture %}

@@ -44,8 +44,7 @@ charter: |
 charter_status: Provisional, since 2025-01-08
 #
 chair: # Can be more than one person
-  - name: Lois Curfman McInnes (ANL)
-    email: curfman@anl.gov
+  - Lois Curfman McInnes
 #
 # A simple statement of the meeting schedule, if you have one
 #

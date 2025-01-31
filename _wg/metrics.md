@@ -35,10 +35,8 @@ charter: |
 charter_status: Provisional, since 2024-10-03
 #
 chair: # Can be more than one person
-  - name: Addi Malviya-Thakur (ORNL)
-    email: malviyaa@ornl.gov
-  - name: Greg Watson (ORNL)
-    email: watsongr@ornl.gov
+  - Addi Malviya-Thakur
+  - Greg Watson
 #
 meeting_schedule: "4:00pm-5:00pm ET Wednesdays, bi-weekly from 2025-01-08"
 #

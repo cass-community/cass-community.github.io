@@ -32,8 +32,7 @@ charter: |
 charter_status: Provisional, since 2024-09-17
 #
 chair: # Can be more than one person
-  - name: David Bernholdt (ORNL)
-    email: bernholdtde@ornl.gov
+  - David Bernholdt
 #
 meeting_schedule: "2:00pm-1:00pm ET Tuesdays, bi-weekly from 2025-01-14"
 #

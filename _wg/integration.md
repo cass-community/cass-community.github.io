@@ -38,8 +38,7 @@ charter: |
 charter_status: Provisional, since 2024-08-19
 #
 chair: # Can be more than one person
-  - name: Jim Willenbring (SNL)
-    email: jmwille@sandia.gov
+  - Jim Willenbring
 #
 # A simple statement of the meeting schedule, if you have one
 #

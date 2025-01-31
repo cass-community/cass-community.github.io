@@ -30,10 +30,8 @@ charter: |
 charter_status: Provisional, 2025-01-10
 #
 chair: # Can be more than one person
-  - name: Hannah Cohoon (LBNL)
-    email: hcohoon@lbl.gov
-  - name: Drew Paine (LBNL)
-    email: pained@lbl.gov
+  - Hannah Cohoon
+  - Drew Paine
 #
 meeting_schedule: to be announced
 #

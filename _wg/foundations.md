@@ -41,8 +41,7 @@ charter: |
 charter_status: Provisional, since early October 2024
 #
 chair: # Can be more than one person
-  - name: Daniel S. Katz (University of Illinois Urbana-Champaign)
-    email: d.katz@ieee.org
+  - Daniel S. Katz
 #
 # A simple statement of the meeting schedule, if you have one
 #

@@ -61,15 +61,13 @@ The `charter_status` should be either "Provisional" or "Approved" and should als
 
 ## `chair` *(list)*
 
-The by-laws require that every working group have a chair.  This field should be a YAML list with information about one or more chairs.
+The by-laws require that every working group have a chair.  This field should be a YAML list with the names of one or more chairs.  Details for each person (`email` and `short_affil` are currently used) must be in `_data/people.yml`. The email is needed because the readers are advised to contact the chair(s) to learn more about or join the working group.
 
 ```yaml
 chair:
-  - name Firstname Lastname (Affiliation) # REQUIRED
-    email: first.last@example.com         # REQUiRED
+  - Firstname Lastname
+  - Second Person
 ```
-
-The email is needed because the readers are advised to contact the chair(s) to learn more about or join the working group.
 
 ## `meeting_schedule` *(string)*
 

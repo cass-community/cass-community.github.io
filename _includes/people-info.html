@@ -1,0 +1,31 @@
+{% comment %}
+  people-info.html: emit information from the `_data/people.yml` file, in HTML format
+
+  Parameters
+    name: name to match in people file (REQUIRED)
+    link: field name to link to.  Named field must contain an email address or a URL. (OPTIONAL)
+    email_subject: text of subject header to include in email link (OPTIONAL)
+    affiliation: boolean whether to emit the `affiliation` (OPTIONAL, default: false)
+    short_affil: boolean whether to emit the `short_affil` (OPTIONAL, default: false)
+    people: name of people data structure (OPTIONAL, default `site.data.people`)
+
+  Output
+    <a href="{{ link }}">{{ name }}</a> ({{ affiliation }})
+  with appropriate variations for different kinds of links (or none) and full or short affiliation (or none)
+{% endcomment %}
+{% assign data = include.people | default: site.data.people -%}
+{% assign name = include.name -%}
+{% assign link = include.link -%}
+{% assign subject = include.email_subject -%}
+{% assign person = site.data.people[name] -%}
+{% if link == "email" and person.email -%}
+  {% assign url = "mailto:" | append: person.email -%}
+  {% if subject %}
+    {% assign url = url | append: "?subject=" | append: subject %}
+  {% endif -%}
+{% else -%}
+  {% assign url = person[link] -%}
+{% endif -%}
+{% if url %}<a href="{{ url }}">{{ name }}</a>{% else %}{{ name }}{% endif -%}
+{% if include.affiliation %} ({{ person.affiliation }}){% endif -%}
+{% if include.short_affil %} ({{ person.short_affil }}){% endif -%}

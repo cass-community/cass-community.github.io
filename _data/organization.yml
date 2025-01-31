@@ -26,76 +26,76 @@ members:
     name: "Collaboration for Better Software (for Science)"
     membership_level: affiliate
     leads: 
-      - Anshu Dubey (ANL)
+      - Anshu Dubey
     sc_reps:
-      - David Bernholdt (ORNL)
+      - David Bernholdt
   - short_name: CORSA
     name: Center for Open-Source Research Software Stewardship and Advancement
     website: https://corsa.center/
     membership_level: core
     leads: 
-      - Greg Watson (ORNL)
+      - Greg Watson
     sc_reps:
-      - Greg Watson (ORNL)
+      - Greg Watson
   - short_name: FASTMath
     name: Frameworks, Algorithms and Scalable Technologies for Mathematics
     website: https://scidac5-fastmath.lbl.gov/
     membership_level: core
     leads: 
-      - Carol Woodward (LLNL)
+      - Carol Woodward
     sc_reps:
-      - Todd Munson (ANL)
+      - Todd Munson
   - short_name: PESO
     name: Partnering for Scientific-Software Ecosystem Opportunities
     website: https://pesoproject.org/
     membership_level: core
     leads: 
-      - Lois Curfman McInnes (ANL)
-      - Mike Heroux (ParaTools)
+      - Lois Curfman McInnes
+      - Michael A. Heroux
     sc_reps: 
-      - Jim Willenbring (SNL)
+      - Jim Willenbring
   - short_name: RAPIDS
     name: "RAPIDS2: A SciDAC Institute for Computer Science, Data, and Artificial Intelligence"
     website: https://rapids.lbl.gov/
     membership_level: core
     leads: 
-      - Rob Ross (ANL)
+      - Rob Ross
     sc_reps:
-      - Lenny Oliker (LBNL)
+      - Lenny Oliker
   - short_name: S4PST
     name: Stewardship for Programming Systems and Tools
     website: https://s4pst.org/
     membership_level: core
     leads: 
-      - Keita Teranishi (ORNL)
+      - Keita Teranishi
     sc_reps:
-      - Seyong Lee (ORNL)
+      - Seyong Lee
   - short_name: STEP
     name: Software Tools Ecosystem Project
     website: https://ascr-step.org/
     membership_level: core
     leads: 
-      - Terry Jones (ORNL)
+      - Terry Jones
     sc_reps:
-      - Terry Jones (ORNL)
+      - Terry Jones
   - short_name: SWAS
     name: Center for Sustaining Workflows and Application Services
     website: https://swas.center/
     membership_level: affiliate
     leads: 
-      - Rafael Ferreira da Silva (ORNL)
+      - Rafael Ferreira da Silva
     sc_reps:
-      - David Bernholdt (ORNL)
+      - David Bernholdt
 
 # CASS officers
 # There are three, and they have a one year term (renewable)
 officers:
   - position: Chair
-    name: David Bernholdt (ORNL)
+    name: David Bernholdt
     term_expires: 2025-10-06
   - position: Vice-Chair
-    name: Terry Turton (LANL)
+    name: Terry Turton
     term_expires: 2025-10-06
   - position: Secretary
-    name: Todd Munson (ANL)
+    name: Todd Munson
     term_expires: 2025-10-06

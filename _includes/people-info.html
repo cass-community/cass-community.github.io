@@ -12,7 +12,7 @@
   Output
     <a href="{{ link }}">{{ name }}</a> ({{ affiliation }})
   with appropriate variations for different kinds of links (or none) and full or short affiliation (or none)
-{% endcomment %}
+{% endcomment -%}
 {% assign data = include.people | default: site.data.people -%}
 {% assign name = include.name -%}
 {% assign link = include.link -%}

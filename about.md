@@ -47,17 +47,30 @@ Most of the work of CASS is carried out within [Working Groups]({{ "/working-gro
         {% assign org = org | append: " (" | append: m.short_name | append: ")" -%}
     {% endif -%}
     {% assign scr = "" -%}
-    {% if m.sc_reps -%}
-        {% assign scr = m.sc_reps | join: ", " -%}
-    {% endif -%}
-| {{ org }} | {% if m.leads %}{{ m.leads | join: ", " }}{% endif %} | {{ scr }} 
+    {% for r in m.sc_reps %}
+        {% capture s %}{% include people-info.html name=r link="email" short_affil=true %}{% endcapture -%}
+        {% assign scr = scr | append: s -%}
+        {% unless forloop.last %}{% assign scr = scr | append: ", " %}{% endunless -%}
+    {% endfor -%}
+    {% assign leads = "" -%}
+    {% for lead in m.leads %}
+        {% capture l %}{% include people-info.html name=lead link="email" short_affil=true %}{% endcapture -%}
+        {% assign leads = leads | append: l -%}
+        {% unless forloop.last %}{% assign leads = leads | append: ", " %}{% endunless -%}
+    {% endfor -%}
+| {{ org }} | {{ leads }} | {{ scr }} 
 {% endfor -%}
 {% assign members = site.data.organization.members | where: "membership_level", "affiliate" -%}
 {% assign scr_array = nil -%}
 {% for m in members -%}
-    {% assign scr_array = scr_array | concat: m.sc_reps -%}
+    {% assign scr_array = scr_array | concat: m.sc_reps | uniq -%}
 {% endfor -%}
-{% assign scr = scr_array | uniq | join: ", " -%}
+{% assign scr = "" -%}
+{% for r in scr_array %}
+    {% capture s %}{% include people-info.html name=r link="email" short_affil=true %}{% endcapture -%}
+    {% assign scr = scr | append: s -%}
+    {% unless forloop.last %}{% assign scr = scr | append: ", " %}{% endunless -%}
+{% endfor -%}
 | ***Affiliate Members*** | | {{ scr }} 
 {% for m in members -%}
     {% assign org = m.name | default: m.short_name | default: "*missing data*" -%}
@@ -67,7 +80,13 @@ Most of the work of CASS is carried out within [Working Groups]({{ "/working-gro
     {% if m.name and m.short_name -%}
         {% assign org = org | append: " (" | append: m.short_name | append: ")" -%}
     {% endif -%}
-| {{ org }} | {% if m.leads %}{{ m.leads | join: ", " }}{% endif %} |
+    {% assign leads = "" -%}
+    {% for lead in m.leads %}
+        {% capture l %}{% include people-info.html name=lead link="email" short_affil=true %}{% endcapture -%}
+        {% assign leads = leads | append: l -%}
+        {% unless forloop.last %}{% assign leads = leads | append: ", " %}{% endunless -%}
+    {% endfor -%}
+| {{ org }} | {{ leads }} |
 {% endfor %}
 
 ### Current officers
@@ -75,7 +94,7 @@ Most of the work of CASS is carried out within [Working Groups]({{ "/working-gro
 | Position | Person | Current Term Ends
 |:---------|:-------|:-----------------
 {% for o in site.data.organization.officers -%}
-| {% if o.position %}{{ o.position }}{% endif %} | {% if o.name %}{{ o.name }}{% endif %} | {% if o.term_expires %}{{ o.term_expires }}{% endif %}
+| {% if o.position %}{{ o.position }}{% endif %} | {% if o.name %}{% include people-info.html name=o.name link="email" short_affil=true %}{% endif %} | {% if o.term_expires %}{{ o.term_expires }}{% endif %}
 {% endfor %}
 
 ## Governing documents

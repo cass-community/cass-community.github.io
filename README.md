@@ -36,6 +36,21 @@ A number of files in the `_data/` directory contain key information used through
 
 This file contains information about CASS as an organization, include the list of members (with key details), the steering committee members, and the officers.  The list of `members` is keyed to the `short_name` of the organizations, with the usual capitalization.
 
+### `_data/people.yml`
+
+This file contains common information about people so that it can be presented easily and consistently on the site.  The list is keyed to the individual's name. When referenced on the site, the name must match exactly the name in this file for the lookup to succeed.
+
+The minimum expected fields (those used currently on the site) are: `affiliation`, `short_affil`, and `email`.  Additional field can be added as needed.
+
+The `_include/people-info.html` function uses this file to look up and emit information in HTML format.
+
+```yaml
+Person One:
+  affiliation: Full name of institutional affiliation
+  short_affil: Abbreviated institutional affiliation
+  email: email address
+```
+
 ### `_data/sw-areas.yml`
 
 This file contains the "areas" used in the software catalog.  The list is keyed to the locally-defined `short_name` for each area (short and all lowercase). The list maps the short_names to a consistent set of human-friendly `name`s, as used in the ECP ST area, as well as terse `description`s.

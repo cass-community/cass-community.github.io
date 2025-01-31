@@ -1,8 +1,8 @@
 ---
-title: Software Catalog
+title: Software
 excerpt: View by Areas
 permalink: /software/
-collection: sw
+collection: software
 sort_by: area
 entries_layout: grid
 layout: sw-collection-areas

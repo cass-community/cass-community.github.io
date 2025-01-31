@@ -1,8 +1,8 @@
 ---
-title: Software Catalog
+title: Software
 excerpt: Alphabetical view
 permalink: /software-alpha/
-collection: sw
+collection: software
 sort_by: name
 entries_layout: grid
 layout: sw-collection

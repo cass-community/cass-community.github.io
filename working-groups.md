@@ -1,7 +1,7 @@
 ---
 title: Working Groups
 permalink: /working-groups/
-collection: wg
+collection: working-groups
 entries_layout: grid
 layout: wg-collection
 # layout: splash # Default: home, but that includes a list of posts

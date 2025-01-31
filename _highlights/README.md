@@ -151,7 +151,7 @@ software_mentioned:
 
 **Important guidance:**
 
-* `software_mentioned` entries must match the `name` field in the `sw` collection, including capitalization.
+* `software_mentioned` entries must match the `name` field in the `software` collection, including capitalization.
 
 ### `cass_members` *(controlled vocabulary)*
 
@@ -169,4 +169,4 @@ An excerpt of the content (currently the first 50 words) will be shown on the hi
 
 * Keys are case sensitive.
 
-* `software_mentioned` entries must match the `name` field in the `sw` collection, including capitalization.
+* `software_mentioned` entries must match the `name` field in the `software` collection, including capitalization.

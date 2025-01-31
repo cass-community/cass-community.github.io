@@ -3,7 +3,7 @@
   Also count the number of entries in each area
 {% endcomment %}
 
-{% assign collection = include.collection | default: "sw" %}
+{% assign collection = include.collection | default: "software" %}
 {% assign entries = include.entries | default: site[collection] | where_exp: "post", "post.hidden != true" %}
 
 {% comment %}

@@ -57,13 +57,13 @@ This file contains the "areas" used in the software catalog.  The list is keyed 
 
 #### Data structure details
 
-In the initial implementation of the site, we allowed multiple `short_name`s to map to the same area `name`.  We've since changed to limit it to a 1:1 mapping so that we can have the default sort for the sw collection be by `area`.  Some of the processing code still supports the many-to-one mapping, but we'll eliminate that over time in favor of simpler code.
+In the initial implementation of the site, we allowed multiple `short_name`s to map to the same area `name`.  We've since changed to limit it to a 1:1 mapping so that we can have the default sort for the software collection be by `area`.  Some of the processing code still supports the many-to-one mapping, but we'll eliminate that over time in favor of simpler code.
 
 The `name` values should be in sentence case
 
 #### Rendering details
 
-When rendering the site, use `_include/sw-areas-lookup` to access the `site.data.sw-areas` structure systematically.  The function takes a specification of the `input` key, the `values` to lookup, and the key to `output` the corresponding values from.  Any of the keys in the structure can be used as inputs or outputs (currently `short_name`, `name`, and `description`).  Note that because of limitations of Jekyll and Liquid, the result returned is not an array, but a text string which must be converted into an array. The general use case looks like this:
+When rendering the site, use `_include/software-areas-lookup` to access the `site.data.software-areas` structure systematically.  The function takes a specification of the `input` key, the `values` to lookup, and the key to `output` the corresponding values from.  Any of the keys in the structure can be used as inputs or outputs (currently `short_name`, `name`, and `description`).  Note that because of limitations of Jekyll and Liquid, the result returned is not an array, but a text string which must be converted into an array. The general use case looks like this:
 
 ```
 {% capture a %}{% include sw-areas-lookup values=values input="name" output="short_name" sep="|" %}{% endcapture %}
@@ -74,7 +74,7 @@ If there is no mapping for the given `area`, it should be rendered as given, in 
 
 ## Software catalog
 
-The `_sw` collection is presented on the `/software/` page, with individual pages in the `/sw/` directory.  Documentation for contributions to this collection can be found in the `_sw/README.md` and `_sw/PRODUCT_TEMPLATE.md` files.
+The `_software` collection is presented on the `/software/` page, with individual pages in the `/software/` directory.  Documentation for contributions to this collection can be found in the `_software/README.md` and `_software/PRODUCT_TEMPLATE.md` files.
 
 ## Point of contact
 David Bernholdt (@bernhold) is the primary point of contact for the <https://cass.community> website.

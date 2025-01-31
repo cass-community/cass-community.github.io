@@ -7,7 +7,7 @@
   <p><em>(Links go to <a href="{{ '/software/' | relative_url }}">software catalog</a>)</em></p>
   <ul style="list-style: none; padding: 0">
     {% for s in page.software_mentioned %}
-      {% assign c = site.sw | where: "name", s %}
+      {% assign c = site.software | where: "name", s %}
       {% assign u = c[0].url | relative_url %}
       {% if u %}
         <li><a href="{{ u }}">{{ s }}</a></li>

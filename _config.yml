@@ -58,13 +58,13 @@ og_image: /assets/images/cass-logo.png
 # Add web analytics, eventually
 
 # We will need to make some changes to collection names and such before we can enable this
-#breadcrumbs: true
+breadcrumbs: true
 
 collections:
-  wg:
+  working-groups:
     output: true
     sort_by: name
-  sw:
+  software:
     output: true
     sort_by: area
   highlights:
@@ -72,20 +72,20 @@ collections:
     sort_by: date
 
 defaults:
-  # wg -- working groups
+  # working groups
   - scope:
       path: ""
-      type: "wg"
+      type: "working-groups"
     values:
       layout: "wg-page"
       classes: wide
       author_profile: false
       comments: false
       toc: false
-  # sw -- software products
+  # software
   - scope:
       path: ""
-      type: "sw"
+      type: "software"
     values:
       layout: "sw-page"
       classes: wide
@@ -151,10 +151,10 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 exclude:
-  - _sw/TEMPLATE.md
-  - _sw/README.md
-  - _wg/TEMPLATE.md
-  - _wg/README.md
+  - _software/TEMPLATE.md
+  - _software/README.md
+  - _working-groups/TEMPLATE.md
+  - _working-groups/README.md
   - _highlights/TEMPLATE.md
   - _highlights/README.md
 

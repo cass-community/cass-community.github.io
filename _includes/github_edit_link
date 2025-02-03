@@ -1,0 +1,19 @@
+{% comment %}
+  github_edit_link -- emits an HTML link to the GitHub source for the calling page
+
+  Parameters
+  text: link text (OPTIONAL, default: "Edit on GitHub")
+  branch: repository branch for source (OPTIONAL, default: "main")
+  repository: repository NWO (OPTIONAL, default: site.repository)
+  repo_host: URL of hosting site (OPTIONAL, default: site.host)
+  path: file path (OPTIONAL, default page.path)
+
+  Note: the jekyll-github-metata plugin supposedly provides a tag for this,
+  but it hardcoded for the `gh_pages` branch.
+{% endcomment %}
+{% assign text = include.text | default: "Edit on GitHub" %}
+{% assign branch = include.branch | default: "main" %}
+{% assign repository = include.repostory | default: site.repository %}
+{% assign host = include.repo_host | default: site.repo_host %}
+{% assign path = include.path | default: page.path %}
+<a href="{{ host }}/{{ repository }}/edit/{{ branch }}/{{ path }}">{{ text }}</a>

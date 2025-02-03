@@ -43,6 +43,7 @@ minimal_mistakes_skin: "air"
 name: The CASS Community
 
 repository: cass-community/cass-community-new
+repo_host: https://github.com
 
 # Set the logo image
 #

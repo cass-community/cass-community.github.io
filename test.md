@@ -13,6 +13,11 @@ resources:
     url: https://github.com/icl-utk-edu/papi/wiki
     icon: <i class="fa-solid fa-font-awesome"></i>
 ---
+## github_edit_link
+
+{% include github_edit_link %}
+
+
 ## people-info.html
 
 {% include people-info.html name="Daniel S. Katz" %}

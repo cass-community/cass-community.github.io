@@ -3,13 +3,16 @@ layout: default
 ---
 {% comment %}}
   CHANGES FROM DEFAULT SINGLE LAYOUT
-  * Call wg-sidebar.html instead of sidebar.html
   * page.title --> page.name
   * page.excerpt --> page.description
   * Copied excerpt code from _include/page__hero.html
   * Added code to display charter
    * Added Additional resources section
 {% endcomment %}
+{% capture chair_icon %}{% include icon-map-lookup label="Chair" %}{% endcapture %}
+{% capture meetings_icon %}{% include icon-map-lookup label="Meetings" %}{% endcapture %}
+{% capture membership_icon %}{% include icon-map-lookup label="Membership" %}{% endcapture %}
+
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -28,7 +31,7 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
-  {% include wg-sidebar.html %}
+  {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
     {% if page.name %}<meta itemprop="headline" content="{{ page.name | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -61,13 +64,75 @@ layout: default
           </aside>
         {% endif %}
 
+        {% comment %}
+          Do some prep work on chair emails that we won't necessarily need, but is a bit complicated and ugly to put inline
+        {% endcomment %}
+
+        {% capture subject %}CASS {{ page.name }} working group interest{% endcapture %}
+        {% assign email = nil %}
+        {% if page.chair %}
+          {% for chair in page.chair %}
+            {% assign c = site.data.people[chair] %}
+              {% if c.email %}
+                {% assign email = email | append: c.email %}{% unless forloop.last %}{% assign email = email | append: "," %}{% endunless %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% assign url = nil %}
+        {% if email %}
+          {% capture url %}mailto:{{ email }}?subject={{ subject }}{% endcapture %}
+        {% endif %}
+
+        {% if page.charter.membership %}
+          <p>{{ membership_icon }} <strong>Membership:</strong> {{ page.charter.membership | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+            {% if page.charter.membership == "Open" %}
+              {% if url %}
+                <a href="{{ url }}">(contact the {{ page.chair.size | pluralize: "chair", "chairs" }}</a> to participate)
+              {% else %}
+                (contact the {{ page.chair.size | pluralize: "chair", "chairs" }} to participate)
+              {% endif %}
+            {% endif %}
+          </p>
+        {% endif %}
+
+        {% if page.meeting_schedule %}
+          <p>{{ meetings_icon }} <strong>Meeting schedule:</strong> {{ page.meeting_schedule }}</p>
+        {% endif %}
+
+        {% if page.chair %}
+          <p>{{ chair_icon }} <strong>{{ page.chair.size | pluralize: "Chair:", "Chairs:" }}</strong>
+          {% for chair in page.chair %}
+            {% assign c = site.data.people[chair] %}
+            {% include people-info.html name=chair link="email" email_subject=subject short_affil=true %}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+          </p>
+        {% endif %}
+
         {% if page.charter %}
           <h2 id="charter">Charter</h2>
-          {{ page.charter | markdownify }}
-
-          {% if page.charter_status %}
-            <p><strong>Charter status:</strong> {{ page.charter_status }}</p>
+          {% if page.charter.purpose %}
+            <p><strong>Purpose:</strong> {{ page.charter.purpose | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
           {% endif %}
+          <details><summary><strong>Read the rest of the charter</strong></summary>
+          {% if page.charter.relationships %}
+            <p><strong>Relationships to other working groups:</strong> {{ page.charter.relationships | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+          {% endif %}
+          {% if page.charter.lifetime %}
+            <p><strong>Expected lifetime:</strong> {{ page.charter.lifetime | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+          {% endif %}
+          {% if page.charter.membership %}
+            <p><strong>Expected membership:</strong> {{ page.charter.membership | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+          {% endif %}
+          {% if page.charter.reporting %}
+            <p><strong>Reporting expectations:</strong> {{ page.charter.reporting | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+          {% endif %}
+          {% if page.charter.additional %}
+            <p><strong>Additional information:</strong> {{ page.charter.additional | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+          {% endif %}
+          {% if page.charter.status %}
+            <p><strong>Charter approval status:</strong> {{ page.charter.status | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+          {% endif %}
+          </details>
         {% endif %}
 
         {% if page.additional_resource_links %}

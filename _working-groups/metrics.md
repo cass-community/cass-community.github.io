@@ -13,26 +13,20 @@ status_date: 2024-10-03 # The date the group went active or retired
 #   Reporting expectations
 #   Additional information (as needed)
 #
-charter: |
-  *Purpose:*
-  The Metrics Working Group (WG) facilitates a coordinated effort to curate and develop metrics for understanding software sustainability, quality and impact from the perspective of scientific and research software. We will  leverage  research-backed analysis tools that will enable projects to collect and interpret these metrics for the long-term benefit of their software development efforts. Our goals are to:
+charter:
+  purpose: |
+    The Metrics Working Group (WG) facilitates a coordinated effort to curate and develop metrics for understanding software sustainability, quality and impact from the perspective of scientific and research software. We will  leverage  research-backed analysis tools that will enable projects to collect and interpret these metrics for the long-term benefit of their software development efforts. Our goals are to:
 
-    - Identify and define metrics that are meaningful for understandingsoftware sustainability, quality and impact.
+    - Identify and define metrics that are meaningful for understanding software sustainability, quality and impact.
     - Align metrics with the preferences and requirements of foundations, grant-making bodies, and other stakeholders.
     - Identify and deploy tools for collecting and analyzing these metrics 
     - Engage directly with software projects to understand and support their specific needs with respect to relevant metrics.
-
-  *Relationship to other working groups:* We will work collaboratively with the Impact Framework WG and support their efforts in evaluating and reporting the outcomes of software projects through the use of metrics. Additionally, the Metrics WG will work with other relevant WGs and stakeholders to ensure broad utility and alignment of its outputs.
-
-  *Lifetime:* Standing.  The WG will periodically refine its metrics and set of tools as the needs of the community evolve. 
-
-  *Membership:* Open
-
-  *Reporting:* Quarterly
-#
-# Charter status may be Provisional or Approved and should include a date
-#
-charter_status: Provisional, since 2024-10-03
+  relationships: |
+    We will work collaboratively with the Impact Framework WG and support their efforts in evaluating and reporting the outcomes of software projects through the use of metrics. Additionally, the Metrics WG will work with other relevant WGs and stakeholders to ensure broad utility and alignment of its outputs.
+  lifetime: Standing.  The WG will periodically refine its metrics and set of tools as the needs of the community evolve.
+  membership: Open
+  reporting: Quarterly
+  status: Provisional, since 2024-10-03
 #
 chair: # Can be more than one person
   - Addi Malviya-Thakur

@@ -20,25 +20,14 @@ status_date: 2024-10-30 # The date the group went active or retired
 #   Reporting expectations
 #   Additional information (as needed)
 #
-charter: |
-  *Purpose:*
-  An open forum for projects to meet and share experiences with joining or membership in an open-source software foundation (e.g., NumFOCUS, High Performance Software Foundation, etc.)
-
-  *Relationship to other working groups:*
-  TBD
-
-  *Lifetime:*
-  Standing
-
-  *Membership:*
-  Open
-
-  *Reporting:*
-  Annually
-#
-# Charter status may be Provisional or Approved and should include a date
-#
-charter_status: Provisional, since early October 2024
+charter:
+  purpose: |
+    An open forum for projects to meet and share experiences with joining or membership in an open-source software foundation (e.g., NumFOCUS, High Performance Software Foundation, etc.)
+  # relationships: 
+  lifetime: Standing
+  membership: Open
+  reporting: Annually
+  status: Provisional, since early October 2024
 #
 chair: # Can be more than one person
   - Daniel S. Katz

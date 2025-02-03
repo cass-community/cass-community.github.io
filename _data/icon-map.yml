@@ -88,6 +88,8 @@
   # icon: <i class="fa-solid fa-medal"></i> # Another option?
 - label: Featured
   icon: <i class="fa-solid fa-fw fa-star"></i>
+- label: Membership
+  icon: <i class="fa-solid fa-fw fa-users"></i>
 
 # Additional ideas (not yet implemented), mostly inspired by
 # https://www.osgeo.org/projects/

@@ -20,25 +20,14 @@ status_date: 2024-09-17 # The date the group went active or retired
 #   Reporting expectations
 #   Additional information (as needed)
 #
-charter: |
-  *Purpose:*
-  I have no purpose.
-
-  *Relationship to other working groups:*
-  We don't like collaborating with other groups.
-
-  *Lifetime:*
-  This will often be "Standing", though we can also have fixed duration WGs.
-
-  *Membership:*
-  This will often be "Open", though some WGs may be something like "One representative per CASS member".
-
-  *Reporting:*
-  Suggest Quarterly, Semiannually, or Annually, as seems appropriate to the topic.
-#
-# Charter status may be Provisional or Approved and should include a date
-#
-charter_status: Provisional, since 2024-09-17
+purpose: |
+  The goals of the CASS Integration Working Group are to improve quality, sustainability, delivery, and interoperability across the scientific and AI software ecosystem. Individual efforts take place at the ecosystem and individual product community levels, including on-node and inter-node programming systems, tools, data and visualization, math libraries, and workflows.  The dual focus on ecosystem and product levels is essential due to the challenges of creating a cohesive ecosystem that includes product communities with different needs and varying levels of maturity.
+relationships: |
+  Integration working group efforts are often synergistic with the Impact Framework and User-Developer Experience (UDX) working groups.
+lifetime: Standing
+membership: Open
+reporting: Quarterly
+status: Provisional, since 2024-08-19
 #
 chair: # Can be more than one person
   - name: David Bernholdt (ORNL)

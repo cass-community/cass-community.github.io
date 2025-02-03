@@ -13,21 +13,15 @@ status_date: 2025-01-10 # The date the group went active or retired; FIXME
 #   Reporting expectations
 #   Additional information (as needed)
 #
-charter: |
-  *Purpose:*
-  The User-Developer Experience (UDX) Working Group (WG) brings together groups and individuals interested in science of scientific software development and use.  The UDX WG provides a forum for discussions on understanding and improving how users and developers interact with and experience scientific software. The UDX WG discussions focus on both the libraries and tools used while creating code as well as the software produced through those efforts. Topics include how documentation is presented and maintained; how applications are updated and installed; how code contributions from dispersed developers are managed and integrated; how tasks are arranged into workflows; how web, desktop, and command line interfaces are leveraged; how organizational policies are navigated, and beyond.
-
-  *Relationship to other working groups:* We will interact with the [Metrics](metrics) and [Impact Framework](impact-framework) WGs if we discover information that could inform efforts of these WGs or can ourselves benefit from their progress.
-
-  *Lifetime:* Standing. Subject to annual review of needs and purpose.
-
-  *Membership:* Open
-
-  *Reporting:* Annually
-#
-# Charter status may be Provisional or Approved and should include a date
-#
-charter_status: Provisional, 2025-01-10
+charter:
+  purpose: |
+    The User-Developer Experience (UDX) Working Group (WG) brings together groups and individuals interested in science of scientific software development and use.  The UDX WG provides a forum for discussions on understanding and improving how users and developers interact with and experience scientific software. The UDX WG discussions focus on both the libraries and tools used while creating code as well as the software produced through those efforts. Topics include how documentation is presented and maintained; how applications are updated and installed; how code contributions from dispersed developers are managed and integrated; how tasks are arranged into workflows; how web, desktop, and command line interfaces are leveraged; how organizational policies are navigated, and beyond.
+  relationships: |
+    We will interact with the [Metrics](metrics) and [Impact Framework](impact-framework) WGs if we discover information that could inform efforts of these WGs or can ourselves benefit from their progress.
+  lifetime: Standing. Subject to annual review of needs and purpose.
+  membership: Open
+  reporting: Annually
+  status: Provisional, since 2025-01-10
 #
 chair: # Can be more than one person
   - Hannah Cohoon

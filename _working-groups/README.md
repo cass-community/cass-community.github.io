@@ -44,20 +44,35 @@ The by-laws require that every working group have a charter. It should include:
 * Expected membership
 * Reporting expectations
 * Additional information (as needed)
+* Charter approval status
 
-Input for this field should generally use the YAML syntax for a multi-line string, denoted by the pipe ("|") character on the line with the key. Each section should have a run-in header in italics, for example `*Purpose*`.
+Each of these should be provided as a separate member of the `charter` structure:
+
+```yaml
+charter:
+  purpose: |
+    Long text
+  relationships: |
+    Long text
+  lifetime: short text
+  membership: short text
+  reporting: short text
+  additional: |
+    Long text (if needed)
+  status: short text
+```
+
+Input for this fields may use the YAML syntax for a multi-line string, denoted by the pipe ("|") character on the line with the key. 
 
 *Relationship to other working groups* is not required by the by-laws, but can be used to capture specific relationships that some WGs might have (e.g., Impact Framework and Metrics).
 
 *Lifetime* will often be "Standing", but other durations may be appropriate in some cases
 
-*Expected membership* will often be "Open", which includes the possibility of people not affiliated with CASS member organizations joining.  However some WGs may have other memberships, such as "One representative from each CASS member organization."
+*Expected membership* will often be "Open", which includes the possibility of people not affiliated with CASS member organizations joining.  However some WGs may have other memberships, such as "One representative from each CASS member organization."  Where memberships are "Open" (exact match required), the rendering may encourage readers to contact the chair(s) to participate.
 
 *Reporting expectations* are likely to be things like Quarterly, Seminannual, Annual, as appropriate to the topic.  The by-laws require annual review of working groups by the Steering Committee, so that would be the longest cycle.
 
-## `charter_status` *(string)*
-
-The `charter_status` should be either "Provisional" or "Approved" and should also mention the date of that status.  For example `Provisional, since 2024-09-17`.
+*Charter approval status* should be either "Provisional" or "Approved" and should also mention the date of that status.  For example `Provisional, since 2024-09-17`.
 
 ## `chair` *(list)*
 

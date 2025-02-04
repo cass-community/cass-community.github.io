@@ -8,6 +8,8 @@ layout: default
   * Copied excerpt code from _include/page__hero.html
   * Added code to display charter
    * Added Additional resources section
+  * Comment out page__date.html include
+  * Add page__edit.html include
 {% endcomment %}
 {% capture chair_icon %}{% include icon-map-lookup label="Chair" %}{% endcapture %}
 {% capture meetings_icon %}{% include icon-map-lookup label="Meetings" %}{% endcapture %}
@@ -151,7 +153,8 @@ layout: default
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
-        {% include page__date.html %}
+        {% comment %}{% include page__date.html %}{% endcomment %}
+        {% include page__edit.html %}
        </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}

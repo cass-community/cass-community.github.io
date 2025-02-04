@@ -6,6 +6,8 @@ layout: default
   * Replace sidebar.html with hl-sidebar.html
   * Add highlight slide image below content
   * Add authors and achnowledgment at the bottom
+  * Comment out page__date.html include
+  * Add page__edit.html include
 {% endcomment %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -84,7 +86,8 @@ layout: default
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
-        {% include page__date.html %}
+        {% comment %}{% include page__date.html %}{% endcomment %}
+        {% include page__edit.html %}
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}

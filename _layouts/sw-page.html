@@ -11,6 +11,8 @@ layout: default
   * Added code to display page.long_description and page.target_audience
   * Added Additional resources section
   * Added Highlights section
+  * Comment out page__date.html include
+  * Add page__edit.html include
 {% endcomment %}
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
 
@@ -116,7 +118,8 @@ layout: default
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
-        {% include page__date.html %}
+        {% comment %}{% include page__date.html %}{% endcomment %}
+        {% include page__edit.html %}
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}

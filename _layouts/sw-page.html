@@ -101,7 +101,7 @@ layout: default
         {% endcomment %}
         {% assign highlights = site.highlights | where_exp: "item", "item.software_mentioned contains page.name" | sort: "date" | reverse %}
         {% if highlights.size > 0 %}
-        <h2 id="highlights">Highlights</h2>
+        <h2 id="impact-stories">Impact stories</h2>
         <ul style="list-style: none; padding: 0">
           {% for h in highlights %}
           <li><a href="{{ h.url | relative_url }}">{{ h.title }}{% if h.date %} ({{ h.date | date: date_format }}){% endif %}</a></li>

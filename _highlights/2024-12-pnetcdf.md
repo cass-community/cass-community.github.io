@@ -1,9 +1,10 @@
 ---
 title: "I/O in WRF: Evaluating Modern Parallel I/O Techniques"
 date: 2024-12-13
+teaser: 2024-12-pnetcdf/pnetcdf-square.png
 slide:
-  - image: 2024-12-13-pnetcdf.jpg
-  - file: 2024-12-13-pnetcdf.pdf
+  - image: 2024-12-pnetcdf/pnetcdf.jpg
+  - file: 2024-12-pnetcdf/pnetcdf.pdf
 software_mentioned:
   - PnetCDF
   - HDF5

@@ -2,7 +2,8 @@
 title: The Value of a Scientific Software Ecosystem in Advancing Scientific Discovery
 date: 2025-01-14
 #
-teaser: 2025-01-sw-ecosystem-power/powers-of-10-transparent.png
+# teaser: 2025-01-sw-ecosystem-power/powers-of-10-transparent.png
+teaser: 2025-01-sw-ecosystem-power/powers-of-10-transparent-square.png
 #
 authors: 
   - Michael A. Heroux

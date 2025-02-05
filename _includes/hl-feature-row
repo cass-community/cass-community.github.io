@@ -1,0 +1,37 @@
+{% comment %}
+  hl-feature-row -- generate a row of highlights using the MM feature_row
+
+  Technically, we're using a variant called flexible_feature_row because
+  the original is tied to the information being in the page frontmatter.
+  In this case, we extract the needed information from the highlights
+  themselves.
+
+  Parameters
+    highlights: path to highlights to feature (OPTIONAL, default: site.data.featured-stories)
+    collection: name of highlight collection (OPTIONAL, default: "highlights")
+  
+  Flexible_feature_row parameters passed through
+    type: "left", "center", or "right" alignment
+    no_border: modify style to eliminate bottom border rule
+{% endcomment %}
+{% assign highlights = include.highlights | default: site.data.featured-stories %}
+{% assign collection = include.collection | default: "highlights" %}
+
+{% assign image_path = "" | split: "," %}
+{% assign title = "" | split: "," %}
+{% assign title_url = "" | split: "," %}
+{% assign excerpt = "" | split: "," %}
+
+{% for h in highlights %}
+  {% assign query = "item.url contains '" | append: h | append: "'" %}
+  {% assign hl = site[collection] | where_exp: "item", query %}
+  {% assign img = hl[0].teaser %}
+  {% capture teaser %}{% include hl-image-path image=img %}{% endcapture %}
+  {% assign image_path = image_path | push: teaser %}
+  {% assign title = title | push: hl[0].title %}
+  {% assign url = hl[0].url | relative_url %}
+  {% assign title_url = title_url | push: url %}
+  {% assign excerpt = excerpt | push: hl[0].excerpt %}
+{% endfor %}
+
+{% include flexible_feature_row no_border=true image_path=image_path title=title title_url=title_url excerpt=excerpt %}

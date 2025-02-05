@@ -39,9 +39,9 @@
 - label: Seminars
   icon: <i class="fa-solid fa-fw fa-person-chalkboard"></i>
 - label: Mailing list
-  icon: <i class="fas fa-fw fa-envelope"></i>
+  icon: <i class="fa-solid fa-fw fa-envelopes-bulk"></i>
 - label: Mailing lists
-  icon: <i class="fas fa-fw fa-envelope"></i>
+  icon: <i class="fa-solid fa-fw fa-envelopes-bulk"></i>
 - label: Discord
   icon: <i class="fa-brands fa-fw fa-discord"></i>
 - label: Issue tracker
@@ -82,6 +82,7 @@
   icon: <i class="fa-solid fa-fw fa-scale-balanced"></i>
 - label: Software
   icon: <i class="fa-solid fa-fw fa-square-binary"></i>
+  # icon: <i class="fa-regular fa-fw fa-file-code"></i>
 - label: Highlights
   icon: <i class="fa-solid fa-fw fa-highlighter"></i> # Ha, ha, visual pun
   # icon: <i class="fa-solid fa-gem"></i> # Maybe more serious?
@@ -90,6 +91,10 @@
   icon: <i class="fa-solid fa-fw fa-star"></i>
 - label: Membership
   icon: <i class="fa-solid fa-fw fa-users"></i>
+- label: Handshake
+  icon: <i class="fa-solid fa-fw fa-handshake-simple"></i>
+- label: Chat
+  icon: <i class="fa-solid fa-fw fa-comments"></i>
 
 # Additional ideas (not yet implemented), mostly inspired by
 # https://www.osgeo.org/projects/

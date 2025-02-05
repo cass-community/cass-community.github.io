@@ -3,9 +3,9 @@ title: About Us
 permalink: /about/
 # toc: true
 # toc_sticky: true
-layout: about-page
+#layout: about-page
 # layout: single
-# layout: splash 
+layout: splash 
 classes: wide
 header:
 #   overlay_color: "#000"

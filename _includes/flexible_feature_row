@@ -1,0 +1,78 @@
+{% comment %}
+  CHANGES FROM DEFAULT FEATURE_ROW
+  * Take parameters from the invocation rather than from the page frontmatter
+  * Change titles to h3 from h2
+  * Optionally modify feature__wrapper style to eliminate bottom border rule
+
+  Parameters (arrays)
+    image_path (REQUIRED)
+    image_caption (OPTIONAL)
+    alt (OPTIONAL)
+    title (OPTIONAL)
+    title_url (OPTIONAL)
+    excerpt (OPTIONAL)
+    url (OPTIONAL)
+    btn_label (OPTIONAL)
+    btn_class (OPTIONAL)
+  Note that every optional parameter provided must have the same number of
+  entries as image_path or else bad things may happen
+
+  Additional parameters
+    no_border: modify style to eliminate bottom border rule
+
+  Original feature_row parameters
+    type: "left", "center", or "right" alignment
+{% endcomment %}
+
+
+{% if include.no_border %}
+<div class="feature__wrapper" style="border-bottom: none">
+{% else %}
+<div class="feature__wrapper">
+{% endif %}
+  {% for image_path in include.image_path %}
+    {% assign f = forloop.index0 %}
+    {% assign image_caption = include.image_caption[f] %}
+    {% assign alt = include.alt[f] %}
+    {% assign title = include.title[f] %}
+    {% assign title_url = include.title_url[f] %}
+    {% assign excerpt = include.excerpt[f] %}
+    {% assign url = include.url[f] %}
+    {% assign btn_label = include.btn_label[f] %}
+    {% assign btn_class = include.btn_class[f] %}
+    <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">
+      <div class="archive__item">
+        {% if image_path %}
+        {% comment %}<div class="archive__item-teaser" style="display: img { block; margin-left: auto; margin-right: auto;}">{% endcomment %}
+          <div class="archive__item-teaser">
+            <img src="{{ image_path | relative_url }}"
+                 alt="{% if alt %}{{ alt }}{% endif %}">
+            {% if image_caption %}
+              <span class="archive__item-caption">{{ image_caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <div class="archive__item-body">
+          {% if title %}
+            {% if title_url %}
+              <h3 class="archive__item-title"><a href="{{ title_url }}">{{ title }}</a></h3>
+            {% else %}
+              <h3 class="archive__item-title">{{ title }}</h3>
+            {% endif %}
+          {% endif %}
+
+          {% if excerpt %}
+            <div class="archive__item-excerpt">
+              {{ excerpt | markdownify }}
+            </div>
+          {% endif %}
+
+          {% if url %}
+            <p><a href="{{ url | relative_url }}" class="btn {{ btn_class }}">{{ btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

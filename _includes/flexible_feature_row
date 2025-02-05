@@ -43,7 +43,6 @@
     <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">
       <div class="archive__item">
         {% if image_path %}
-        {% comment %}<div class="archive__item-teaser" style="display: img { block; margin-left: auto; margin-right: auto;}">{% endcomment %}
           <div class="archive__item-teaser">
             <img src="{{ image_path | relative_url }}"
                  alt="{% if alt %}{{ alt }}{% endif %}">

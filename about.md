@@ -4,8 +4,8 @@ permalink: /about/
 # toc: true
 # toc_sticky: true
 #layout: about-page
-# layout: single
-layout: splash 
+layout: single
+# layout: splash 
 classes: wide
 header:
 #   overlay_color: "#000"
@@ -32,7 +32,7 @@ CASS member organizations have their own leadership, governance, and activities,
 
 Most of the work of CASS is carried out within [Working Groups]({{ "/working-groups/" | relative_url }}), which are created as needed.
 
-### Current members and leadership
+## Current members and leadership
 
 | Organization Name | Organization Lead(s) | Steering Committee Representative 
 |:------------------|:------------------------|:-------

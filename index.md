@@ -24,13 +24,13 @@ The **Consortium for the Advancement of Scientific Software (CASS)** is a federa
 
 ## Software
 
-The current CASS software portfolio focuses on libraries and tools which support leading-edge computational science and engineering research on high-performance parallel computers. Topical areas include: data and visualization, development tools, mathematical libraries, programming models and runtimes, and software ecosystem and delivery, and the software is freely available.  Most of the software has been developed with support from the U.S. Department of Energy [Office of Advanced Scientific Computing Research](https://www.energy.gov/science/ascr/advanced-scientific-computing-research), and the [Software Technologies](https://www.exascaleproject.org/research/#software) focus area of the [Exascale Computing Project](https://www.exascaleproject.org/).
+The current CASS software portfolio focuses on freely available libraries and tools that support leading-edge computational science and engineering research on high-performance parallel computers. Topical areas include: data and visualization, development tools, mathematical libraries, programming models and runtimes, and software ecosystem and delivery. Most of the software has been developed with support from the U.S. Department of Energy [Office of Advanced Scientific Computing Research](https://www.energy.gov/science/ascr/advanced-scientific-computing-research), and the [Software Technologies](https://www.exascaleproject.org/research/#software) focus area of the [Exascale Computing Project](https://www.exascaleproject.org/).
 
 **{{ software_icon }} [Explore our software...]({{ "/software/" | relative_url }})**
 
 ## Engage with us
 
-CASS and its member organizations work with our software product teams to improve the quality, sustainability, and interoperability of the software products in our ecosystem, and with the broader community to improve awareness of and the ability to take advantage of the software to advance science.  There are many ways you can get involved. DOE sponsorship is *not* required to participate or join.
+CASS and its member organizations work with our software product teams to improve the quality, sustainability, and interoperability of the software products in our ecosystem -- essential for a robust and trustworthy scientific software ecosystem.  We also collaborate with the broader community to leverage these reusable software libraries and tools to advance science. There are many ways you can get involved. DOE sponsorship is *not* required to participate or join.
 
 **{{ mailinglist_icon }} [Join our announcement mailing list](http://eepurl.com/iRiSnY)** for updates on CASS events and news.
 

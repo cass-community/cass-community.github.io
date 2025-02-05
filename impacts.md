@@ -24,4 +24,4 @@ The portion of the scientific software ecosystem that is currently the focus of 
 These highlights illustrate ways in which software in the CASS ecosystem is used by other computational scientists, or even other organizations, to facilitate advances in their fundamental research, as well as advances in computer science and applied math embodied in those software products themselves.
 {% endcomment %}
 
-Computing is central to the advancement of modern science. These highlights illustrate ways in which software in the CASS ecosystem is used by other computational scientists, or even other organizations, to facilitate advances in their fundamental research, as well as advances in computer science and applied math embodied in the software products themselves.
+Computing is central to the advancement of modern science. These stories illustrate ways in which software in the CASS ecosystem is used by other computational scientists, or even other organizations, to facilitate advances in their fundamental research, as well as advances in computer science and applied math embodied in the software products themselves.

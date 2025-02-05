@@ -16,7 +16,7 @@ header:
 {% capture chat_icon %}{% include icon-map-lookup label="Chat" %}{% endcapture %}
 {% capture handshake_icon %}{% include icon-map-lookup label="Handshake" %}{% endcapture %}
 
-The **Consortium for the Advancement of Scientific Software (CASS)** is a federation of member organizations committed to the stewardship and advancement of the current and future ecosystem of scientific computing software in support of competitiveness and innovation through the advancement of science. These highlights illustrate some of the impacts of software in the CASS portfolio.
+The **Consortium for the Advancement of Scientific Software (CASS)** is a federation of member organizations committed to the stewardship and advancement of the current and future ecosystem of scientific computing software in support of competitiveness and innovation through the advancement of science. These stories illustrate some of the impacts of software in the CASS portfolio.
 
 {% include hl-feature-row no_border=true %}
 
@@ -24,7 +24,7 @@ The **Consortium for the Advancement of Scientific Software (CASS)** is a federa
 
 ## Software
 
-The current CASS software portfolio focuses on libraries and tools which support leading-edge computational science and engineering research on high-performance parallel computers. Topical areas include: data and visualization, development tools, mathematical libraries, programming models and runtimes, and software ecosystem and delivery, and the software is freely available.  Most of the software has been developed and supported by the U.S. Department of Energy [Office of Advanced Scientific Computing Research](https://www.energy.gov/science/ascr/advanced-scientific-computing-research), and the [Software Technologies](https://www.exascaleproject.org/research/#software) focus area of the [Exascale Computing Project](https://www.exascaleproject.org/).
+The current CASS software portfolio focuses on libraries and tools which support leading-edge computational science and engineering research on high-performance parallel computers. Topical areas include: data and visualization, development tools, mathematical libraries, programming models and runtimes, and software ecosystem and delivery, and the software is freely available.  Most of the software has been developed with support from the U.S. Department of Energy [Office of Advanced Scientific Computing Research](https://www.energy.gov/science/ascr/advanced-scientific-computing-research), and the [Software Technologies](https://www.exascaleproject.org/research/#software) focus area of the [Exascale Computing Project](https://www.exascaleproject.org/).
 
 **{{ software_icon }} [Explore our software...]({{ "/software/" | relative_url }})**
 

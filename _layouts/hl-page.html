@@ -8,7 +8,9 @@ layout: default
   * Add authors and achnowledgment at the bottom
   * Comment out page__date.html include
   * Add page__edit.html include
+  * Add default date format
 {% endcomment %}
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -66,16 +68,29 @@ layout: default
           <a href="{{ f }}"><img src="{{ i }}" alt="Image of highlight slide"></a>
         {% endif %}
 
-        {% if page.authors or page.acknowledgment %}
-        <p>
-        {% if page.authors %}
-        <em>{{ page.authors.size | pluralize: "Author:", "Authors:" }} {{ page.authors | array_to_sentence_string }}</em>
+        {% comment %}
+          If there's no date in the frontmatter, page.date to site.time.
+          But we want to recognize that case and avoid showing a publication date.
+        {% endcomment %}
+        {% if page.date == site.time %}
+          {% assign date_set = false %}
+        {% else %}
+          {% assign date_set = true %}
         {% endif %}
-        {% if page.authors and page.acknowledgment %}<br>{% endif %}
-        {% if page.acknowledgment %}
-        <em>Acknowledgement: {{ page.acknowledgment }}</em>
-        {% endif %}
-        </p>
+        {% if page.authors or page.acknowledgment or date_set %}
+          <p>
+          {% if page.authors %}
+            <em>{{ page.authors.size | pluralize: "Author:", "Authors:" }} {{ page.authors | array_to_sentence_string }}</em>
+            {% if page.acknowledgment or date_set %}<br>{% endif %}
+          {% endif %}
+          {% if page.acknowledgment %}
+            <em>Acknowledgement: {{ page.acknowledgment }}</em>
+            {% if date_set %}<br>{% endif %}
+          {% endif %}
+          {% if date_set %}
+            <em>Published: {{ page.date | date: date_format }}</em>
+          {% endif %}
+          </p>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}

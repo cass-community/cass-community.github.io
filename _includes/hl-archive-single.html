@@ -13,7 +13,7 @@
     with the text (header and excerpt).
 {% endcomment %}
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-{% assign teaser_path = "/assets/highlights/" %}
+{% assign teaser_path = "/assets/impacts/" %}
 
 {% if post.teaser %}
   {% capture teaser %}{{ post.teaser | prepend: teaser_path }}{% endcapture %}
@@ -49,10 +49,10 @@
   Could be a real teaser or a slide -- teaser takes priority
 {% endcomment %}
 {% if post.slide %}
-{% assign teaser = post.slide[0].image | prepend: "/assets/highlights/" | relative_url %}
+{% assign teaser = post.slide[0].image | prepend: "/assets/impacts/" | relative_url %}
 {% endif %}
 {% if post.teaser %}
-{% assign teaser = post.teaser | prepend: "/assets/highlights/" | relative_url %}
+{% assign teaser = post.teaser | prepend: "/assets/impacts/" | relative_url %}
 {% endif %}
 
 

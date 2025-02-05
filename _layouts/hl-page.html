@@ -60,8 +60,8 @@ layout: default
 
         {% if page.slide %}
           {% assign s = page.slide %}
-          {% assign i = s[0].image| prepend: "/assets/highlights/" | relative_url %}
-          {% assign f = s[1].file | prepend: "/assets/highlights/" | relative_url %}
+          {% assign i = s[0].image| prepend: "/assets/impacts/" | relative_url %}
+          {% assign f = s[1].file | prepend: "/assets/impacts/" | relative_url %}
           <p id="highlight-slide"><strong>Highlight slide</strong></p>
           <a href="{{ f }}"><img src="{{ i }}" alt="Image of highlight slide"></a>
         {% endif %}

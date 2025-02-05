@@ -1,6 +1,6 @@
-# Highlights Contributor README
+# Impact Stories Contributor README
 
-This document is intended to provide guidance for contributing to the highlights section of the site and individual highlights on the <https://cass.community> website.  It is very much a work in progress.  If things are wrong, unclear, or missing, please file an [issue](https://github.com/cass-community/new/issues).
+This document is intended to provide guidance for contributing to the impacts section of the site and individual highlights on the <https://cass.community> website.  It is very much a work in progress.  If things are wrong, unclear, or missing, please file an [issue](https://github.com/cass-community/new/issues).
 
 Most of the information here is organized by the specific keys in the [TEMPLATE.md](TEMPLATE.md) file.  *But please also note and follow the [Best Practices](#best-practices) guidance*.
 
@@ -81,7 +81,7 @@ Style issues in question:
 We support two basic styles of highlights: free-form and slide-based.  Both versions support arbitrary markdown content for the body of the highlight.  The primary differences are:
 
 * Free-form highlights utilize a `teaser` field to designate an eye-candy image to associate with the highlight.
-* Slide-based highlights display an image of the slide on the bottom of the highlight page, linked to a PDF of of the slide.  Both the image and the PDF should be in the `/assets/highlights/` directory with a name that is associated with the filename of the highlight itself.
+* Slide-based highlights display an image of the slide on the bottom of the highlight page, linked to a PDF of of the slide.  Both the image and the PDF should be in the `/assets/impacts/` directory with a name that is associated with the filename of the highlight itself.
 
 ## Filenames
 
@@ -89,7 +89,7 @@ We expect to publish many highlights, and the easiest way to identify which are 
 
 ## Assets
 
-Highlights are generally accompanied by images and other files.  They should be placed in `/assets/highlights/` and should be given a filename(s) that start with the same string as the highlight filename itself.  If there is more than one asset associated with a highlight, it is probably most convenient to create a directory in `/assets/highlights/` with *exactly* the same name as the highlight file itself, and then put then individual assets in that directory.  For a single file the directory is optional.
+Highlights are generally accompanied by images and other files.  They should be placed in `/assets/impacts/` and should be given a filename(s) that start with the same string as the highlight filename itself.  If there is more than one asset associated with a highlight, it is probably most convenient to create a directory in `/assets/impacts/` with *exactly* the same name as the highlight file itself, and then put then individual assets in that directory.  For a single file the directory is optional.
 
 ## Frontmatter for highlights
 
@@ -103,13 +103,13 @@ The date on which the highlight was published.  It will appear in the "Last upda
 
 ### `teaser` *(image reference)*
 
-The teaser is an image used as eye candy when the highlight is presented in a list of highlights or carousel.  It is typically, but not necessarily, an image that is also used in the body of the highlight.  The file must reside in `/assets/highlights`.
+The teaser is an image used as eye candy when the highlight is presented in a list of highlights or carousel.  It is typically, but not necessarily, an image that is also used in the body of the highlight.  The file must reside in `/assets/impacts`.
 
 A `slide.image` entry will take precedence over a `teaser` if both are present.
 
 ### `slide` *(list)*
 
-For highlights that are based on a Powerpoint slide, this list provides the base filenames for the image and PDF versions of the file.  The files must reside in `/assets/highlights/`.
+For highlights that are based on a Powerpoint slide, this list provides the base filenames for the image and PDF versions of the file.  The files must reside in `/assets/impacts/`.
 
 ```yaml
 slide:

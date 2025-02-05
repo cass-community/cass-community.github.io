@@ -2,7 +2,7 @@
 title: Impacts
 excerpt: Of CASS-Stewarded Software on Science
 permalink: /impacts/
-collection: highlights
+collection: impacts
 entries_layout: list
 sort_by: date
 sort_order: reverse

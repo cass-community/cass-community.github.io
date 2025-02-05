@@ -8,14 +8,14 @@
 
   Parameters
     highlights: path to highlights to feature (OPTIONAL, default: site.data.featured-stories)
-    collection: name of highlight collection (OPTIONAL, default: "highlights")
+    collection: name of highlight collection (OPTIONAL, default: "impacts")
   
   Flexible_feature_row parameters passed through
     type: "left", "center", or "right" alignment
     no_border: modify style to eliminate bottom border rule
 {% endcomment %}
 {% assign highlights = include.highlights | default: site.data.featured-stories %}
-{% assign collection = include.collection | default: "highlights" %}
+{% assign collection = include.collection | default: "impacts" %}
 
 {% assign image_path = "" | split: "," %}
 {% assign title = "" | split: "," %}

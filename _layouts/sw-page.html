@@ -99,7 +99,7 @@ layout: default
         {% comment %}
           Lookup any highlights that mention the product and link to them
         {% endcomment %}
-        {% assign highlights = site.highlights | where_exp: "item", "item.software_mentioned contains page.name" | sort: "date" | reverse %}
+        {% assign highlights = site.impacts | where_exp: "item", "item.software_mentioned contains page.name" | sort: "date" | reverse %}
         {% if highlights.size > 0 %}
         <h2 id="impact-stories">Impact stories</h2>
         <ul style="list-style: none; padding: 0">

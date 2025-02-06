@@ -12,19 +12,12 @@
       in the software catalog takes precedence over failure to appear in the mentions list.
     collection: collection to lookup products (OPTIONAL, default: site.software)
 {% endcomment -%}
-{% assign product = include.product | default: "missing parameter" %}
-{% assign mentions = include.mentions | default: page.software_mentioned %}
-{% assign collection = include.collection | default: site.software %}
+{% assign product = include.product | default: "missing parameter" -%}
+{% assign mentions = include.mentions | default: page.software_mentioned -%}
+{% assign collection = include.collection | default: site.software -%}
 {% if product -%}
   {% assign s = collection | where: "name", product -%}
   {% assign u = s[0].url | relative_url -%}
-  <p>s = {{ s | inspect }} u = {{ u | inspect }}</p>
-  {% if u -%}
-    <a href="{{ u }}">{{ product }}</a>
-    {% unless mentions contains product -%}
-      <em><font color="magenta">(not in `software_mentioned`)</font></em>
-    {% endunless -%}
-  {% else -%}
-  <em><font color="red">{{ product }} (not in software catalog)</font></em>
-  {% endif -%}
+  {% if u -%}<a href="{{ u }}">{{ product }}</a>{% unless mentions contains product -%}<em><font color="magenta">(not in `software_mentioned`)</font></em>{% endunless -%}
+  {% else -%}<em><font color="red">{{ product }} (not in software catalog)</font></em>{% endif -%}
 {% endif -%}

@@ -3,7 +3,6 @@ layout: default
 ---
 {% comment %}}
   CHANGES FROM DEFAULT SINGLE LAYOUT
-  * Replace sidebar.html with hl-sidebar.html
   * Add highlight slide image below content
   * Add authors and achnowledgment at the bottom
   * Comment out page__date.html include
@@ -32,7 +31,7 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
-  {% include hl-sidebar.html %}
+  {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -73,11 +72,9 @@ layout: default
         {% endif %}
 
         {% comment %}
-          Display CASS member information for slide-based Highlights
-
-          Free-form highlights should make this call in the body text.
+          Display CASS member information
         {% endcomment %}
-        {% if page.cass_members and page.slide %}
+        {% if page.cass_members %}
           {% include show-cass-members.html highlight=true %}
         {% endif %}
 

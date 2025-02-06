@@ -49,12 +49,13 @@ If you're working on the rendering of the site, the top-level [README.md](../REA
 * When mentioning products included in the CASS software product catalog, the mention in the body text should be **bolded** and the package name should be included in the `software_mentioned` list in the frontmatter of the highlight.  The body text should *not* be linked to anything.
 * Ideally, the `sofware_mentioned` list should be in the same order that the products are named in the body.
 * Mentions of software products *not* included in the CASS software product catalog should generally be minimized.  Where present, they should *not* be bolded.  Nor should they be linked, unless there is a strong reason.
+* It is ***extremely*** important that the `software_mentioned` frontmatter be consistent with the actual software mentions in the body text.  The `software_mentioned` data is used to create a list of relevant Impact stories in the product pages of the software catalog.
 
 ### CASS member mentions
 
 * When mentioning CASS member organizations, the mention in the body text should be in plain text and the member name name should be included in the `cass_members` list in the frontmatter of the highlight.  The body text should *not* be linked to anything.
 * In the body text, CASS member organizations should be mentioned as succinctly as possible.  Probably in one place, maybe in the "The enabling software" intro text. Member names do not need to be prefixed with "CASS member organization" unless it is required to make sense in the text.
-* in free-form highlights, the include file to list the content of the `cass_members` entry in the frontmatter should be invoked exactly once in the body of the highlight.  The recommended location is either after the introductory paragraph of "The software" section (if it exists) or at the very end of the body.  The appropriate call is shown below.  Slide-based highlights should *not* invoke the include file in the body, since it is automatically included by the layout.
+* In free-form highlights, the include file to list the content of the `cass_members` entry in the frontmatter should be invoked exactly once in the body of the highlight.  The recommended location is either after the introductory paragraph of "The software" section (if it exists) or at the very end of the body.  The appropriate call is shown below.  Slide-based highlights should *not* invoke the include file in the body, since it is automatically included by the layout.
 
 ```
 {% include show-cass-members.html highlight=true %}

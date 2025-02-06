@@ -13,6 +13,11 @@ resources:
     url: https://github.com/icl-utk-edu/papi/wiki
     icon: <i class="fa-solid fa-font-awesome"></i>
 #
+software_mentioned:
+  - ADIOS
+  - HDF5
+  - Trilinos
+#
 feature_row:
   - image_path: /assets/impacts/2025-01-wdmapp/wdmapp-coupled-turbulence.jpg
     title: "Whole Device Modeling of Magnetically Confined Fusion Plasma"
@@ -24,6 +29,18 @@ feature_row:
     title: "I/O in WRF: Evaluating Modern Parallel I/O Techniques"
     excerpt: "This work presents a comparative study of several parallel I/O implementations in the Weather Research and Forecasting model (WRF). The I/O libraries under study include PnetCDF, HDF5 via NetCDF4, and ADIOS. Our evaluation and performance analysis can guide I/O strategies for modern parallel codes."
 ---
+## sw-lin-mention.html
+
+{% include sw-link-mention.html %}
+
+{% include sw-link-mention.html product="ADIOS" %}
+
+{% include sw-link-mention.html product="Trilinos" %}
+
+{% include sw-link-mention.html product="hdf5" %}
+
+{% include sw-link-mention.html product="ParaView" %}
+
 ## flexible_feature_row
 
 {% assign image_path = "" | split: "," %}

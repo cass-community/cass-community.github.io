@@ -1,0 +1,30 @@
+{% comment %}
+  sw-link-mention.html -- emit an HTML link to the product page of the mentioned software
+
+  Parameters
+    product: name of the product to link (REQUIRED)
+      The product name must match exactly with the name used in the software catalog,
+      including capitalization.  If the given product name doesn't match anything in 
+      the catalog, it will be rendered in red font along with an inline error message.
+    mentions: list of software mentions to confirm presence (OPTIONAL, default: page.software_mentioned)
+      If the product name is not in the mentions, the product link will be generated, but
+      the link will be followed by an inline error message in magenta. Failure to match 
+      in the software catalog takes precedence over failure to appear in the mentions list.
+    collection: collection to lookup products (OPTIONAL, default: site.software)
+{% endcomment -%}
+{% assign product = include.product | default: "missing parameter" %}
+{% assign mentions = include.mentions | default: page.software_mentioned %}
+{% assign collection = include.collection | default: site.software %}
+{% if product -%}
+  {% assign s = collection | where: "name", product -%}
+  {% assign u = s[0].url | relative_url -%}
+  <p>s = {{ s | inspect }} u = {{ u | inspect }}</p>
+  {% if u -%}
+    <a href="{{ u }}">{{ product }}</a>
+    {% unless mentions contains product -%}
+      <em><font color="magenta">(not in `software_mentioned`)</font></em>
+    {% endunless -%}
+  {% else -%}
+  <em><font color="red">{{ product }} (not in software catalog)</font></em>
+  {% endif -%}
+{% endif -%}

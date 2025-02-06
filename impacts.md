@@ -1,6 +1,6 @@
 ---
 title: Impacts
-excerpt: Of CASS-Stewarded Software on Science
+excerpt: Of CASS-stewarded software on science
 permalink: /impacts/
 collection: impacts
 entries_layout: list

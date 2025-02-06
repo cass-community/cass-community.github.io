@@ -10,6 +10,10 @@
   icon: <i class="fa-solid fa-fw fa-globe"></i>
 - label: Repository
   icon: <i class="fa-solid fa-fw fa-code"></i>
+# This is intended to denote a link that will directly download a file
+- label: Download
+  icon: <i class="fa-solid fa-fw fa-download"></i>
+# This is intended to denote a link to a page that offers (perhaps multiple) downloads (e.g., versions of a software package)
 - label: Downloads
   icon: <i class="fa-solid fa-fw fa-file-arrow-down"></i>
 - label: Documentation

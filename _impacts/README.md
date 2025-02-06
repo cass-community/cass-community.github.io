@@ -25,7 +25,7 @@ If you're working on the rendering of the site, the top-level [README.md](../REA
 * Refer to "CASS member organizations", not "SSOs" or such 
   * The phrase "software stewardship organization" should only be used in describing the type of projects/organizations that are members of CASS.
 
-* We must avoid the appearance that we are a "DOE-only" organization.  It happens that all of the founding members are DOE-funded projects, but we are open to any project/organization with a software stewardship mission compatible with our Charter joining.  Don't use DOE-specific or exclusive language.
+* Don't use DOE-specific or exclusive language. We must avoid the appearance that we are a "DOE-only" organization.  It happens that all of the founding members are DOE-funded projects, but we are open to any project/organization with a software stewardship mission compatible with our Charter joining.  
 
 * When linking to papers and such, use DOIs wherever possible.
   * Note that many publisher sites list the DOI and provide a link, but often that link is to a publisher site, not to the DOI resolver (`https://doi.org/`).  We should only link to the DOI resolver site.
@@ -36,7 +36,7 @@ If you're working on the rendering of the site, the top-level [README.md](../REA
 * When mentioning applications we prefer (but it is not required) to link the software mention to that package's preferred web presence.
   * If they have a website that includes or links to other resources for the package, that's generally going to be the preferred target.  
   * Failing that, probably the code repository, if it is public.
-* We are happy to include O(1) "preferred citation" for an application itself (what the application team would request that users of the package cite in a paper).
+* We are happy to include O(1) "preferred citation" for an application itself (what the application team would request that users of the package cite in a paper).  This should be included in an "Additional resources" section at the end of the highlight.
 * We are happy to link to published papers (preferred) or highlights relating to application science accomplishments discussed in the highlight.  However these should not be excessive.  And ideally, we can draw a line between CASS software products and the scientific accomplishment.
 * Full citations should only appear in the Additional resources section at the end of the highlight -- otherwise they take up a lot of space with little actual information content (the DOI link is the useful thing).
 * Generally, the second major section of the highlight should be an h2 heading "The enabling software" 
@@ -52,8 +52,13 @@ If you're working on the rendering of the site, the top-level [README.md](../REA
 
 ### CASS member mentions
 
-* When mentioning CASS member organizations, the mention in the body text should be **bolded** and the member name name should be included in the `cass_members` list in the frontmatter of the highlight.  The body text should *not* be linked to anything.
+* When mentioning CASS member organizations, the mention in the body text should be in plain text and the member name name should be included in the `cass_members` list in the frontmatter of the highlight.  The body text should *not* be linked to anything.
 * In the body text, CASS member organizations should be mentioned as succinctly as possible.  Probably in one place, maybe in the "The enabling software" intro text. Member names do not need to be prefixed with "CASS member organization" unless it is required to make sense in the text.
+* in free-form highlights, the include file to list the content of the `cass_members` entry in the frontmatter should be invoked exactly once in the body of the highlight.  The recommended location is either after the introductory paragraph of "The software" section (if it exists) or at the very end of the body.  The appropriate call is shown below.  Slide-based highlights should *not* invoke the include file in the body, since it is automatically included by the layout.
+
+```
+{% include show-cass-members.html highlight=true %}
+```
 
 ### Additional resources section
 

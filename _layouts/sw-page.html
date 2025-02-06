@@ -76,21 +76,8 @@ layout: default
           <p> <strong>{{ area_icon }} Area:</strong> {{ a }}</p>
         {% endif %}
 
-        {% comment %}
-          Validate values provided for cass_member so we can identify bad data
-        {% endcomment %}
         {% if page.cass_members %}
-          <p><strong>{{ member_icon }} <a href={{ "/about/#current-members-and-leadership" | relative_url }}>CASS {{ page.cass_members.size | pluralize: "member", "members" }}</a>:</strong>
-          {% for cm in page.cass_members %}
-            {% assign members = site.data.organization.members | where: "short_name", cm %}
-            {% if members.size == 1 %}
-              {% assign m = members[0].short_name %}
-            {% else %}
-              {% assign m = cm | default: "missing data" | prepend: '<em><font color="red">' | append: '</font></em>' %}
-            {% endif %}
-            {{ m }}{% unless forloop.last %}, {% endunless %}
-          {% endfor %}
-          </p>
+          {% include show-cass-members.html %}
         {% endif %}
 
         {% if page.long_description %}

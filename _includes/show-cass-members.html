@@ -1,0 +1,61 @@
+{% comment %}
+  Show the CASS member list.
+  Used in the highlight and software catalog sidebars.
+
+  Validates member entries and emits red text to call out entries that
+  don't match the controlled vocabulary or are missing.
+
+  Parameters
+    cass_members: list of CASS members to be displayed (OPTIONAL, default: page.cass_members)
+    additional_text: text to be added to the leadin (OPTIONAL, default: nil)
+    highlight: boolean denoting whether we're being called from a highlight page
+      to trigger setting the "standard" additional_text for highlights (OPTIONAL, default: false)
+
+  The "standard" additional_text for highlights is "supporting the software".
+  Note that setting highlight=true will override any value provided for additional_text.
+
+  Future enhancements
+    Many hardcoded values could become optional parameters:
+      member_icon
+      heading tags (open, close)
+      list tags (open, close)
+      item tags (open, close)
+      URL to link in header
+{% endcomment %}
+{% capture member_icon %}{% include icon-map-lookup label="CASS member" %}{% endcapture %}
+{% assign cass_members = include.cass_members | default: page.cass_members %}
+{% assign text = include.additional_text | default: nil %}
+{% if include.highlight %}
+  {% assign text = "supporting the software" %}
+{% endif %}
+
+{% comment %}
+  Old-style (h3+ul) formatting
+
+<h3>{{ member_icon }} <a href={{ "/about/#current-members-and-leadership" | relative_url }}>CASS {{ cass_members.size | pluralize: "member", "members" }}</a></h3>
+<ul style="list-style: none; padding: 0">
+  {% for cm in cass_members %}
+    {% assign members = site.data.organization.members | where: "short_name", cm %}
+    {% if members.size == 1 %}
+      {% assign m = members[0].short_name %}
+    {% else %}
+      {% assign m = cm | default: "missing data" | prepend: '<em><font color="red">' | append: '</font></em>' %}
+    {% endif %}
+    <li>{{ m }}</li>
+  {% endfor %}
+  </ul>
+{% endcomment %}
+
+{% if cass_members %}
+  <p><strong>{{ member_icon }} <a href='{{ "/about/#current-members-and-leadership" | relative_url }}'>CASS {{ page.cass_members.size | pluralize: "member", "members" }}{% unless text %}:{% endunless %}</a></strong>{% if text %} {{ text }}:{% endif %}
+  {% for cm in cass_members %}
+    {% assign members = site.data.organization.members | where: "short_name", cm %}
+    {% if members.size == 1 %}
+      {% assign m = members[0].short_name %}
+    {% else %}
+      {% assign m = cm | default: "missing data" | prepend: '<em><font color="red">' | append: '</font></em>' %}
+    {% endif %}
+    {{ m }}{% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+  </p>
+{% endif %}

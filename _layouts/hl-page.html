@@ -11,6 +11,9 @@ layout: default
   * Add default date format
 {% endcomment %}
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+{% capture download_icon %}{% include icon-map-lookup label="Download" %}{% endcapture %}
+{% capture member_icon %}{% include icon-map-lookup label="CASS member" %}{% endcapture %}
+
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -64,8 +67,18 @@ layout: default
           {% assign s = page.slide %}
           {% assign i = s[0].image| prepend: "/assets/impacts/" | relative_url %}
           {% assign f = s[1].file | prepend: "/assets/impacts/" | relative_url %}
-          <p id="highlight-slide"><strong>Highlight slide</strong></p>
-          <a href="{{ f }}"><img src="{{ i }}" alt="Image of highlight slide"></a>
+          <h2 id="highlight-slide">Highlight slide</h2>
+          <p><a href="{{ i }}" class="image-popup"><img src="{{ i }}" alt="Image of highlight slide"></a></p>
+          <p><a href="{{ f }}">{{ download_icon }} Download slide</a></p>
+        {% endif %}
+
+        {% comment %}
+          Display CASS member information for slide-based Highlights
+
+          Free-form highlights should make this call in the body text.
+        {% endcomment %}
+        {% if page.cass_members and page.slide %}
+          {% include show-cass-members.html highlight=true %}
         {% endif %}
 
         {% comment %}

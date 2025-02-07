@@ -72,8 +72,11 @@ layout: default
         {% endif %}
 
         {% comment %}
-          Display CASS member information
+          Display software mentions and CASS member information
         {% endcomment %}
+        {% if page.software_mentioned %}
+          {% include show-software-mentioned.html %}
+        {% endif %}
         {% if page.cass_members %}
           {% include show-cass-members.html highlight=true %}
         {% endif %}

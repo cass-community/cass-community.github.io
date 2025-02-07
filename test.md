@@ -29,7 +29,11 @@ feature_row:
     title: "I/O in WRF: Evaluating Modern Parallel I/O Techniques"
     excerpt: "This work presents a comparative study of several parallel I/O implementations in the Weather Research and Forecasting model (WRF). The I/O libraries under study include PnetCDF, HDF5 via NetCDF4, and ADIOS. Our evaluation and performance analysis can guide I/O strategies for modern parallel codes."
 ---
-## sw-lin-mention.html
+## show-software-mentioned.html
+
+{% include show-software-mentioned.html %}
+
+## sw-link-mention.html
 
 {% include sw-link-mention.html %}
 

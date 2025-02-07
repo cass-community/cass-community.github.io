@@ -47,7 +47,7 @@
 {% endcomment %}
 
 {% if cass_members %}
-  <p><strong>{{ member_icon }} <a href='{{ "/about/#current-members-and-leadership" | relative_url }}'>CASS {{ page.cass_members.size | pluralize: "member", "members" }}{% unless text %}:{% endunless %}</a></strong>{% if text %} {{ text }}:{% endif %}
+  <p><strong>{{ member_icon }} <a href='{{ "/about#current-members-and-leadership" | relative_url }}'>CASS {{ page.cass_members.size | pluralize: "member", "members" }}{% unless text %}:{% endunless %}</a></strong>{% if text %} {{ text }}:{% endif %}
   {% for cm in cass_members %}
     {% assign members = site.data.organization.members | where: "short_name", cm %}
     {% if members.size == 1 %}

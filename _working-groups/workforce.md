@@ -22,15 +22,17 @@ status_date: 2024-01-08 # The date the group went active or retired
 #
 charter:
   purpose: |
-    The goal of the CASS Workforce Working Group is to advance the multidisciplinary community and workforce for next-generation computing sciences, with emphasis on scientific software as a cornerstone of sustained collaboration and scientific progress.  Our mission:
+    The goal of the CASS Workforce Working Group is to advance multidisciplinary leadership in next-generation computing sciences, with emphasis on robust and innovative scientific software as a cornerstone of advancing basic science, innovation, and security.
+    
+Based on the current membership of CASS, our mission is:
    
-    - Establish a sustainable plan to recruit and retain a vibrant workforce in the DOE HPC/AI community by fostering a supportive culture within the computing sciences at DOE national laboratories.
-    - Engage talented people (with emphasis on students at colleges and universities throughout the U.S.) with the potential for strong skills and interest in HPC/AI 
-    - Raise awareness of DOE activities and needs related to scientific applications, software technologies, hardware, and infrastructure
-    - Provide pathways for interactions, including training, internships, collaborations, and careers
+    - Establish a sustainable plan to recruit and retain a vibrant workforce in the DOE HPC/AI community by fostering a supportive culture for all.
+    - Engage talented people (with emphasis on students at colleges and universities throughout the U.S.) with the potential for strong skills and interest in HPC/AI.
+    - Raise awareness of DOE activities and needs related to scientific applications, software technologies, hardware, and infrastructure.
+    - Provide pathways for interactions, including training, internships, collaborations, and seamless entry into HPC/scientific software careers.
     - Leverage and complement existing outreach efforts DOE national laboratories, computing facilities, and the HPC computational science community.
   relationships: |
-    Workforce working group efforts are often synergistic with the Impact Framework and User-Developer Experience (UDX) working groups. 
+    Workforce working group efforts are often synergistic with the Software Ecosystem, Impact Framework and User-Developer Experience (UDX) working groups. 
   lifetime: Standing
   membership: Open
   reporting: Quarterly

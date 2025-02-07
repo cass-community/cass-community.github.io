@@ -86,7 +86,7 @@ layout: default
         {% endif %}
 
         {% if page.charter.membership %}
-          <p>{{ membership_icon }} <strong>Membership:</strong> {{ page.charter.membership | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+          <p id="membership">{{ membership_icon }} <strong>Membership:</strong> {{ page.charter.membership | markdownify | remove: "<p>" | remove: "</p>" | strip }}
             {% if page.charter.membership == "Open" %}
               {% if url %}
                 <a href="{{ url }}">(contact the {{ page.chair.size | pluralize: "chair", "chairs" }}</a> to participate)
@@ -98,11 +98,11 @@ layout: default
         {% endif %}
 
         {% if page.meeting_schedule %}
-          <p>{{ meetings_icon }} <strong>Meeting schedule:</strong> {{ page.meeting_schedule }}</p>
+          <p id="meetings">{{ meetings_icon }} <strong>Meeting schedule:</strong> {{ page.meeting_schedule }}</p>
         {% endif %}
 
         {% if page.chair %}
-          <p>{{ chair_icon }} <strong>{{ page.chair.size | pluralize: "Chair:", "Chairs:" }}</strong>
+          <p id="chair">{{ chair_icon }} <strong>{{ page.chair.size | pluralize: "Chair:", "Chairs:" }}</strong>
           {% for chair in page.chair %}
             {% assign c = site.data.people[chair] %}
             {% include people-info.html name=chair link="email" email_subject=subject short_affil=true %}{% unless forloop.last %}, {% endunless %}
@@ -113,26 +113,26 @@ layout: default
         {% if page.charter %}
           <h2 id="charter">Charter</h2>
           {% if page.charter.purpose %}
-            <p><strong>Purpose:</strong> {{ page.charter.purpose | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+            <p id="charter-purpose"><strong>Purpose:</strong> {{ page.charter.purpose | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
           {% endif %}
           <details><summary><strong>Read the rest of the charter</strong> (the CASS by-laws require additional information in the charter)</summary>
           {% if page.charter.relationships %}
-            <p><strong>Relationships to other working groups:</strong> {{ page.charter.relationships | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+            <p id="charter-relationships"><strong>Relationships to other working groups:</strong> {{ page.charter.relationships | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
           {% endif %}
           {% if page.charter.lifetime %}
-            <p><strong>Expected lifetime:</strong> {{ page.charter.lifetime | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+            <p id="charter-lifetime"><strong>Expected lifetime:</strong> {{ page.charter.lifetime | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
           {% endif %}
           {% if page.charter.membership %}
-            <p><strong>Expected membership:</strong> {{ page.charter.membership | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+            <p id="charter-membership"><strong>Expected membership:</strong> {{ page.charter.membership | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
           {% endif %}
           {% if page.charter.reporting %}
-            <p><strong>Reporting expectations:</strong> {{ page.charter.reporting | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+            <p id="charter-reporting"><strong>Reporting expectations:</strong> {{ page.charter.reporting | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
           {% endif %}
           {% if page.charter.additional %}
-            <p><strong>Additional information:</strong> {{ page.charter.additional | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+            <p id="charter-additional"><strong>Additional information:</strong> {{ page.charter.additional | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
           {% endif %}
           {% if page.charter.status %}
-            <p><strong>Charter approval status:</strong> {{ page.charter.status | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+            <p id="charter-status"><strong>Charter approval status:</strong> {{ page.charter.status | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
           {% endif %}
           </details>
         {% endif %}

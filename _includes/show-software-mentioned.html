@@ -4,14 +4,14 @@ Show the software_mentioned list. Used in highlights.
 
 Parameters
   mentions: list of software products to be displayed (OPTIONAL, default: page.software_mentioned)
-  
+
   collection: collection to lookup products (OPTIONAL, default: site.software)
 {% endcomment %}
 {% capture sw_icon %}{% include icon-map-lookup label="Software" %}{% endcapture %}
 {% assign mentions = include.mentions | default: page.software_mentioned %}
 {% assign collection = include.collection | default: site.software -%}
 {% if mentions %}
-  <p><strong>{{ sw_icon }} Software mentioned:</strong>
+  <p id="software-mentioned"><strong>{{ sw_icon }} Software mentioned:</strong>
     {% for product in mentions -%}
       {% include sw-link-mention.html product=product collection=collection %}{% unless forloop.last %}, {% endunless -%}
     {% endfor -%}

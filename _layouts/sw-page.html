@@ -74,7 +74,7 @@ layout: default
           {% capture a %}{% include sw-areas-lookup values = page.area input="short_name" output="name" %}{% endcapture %}
           {% assign a = a | strip_newlines | split: "|" | default: '<em><font color="red">missing data</font></em>' %}
           {% assign u = a[0] | slugify | prepend: "/software#" | relative_url %}
-          <p> <strong>{{ area_icon }} Area:</strong> <a href="{{ u }}">{{ a }}</a></p>
+          <p id="area"><strong>{{ area_icon }} Area:</strong> <a href="{{ u }}">{{ a }}</a></p>
         {% endif %}
 
         {% if page.cass_members %}

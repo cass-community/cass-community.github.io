@@ -12,9 +12,6 @@ software_mentioned:
   - Kokkos
   - Spack
   - E4S
-cass_members: 
-  - PESO
-  - S4PST
 ---
 
  In close collaboration with CASS and its member organizations, the PESO Project supports and evolves a **scientific software ecosystem** comprised of a large number of advanced scientific libraries and tools delivered. Building on the legacy of the U.S. [Exascale Computing Project](https://www.exascaleproject.org/), we are advancing a comprehensive, advanced scientific software ecosystem that supports researchers, developers, and computing organizations and their progress in the fast-evolving world of artificial intelligence, modeling and simulation, and high-performance computing (HPC) for scientific discovery.

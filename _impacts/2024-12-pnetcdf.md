@@ -9,7 +9,5 @@ software_mentioned:
   - PnetCDF
   - HDF5
   - ADIOS
-cass_members: 
-  - RAPIDS
 ---
 This work presents a comparative study of several parallel I/O implementations in the Weather Research and Forecasting model (WRF). The I/O libraries under study include {% include sw-link-mention.html product="PnetCDF" %}, {% include sw-link-mention.html product="HDF5" %} via NetCDF4, and {% include sw-link-mention.html product="ADIOS" %}. Our evaluation and performance analysis can guide I/O strategies for modern parallel codes.

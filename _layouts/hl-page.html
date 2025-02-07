@@ -76,9 +76,9 @@ layout: default
         {% endcomment %}
         {% if page.software_mentioned %}
           {% include show-software-mentioned.html %}
-        {% endif %}
-        {% if page.cass_members %}
-          {% include show-cass-members.html highlight=true %}
+          {% capture m %}{% include cass-members-represented %}{% endcapture %}
+          {% assign m = m | strip_newlines | split: "|" %}
+          {% include show-cass-members.html cass_members=m highlight=true %}
         {% endif %}
 
         {% comment %}

@@ -1,0 +1,27 @@
+{% comment %}
+  Emit a list of CASS members represented in a list of software products
+
+  The result is a list (not an array) separated by the value
+  of the `sep` parameter.
+
+  Suggested usage (turns the output into an array, a): 
+    {% capture m %}{% include cass-members-represented sep="|" %}{% endcapture %}
+    {% assign m = m | strip_newlines | split: "|" %}
+
+Parameters
+  mentions: list of software products to be displayed (OPTIONAL, default: page.software_mentioned)
+
+  collection: collection to lookup products (OPTIONAL, default: site.software)
+  sep: separator for output list (optional, default: "|")
+{% endcomment -%}
+{% assign mentions = include.mentions | default: page.software_mentioned -%}
+{% assign collection = include.collection | default: site.software -%}
+{% assign sep = include.sep | default: "|" -%}
+{% if mentions -%}
+    {% for product in mentions %}
+      {% assign p = collection | where: "name", product %}
+      {% assign out = out | concat: p[0].cass_members %}
+    {% endfor -%}
+    {% assign out = out | sort | uniq %}
+{% endif -%}
+{{ out | join: sep }}

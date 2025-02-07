@@ -15,8 +15,10 @@ resources:
 #
 software_mentioned:
   - ADIOS
+  - TAU
   - HDF5
   - Trilinos
+  - Spack
 #
 feature_row:
   - image_path: /assets/impacts/2025-01-wdmapp/wdmapp-coupled-turbulence.jpg
@@ -29,6 +31,16 @@ feature_row:
     title: "I/O in WRF: Evaluating Modern Parallel I/O Techniques"
     excerpt: "This work presents a comparative study of several parallel I/O implementations in the Weather Research and Forecasting model (WRF). The I/O libraries under study include PnetCDF, HDF5 via NetCDF4, and ADIOS. Our evaluation and performance analysis can guide I/O strategies for modern parallel codes."
 ---
+## cass-members-represented
+
+{% include cass-members-represented %}
+
+{% capture m %}{% include cass-members-represented %}{% endcapture %}
+<p>m = {{ m | inspect }}</p>
+{% assign m = m | strip_newlines | split: "|" %}
+<p>m = {{ m | inspect }}</p>
+
+
 ## show-software-mentioned.html
 
 {% include show-software-mentioned.html %}

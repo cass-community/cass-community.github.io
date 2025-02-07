@@ -24,7 +24,7 @@ charter:
   purpose: |
     The goal of the CASS Workforce Working Group is to advance multidisciplinary leadership in next-generation computing sciences, with emphasis on robust and innovative scientific software as a cornerstone of advancing basic science, innovation, and security.
     
-Based on the current membership of CASS, our mission is:
+    Based on the current membership of CASS, our mission is:
    
     - Establish a sustainable plan to recruit and retain a vibrant workforce in the DOE HPC/AI community by fostering a supportive culture for all.
     - Engage talented people (with emphasis on students at colleges and universities throughout the U.S.) with the potential for strong skills and interest in HPC/AI.

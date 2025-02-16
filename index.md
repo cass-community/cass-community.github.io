@@ -15,6 +15,15 @@ header:
 {% capture membership_icon %}{% include icon-map-lookup label="Membership" %}{% endcapture %}
 {% capture chat_icon %}{% include icon-map-lookup label="Chat" %}{% endcapture %}
 {% capture handshake_icon %}{% include icon-map-lookup label="Handshake" %}{% endcapture %}
+{% capture meetings_icon %}{% include icon-map-lookup label="Meetings" %}{% endcapture %}
+
+
+**{{ meetings_icon }} Upcoming event:** Join us at the SIAM [Computational Science and Engineering](https://www.siam.org/conferences-events/siam-conferences/cse25/) (CSE25) conference, 3-7 March 2025, in Ft. Worth, Texas, for the following CASS-organized sessions:
+
+* Advancing Scientific Software Stewardship through CASS Working Groups ([MS22](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82308))
+* Introducing the Consortium for the Advancement of Scientific Software (CASS) ([MS87](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82327) and [MS112](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82328))
+
+---
 
 The **Consortium for the Advancement of Scientific Software (CASS)** is committed to the stewardship and advancement of the current and future ecosystem of scientific computing software in support of competitiveness and innovation through the advancement of science. These stories illustrate some of the impacts of software in the CASS portfolio.
 

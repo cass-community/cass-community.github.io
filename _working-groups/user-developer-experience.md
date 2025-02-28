@@ -27,7 +27,7 @@ chair: # Can be more than one person
   - Hannah Cohoon
   - Drew Paine
 #
-meeting_schedule: to be announced
+meeting_schedule: First Tuesday of odd months, beginning 6 May 2025, at 12:00pm Eastern
 #
 # A way of easily providing additional resource/links
 #

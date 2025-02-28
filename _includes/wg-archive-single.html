@@ -39,7 +39,7 @@
       Do some prep work on chair emails that we won't necessarily need, but is a bit complicated and ugly to put inline
     {% endcomment %}
 
-    {% capture subject %}CASS {{ page.name }} working group interest{% endcapture %}
+    {% capture subject %}CASS {{ post.name }} working group interest{% endcapture %}
     {% assign email = nil %}
     {% if post.chair %}
       {% for chair in post.chair %}

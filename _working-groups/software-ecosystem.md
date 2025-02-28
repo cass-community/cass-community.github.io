@@ -31,7 +31,7 @@ charter:
   status: Provisional, since 2025-02-11
 #
 chair: # Can be more than one person
-  - Mike Heroux
+  - Michael A. Heroux
 #
 # A simple statement of the meeting schedule, if you have one
 #

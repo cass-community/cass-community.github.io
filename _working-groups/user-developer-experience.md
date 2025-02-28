@@ -32,9 +32,6 @@ meeting_schedule: First Tuesday of odd months, beginning 6 May 2025, at 12:00pm 
 # A way of easily providing additional resource/links
 #
 additional_resource_links:
-  - label: Calendar event for meetings
-    url: https://calendar.google.com/calendar/u/0?cid=Y181YjFjNzU0MDE5MmU5ZTY2OTE1MDlkMGFjMWQzOWIzNmY3ZGIxNDNlNzRhMTBhMTRhOWEzY2Q3MDVmMTI1NzhmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20
-    icon: <i class="fa-regular fa-fw fa-calendar-days"></i>
   - label: CASS Slack channel
     note: "#wg-udx"
     url: https://softwareecosy-91t5745.slack.com/archives/C076WTT3BPB

@@ -18,10 +18,10 @@ header:
 {% capture meetings_icon %}{% include icon-map-lookup label="Meetings" %}{% endcapture %}
 
 
-**{{ meetings_icon }} In case you missed it:** Two minisymposia about CASS at the SIAM [Computational Science and Engineering](https://www.siam.org/conferences-events/siam-conferences/cse25/) (CSE25) conference, 3-7 March 2025, in Ft. Worth, Texas.  Presentations are available.
+**{{ meetings_icon }} In case you missed it:** Two minisymposia about CASS at the SIAM [Computational Science and Engineering](https://www.siam.org/conferences-events/siam-conferences/cse25/) (CSE25) conference, 3-7 March 2025, in Ft. Worth, Texas.  Presentations are available, and we got some coverage in SIAM News.
 
 * Advancing Scientific Software Stewardship through CASS Working Groups ([MS22](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82308)): [presentations](https://doi.org/10.6084/m9.figshare.c.7699283)
-* Introducing the Consortium for the Advancement of Scientific Software (CASS) ([MS87](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82327) and [MS112](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82328)): [presentations](https://doi.org/10.6084/m9.figshare.c.7699772)
+* Introducing the Consortium for the Advancement of Scientific Software (CASS) ([MS87](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82327) and [MS112](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82328)): [presentations](https://doi.org/10.6084/m9.figshare.c.7699772), [SIAM News article](https://www.siam.org/publications/siam-news/articles/introducing-the-consortium-for-the-advancement-of-scientific-software/)
 
 ---
 

@@ -24,7 +24,7 @@ charter:
   purpose: |
     The CASS Integration Working Group's goal is to enhance the quality, sustainability, efficiency, and interoperability of scientific and AI software. This happens at two levels: (1) ecosystem level – improving how different software products and communities work together (interoperability); and (2) software product level – improving individual libraries and tools within our software portfolios including programming systems, data and visualization, math libraries, tools, and workflows.  Since different product communities have unique needs and development stages, focusing on both the broader ecosystem and specific products is essential for creating a well-integrated software environment.
   relationships: |
-    Integration working group efforts are often synergistic with the Impact Framework and User-Developer Experience (UDX) working groups.
+    The Integration Working Group is related to the Software Ecosystem Working Group in that both address ecosystem-level concerns. The primary difference is that the latter is focused mostly on connecting the HPC/AI software ecosystem to the user base and improving collaboration across CASS, while the former is conerned more with issues closer to the code itself, such as CI testing at various levels. There are strong synergies where these concerns meet, such as the workflows for communicating and addressing CI failures. In addition, Integration Working Group efforts are often synergistic with the Impact Framework and User-Developer Experience (UDX) working groups.
   lifetime: Standing
   membership: Open
   reporting: Quarterly

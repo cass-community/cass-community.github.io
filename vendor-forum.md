@@ -1,9 +1,6 @@
 ---
 title: Vendor Forum
 permalink: /vendor-forum/
-# toc: true
-# toc_sticky: true
-#layout: about-page
 layout: single
 # layout: splash 
 classes: wide
@@ -24,17 +21,17 @@ More information about CASS and its constituent members can be found online on t
 
 ## Vendor Forum purpose
 
-The purpose of the CASS vendor forum is to promote engagement and communication between the Consortium and the commercial vendors that provide products (hardware, software, or services) in support of scientific computing. The vendor forum is meant to be broadly inclusive so that all interested parties may participate.
+The purpose of the CASS Vendor Forum is to promote engagement and communication between the Consortium and the commercial vendors that provide products (hardware, software, or services) in support of scientific computing. The Vendor Forum is meant to be broadly inclusive so that all interested parties may participate.
 
-The [software in the CASS portfolio](https://cass.community/software/) enables a wide range of scientific computing in HPC environments, and historically, vendors have incorporated some of these software packages into their own products. Additionally, many of the software teams in CASS are interested in pursuing codesign activities, and the vendor forum will help facilitate connections between vendors and consortium teams for this purpose.
+The [software in the CASS portfolio](https://cass.community/software/) enables a wide range of scientific computing in HPC environments, and historically, vendors have incorporated some of these software packages into their own products. Additionally, many of the software teams in CASS are interested in pursuing codesign activities, and the Vendor Forum will help facilitate connections between vendors and consortium teams for this purpose.
 
 ## Benefits of participation
 
 The CASS Vendor Forum is a conduit for the exchange of information and experiences between the Consortium and commercial organizations. It will facilitate collaboration and advance technology awareness to enhance computational capabilities for the field as a whole.
 
-Participants in the CASS vendor forum will be kept apprised of the latest activities, concerns, and trends from a broad cross section of the scientific software community and will have an opportunity to provide feedback and engage in areas of interest.
+Participants in the CASS Vendor Forum will be kept apprised of the latest activities, concerns, and trends from a broad cross section of the scientific software community and will have an opportunity to provide feedback and engage in areas of interest.
 
-Vendor forum participants will be able to follow up with CASS (outside of briefing events) for the following purposes:
+Vendor Forum participants will be able to follow up with CASS (outside of briefing events) for the following purposes:
 
 * To provide feedback on overall CASS activities  
 * To request more detailed follow up discussions on topics of interest  

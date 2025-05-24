@@ -11,15 +11,6 @@ header:
   overlay_image: /assets/images/wes-lewis-zt6OxRORM2g-unsplash.jpg
   caption: 'Photo by <a href="https://unsplash.com/@westhmus">wes lewis</a> on <a href="https://unsplash.com/photos/group-of-people-taking-photo-zt6OxRORM2g">Unsplash</a>'
 ---
-## CASS overview
-
-The mission of the Consortium for the Advancement of Scientific Software (CASS) is stewardship and advancement of the current and future ecosystem of scientific computing software. It is composed of a collection of complementary, agile organizations that support specific scientific software communities and provide crosscutting services. These organizations work together under a unified consortium framework to coordinate effort, pool resources, and engage with the community for maximum impact.
-
-CASS and its initial member organizations were formed at the behest of the Department of Energy’s Advanced Scientific Computing Research (ASCR) program, but membership in the consortium is not limited to DOE-funded organizations.
-
-More information about CASS and its constituent members can be found online on the [CASS website](https://cass.community/).
-
-## Vendor Forum purpose
 
 The purpose of the CASS Vendor Forum is to promote engagement and communication between the Consortium and the commercial vendors that provide products (hardware, software, or services) in support of scientific computing. The Vendor Forum is meant to be broadly inclusive so that all interested parties may participate.
 

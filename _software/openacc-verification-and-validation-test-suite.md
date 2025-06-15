@@ -91,7 +91,7 @@ additional_resource_links:
 #   - label: Downloads
 #     url: 
   - label: Documentation
-    url: https://crpl.cis.udel.edu/oaccvv/github/
+    url: https://crpl.cis.udel.edu/oaccvv/about/github/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

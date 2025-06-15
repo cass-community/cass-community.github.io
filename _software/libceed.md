@@ -71,7 +71,7 @@ target_audience: |
 #                       - package2
 #                       - package3
 #
-#e4s_product: libceed
+e4s_product: libceed
 spack_name: libceed
 #
 # ADDITIONAL PRODUCT INFORMATION

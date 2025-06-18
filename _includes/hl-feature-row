@@ -15,7 +15,10 @@
     no_border: modify style to eliminate bottom border rule
 {% endcomment %}
 {% assign highlights = include.highlights | default: site.data.featured-stories %}
-{% assign collection = include.collection | default: "impacts" %}
+{% assign hl_collection = include.collection | default: site.impacts %}
+
+{% capture sw_icon %}{% include icon-map-lookup label="Software" %}{% endcapture %}
+{% capture mentions_heading %}{{ sw_icon }} Software mentioned:{% endcapture %}
 
 {% assign image_path = "" | split: "," %}
 {% assign title = "" | split: "," %}
@@ -24,14 +27,21 @@
 
 {% for h in highlights %}
   {% assign query = "item.url contains '" | append: h | append: "'" %}
-  {% assign hl = site[collection] | where_exp: "item", query %}
+  {% assign hl = hl_collection | where_exp: "item", query %}
   {% assign img = hl[0].teaser %}
   {% capture teaser %}{% include hl-image-path image=img %}{% endcapture %}
   {% assign image_path = image_path | push: teaser %}
   {% assign title = title | push: hl[0].title %}
   {% assign url = hl[0].url | relative_url %}
   {% assign title_url = title_url | push: url %}
-  {% assign excerpt = excerpt | push: hl[0].excerpt %}
+  {% assign my_excerpt = hl[0].excerpt %}
+  {% if hl[0].software_mentioned %}
+    {% assign mentions = hl[0].software_mentioned %}
+    {% capture formatted_mentions %}{% include show-software-mentioned.html mentions=mentions heading=mentions_heading %}{% endcapture %}
+    {% assign my_excerpt = my_excerpt | append: formatted_mentions %}
+  {% endif %}
+  {% assign excerpt = excerpt | push: my_excerpt %}
 {% endfor %}
 
 {% include flexible_feature_row no_border=true image_path=image_path title=title title_url=title_url excerpt=excerpt %}
+  

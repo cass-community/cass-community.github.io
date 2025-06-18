@@ -8,12 +8,14 @@ Parameters
   collection: collection to lookup products (OPTIONAL, default: site.software)
 {% endcomment %}
 {% capture sw_icon %}{% include icon-map-lookup label="Software" %}{% endcapture %}
+{% capture default_heading %}{{ sw_icon }}<strong>Software mentioned:</strong>{% endcapture %}
+{% assign heading = include.heading | default: default_heading -%}
 {% assign mentions = include.mentions | default: page.software_mentioned %}
 {% assign collection = include.collection | default: site.software -%}
 {% if mentions %}
-  <p id="software-mentioned"><strong>{{ sw_icon }} Software mentioned:</strong>
+  <span id="software-mentioned">{{ heading }}
     {% for product in mentions -%}
-      {% include sw-link-mention.html product=product collection=collection %}{% unless forloop.last %}, {% endunless -%}
+      {% include sw-link-mention.html product=product collection=collection mentions=mentions %}{% unless forloop.last %}, {% endunless -%}
     {% endfor -%}
-    </p>
+  </span>
 {% endif %}

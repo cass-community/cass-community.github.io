@@ -55,6 +55,8 @@
 {% assign teaser = post.teaser | prepend: "/assets/impacts/" | relative_url %}
 {% endif %}
 
+{% capture sw_icon %}{% include icon-map-lookup label="Software" %}{% endcapture %}
+{% capture mentions_heading %}{{ sw_icon }} Software mentioned:{% endcapture %}
 
 <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
@@ -75,5 +77,7 @@
     {% if post.date %}<p class="archive__item-excerpt" itemprop="date">Date: {{ post.date | date: date_format }}</p>{% endif %}
     {% if post.excerpt %}<p class="archive__item-excerpt clearfix" itemprop="description">
       {{ post.excerpt | markdownify | strip_html | truncatewords: 50 }}</p>{% endif %}
+    {% if post.software_mentioned %}<p class="archive__item-excerpt clearfix" itemprop="description">
+      {% include show-software-mentioned.html heading=mentions_heading mentions=post.software_mentioned %}</p>{% endif %}
   </article>
 </div>

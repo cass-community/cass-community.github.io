@@ -75,7 +75,7 @@ layout: default
           Display software mentions and CASS member information
         {% endcomment %}
         {% if page.software_mentioned %}
-          {% include show-software-mentioned.html %}
+          <p>{% include show-software-mentioned.html %}</p>
           {% capture m %}{% include cass-members-represented %}{% endcapture %}
           {% assign m = m | strip_newlines | split: "|" %}
           {% include show-cass-members.html cass_members=m highlight=true %}

@@ -76,7 +76,7 @@ Input for this fields may use the YAML syntax for a multi-line string, denoted b
 
 ## `chair` *(list)*
 
-The by-laws require that every working group have a chair.  This field should be a YAML list with the names of one or more chairs.  Details for each person (`email` and `short_affil` are currently used) must be in `_data/people.yml`. The email is needed because the readers are advised to contact the chair(s) to learn more about or join the working group.
+The by-laws require that every working group have a chair.  This field should be a YAML list with the names of one or more chairs.  Details for each person (`email` and `short_affil` are currently used) must be in `_data/people.yml`. Note that the name used in the `chair` field must match exactly with that in `_data/people.yml` or else the it won't be recognized. The email is needed because the readers are advised to contact the chair(s) to learn more about or join the working group.
 
 ```yaml
 chair:

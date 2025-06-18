@@ -29,9 +29,12 @@ membership: Open
 reporting: Quarterly
 status: Provisional, since 2024-08-19
 #
+# The by-laws require that every working group have a chair (one or more).  The people named as chairs should also appear in `_data/people.yml` with exactly the same name.  
+# The `_data/people.yml` entry for each chair must include an email address because readers of the site are advised to contact the chair(s) to learn more about or join the working group.
+#
 chair: # Can be more than one person
-  - name: David Bernholdt (ORNL)
-    email: bernholdtde@ornl.gov
+  - name: David Bernholdt
+  - name: Berk Geveci
 #
 # A simple statement of the meeting schedule, if you have one
 #

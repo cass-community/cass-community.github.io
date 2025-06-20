@@ -6,7 +6,7 @@ permalink: /about/
 #layout: about-page
 layout: single
 # layout: splash 
-classes: wide
+classes: wide no-left-sidebar
 header:
 #   overlay_color: "#000"
 #  overlay_filter: "0.60"

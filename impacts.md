@@ -8,7 +8,7 @@ sort_by: date
 sort_order: reverse
 layout: hl-collection
 # layout: splash # Default: home, but that includes a list of posts
-classes: wide
+classes: wide no-left-sidebar
 header:
 #   overlay_color: "#000"
 #  overlay_filter: "0.60"

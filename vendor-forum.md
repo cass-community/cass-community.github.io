@@ -3,7 +3,7 @@ title: Vendor Forum
 permalink: /vendor-forum/
 layout: single
 # layout: splash 
-classes: wide
+classes: wide no-left-sidebar
 header:
 #   overlay_color: "#000"
 #  overlay_filter: "0.60"
@@ -42,7 +42,7 @@ Interested parties may join the forum by signing up for the CASS Vendor Forum an
         /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
-<div id="mc_embed_signup">
+<div id="mc_embed_signup" style="display:block; margin:auto;">
     <form action="https://community.us16.list-manage.com/subscribe/post?u=5438ff2caf2456f6ec49ebfbf&amp;id=a6e42e8d6a&amp;f_id=000310e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
         <div id="mc_embed_signup_scroll"><h2>Sign up for CASS Vendor Forum announcements</h2>
             <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>

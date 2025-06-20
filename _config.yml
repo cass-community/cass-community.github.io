@@ -79,7 +79,7 @@ defaults:
       type: "working-groups"
     values:
       layout: "wg-page"
-      classes: wide
+      classes: wide no-left-sidebar
       author_profile: false
       comments: false
       toc: false
@@ -89,7 +89,7 @@ defaults:
       type: "software"
     values:
       layout: "sw-page"
-      classes: wide
+      classes: wide no-left-sidebar
       author_profile: false
       comments: false
       toc: false
@@ -101,7 +101,7 @@ defaults:
       type: "impacts"
     values:
       layout: "hl-page"
-      classes: wide
+      classes: wide no-left-sidebar
       author_profile: false
       comments: false
       toc: false

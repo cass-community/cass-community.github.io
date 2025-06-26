@@ -38,14 +38,14 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: VTK-m
+name: Viskores
 area: dataviz
 cass_members:
   - RAPIDS
 description: A performance-portable visualization library leveraged by production tools such as ParaView and VisIt
 long_description: |
-    VTK-m is a toolkit of scientific visualization algorithms for emerging processor 
-    architectures. VTK-m supports the fine-grained concurrency for data analysis and 
+    Viskores is a toolkit of scientific visualization algorithms for emerging processor 
+    architectures. Viskores supports the fine-grained concurrency for data analysis and 
     visualization algorithms required to drive extreme scale computing by providing abstract 
     models for data and execution that can be applied to a variety of algorithms across many 
     different processor architectures.
@@ -53,7 +53,7 @@ target_audience: |
     Developers of visualization tools and workflows that need to support parallelism on
     many core architectures. Researchers and analysists that want to develop data parallel
     algorithms in a performance portable way.
-    VTK-m is broadly used across the DOE HPC community, most often employed through its 
+    Viskores is broadly used across the DOE HPC community, most often employed through its 
     integration into the ParaView, ParaView Catalyst, and Visit analysis and visualization 
     packages.
 #
@@ -66,7 +66,7 @@ target_audience: |
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
 e4s_product: VTK-M
-spack_name: vtk-m
+spack_name: viskores
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   This is an OPTIONAL list of resource links that you can provide to make your catalog entry more useful.
@@ -86,11 +86,16 @@ spack_name: vtk-m
 
 additional_resource_links:
   - label: Website
-    url: https://m.vtk.org/
+    url: https://viskores.readthedocs.io/
   - label: Repository
-    url: https://github.com/Kitware/VTK-m
+    url: https://github.com/Viskores/viskores
   - label: Downloads
-    url: https://gitlab.kitware.com/vtk/vtk-m/-/releases
+    url: https://github.com/Viskores/viskores/releases
   - label: Documentation
-    url: https://docs-m.vtk.org/latest/
+    url: https://viskores.readthedocs.io/
+  - label: E4S Package (VTK-M)
+    url: https://e4s-project.github.io/DocPortal.html?search=VTK-M
+    note: E4S package for Viskores coming soon
+  - label: Spack Package
+    url: https://packages.spack.io/package.html?name=viskores
 ---

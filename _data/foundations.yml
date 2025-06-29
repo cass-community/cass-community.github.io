@@ -1,0 +1,26 @@
+Apache Software Foundation
+  abbreviation: ASF
+  url: https://www.apache.org/
+  corsa_howto: https://corsa.center/foundations/apache.html
+
+Eclipse Foundation
+  url: https://eclipse.org/
+  corsa_howto: https://corsa.center/foundations/eclipse.html
+
+High Performance Software Foundation
+  abbreviation: HPSF
+  url: https://hpsf.io/
+  corsa_howto: https://corsa.center/foundations/hpsf.html
+
+LF AI & Data Foundation
+  url: https://lfaidata.foundation/
+  corsa_howto: https://corsa.center/foundations/lfaidata.html
+
+NumFOCUS
+  url: https://numfocus.org/
+  corsa_howto: https://corsa.center/foundations/numfocus.html
+
+Open Molecular Software Foundation
+  abbreviation: OMSF
+  email: info@omsf.io
+  corsa_howto: https://corsa.center/foundations/omsf.html

@@ -1,26 +1,40 @@
-Apache Software Foundation
+# Information about (software) foundations mentioned on the site
+#
+# This list should include all of the foundations of which CASS software products are members.
+#
+# Names must match *exactly* for to be matched (e.g., capitalization, punctuation, etc.)
+#
+# Content of the data structure should include:
+#   abbreviation: commonly used abbreviation for the foundation (Optional)
+#   url: the foundation's main website OR a mailto URL for a contact email (Encouraged)
+#   corsa_howto: link to the "How to Join" document curated by CORSA (Optional)
+#
+Apache Software Foundation:
   abbreviation: ASF
   url: https://www.apache.org/
   corsa_howto: https://corsa.center/foundations/apache.html
 
-Eclipse Foundation
+Eclipse Foundation:
   url: https://eclipse.org/
   corsa_howto: https://corsa.center/foundations/eclipse.html
 
-High Performance Software Foundation
+High Performance Software Foundation:
   abbreviation: HPSF
   url: https://hpsf.io/
   corsa_howto: https://corsa.center/foundations/hpsf.html
 
-LF AI & Data Foundation
+LF AI & Data Foundation:
   url: https://lfaidata.foundation/
   corsa_howto: https://corsa.center/foundations/lfaidata.html
 
-NumFOCUS
+NumFOCUS:
   url: https://numfocus.org/
   corsa_howto: https://corsa.center/foundations/numfocus.html
 
-Open Molecular Software Foundation
+Open Molecular Software Foundation:
   abbreviation: OMSF
-  email: info@omsf.io
+  url: info@omsf.io
   corsa_howto: https://corsa.center/foundations/omsf.html
+
+LLVM Foundation:
+  url: https://foundation.llvm.org/

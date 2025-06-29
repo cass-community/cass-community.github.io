@@ -41,9 +41,27 @@
     {% comment %}
     `area` is required, so if it isn't present or isn't one of the recognized areas from 
     `_data/sw-areas.yml`, we'll show the heading with a red "missing data" marker.
+
+      If we have additional information below this, we probably want to remove the bottom margin with style="margin-bottom: 0em;" on the paragraph below.  
+      Or a better yet, make the whole set of stuff formatted into a single <ul> or a single <p> with <br>s.
     {% endcomment %}
     {% capture a %}{% include sw-areas-lookup values = post.area input="short_name" output="name" %}{% endcapture %}
     {% assign a = a | strip_newlines | split: "|" | default: '<em><font color="red">missing data</font></em>' %}
     <p class="archive__item-excerpt" itemprop="area">{{ area_icon }} {{ a }}</p>
+
+    {% comment %} 
+      DON'T LIST FOUNDATION MEMBERSHIPS (for now) 
+    
+      Get the icon for foundations
+    {% capture foundation_icon %}{% include icon-map-lookup label="Foundation" %}{% endcapture %}
+
+      `foundation_membership` is optional and could (theoretically) be multivalued
+      We will leave validating against `_data/foundations.yml` as an exercise for another day
+    {% if post.foundation_membership %}
+      {% for fm in post.foundation_membership %}
+        <p class="archive__item-excerpt" itemprop="foundation">{{ foundation_icon }} {{ fm }}</p>
+      {% endfor %}
+    {% endif %}
+    {% endcomment %}
   </article>
 </div>

@@ -81,6 +81,10 @@ layout: default
           {% include show-cass-members.html %}
         {% endif %}
 
+        {% if page.foundation_membership %}
+          {% include show-foundations.html %}
+        {% endif %}
+
         {% if page.long_description %}
         <h2 id="description">Description</h2>
         {{ page.long_description | markdownify }}

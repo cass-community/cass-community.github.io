@@ -1,0 +1,31 @@
+{% comment %}
+  Show the foundation membership. Used in the software catalog.
+
+  Validates foundation entries and emits red text to call out entries that
+  don't match the controlled vocabulary or are missing.
+
+  Parameters
+    foundation_membership: list of foundations to be displayed (REQUIRED, default: page.foundation_membership)
+    additional_text: text to be added to the leadin (OPTIONAL, default: nil)
+    foundations: name of foundations data structure (OPTIONAL, default `site.data.foundations`)
+
+  
+{% endcomment %}
+{% capture foundation_icon %}{% include icon-map-lookup label="Foundation" %}{% endcapture %}
+{% assign foundation_membership = include.foundation_membership | default: page.foundation_membership %}
+{% assign text = include.additional_text | default: nil %}
+{% assign foundations = include.foundations | default: site.data.foundations %}
+
+{% if foundation_membership %}
+  <p id="foundation-membership"><strong>{{ foundation_icon }} Foundation {{ foundation_membership.size | pluralize: "membership", "memberships" }}{% unless text %}:{% endunless %}</a></strong>{% if text %} {{ text }}:{% endif %}
+  {% for fm in foundation_membership %}
+    {% assign foundation = foundations[fm] -%}
+    {% if foundation %}
+      {% capture f %}{% if foundation.url %}<a href="{{ foundation.url }}">{% endif %}{{ fm }}{% if foundation.url %}</a>{% if foundation.abbreviation %} ({{ foundation.abbreviation }}){% endif %}{% endif %}{% endcapture %}
+    {% else %}
+      {% assign f = fm | default: "missing data" | prepend: '<em><font color="red">' | append: '</font></em>' %}
+    {% endif %}
+    {{ f }}{% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+  </p>
+{% endif %}

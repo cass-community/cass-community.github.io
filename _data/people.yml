@@ -1,3 +1,18 @@
+# Information about people mentioned on the site
+#
+# Names must match *exactly* for to be matched (e.g., middle initials, etc.)
+#
+# Content of the structure should include:
+#   affiliation: the full name of the institution
+#   short_affil: the abbreviation of the institution
+#   email: used in situations where direct contact is needed
+#
+# Other items, which may or may not be used on the site include
+#   homepage: individuals preferred professional webpage
+#   github: GitHub profile URL
+#   linkedin: LinkedIn profile URL
+# and other social media handles
+#
 David Bernholdt:
   affiliation: Oak Ridge National Laboratory
   short_affil: ORNL
@@ -24,7 +39,6 @@ Michael A. Heroux:
   email: mheroux@paratools.com
 
 Terry Jones:
-  name: Terry Jones
   affiliation: Oak Ridge National Laboratory
   short_affil: ORNL
   email: trjones@ornl.gov

@@ -48,7 +48,7 @@ long_description: |
     architectures. Viskores supports the fine-grained concurrency for data analysis and 
     visualization algorithms required to drive extreme scale computing by providing abstract 
     models for data and execution that can be applied to a variety of algorithms across many 
-    different processor architectures.
+    different processor architectures. Viskores was originally named VTK-m, changing its name in June 2025.
 target_audience: |
     Developers of visualization tools and workflows that need to support parallelism on
     many core architectures. Researchers and analysists that want to develop data parallel
@@ -93,9 +93,4 @@ additional_resource_links:
     url: https://github.com/Viskores/viskores/releases
   - label: Documentation
     url: https://viskores.readthedocs.io/
-  - label: E4S Package (VTK-M)
-    url: https://e4s-project.github.io/DocPortal.html?search=VTK-M
-    note: E4S package for Viskores coming soon
-  - label: Spack Package
-    url: https://packages.spack.io/package.html?name=viskores
 ---

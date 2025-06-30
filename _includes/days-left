@@ -1,0 +1,13 @@
+{% comment %}
+  days-left: Calculate the number of dates before the indicated date
+
+  Parameters
+    date: target date (REQUIRED)
+    now: reference date (Optional, default: site.time)
+
+  Constants used
+    86,400 seconds per day
+{% endcomment %}
+{%- assign d = include.date | default: site.time | date: "%s" | plus: 0 -%}
+{%- assign n = include.now | default: site.time | date: "%s" | plus: 0 -%}
+{{ d | minus: n | divided_by: 86400 | plus: 0 }}

@@ -11,9 +11,9 @@
   Note: the jekyll-github-metata plugin supposedly provides a tag for this,
   but it hardcoded for the `gh_pages` branch.
 {% endcomment %}
-{% assign text = include.text | default: "Edit on GitHub" %}
-{% assign branch = include.branch | default: "main" %}
-{% assign repository = include.repostory | default: site.repository %}
-{% assign host = include.repo_host | default: site.repo_host %}
-{% assign path = include.path | default: page.path %}
+{%- assign text = include.text | default: "Edit on GitHub" -%}
+{%- assign branch = include.branch | default: "main" -%}
+{%- assign repository = include.repostory | default: site.repository -%}
+{%- assign host = include.repo_host | default: site.repo_host -%}
+{%- assign path = include.path | default: page.path -%}
 <a href="{{ host }}/{{ repository }}/edit/{{ branch }}/{{ path }}">{{ text }}</a>

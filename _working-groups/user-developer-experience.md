@@ -21,7 +21,8 @@ charter:
   lifetime: Standing. Subject to annual review of needs and purpose.
   membership: Open
   reporting: Annually
-  status: Provisional, since 2025-01-10
+  status: Provisional
+  status_date: 2025-01-10
 #
 chair: # Can be more than one person
   - Hannah Cohoon

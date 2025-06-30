@@ -59,7 +59,8 @@ charter:
   reporting: short text
   additional: |
     Long text (if needed)
-  status: short text
+  status: "Provisional" or "Active" or 
+  status_date: YYYY-MM-DD
 ```
 
 Input for this fields may use the YAML syntax for a multi-line string, denoted by the pipe ("|") character on the line with the key. 
@@ -72,7 +73,9 @@ Input for this fields may use the YAML syntax for a multi-line string, denoted b
 
 *Reporting expectations* are likely to be things like Quarterly, Seminannual, Annual, as appropriate to the topic.  The by-laws require annual review of working groups by the Steering Committee, so that would be the longest cycle.
 
-*Charter approval status* should be either "Provisional" or "Approved" and should also mention the date of that status.  For example `Provisional, since 2024-09-17`.
+*Charter approval status* should be either "Provisional", "Active", or "Retired"
+
+*Status date* should be the date (in ISO 8601 format) of the last approval action -- when the working group was started as Provisional, or when it was last reviewed by the Steering Committee (as required by the by-laws).  When a working group is retired, the status date should reflect the date of that retirement.
 
 ## `chair` *(list)*
 

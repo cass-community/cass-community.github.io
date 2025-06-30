@@ -21,11 +21,8 @@ charter:
   lifetime: Standing.  We plan a process of review and refinement each time the IF is used.
   membership: Open
   reporting: Quarterly
-  status: Provisional, since 2024-09-17
-#
-# Charter status may be Provisional or Approved and should include a date
-#
-charter_status: Provisional, since 2024-09-17
+  status: Provisional
+  status_date: 2024-09-17
 #
 chair: # Can be more than one person
   - David Bernholdt

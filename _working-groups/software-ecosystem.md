@@ -28,7 +28,8 @@ charter:
   lifetime: Standing
   membership: Open
   reporting: Annually
-  status: Provisional, since 2025-02-11
+  status: Provisional
+  status_date: 2025-02-11
 #
 chair: # Can be more than one person
   - Michael A. Heroux

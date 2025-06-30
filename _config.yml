@@ -105,6 +105,15 @@ defaults:
       author_profile: false
       comments: false
       toc: false
+  # internal
+  - scope:
+      path: "internal"
+    values:
+      sitemap: false
+  - scope:
+      path: "internal/**"
+    values:
+      sitemap: false
 
 footer:
   links:

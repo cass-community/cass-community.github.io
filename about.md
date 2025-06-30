@@ -91,10 +91,10 @@ Most of the work of CASS is carried out within [Working Groups]({{ "/working-gro
 
 ### Current officers
 
-| Position | Person | Current Term Ends
-|:---------|:-------|:-----------------
+| Position | Person | Elected | Term Ends
+|:---------|:-------|:--------|:-----------------
 {% for o in site.data.organization.officers -%}
-| {% if o.position %}{{ o.position }}{% endif %} | {% if o.name %}{% include people-info.html name=o.name link="email" short_affil=true %}{% endif %} | {% if o.term_expires %}{{ o.term_expires }}{% endif %}
+| {% if o.position %}{{ o.position }}{% endif %} | {% if o.name %}{% include people-info.html name=o.name link="email" short_affil=true %}{% endif %} | {% if o.elected %}{{ o.elected }}{% endif %} | {% if site.data.organization.officers_term %}{% include days-ahead date=o.elected days=site.data.organization.officers_term %}{% endif %}
 {% endfor %}
 
 ## Governing documents

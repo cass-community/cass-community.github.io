@@ -36,7 +36,8 @@ charter:
   lifetime: Standing
   membership: Open
   reporting: Quarterly
-  status: Provisional, since 2025-01-08
+  status: Provisional
+  status_date: 2025-01-08
 #
 chair: # Can be more than one person
   - Lois Curfman McInnes

@@ -89,13 +89,14 @@ members:
 
 # CASS officers
 # There are three, and they have a one year term (renewable)
+#
 officers:
   - position: Chair
     name: David Bernholdt
-    term_expires: 2025-10-06
+    elected: 2024-10-07
   - position: Vice-Chair
     name: Terry Turton
-    term_expires: 2025-10-06
+    elected: 2024-10-07
   - position: Secretary
     name: Todd Munson
-    term_expires: 2025-10-06
+    elected: 2024-10-07

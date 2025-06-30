@@ -1,0 +1,13 @@
+{% comment %}
+  days-ahead: Given a date and a number of days, emit the date+days
+
+  Parameters
+    date: starting date (REQUIRED)
+    days: number of days to add to date (REQUIRED)
+
+  Constants used
+    86,400 seconds per day
+{% endcomment %}
+{%- assign d = include.date | default: site.time | date: "%s" | plus: 0 -%}
+{%- assign a = include.days | default: 1 | plus: 0 | times: 86400 -%}
+{{ d | plus: a | date: "%F" }}

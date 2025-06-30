@@ -132,7 +132,7 @@ layout: default
             <p id="charter-additional"><strong>Additional information:</strong> {{ page.charter.additional | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
           {% endif %}
           {% if page.charter.status %}
-            <p id="charter-status"><strong>Charter approval status:</strong> {{ page.charter.status | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+            <p id="charter-status"><strong>Charter approval status:</strong> {{ page.charter.status | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if page.charter.status_date %} as of {{ page.charter.status_date }}{% endif %}</p>
           {% endif %}
           </details>
         {% endif %}

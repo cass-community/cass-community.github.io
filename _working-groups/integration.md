@@ -28,7 +28,8 @@ charter:
   lifetime: Standing
   membership: Open
   reporting: Quarterly
-  status: Provisional, since 2024-08-19
+  status: Provisional
+  status_date: 2024-08-19
 #
 chair: # Can be more than one person
   - Jim Willenbring

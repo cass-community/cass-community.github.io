@@ -27,7 +27,8 @@ charter:
   lifetime: Standing
   membership: Open
   reporting: Annually
-  status: Provisional, since early October 2024
+  status: Provisional
+  status_date: 2024-10-01
 #
 chair: # Can be more than one person
   - Daniel S. Katz

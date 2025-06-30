@@ -2,9 +2,9 @@
 # Product information for CASS website product catalog
 #
 # INSTRUCTIONS
-#   This is a Jekyll Markdown file, which starts with YAML "frontmatter." For the product 
-#   catalog, we will be using only the YAML frontmatter (between the "---" separators).  
-#   Please leave the main body empty.  
+#   This is a Jekyll Markdown file, which starts with YAML "frontmatter." For the product
+#   catalog, we will be using only the YAML frontmatter (between the "---" separators).
+#   Please leave the main body empty.
 #
 #   Please name the file itself for the software product: <name>.md
 #
@@ -12,7 +12,7 @@
 #   product's entry in the catalog.  To provide optional items, please uncomment the keys and complete
 #   the value appropriately.
 #
-#   Some keys are specifically chosen to match those in the e4s.yaml schema (ignoring case) 
+#   Some keys are specifically chosen to match those in the e4s.yaml schema (ignoring case)
 #   with the expectation that they should have the same content (and probably will eventually be merged).
 #
 #
@@ -21,19 +21,19 @@
 #   area:                   (string) REQUIRED The technical area of the product.  For now, we are using
 #                           the areas that were used by ECP ST, except that anything that was categorized as
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
-#                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".  
+#                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
 #   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
 #                           organizations) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: colabs, corsa, swas)
 #   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
 #                           "subtitle", following the `name`.
-#   long_description:       (multiline string) REQUIRED A one-paragraph description of your software. A brief, moderately technical description 
+#   long_description:       (multiline string) REQUIRED A one-paragraph description of your software. A brief, moderately technical description
 #                           of your software's primary features and capabilities.
 #   target_audience:        (multiline string) REQUIRED A one-paragraph description of who should be interested in your software.  This should be
-#                           less technical than the description -- meant to guide someone who's inexpert or just trying to 
+#                           less technical than the description -- meant to guide someone who's inexpert or just trying to
 #                           figure out who might be using the software.
 #
-# Note on multline string entries (long_description and target_audience): YAML supports a multiline string entry that allows 
+# Note on multline string entries (long_description and target_audience): YAML supports a multiline string entry that allows
 # a value to be a paragraph (or several).  A multiline string value starts with a pipe ("|") following the colon of the key, with
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
@@ -44,17 +44,17 @@ cass_members:
   - RAPIDS
 description: A performance-portable visualization library leveraged by production tools such as ParaView and VisIt
 long_description: |
-    Viskores is a toolkit of scientific visualization algorithms for emerging processor 
-    architectures. Viskores supports the fine-grained concurrency for data analysis and 
-    visualization algorithms required to drive extreme scale computing by providing abstract 
-    models for data and execution that can be applied to a variety of algorithms across many 
+    Viskores is a toolkit of scientific visualization algorithms for emerging processor
+    architectures. Viskores supports the fine-grained concurrency for data analysis and
+    visualization algorithms required to drive extreme scale computing by providing abstract
+    models for data and execution that can be applied to a variety of algorithms across many
     different processor architectures. Viskores was originally named VTK-m, changing its name in June 2025.
 target_audience: |
     Developers of visualization tools and workflows that need to support parallelism on
     many core architectures. Researchers and analysists that want to develop data parallel
     algorithms in a performance portable way.
-    Viskores is broadly used across the DOE HPC community, most often employed through its 
-    integration into the ParaView, ParaView Catalyst, and Visit analysis and visualization 
+    Viskores is broadly used across the DOE HPC community, most often employed through its
+    integration into the ParaView, ParaView Catalyst, and Visit analysis and visualization
     packages.
 #
 # PACKAGING INFORMATION
@@ -85,8 +85,6 @@ spack_name: viskores
 # For additional information, see _software/README.md.
 
 additional_resource_links:
-  - label: Website
-    url: https://viskores.readthedocs.io/
   - label: Repository
     url: https://github.com/Viskores/viskores
   - label: Downloads

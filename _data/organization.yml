@@ -100,3 +100,11 @@ officers:
   - position: Secretary
     name: Todd Munson
     elected: 2024-10-07
+
+# Timelines for elections and reviews
+# Set in the by-laws
+#
+officers_term: 365 # days
+wg_reviews:
+  provisional: 182 # days
+  active: 365 # days

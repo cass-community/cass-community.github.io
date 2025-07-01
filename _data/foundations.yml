@@ -9,6 +9,33 @@
 #   url: the foundation's main website OR a mailto URL for a contact email (Encouraged)
 #   corsa_howto: link to the "How to Join" document curated by CORSA (Optional)
 #
+# The following foundations have members in the CASS portfolio
+#
+High Performance Software Foundation:
+  abbreviation: HPSF
+  url: https://hpsf.io/
+  corsa_howto: https://corsa.center/foundations/hpsf.html
+
+NumFOCUS:
+  url: https://numfocus.org/
+  corsa_howto: https://corsa.center/foundations/numfocus.html
+
+LLVM Foundation:
+  url: https://foundation.llvm.org/
+
+Unified Acceleration Foundation:
+  abbreviation: UXL
+  url: https://uxlfoundation.org/
+
+University of Oregon Foundation:
+  url: https://www.uofoundation.org/
+
+Software in the Public Interest:
+  abbreviation: SPI
+  url: https://www.spi-inc.org/
+#
+# The following foundations do NOT have members in the CASS portfolio
+#
 Apache Software Foundation:
   abbreviation: ASF
   url: https://www.apache.org/
@@ -18,23 +45,11 @@ Eclipse Foundation:
   url: https://eclipse.org/
   corsa_howto: https://corsa.center/foundations/eclipse.html
 
-High Performance Software Foundation:
-  abbreviation: HPSF
-  url: https://hpsf.io/
-  corsa_howto: https://corsa.center/foundations/hpsf.html
-
 LF AI & Data Foundation:
   url: https://lfaidata.foundation/
   corsa_howto: https://corsa.center/foundations/lfaidata.html
-
-NumFOCUS:
-  url: https://numfocus.org/
-  corsa_howto: https://corsa.center/foundations/numfocus.html
 
 Open Molecular Software Foundation:
   abbreviation: OMSF
   url: info@omsf.io
   corsa_howto: https://corsa.center/foundations/omsf.html
-
-LLVM Foundation:
-  url: https://foundation.llvm.org/

@@ -15,6 +15,8 @@ header:
 
 ## Spack package availability
 
+These listings are for informational purposes only.  It is not necessarily useful or appropriate for every product to be packaged with Spack.
+
 {% assign spack_yes = site.software | where_exp: "item", "item.spack_name" | map: "name" %}
 **Products with Spack packages:** {{ spack_yes | sort_natural | array_to_sentence_string }}
 
@@ -22,6 +24,8 @@ header:
 **Products *without* Spack packages:** {{ spack_no | sort_natural | array_to_sentence_string }}
 
 ## E4S availability
+
+These listings are for informational purposes only.  It is not necessarily useful or appropriate for every product to be part of the E4S distribution.
 
 {% assign e4s_yes = site.software | where_exp: "item", "item.e4s_product" | map: "name" %}
 **Products available in E4S:** {{ e4s_yes | sort_natural | array_to_sentence_string }}
@@ -40,6 +44,8 @@ header:
 **Products *not* available in E4S but having Spack packages:** {{ e4s_possible | sort_natural | array_to_sentence_string }}
 
 ## Mentions in highlights
+
+This list is for informational purposes only.  We do not expect exact parity in the number of highlights in which each software product appears.  But for those with fewer highlights, we might want to make extra efforts to try to identify good impact stories to highlight.
 
 {% assign sw = site.software | map: "name" | sort_natural %}
 

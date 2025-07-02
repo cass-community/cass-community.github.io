@@ -66,7 +66,7 @@ Due dates within 30 days are highlighted in blue. Overdue items are highlighted 
     {%- assign person = site.data.people[c] -%}
     {%- assign email = email | append: person.email | append: ";" -%}
   {% endfor -%}
-  {%- assign subject = "?subject=CASS " | append: wg.name | append: " working group review" | replace: " ", "%20" -%}
+  {%- assign subject = "?subject=CASS " | append: wg.name | append: " working group review" | uri_escape -%}
   {%- assign chair_email = "[" | append: chair | append: "](" | append: email | append: subject | append: ")" -%}
   {% assign line = expiration | append: "|" | append: name | append: "|" | append: wg.charter.status | append: "|" | append: wg.charter.status_date | append: "|" | append: chair_email %}
   {% assign cal = cal | push: line %}

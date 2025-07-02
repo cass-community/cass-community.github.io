@@ -47,11 +47,11 @@ These listings are for informational purposes only.  It is not necessarily usefu
 
 This list is for informational purposes only.  We do not expect exact parity in the number of highlights in which each software product appears.  But for those with fewer highlights, we might want to make extra efforts to try to identify good impact stories to highlight.
 
-{% assign sw = site.software | map: "name" | sort_natural %}
+{% assign sw = site.software | sort_natural: "name" %}
 
 | Package | Highlight Count
 |:--------|:--------------:
 {% for s in sw %}
-  {%- assign highlights = site.impacts | where_exp: "item", "item.software_mentioned contains s" -%}
-| {{ s }} | {{ highlights.size }}
+  {%- assign highlights = site.impacts | where_exp: "item", "item.software_mentioned contains s.name" -%}
+| [{{ s.name }}]({{ s.url }}{% if highlights.size > 0 %}#impact-stories{% endif %}) | {{ highlights.size }}
 {% endfor %}

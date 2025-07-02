@@ -74,7 +74,7 @@ Due dates within 30 days are highlighted in blue. Overdue items are highlighted 
 {% assign cal = cal | sort %}
 
 | Review Due | Working Group | Current Status | Status Date | Chair(s)
-|:-----------|:--------------|:---------------|:------------|:--------
+|:----------:|:--------------|:--------------:|:-----------:|:--------
 {% for line in cal %}
   {%- assign fields = line | split: "|" -%}
   {%- assign expiration = fields[0] -%}

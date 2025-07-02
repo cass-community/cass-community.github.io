@@ -17,13 +17,13 @@ header:
 - [Calendar](calendar): due dates for Steering Committee actions
   - Office elections
   - Working group reviews
-{% comment %}
 - [Software](software): information about the software packages in the CASS portfolio
   - Availability of spack packages
   - Availability in E4S
+  - Counts of mentions in highlights
+{% comment %}
   - Foundation memberships
   - Software licenses
-  - Counts of mentions in highlights
 {% endcomment %}
 
 ## Site build date and time

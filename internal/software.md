@@ -13,6 +13,13 @@ header:
 ---
 *The resources linked from this page are intended for internal use by CASS members. Nothing in the internal tree should be linked from any public webpage.*
 
+## Software by CASS member
+
+{% assign cass_members = site.software | group_by_exp: "item", "item.cass_members | array_to_sentence_string" | sort_natural: "name" %}
+{% for m in cass_members %}
+  **{{ m.name }}**: {{ m.items | map: "name" | sort_natural | array_to_sentence_string }}
+{% endfor %}
+
 ## Spack package availability
 
 These listings are for informational purposes only.  It is not necessarily useful or appropriate for every product to be packaged with Spack.

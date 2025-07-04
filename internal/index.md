@@ -18,6 +18,7 @@ header:
   - Office elections
   - Working group reviews
 - [Software](software): information about the software packages in the CASS portfolio
+  - Software by CASS member
   - Availability of spack packages
   - Availability in E4S
   - Counts of mentions in highlights

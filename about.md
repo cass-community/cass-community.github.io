@@ -104,7 +104,7 @@ Most of the work of CASS is carried out within [Working Groups]({{ "/working-gro
 
 ## Sponsors and funding
 
-CASS operates on in-kind contributions of effort and other resources from member organizations.  As such, it has no budget of its own, and no direct sponsors.  
+CASS operates on contributions of effort and other resources from member organizations.  As such, it has no budget of its own, and no direct sponsors.  
 
 {% capture funding %}{% include funding-ack-content logos=true %}{% endcapture %}
 Member organizations, of course, have their own funding sources. {{ funding | strip }}

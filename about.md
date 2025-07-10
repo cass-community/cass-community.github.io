@@ -34,8 +34,8 @@ Most of the work of CASS is carried out within [Working Groups]({{ "/working-gro
 
 ## Current members and leadership
 
-| Organization Name | Organization Lead(s) | Steering Committee Representative 
-|:------------------|:------------------------|:-------
+| Organization Name | Focus Area(s) | Organization Lead(s) | Steering Committee Representative 
+|:------------------|:--------------|:---------------------|:-------
 | ***Core Members*** | |
 {% assign members = site.data.organization.members | where: "membership_level", "core" -%}
 {% for m in members -%}
@@ -58,7 +58,7 @@ Most of the work of CASS is carried out within [Working Groups]({{ "/working-gro
         {% assign leads = leads | append: l -%}
         {% unless forloop.last %}{% assign leads = leads | append: ", " %}{% endunless -%}
     {% endfor -%}
-| {{ org }} | {{ leads }} | {{ scr }} 
+| {{ org }} | {{ m.focus_area }} | {{ leads }} | {{ scr }} 
 {% endfor -%}
 {% assign members = site.data.organization.members | where: "membership_level", "affiliate" -%}
 {% assign scr_array = nil -%}
@@ -86,7 +86,7 @@ Most of the work of CASS is carried out within [Working Groups]({{ "/working-gro
         {% assign leads = leads | append: l -%}
         {% unless forloop.last %}{% assign leads = leads | append: ", " %}{% endunless -%}
     {% endfor -%}
-| {{ org }} | {{ leads }} |
+| {{ org }} | {{ m.focus_area }} | {{ leads }} |
 {% endfor %}
 
 ### Current officers

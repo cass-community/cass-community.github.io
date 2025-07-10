@@ -20,6 +20,9 @@
 #     the concatenation of the unique sc_reps values from the affiliate member
 #     entries.  So you can safely duplicate sc_reps or just have one per every
 #     five affiliates.
+#   focus_area: A short phrase describing the focus area(a) of the member organization.
+#     This needs to be very terse in order not to blow out the formatting of the table
+#     where it is displayed.
 #
 members: 
   - short_name: COLABS
@@ -29,6 +32,7 @@ members:
       - Anshu Dubey
     sc_reps:
       - David Bernholdt
+    focus_area: Training, workforce development, and RSE community building
   - short_name: CORSA
     name: Center for Open-Source Research Software Stewardship and Advancement
     website: https://corsa.center/
@@ -37,6 +41,7 @@ members:
       - Greg Watson
     sc_reps:
       - Greg Watson
+    focus_area: Pathways to foundations and software sustainability metrics
   - short_name: FASTMath
     name: Frameworks, Algorithms and Scalable Technologies for Mathematics
     website: https://scidac5-fastmath.lbl.gov/
@@ -45,6 +50,7 @@ members:
       - Carol Woodward
     sc_reps:
       - Todd Munson
+    focus_area: Scalable mathematical libraries
   - short_name: PESO
     name: Partnering for Scientific-Software Ecosystem Opportunities
     website: https://pesoproject.org/
@@ -54,6 +60,7 @@ members:
       - Michael A. Heroux
     sc_reps: 
       - Jim Willenbring
+    focus_area: Fostering, curating, and delivering a scientific software ecosystem
   - short_name: RAPIDS
     name: "RAPIDS2: A SciDAC Institute for Computer Science, Data, and Artificial Intelligence"
     website: https://rapids.lbl.gov/
@@ -62,6 +69,7 @@ members:
       - Rob Ross
     sc_reps:
       - Lenny Oliker
+    focus_area: Platform readiness, data management/understanding, and AI tools
   - short_name: S4PST
     name: Stewardship for Programming Systems and Tools
     website: https://s4pst.org/
@@ -70,6 +78,7 @@ members:
       - Keita Teranishi
     sc_reps:
       - Seyong Lee
+    focus_area: Programming models and runtimes
   - short_name: STEP
     name: Software Tools Ecosystem Project
     website: https://ascr-step.org/
@@ -78,6 +87,7 @@ members:
       - Terry Jones
     sc_reps:
       - Terry Jones
+    focus_area: Development tools
   - short_name: SWAS
     name: Center for Sustaining Workflows and Application Services
     website: https://swas.center/
@@ -86,6 +96,7 @@ members:
       - Rafael Ferreira da Silva
     sc_reps:
       - David Bernholdt
+    focus_area: Workflow software
 
 # CASS officers
 # There are three, and they have a one year term (renewable)

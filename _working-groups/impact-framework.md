@@ -2,8 +2,9 @@
 name: Impact Framework
 description: Curating the CASS Impact Framework process
 #
-status: Active # Values can be "Active" or "Retired"
-status_date: 2024-09-17 # The date the group went active or retired
+# These fields are not used, AFAIK.  See the charter.{status,status_date} instead.
+# status: Active # Values can be "Active" or "Retired"
+# status_date: 2024-09-17 # The date the group went active or retired
 #
 # Charter information: according to the by-laws, the following info is expected:
 #   Purpose
@@ -21,13 +22,13 @@ charter:
   lifetime: Standing.  We plan a process of review and refinement each time the IF is used.
   membership: Open
   reporting: Quarterly
-  status: Provisional
-  status_date: 2024-09-17
+  status: Active
+  status_date: 2025-08-12
 #
 chair: # Can be more than one person
   - David Bernholdt
 #
-meeting_schedule: "2:00pm-1:00pm ET Tuesdays, bi-weekly from 2025-01-14"
+meeting_schedule: "12:00pm-1:00pm ET Tuesdays, bi-weekly from 2025-01-14"
 #
 # A way of easily providing additional resource/links
 #

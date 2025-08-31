@@ -24,8 +24,8 @@ charter:
   lifetime: Standing
   membership: Open
   reporting: Annually
-  status: Provisional
-  status_date: 2024-10-01
+  status: Retired
+  status_date: 2025-08-25
 #
 chair: # Can be more than one person
   - Daniel S. Katz

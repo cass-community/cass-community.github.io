@@ -86,7 +86,7 @@ layout: default
         {% endif %}
 
         {% if page.charter.status == "Retired" %}
-          <p id="status">{{ status_icon }} <strong>Status: This working was retired on {{ page.charter.status_date | date: "%F" }}.  This page has been retained for informational purposes.
+          <p id="status">{{ status_icon }} <strong>Status: This working was retired on {{ page.charter.status_date | date: "%F" }}.  This page has been retained for archival purposes.
             Contact the {{ page.chair.size | pluralize: "chair", "chairs" }} for further information.</strong>
           </p>
         {% endif %}

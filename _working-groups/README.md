@@ -26,14 +26,6 @@ The description is used in small areas (such as the grid view of the working gro
 * The description` *should* be in sentence case.
 * The `description` *should not* end with a period.
 
-## `status` *(controlled vocabulary)*
-
-The `status` of the working group can be "Active" or "Retired".
-
-## `status_date` *(ISO date)*
-
-The effective date of the current `status`, in YYYY-MM-DD format.
-
 ## `charter` *(multiparagraph text)*
 
 The by-laws require that every working group have a charter. It should include:

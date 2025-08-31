@@ -9,9 +9,6 @@ name: Workforce
 # 
 description: Advancing the multidisciplinary community and workforce for next-generation computing sciences, with emphasis on scientific software
 #
-status: Active # Values can be "Active" or "Retired"
-status_date: 2024-01-08 # The date the group went active or retired
-#
 # Charter information: according to the by-laws, the following info is expected:
 #   Purpose
 #   Relationship to other working groups (as needed, not required by by-laws)

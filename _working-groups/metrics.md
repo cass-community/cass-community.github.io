@@ -2,9 +2,6 @@
 name: Metrics
 description: Curating and developing metrics for understanding software sustainability, quality and impact
 #
-status: Active # Values can be "Active" or "Retired"
-status_date: 2024-10-03 # The date the group went active or retired
-#
 # Charter information: according to the by-laws, the following info is expected:
 #   Purpose
 #   Relationship to other working groups (as needed, not required by by-laws)

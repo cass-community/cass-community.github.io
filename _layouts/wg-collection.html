@@ -8,6 +8,7 @@ layout: archive
     * Use wg-archive layout instead of archive
     * Call wg-documents-collection.html include
       - Use entries instead of collection argument
+    * Explicitly separate Provisional and Active WGs from Retired WGs
 {% endcomment %}
 
 {% assign entries = site[page.collection] | where_exp: "post", "post.hidden != true" %}
@@ -36,6 +37,21 @@ layout: archive
 {% endif %}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include wg-documents-collection.html entries=entries sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}
-</div>
+
+{% assign active_entries = entries | where_exp: "item", "item.charter.status != 'Retired'" %}
+{% if active_entries != nil %}
+  <div class="entries-{{ entries_layout }}">
+    {% include wg-documents-collection.html entries=active_entries sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}
+  </div>
+{% endif %}
+
+{% assign retired_entries = entries | where_exp: "item", "item.charter.status == 'Retired'" %}
+{% if retired_entries != nil %}
+  <h2 id="retired-working-groups">Retired working groups</h2>
+
+  <p>The following working groups are no longer active, but are listed here for archival purposes.</p>
+
+  <div class="entries-{{ entries_layout }}">
+    {% include wg-documents-collection.html entries=retired_entries sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}
+  </div>
+{% endif %}

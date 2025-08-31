@@ -3,16 +3,16 @@
     * Use sort_natural (case insensitive) instead of sort (case sensitive)
     * Call wg-archive-single.html include
 {% endcomment %}
-{% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
+{% assign my_entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
 
 {% if include.sort_by %}
-  {% assign entries = entries | sort_natural: include.sort_by %}
+  {% assign my_entries = my_entries | sort_natural: include.sort_by %}
 {% endif %}
 
 {% if include.sort_order == 'reverse' %}
-  {% assign entries = entries | reverse %}
+  {% assign my_entries = my_entries | reverse %}
 {% endif %}
 
-{%- for post in entries -%}
+{%- for post in my_entries -%}
   {% include wg-archive-single.html type=include.type %}
 {%- endfor -%}

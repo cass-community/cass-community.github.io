@@ -2,9 +2,6 @@
 name: User-Developer Experience
 description: Promote improved user-developer experiences
 #
-status: Active # Values can be "Active" or "Retired"
-status_date: 2025-01-10 # The date the group went active or retired; FIXME
-#
 # Charter information: according to the by-laws, the following info is expected:
 #   Purpose
 #   Relationship to other working groups (as needed, not required by by-laws)

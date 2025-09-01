@@ -91,6 +91,11 @@ Due dates within 30 days are highlighted in blue. Overdue items are highlighted 
   {{ expiration }} | {{ fields[1] }} | {{ fields[2] }} | {{ fields[3] }} | {{ fields[4] }}
 {% endfor %}
 
+### Working group review questions
 
+To accelerate working group reviews, WG leads will be asked to respond in writing to the following questions ahead of the Steering Committee meeting in which the review is scheduled. Questions are applicable to reviews of both provisional and active working groups.  In the case of provisional working groups, consider the “last review” to be the inception of the working group.
 
-
+1. Is your published charter consistent with your activities and plans (i.e., is it current, or does it need to be updated)?  
+2. Is the working group meeting on a regular basis?  
+3. Briefly describe the progress you have made since the last review of your working group.  
+4. Briefly describe how the work that you have done since your last review furthers the stewardship and advancement of the current and future ecosystem of scientific computing software.

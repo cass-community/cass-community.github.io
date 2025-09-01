@@ -9,9 +9,6 @@ name: Software Ecosystem
 # 
 description: Planning and executing activities that support and enhance holistic collaboration across the breadth of the CASS community member organizations to sustain and advance our software libraries and tools usage as a curated portfolio
 #
-status: Active # Values can be "Active" or "Retired"
-status_date: 2025-02-11 # The date the group went active or retired
-#
 # Charter information: according to the by-laws, the following info is expected:
 #   Purpose
 #   Relationship to other working groups (as needed, not required by by-laws)

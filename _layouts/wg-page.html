@@ -14,7 +14,7 @@ layout: default
 {% capture chair_icon %}{% include icon-map-lookup label="Chair" %}{% endcapture %}
 {% capture meetings_icon %}{% include icon-map-lookup label="Meetings" %}{% endcapture %}
 {% capture membership_icon %}{% include icon-map-lookup label="Membership" %}{% endcapture %}
-
+{% capture status_icon %}{% include icon-map-lookup label="Status" %}{% endcapture %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -85,20 +85,30 @@ layout: default
           {% capture url %}mailto:{{ email }}?subject={{ subject }}{% endcapture %}
         {% endif %}
 
+        {% if page.charter.status == "Retired" %}
+          <p id="status">{{ status_icon }} <strong>Status: This working was retired on {{ page.charter.status_date | date: "%F" }}.  This page has been retained for archival purposes.
+            Contact the {{ page.chair.size | pluralize: "chair", "chairs" }} for further information.</strong>
+          </p>
+        {% endif %}
+
         {% if page.charter.membership %}
           <p id="membership">{{ membership_icon }} <strong>Membership:</strong> {{ page.charter.membership | markdownify | remove: "<p>" | remove: "</p>" | strip }}
             {% if page.charter.membership == "Open" %}
-              {% if url %}
-                <a href="{{ url }}">(contact the {{ page.chair.size | pluralize: "chair", "chairs" }}</a> to participate)
-              {% else %}
-                (contact the {{ page.chair.size | pluralize: "chair", "chairs" }} to participate)
-              {% endif %}
+              {% unless page.charter.status == "Retired" %}
+                {% if url %}
+                  <a href="{{ url }}">(contact the {{ page.chair.size | pluralize: "chair", "chairs" }}</a> to participate)
+                {% else %}
+                  (contact the {{ page.chair.size | pluralize: "chair", "chairs" }} to participate)
+                {% endif %}
+              {% endunless %}
             {% endif %}
           </p>
         {% endif %}
 
         {% if page.meeting_schedule %}
-          <p id="meetings">{{ meetings_icon }} <strong>Meeting schedule:</strong> {{ page.meeting_schedule }}</p>
+          {% unless page.charter.status == "Retired" %}
+            <p id="meetings">{{ meetings_icon }} <strong>Meeting schedule:</strong> {{ page.meeting_schedule }}</p>
+          {% endunless %}
         {% endif %}
 
         {% if page.chair %}

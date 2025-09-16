@@ -87,7 +87,7 @@ members:
       - Terry Jones
     sc_reps:
       - Terry Jones
-    focus_area: Development tools
+    focus_area: Performance and correctness tools
   - short_name: SWAS
     name: Center for Sustaining Workflows and Application Services
     website: https://swas.center/

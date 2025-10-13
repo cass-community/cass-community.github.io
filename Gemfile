@@ -38,3 +38,7 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # It seems that jekyll-link-attributes requires this, but the dependency is wonky
 gem "nokogiri"
+
+# Adding gems which are being moved out of Ruby stdlib
+gem "fiddle"
+gem "faraday-retry"

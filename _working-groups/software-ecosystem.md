@@ -2,8 +2,8 @@
 name: Software Ecosystem
 #
 #   description: A short description of your working group.  The `description` is always shown immediately 
-#   after the `name` and they should be considered together as, in effect constructing a sentence-length 
-#   description of the product with the form `name: desciption`.  However it does not need to be a complete 
+#   after the `name` and they should be considered together as, in effect, constructing a sentence-length 
+#   description of the product with the form `name: description`.  However, it does not need to be a complete 
 #   sentence in the grammatical sense.  Key points: The `description` should *not* repeat the `name`, it 
 #   should be in sentence case, and it should *not* end with a period.
 # 
@@ -19,9 +19,9 @@ description: Planning and executing activities that support and enhance holistic
 #
 charter:
   purpose: |
-    The CASS Software Ecosystem Working Group focuses on sustaining and improving collaboration across CASS community, promoting activities in support of the scientific software ecosystem.  Our efforts include promoting a curated portfolio of independently-developed, interoperable, and interchangeable libraries and tools that enable the development and use of application codes in the pursuit of scientific discovery.  We interpret the opportunities broadly to include community development, outreach, best practices in adopting and using the software portfolio, and more.
+    The CASS Software Ecosystem Working Group focuses on sustaining and improving collaboration across the CASS community and on promoting activities that support the scientific software ecosystem.  Our efforts include promoting a curated portfolio of independently developed, interoperable, and interchangeable libraries and tools that enable the development and use of application codes in the pursuit of scientific discovery.  We interpret the opportunities broadly to include community development, outreach, best practices in adopting and using the software portfolio, and more.
   relationships: |
-    The software ecosystem working group efforts are often synergistic with the Software Integration, Impact Framework and User-Developer Experience (UDX) working groups.
+    The software ecosystem working group's efforts often align with those of the Software Integration, Impact Framework, and User-Developer Experience (UDX) working groups.
   lifetime: Standing
   membership: Open
   reporting: Annually
@@ -33,9 +33,9 @@ chair: # Can be more than one person
 #
 # A simple statement of the meeting schedule, if you have one
 #
-meeting_schedule: "2:00pm-3:00pm ET, every other Tuesday, including Feb 11, 2025"
+meeting_schedule: "4:00 pm-5:00 pm ET, every other Tuesday, including Sep 30, 2025"
 #
-# A way of easily providing additional resource/links
+# A way of easily providing additional resources/links
 #
 additional_resource_links:
   - label: Slack channel

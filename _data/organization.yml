@@ -24,15 +24,16 @@
 #     This needs to be very terse in order not to blow out the formatting of the table
 #     where it is displayed.
 #
-members: 
-  - short_name: COLABS
-    name: "Collaboration for Better Software (for Science)"
-    membership_level: affiliate
-    leads: 
-      - Anshu Dubey
-    sc_reps:
-      - David Bernholdt
-    focus_area: Training, workforce development, and RSE community building
+members:
+  # Resigned membership 2025-10-07
+  # - short_name: COLABS
+  #   name: "Collaboration for Better Software (for Science)"
+  #   membership_level: affiliate
+  #   leads: 
+  #     - Anshu Dubey
+  #   sc_reps:
+  #     - David Bernholdt
+  #   focus_area: Training, workforce development, and RSE community building
   - short_name: CORSA
     name: Center for Open-Source Research Software Stewardship and Advancement
     website: https://corsa.center/
@@ -88,15 +89,16 @@ members:
     sc_reps:
       - Terry Jones
     focus_area: Performance and correctness tools
-  - short_name: SWAS
-    name: Center for Sustaining Workflows and Application Services
-    website: https://swas.center/
-    membership_level: affiliate
-    leads: 
-      - Rafael Ferreira da Silva
-    sc_reps:
-      - David Bernholdt
-    focus_area: Workflow software
+  # Resigned membership 2025-10-07
+  # - short_name: SWAS
+  #   name: Center for Sustaining Workflows and Application Services
+  #   website: https://swas.center/
+  #   membership_level: affiliate
+  #   leads: 
+  #     - Rafael Ferreira da Silva
+  #   sc_reps:
+  #     - David Bernholdt
+  #   focus_area: Workflow software
 
 # CASS officers
 # There are three, and they have a one year term (renewable)
@@ -104,13 +106,18 @@ members:
 officers:
   - position: Chair
     name: David Bernholdt
-    elected: 2024-10-07
+    elected: 2025-10-14
+    # elected: 2024-10-07
   - position: Vice-Chair
-    name: Terry Turton
-    elected: 2024-10-07
+    name: Jim Willenbring
+    elected: 2025-10-14
+    # name: Terry Turton
+    # elected: 2024-10-07
   - position: Secretary
-    name: Todd Munson
-    elected: 2024-10-07
+    name: Elaine Raybourn
+    elected: 2025-10-14
+    # name: Todd Munson
+    # elected: 2024-10-07
 
 # Timelines for elections and reviews
 # Set in the by-laws

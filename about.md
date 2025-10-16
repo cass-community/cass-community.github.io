@@ -71,23 +71,27 @@ Most of the work of CASS is carried out within [Working Groups]({{ "/working-gro
     {% assign scr = scr | append: s -%}
     {% unless forloop.last %}{% assign scr = scr | append: ", " %}{% endunless -%}
 {% endfor -%}
-| ***Affiliate Members*** | | {{ scr }} 
-{% for m in members -%}
-    {% assign org = m.name | default: m.short_name | default: "*missing data*" -%}
-    {% if m.website -%}
-        {% assign org = org | prepend: "[" | append: "](" | append: m.website | append: ")" -%}
-    {% endif -%}
-    {% if m.name and m.short_name -%}
-        {% assign org = org | append: " (" | append: m.short_name | append: ")" -%}
-    {% endif -%}
-    {% assign leads = "" -%}
-    {% for lead in m.leads %}
-        {% capture l %}{% include people-info.html name=lead link="email" short_affil=true %}{% endcapture -%}
-        {% assign leads = leads | append: l -%}
-        {% unless forloop.last %}{% assign leads = leads | append: ", " %}{% endunless -%}
-    {% endfor -%}
+| ***Affiliate Members*** | | {{ scr }}
+{% if members.size != 0 -%}
+    {% for m in members -%}
+        {% assign org = m.name | default: m.short_name | default: "*missing data*" -%}
+        {% if m.website -%}
+            {% assign org = org | prepend: "[" | append: "](" | append: m.website | append: ")" -%}
+        {% endif -%}
+        {% if m.name and m.short_name -%}
+            {% assign org = org | append: " (" | append: m.short_name | append: ")" -%}
+        {% endif -%}
+        {% assign leads = "" -%}
+        {% for lead in m.leads %}
+            {% capture l %}{% include people-info.html name=lead link="email" short_affil=true %}{% endcapture -%}
+            {% assign leads = leads | append: l -%}
+            {% unless forloop.last %}{% assign leads = leads | append: ", " %}{% endunless -%}
+        {% endfor -%}
 | {{ org }} | {{ m.focus_area }} | {{ leads }} |
-{% endfor %}
+    {% endfor %}
+{% else -%}
+| *none at present* | |
+{% endif %}
 
 ### Current officers
 

@@ -23,8 +23,8 @@ charter:
   lifetime: Standing.  The WG will periodically refine its metrics and set of tools as the needs of the community evolve.
   membership: Open
   reporting: Quarterly
-  status: Provisional
-  status_date: 2024-10-03
+  status: Active
+  status_date: 2025-10-14
 #
 chair: # Can be more than one person
   - Addi Malviya-Thakur

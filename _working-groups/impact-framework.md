@@ -37,3 +37,13 @@ additional_resource_links:
     note: "#wg-impact-framework"
     url: https://softwareecosy-91t5745.slack.com/archives/C075W0ZMJQJ
 ---
+## Work product
+
+The primary output of the Impact Framework WG is the Impact Framework document.  Versions of the IF document are available below.  We expect to update the Impact Framework on an annual basis in response to user feedback and experience.
+
+### Impact Framework version 1 (2025-09-08)
+
+The first version of the Impact Framework document was approved by the CASS Steering Committee on 2025-09-08.  We plan to work with member organizations and their stewarded product teams to roll out the document to capture progress and plans for stewardship activities starting in Fall 2025.  Where possible, we plan to do this as part of each member organization's planning and reporting cycle, though in some cases we may initially be out of cycle.
+
+- [PDF](/assets/wg/impact-framework/Impact%20Framework%20v01rc3.pdf)
+- [Word](/assets/wg/impact-framework/Impact%20Framework%20v01rc3.docx)

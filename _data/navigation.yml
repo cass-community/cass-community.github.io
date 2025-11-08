@@ -11,6 +11,9 @@ main:
   # - title: Events
   #   description: "Events organized by CASS"
   #   url: /events/
+  - title: "News"
+    description: "Updates from CASS and its members"
+    url: /news/
   - title: "Vendor Forum"
     description: "Of interest to HPC vendors"
     url: /vendor-forum/

@@ -56,6 +56,8 @@
   icon: <i class="fa-solid fa-fw fa-gears"></i>
 - label: Code of conduct
   icon: <i class="fa-solid fa-fw fa-handshake-simple"></i>
+- label: News
+  icon: <i class="fa-solid fa-bullhorn"></i>
 #
 # Also use this structure to uniformly lookup icons used
 # elsewhere on the site (i.e. not in resource link lists)

@@ -1,14 +1,16 @@
 FILENAME							CREDIT
 
-annie-spratt-QckxruozjRg-unsplash.jpg				Photo by <a href="https://unsplash.com/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> on <a href="https://unsplash.com/photos/group-of-people-using-laptop-computer-QckxruozjRg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-      
-thisisengineering-uyfohHiTxho-unsplash.jpg			Photo by <a href="https://unsplash.com/@thisisengineering">ThisisEngineering</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-on-white-table-uyfohHiTxho">Unsplash</a>
+annie-spratt-QckxruozjRg-unsplash.jpg				Photo by <a href="https://unsplash.com/@anniespratt">Annie Spratt</a> on <a href="https://unsplash.com/photos/group-of-people-using-laptop-computer-QckxruozjRg">Unsplash</a>
+
+deleece-cook-dUPDhdeCN84-unsplash.jpg				Photo by <a href="https://unsplash.com/@deleece">Deleece Cook</a> on <a href="https://unsplash.com/photos/black-and-white-underwood-typewriter-dUPDhdeCN84">Unsplash</a>
 
 markus-spiske-fN6HM1hrgxk-unsplash.jpg				Photo by <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/photos/a-computer-screen-with-a-lot-of-text-on-it-fN6HM1hrgxk">Unsplash</a>
 
 pawel-chu-ULh0i2txBCY-unsplash.jpg				Photo by <a href="https://unsplash.com/@pawell">Pawel Chu</a> on <a href="https://unsplash.com/photos/long-table-with-eiffel-chair-inside-room-ULh0i2txBCY">Unsplash</a>
 
 thisisengineering-p5wrlynJR4A-unsplash.jpg			Photo by <a href="https://unsplash.com/@thisisengineering">ThisisEngineering</a> on <a href="https://unsplash.com/photos/man-in-blue-dress-shirt-and-woman-in-black-long-sleeve-shirt-p5wrlynJR4A">Unsplash</a>
+
+thisisengineering-uyfohHiTxho-unsplash.jpg			Photo by <a href="https://unsplash.com/@thisisengineering">ThisisEngineering</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-on-white-table-uyfohHiTxho">Unsplash</a>
 
 warpx-long-efield-ascent-vtkm-v2.jpg				Credit: Axel Huebl (Berkeley Lab)
 								Caption: WarpX: longitudinal electric field in a laser-plasma accelerator rendered with the ECP software libraries Ascent & Viskores as the simulation was running.

@@ -62,6 +62,9 @@ og_image: /assets/images/cass-logo.png
 breadcrumbs: true
 
 collections:
+  news:
+    output: true
+    sort_by: date
   working-groups:
     output: true
     sort_by: name
@@ -73,6 +76,16 @@ collections:
     sort_by: date
 
 defaults:
+  # news
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: single
+      classes: wide no-left-sidebar
+      author_profile: false
+      comments: false
+      share: true
   # working groups
   - scope:
       path: ""

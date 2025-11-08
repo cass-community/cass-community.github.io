@@ -1,0 +1,55 @@
+{% comment %}
+  breaking-news-notice.html
+
+  Displays recent news items in a notice box.  If there are no news items that fit the parameters, nothing is displayed.
+
+  Parameters
+      look_back: the number of days in the past items are still considered "recent" (default: 30)
+
+{% endcomment %}
+
+{% assign news_collection = include.collection | default: 'news' %}
+{% assign news_sort_by = include.sort_by | default: 'date' %}
+{% assign news_sort_order = include.sort_order | default: 'reverse' %}
+{% assign news_layout = include.entries_layout | default: 'list' %}
+{% assign news_class = include.class | default: 'notice notice--primary' %}
+{% assign news_look_back = include.look_back | default: 30 %}
+
+{% capture news_icon %}{% include icon-map-lookup label="News" %}{% endcapture %}
+
+{% comment %}
+  Convert look_back into a date we can compare to
+{% endcomment %}
+{% assign seconds_back = news_look_back | times: 86400 %}
+{% assign back_date = site.time | date: "%s" | minus: seconds_back | plus: 0 %}
+
+{% comment %}
+  Filter the collection down to the "recent" entries: anything in the future, and anything
+  in the past up to `news_look_back` days ago.
+
+  Unfortunately, filtering the collection array using where_exp doesn't
+  work when we're comparing dates.  So we need to manually create the
+  filtered array.
+{% endcomment %}
+{% assign breaking_news = "" | split: "," %}
+{% for i in site[news_collection] %}
+  {% assign idate = i.date | date: "%s" | plus: 0 %}
+  {% if idate >= back_date %}
+    {% assign breaking_news = breaking_news | push: i %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+  Display iff there is actually news within our window
+{% endcomment %}
+{% if breaking_news.size != 0 %}
+  <div class="{{ news_class }}">
+    <h2 style="margin-top: 0">Breaking news</h2>
+
+    <div class="entries-{{ news_layout }}">
+      {% include documents-collection.html entries=breaking_news sort_by=news_sort_by sort_order=news_sort_order type=news_layout %}
+    </div>
+
+    <p style="margin-top: 1em"><strong>{{ news_icon }} Read more <a href="{{ "/news/" | relative_url }}">CASS news...</a></strong></p>
+  </div>
+{% endif %}

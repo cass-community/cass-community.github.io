@@ -78,12 +78,13 @@ spack_name:  null
 # For additional information, see _software/README.md.
 
 additional_resource_links:
-  - label: Website
-    url: https://go.lbl.gov/julienne
+  # At present, this redirects straight to the GitHub repo, so it is redundant.
+  # - label: Website
+  #   url: https://go.lbl.gov/julienne
   - label: Repository
     url: https://github.com/BerkeleyLab/julienne.git
   - label: Downloads
-    url: https://github.com/BerkeleyLab/julienne
+    url: https://github.com/BerkeleyLab/julienne/releases
   - label: Documentation
     url: https://berkeleylab.github.io/julienne
 ---

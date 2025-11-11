@@ -7,13 +7,13 @@
 
 - short_name: ai
   name: Artificial intelligence
-  description: Libraries and tools that support artificial intelligence workflows
+  description: Libraries and tools that support artificial intelligence research and research using artificial intelligence
 - short_name: dataviz
   name: Data and visualization
   description: Provide capabilities for analyzing, visualizing, compressing, moving, and managing data
 - short_name: devtools
   name: Development tools
-  description: Help address software performance and correctness challenges, facilitating efficient support of the latest HPC node architectures
+  description: Help address performance challenges and faciliate efficient support of the latest HPC node architectures 
 - short_name: mathlibs
   name: Mathematical libraries
   description: Scalable libraries supporting the latest HPC architectures for coupled systems, ensemble calculations, and more

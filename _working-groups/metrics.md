@@ -41,6 +41,6 @@ additional_resource_links:
     url: https://softwareecosy-91t5745.slack.com/archives/C078FEAQ58S
 ---
 ## News
-* **2025-11-25** Release of [The CASS Sustainability Metrics Report](xx) offers a framework for assessing and improving the long-term viability of research software projects by organizing maintainability indicators into three primary dimensions: Impact, Sustainability, and Quality, while emphasizing the metrics related to each.
+* **2025-11-25** Release of [The CASS Sustainability Metrics Report](https://zenodo.org/records/17704989) offers a framework for assessing and improving the long-term viability of research software projects by organizing maintainability indicators into three primary dimensions: Impact, Sustainability, and Quality, while emphasizing the metrics related to each.
   
 * We held a mini-workshop on **Effective Metrics for Measuring and Enhancing Sustainability in Scientific Software** held at the Sustainable Scientific Software Conference (S3C) 2024. This [blog article](https://bssw.io/blog_posts/effective-metrics-for-measuring-and-enhancing-sustainability-in-scientific-software) on BSSw.io summarizes the workshop output.

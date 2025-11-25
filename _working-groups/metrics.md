@@ -31,7 +31,7 @@ chair: # Can be more than one person
   - Addi Malviya-Thakur
   - Greg Watson
 #
-meeting_schedule: The second Wednesday of each Month, 4:00pm-5:00pm ET.
+meeting_schedule: The second Wednesday of each month, 4:00pm-5:00pm ET.
 #
 # A way of easily providing additional resource/links
 #

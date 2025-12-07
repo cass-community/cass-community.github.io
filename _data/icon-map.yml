@@ -101,6 +101,10 @@
   icon: <i class="fa-solid fa-fw fa-handshake-simple"></i>
 - label: Chat
   icon: <i class="fa-solid fa-fw fa-comments"></i>
+- label: Ribbon
+  icon: <i class="fa-solid fa-ribbon"></i>
+- label: Shield
+  icon: <i class="fa-solid fa-shield"></i>
 
 # Additional ideas (not yet implemented), mostly inspired by
 # https://www.osgeo.org/projects/

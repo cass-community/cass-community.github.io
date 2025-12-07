@@ -25,6 +25,10 @@ target_audience: |
     maintain many different software packages, and by large teams or facilities who want
     to deploy software on shared systems for many users. Package authors can add their
     packages to Spack to make them more easily available to their user base.
+#
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
 e4s_product: spack
 spack_name: spack
 

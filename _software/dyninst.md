@@ -60,6 +60,10 @@ target_audience: |
     Dyninst is intended to support tool builders across a wide variety of areas, including debugging,
     performance profiling, code analysis, testing, and software security.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

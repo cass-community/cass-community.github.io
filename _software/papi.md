@@ -59,6 +59,10 @@ target_audience: |
     scientific application teams, math library developers, 
     runtime system engineers, and HPC centers.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

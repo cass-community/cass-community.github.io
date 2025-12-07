@@ -52,6 +52,10 @@ long_description: |
 target_audience: |
     Developers implementing OpenACC compilers, and application developers seeking a better understanding of the OpenACC implementations they are using.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
 #   e4s_product:    (string) If your product is in E4S, list its e4S name here (may be different than `name`). If your

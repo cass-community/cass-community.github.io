@@ -56,6 +56,10 @@ target_audience: |
     Developers of scientific and data analysis codes, particularly people who desire a higher-level interface to programming supercomputers
     than traditional bulk-synchronous models.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

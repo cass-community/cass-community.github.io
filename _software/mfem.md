@@ -55,6 +55,10 @@ target_audience: |
     on GPU platforms. This is of interest to both industry and many projects in the DOE. MFEM is particularly impactful in multi-physics
     problems, or when high accuracy or robustness is required. In addition, MFEM can be used for research and teaching in academia.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
 #   e4s_product:    (string) If your product is in E4S, list its e4S name here (may be different than `name`). If your

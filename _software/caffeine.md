@@ -53,6 +53,10 @@ long_description: |
 target_audience: |
     Caffeine provides distributed communication services to implementers of Fortran compilers and will support users compiling parallel Fortran code.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

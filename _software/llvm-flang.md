@@ -51,7 +51,10 @@ long_description: |
     S4PST contributes to LLVM Flang by writing unit tests, developing a multi-image parallel runtime interface (PRIF), writing the first PRIF implementation (Caffeine), and collaborating with industry on translating Fortran syntax to PRIF calls and on supporting the automatic parallelization of AI algorithms for science.
 target_audience: |
    All software developers and integrators whose projects include or depend upon Fortran source code.   
-
+#
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 8273
 
 #
 # PACKAGING INFORMATION

@@ -67,6 +67,10 @@ target_audience: |
     HPCToolkit is designed for use by developers working on parallel
     applications, frameworks, runtime systems, and tools for CPU and GPU-accelerated systems. 
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

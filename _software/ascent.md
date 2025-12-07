@@ -52,6 +52,10 @@ target_audience: |
     and analysis. Ascent is integrated with a number of DOE applications including WarpX, Nyx and AMR-Wind. It is deployed at all 
     major DOE compute facilities and are used daily for analysis and visualization.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

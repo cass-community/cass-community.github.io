@@ -48,6 +48,10 @@ long_description: |
 target_audience: |
     Scientists and science teams interested in the exploration of scientific datasets of various types, especially 2D and 3D spatial datasets. ParaView is widely used for applications ranging from fusion science to material science.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

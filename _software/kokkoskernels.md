@@ -60,6 +60,10 @@ target_audience: |
     writing distributed linear algebra and solver libraries
     as well as scientific application developers.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 9534
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
 #   e4s_product:    (string) If your product is in E4S, list its e4S name here (may be different than `name`). If your

@@ -53,6 +53,10 @@ target_audience: |
     Darshan is intended for HPC users, application and library developers,
     facilities staff, and other I/O research practitioners.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

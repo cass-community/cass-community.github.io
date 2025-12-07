@@ -53,6 +53,10 @@ target_audience: |
     indented and it will be interpreted as a single value
     until it hits outdented text (a key or a comment).
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
 #   e4s_product:    (string) If your product is in E4S, list its e4S name here (may be different than `name`). If your

@@ -48,6 +48,10 @@ long_description: |
 target_audience: |
     Science teams interested in integrating robust scientific visualization into their scientific workflows should consider ParaView Catalyst, which is leveraged across numerous projects in the DOE SciDAC community.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

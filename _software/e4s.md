@@ -54,6 +54,10 @@ target_audience: |
     E4S is useful for a wide variety of people, including AI and scientific software developers and
     users, as well as computer facility staff.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

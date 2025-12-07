@@ -50,6 +50,10 @@ long_description: |
 target_audience: |
     The SUNDIALS time integration library is targeted towards scientists and engineers working on simulations involving systems of ordinary differential equations, differential algebraic equations, and nonlinear algebraic equations. SUNDIALS provides capabilities for these systems for users running simulations on hardware ranging from laptops to leadership class exascale supercomputers and is designed to be incorporated into existing codes.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
 #   e4s_product:    (string) If your product is in E4S, list its e4S name here (may be different than `name`). If your

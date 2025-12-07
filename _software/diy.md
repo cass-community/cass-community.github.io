@@ -54,6 +54,10 @@ target_audience: |
     DIY is perfect for developers wishing to quickly implement block-parallel analysis algorithms that can scale on
     HPC platforms.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

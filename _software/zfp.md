@@ -56,6 +56,11 @@ target_audience: |
     replacement for std::vector and native C/C++ arrays. zfp arrays provide accessors like proxy 
     pointers, iterators, and views. zfp arrays allow specifying an exact memory footprint or an 
     error tolerance.
+#
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

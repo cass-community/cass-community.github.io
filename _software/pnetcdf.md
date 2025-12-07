@@ -48,6 +48,10 @@ long_description: |
 target_audience: |
     Science teams interested in a convenient parallel interface for storing and retrieving structured data should consider PnetCDF. It is widely used in the climate and weather communities, as well as in the fusion energy sciences.
 #
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

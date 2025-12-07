@@ -1,0 +1,14 @@
+{% comment %}
+  Emit the highest OpenSSF badge level achieved
+
+  Parameter
+    project_data: JSON data for OpenSSF project (REQUIRED)
+
+  We do this the same way that the badges provided on the OpenSSF site do:
+  If any badge level has been achieved, we show that level, even if progress
+  being made towards a higher level (e.g., a tiered_percentage of 129% will render
+  as "passing"), but if a badge has not yet been achived, it will show as 
+  "in progress" along with he percentage achieved so far.
+{% endcomment %}
+
+{{ include.project_data[0].badge_level | replace: "_", " " }}{% if include.project_data[0].badge_level == "in_progress" %} {{ include.project_data[0].tiered_percentage }}%{% endif %}

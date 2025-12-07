@@ -60,6 +60,10 @@ Input for this field should generally use the YAML syntax for a multi-line strin
 
 * If the product is popular in certain scientific communities, you're welcome to include that information, but put it *after* you provide a general description of the target audience, not before.
 
+## OpenSSF Best Practices badge information
+
+This field should provide the project ID for the package on https://www.bestpractices.dev/en/projects.  Project which have not registered for the OpenSSF badging process can leave the entry blank or comment it out altogether.
+
 ## Package information
 
 These fields are used to connect the CASS catalog entry to information on the product in the [E4S DocPortal](https://e4s-project.github.io/DocPortal.html) and [Spack package listing](https://packages.spack.io/), respectively.  In both cases, the values provided are used as a query string to look up the specific package information.

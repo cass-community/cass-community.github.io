@@ -14,6 +14,10 @@ target_audience: |
     runtime developers that already target HIP or CUDA and
     want to target a platform that supports OpenCL or
     Level-Zero, such as Intel GPUs.
+#
+# OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
+#
+openssf_bestpractices_id: 
 e4s_product: null
 spack_name: null
 repository: https://github.com/CHIP-SPV/chipStar

@@ -89,16 +89,18 @@ spack_name: xsdk
 #
 # For additional information, see _software/README.md.
 #
-additional_resource_links:
-  - label: Website
-    url: https://xsdk.info/
+# Website redirects to GitHub organization (link below)
+# additional_resource_links:
+#   - label: Website
+#     url: https://xsdk.info/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #
 end_user_resource_links:
-  - label: Documentation
-    note: (installation instructions)
-    url: https://xsdk.info/installing-the-software/
+  # Webpage no longer exists
+  # - label: Documentation
+  #   note: (installation instructions)
+  #   url: https://xsdk.info/installing-the-software/
   - label: Issue tracker
     url: https://github.com/xsdk-project/xsdk-issues/issues
 #

@@ -87,8 +87,9 @@ openssf_bestpractices_id:
 # For additional information, see _software/README.md.
 
 additional_resource_links:
-  - label: Website
-    url: https://crd.lbl.gov/divisions/amcr/computer-science-amcr/par/research/roofline/software/ert/
+  # Website currently broken.  Waiting on Sam Williams to supply a new URL when it is ready
+  # - label: Website
+  #   url: https://crd.lbl.gov/divisions/amcr/computer-science-amcr/par/research/roofline/software/ert/
   - label: Repository
     url: https://bitbucket.org/berkeleylab/cs-roofline-toolkit/src/master/
   # - label: Downloads

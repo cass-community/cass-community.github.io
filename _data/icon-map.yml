@@ -22,6 +22,10 @@
   icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: User's guide
   icon: <i class="fa-regular fa-fw fa-file-lines"></i>
+- label: User manual
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
+- label: User's manual
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Contributor guide
   icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Contributor's guide

@@ -62,3 +62,14 @@ This list is for informational purposes only.  We do not expect exact parity in 
   {%- assign highlights = site.impacts | where_exp: "item", "item.software_mentioned contains s.name" -%}
 | [{{ s.name }}]({{ s.url }}{% if highlights.size > 0 %}#impact-stories{% endif %}) | {{ highlights.size }}
 {% endfor %}
+
+## OpenSSF Best Practices badge status
+
+{% assign projects = site.software | where_exp: "item", "item.openssf_bestpractices_id != nil" | sort_natural: "name" %}
+
+| Package | OpenSSF project ID<br>(Link to OpenSSF page) | Tiered percentage | Badge level | Date of last update 
+|:--------|---------------------------------------------:|------------------:|:----------: |-------------------:
+{% for p in projects %}
+  {%- assign project_data = site.data.openssf | where: "id", p.openssf_bestpractices_id -%}
+  | {{ p.name }} | [{{ p.openssf_bestpractices_id }}]({{ site.openssf_bp_projects_url }}/{{ p.openssf_bestpractices_id }}) | {{ project_data[0].tiered_percentage }}% | {{ project_data[0].badge_level }} | {{ project_data[0].updated_at | date: "%F" }}
+{% endfor %}

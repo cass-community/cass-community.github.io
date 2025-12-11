@@ -1,4 +1,7 @@
 ---
+# As of 2025-10-01, this product is no longer receiving stewardship support from FASTMath
+published: false
+#
 # Product information for CASS website product catalog
 #
 # INSTRUCTIONS

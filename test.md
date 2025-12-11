@@ -17,7 +17,7 @@ software_mentioned:
   - ADIOS
   - TAU
   - HDF5
-  - Trilinos
+  # - Trilinos # No longer part of the CASS portfolio (2025-10-01)
   - Spack
 #
 feature_row:
@@ -50,8 +50,6 @@ feature_row:
 {% include sw-link-mention.html %}
 
 {% include sw-link-mention.html product="ADIOS" %}
-
-{% include sw-link-mention.html product="Trilinos" %}
 
 {% include sw-link-mention.html product="hdf5" %}
 

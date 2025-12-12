@@ -29,6 +29,9 @@ target_audience: |
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 
+#
+foundation_membership: High Performance Software Foundation
+#
 e4s_product: spack
 spack_name: spack
 

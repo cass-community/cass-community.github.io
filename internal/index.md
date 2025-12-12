@@ -23,8 +23,8 @@ header:
   - Availability in E4S
   - Counts of mentions in highlights
   - OpenSSF Best Practices badge status
-{% comment %}
   - Foundation memberships
+{% comment %}
   - Software licenses
 {% endcomment %}
 

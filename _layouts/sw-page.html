@@ -21,6 +21,7 @@ layout: default
 {% capture member_icon %}{% include icon-map-lookup label="CASS member" %}{% endcapture %}
 {% capture highlight_icon %}{% include icon-map-lookup label="Highlights" %}{% endcapture %}
 {% capture shield_icon %}{% include icon-map-lookup label="Shield" %}{% endcapture %}
+{% capture foundation_icon %}{% include icon-map-lookup label="Foundation" %}{% endcapture %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -100,6 +101,16 @@ layout: default
             {% capture link %}{{ site.openssf_bp_projects_url }}/{{ page.openssf_bestpractices_id }}.json{% endcapture %}
             <p id="openssf"><strong>{{ shield_icon }} OpenSSF Best Practices badge:</strong> <font color="red">ERROR: data not available. Please add <a href="{{link }}">{{ link }}</a> to `_data/openssf/`</font></p>
           {% endif %}
+        {% endif %}
+
+        {% if page.foundation_membership %}
+          {% assign foundation = site.data.foundations[page.foundation_membership] %}
+          {% if foundation.url %}
+            {% capture foundation_data %}<a href="{{ foundation.url }}">{{ page.foundation_membership }}</a>{% endcapture %}
+          {% else %}
+            {% capture foundation_data %}{{ page.foundation_membership }}{% endcapture %}
+          {% endif %}
+            <p id="foundation"><strong>{{ foundation_icon }} Foundation membership:</strong> {{ foundation_data }}</p>
         {% endif %}
 
         {% if page.e4s_product or page.spack_name %}

@@ -62,7 +62,11 @@ Input for this field should generally use the YAML syntax for a multi-line strin
 
 ## OpenSSF Best Practices badge information
 
-This field should provide the project ID for the package on https://www.bestpractices.dev/en/projects.  Project which have not registered for the OpenSSF badging process can leave the entry blank or comment it out altogether.
+This field should provide the project ID for the package on https://www.bestpractices.dev/en/projects.  Projects which have not registered for the OpenSSF badging process can leave the entry blank or comment it out altogether.
+
+## Foundation membership information
+
+This field should provide the full name of the software foundation the project is affiliated with. The foundation name should appear in `_data/foundations.yml` along with a short name or abbreviation and a URL for the foundation.  Projects which are not members of software foundations can leave the entry blank or comment it out altogether.
 
 ## Package information
 

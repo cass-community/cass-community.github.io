@@ -73,3 +73,10 @@ This list is for informational purposes only.  We do not expect exact parity in 
   {%- assign project_data = site.data.openssf | where: "id", p.openssf_bestpractices_id -%}
   | {{ p.name }} | [{{ p.openssf_bestpractices_id }}]({{ site.openssf_bp_projects_url }}/{{ p.openssf_bestpractices_id }}) | {{ project_data[0].tiered_percentage }}% | {{ project_data[0].badge_level }} | {{ project_data[0].updated_at | date: "%F" }}
 {% endfor %}
+
+## Foundation memberships
+
+{% assign foundation_members = site.software | group_by_exp: "item", "item.foundation_membership" | sort_natural: "name" %}
+{% for m in foundation_members %}
+  {% if m.name == nil %}*Non-members*:{% else %}**{{ m.name }}**:{% endif %} {{ m.items | map: "name" | sort_natural | array_to_sentence_string }}
+{% endfor %}

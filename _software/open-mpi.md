@@ -58,7 +58,9 @@ target_audience: |
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
-openssf_bestpractices_id: 
+openssf_bestpractices_id:
+#
+foundation_membership: Software in the Public Interest 
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only

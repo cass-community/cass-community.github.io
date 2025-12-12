@@ -1,0 +1,21 @@
+# Foundation names and URLs
+#
+High Performance Software Foundation:
+  short: HPSF
+  url: https://hpsf.io/
+
+NumFOCUS:
+  short: NumFOCUS
+  url: https://numfocus.org/
+
+Unified Acceleration Foundation:
+  short: UXL
+  url: https://uxlfoundation.org/
+
+LLVM Foundation:
+  short: LLVM
+  url: https://foundation.llvm.org/
+
+Software in the Public Interest:
+  short: SPI
+  url: https://www.spi-inc.org/

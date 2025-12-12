@@ -71,6 +71,8 @@ target_audience: |
 #
 openssf_bestpractices_id: 
 #
+foundation_membership: High Performance Software Foundation
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:

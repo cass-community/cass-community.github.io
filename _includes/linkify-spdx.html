@@ -1,0 +1,42 @@
+{% comment %}
+  linkify-spdx.html -- Add links to SPDX license expressions
+
+  Given an SPDX license expression, 
+  link the licenses and exceptions named to their 
+  reference pages on the SPDX site.
+
+  SPDX license expressions are defined here: https://spdx.github.io/spdx-spec/v3.0.1/annexes/spdx-license-expressions/
+  We support a subset:
+  - An SPDX License List Short Form Identifier
+  - Composite license expressions combining the above with "WITH" and a license exception id
+  - Composite license expressions combining the above with "AND" or "OR"
+
+  We don't currently support:
+  - "+" operators on short identfiers
+  - user-defined license references
+  - complex expressions with parenthesis
+
+  Parameters
+    spdx: The SPDX license expression to be linkified (REQUIRED)
+{% endcomment %}
+{% assign input_expression = include.spdx | normalize_whitespace | split: " " %}
+{% assign output_expression = "" | split: "," %}
+
+{% for term in input_expression %}
+  {% assign term_l = term | lowercase %}
+  {% if term_l == "with" or term_l == "and" or term_l == "or" %}
+    {% assign output_expression = output_expression | push: term %}
+  {% else %}
+    {% assign url = site.data.spdx_license_list_data.licenses.licenses | where_exp: "item", "item.licenseId == term" | map: "reference" %}
+    {% if url == empty %}
+      {% assign url = site.data.spdx_license_list_data.exceptions.exceptions | where_exp: "item", "item.licenseExceptionId == term" | map: "reference" %}
+    {% endif %}
+  {% endif %}
+  {% if url == empty %}
+      {% assign output_expression = output_expression | push: term %}
+  {% else %}
+    {% capture linked %}<a href="{{ url }}">{{ term }}</a>{% endcapture %}
+  {% assign output_expression = output_expression | push: linked %}
+  {% endif %}
+{% endfor %}
+{{ output_expression | join: " " }}

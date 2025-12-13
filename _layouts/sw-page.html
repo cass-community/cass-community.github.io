@@ -95,7 +95,7 @@ layout: default
         {% endif %}
 
         {% if page.license_spdx %}
-          <p id="license"><strong>{{ license_icon }} License:</strong> {{ page.license_spdx }}</p>
+          <p id="license"><strong>{{ license_icon }} License:</strong> {% include linkify-spdx.html spdx=page.license_spdx %}</p>
         {% endif %}
         
         {% if page.openssf_bestpractices_id %}

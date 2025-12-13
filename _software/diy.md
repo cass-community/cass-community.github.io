@@ -54,6 +54,10 @@ target_audience: |
     DIY is perfect for developers wishing to quickly implement block-parallel analysis algorithms that can scale on
     HPC platforms.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause-LBNL"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

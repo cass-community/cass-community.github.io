@@ -22,6 +22,7 @@ layout: default
 {% capture highlight_icon %}{% include icon-map-lookup label="Highlights" %}{% endcapture %}
 {% capture shield_icon %}{% include icon-map-lookup label="Shield" %}{% endcapture %}
 {% capture foundation_icon %}{% include icon-map-lookup label="Foundation" %}{% endcapture %}
+{% capture license_icon %}{% include icon-map-lookup label="License" %}{% endcapture %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -93,6 +94,10 @@ layout: default
         {{ page.target_audience | markdownify }}
         {% endif %}
 
+        {% if page.license_spdx %}
+          <p id="license"><strong>{{ license_icon }} License:</strong> {{ page.license_spdx }}</p>
+        {% endif %}
+        
         {% if page.openssf_bestpractices_id %}
           {% assign project_data = site.data.openssf | where: "id", page.openssf_bestpractices_id %}
           {% if project_data and project_data != empty %}

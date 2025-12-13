@@ -67,6 +67,10 @@ target_audience: |
     HPCToolkit is designed for use by developers working on parallel
     applications, frameworks, runtime systems, and tools for CPU and GPU-accelerated systems. 
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

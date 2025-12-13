@@ -56,6 +56,10 @@ target_audience: |
     Developers of scientific and data analysis codes, particularly people who desire a higher-level interface to programming supercomputers
     than traditional bulk-synchronous models.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "Apache-2.0"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

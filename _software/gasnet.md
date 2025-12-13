@@ -54,6 +54,10 @@ target_audience: |
     The GASNet interface is primarily intended as a compilation target and for
     use by runtime library writers (as opposed to end users).
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

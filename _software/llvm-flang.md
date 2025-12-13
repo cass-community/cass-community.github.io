@@ -52,6 +52,10 @@ long_description: |
 target_audience: |
    All software developers and integrators whose projects include or depend upon Fortran source code.   
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "Apache-2.0 WITH LLVM-exception"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 8273

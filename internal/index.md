@@ -24,9 +24,7 @@ header:
   - Counts of mentions in highlights
   - OpenSSF Best Practices badge status
   - Foundation memberships
-{% comment %}
   - Software licenses
-{% endcomment %}
 
 ## Site build date and time
 

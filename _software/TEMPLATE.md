@@ -53,6 +53,10 @@ target_audience: |
     indented and it will be interpreted as a single value
     until it hits outdented text (a key or a comment).
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: 
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

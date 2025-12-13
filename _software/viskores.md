@@ -57,6 +57,10 @@ target_audience: |
     integration into the ParaView, ParaView Catalyst, and Visit analysis and visualization
     packages.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

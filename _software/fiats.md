@@ -50,6 +50,10 @@ long_description: |
 target_audience: |
     Fortran software developers that want to use a deep learning library to train on their data and perform inferences
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause-LBNL"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

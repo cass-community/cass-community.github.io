@@ -55,6 +55,10 @@ target_audience: |
     figure. One can examine the resultant Roofline figure in order to determine both the 
     implementation and inherent performance limitations.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause-LBNL"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

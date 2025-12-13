@@ -26,6 +26,10 @@ target_audience: |
     to deploy software on shared systems for many users. Package authors can add their
     packages to Spack to make them more easily available to their user base.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "(Apache-2.0 OR MIT)"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

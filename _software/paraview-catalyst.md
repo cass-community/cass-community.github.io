@@ -48,6 +48,10 @@ long_description: |
 target_audience: |
     Science teams interested in integrating robust scientific visualization into their scientific workflows should consider ParaView Catalyst, which is leveraged across numerous projects in the DOE SciDAC community.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

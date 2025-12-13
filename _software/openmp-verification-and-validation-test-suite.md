@@ -49,7 +49,10 @@ long_description: |
     OpenMP is a directive-based programming model that targets both CPUs and accelerators with a goal to either run a given code on multicore platforms or to offload portions of the code to accelerators. The project builds validation and verification test suites to test the validity of the implementations, conformance to the standard specification and provide feedback to the standard organization.  We have been also exploring the usability of LLMs for automating tests generation. 
 target_audience: |
     Developers implementing OpenMP compilers, and application developers seeking a better understanding of the OpenMP implementations they are using.
-
+#
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #

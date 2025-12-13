@@ -63,6 +63,10 @@ target_audience: |
     such as scale-resolving compressible turbulent flow, nonlinear solid mechanics, compound flooding,
     and electromagnetics simulation for quantum computing design. There is an international community
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-2-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

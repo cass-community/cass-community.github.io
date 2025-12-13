@@ -53,6 +53,10 @@ long_description: |
 target_audience: |
     Caffeine provides distributed communication services to implementers of Fortran compilers and will support users compiling parallel Fortran code.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause-LBNL"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

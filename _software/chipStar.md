@@ -15,6 +15,10 @@ target_audience: |
     want to target a platform that supports OpenCL or
     Level-Zero, such as Intel GPUs.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "MIT"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

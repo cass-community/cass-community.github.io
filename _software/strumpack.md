@@ -49,7 +49,7 @@ long_description: |
   STRUMPACK is a software library providing linear algebra routines and linear system
   solvers for sparse and dense rank-structured linear systems.
   For dense linear systems, STRUMPACK has support for the Hierarchically Semi-Separable (HSS),
-  Block Low Rank (BLR), Hierachically Off-Diagonal Low Rank (HODLR), Butterfly and
+  Block Low Rank (BLR), Hierarchically Off-Diagonal Low Rank (HODLR), Butterfly and
   Hierarchically Off-Diagonal Butterfly (HODBF) rank-structured matrix formats.
   In sparse direct solvers based on multifrontal LU factorization, the fill-in in the
   triangular factors often has low-rank structure. Hence, the sparse linear solve
@@ -57,7 +57,7 @@ long_description: |
   to compress the fill-in. This leads to purely algebraic, fast and scalable
   (both with problem size and compute cores) approximate direct solvers or preconditioners.
   The sparse solver in STRUMPACK can also be used as an exact direct solver,
-  whiich delivers good performance and distributed
+  which delivers good performance and distributed
   memory scalability and provides excellent GPU support in CUDA, HIP and SYCL.
   STRUMPACK also provides preconditioned GMRES and BiCGStab iterative solvers.
 
@@ -70,6 +70,10 @@ target_audience: |
   particular type of problem.
   The various comopressing formats can be useful as strong approximate
   factorization preconditioners for an iterative solver.
+#
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause-LBNL"
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #

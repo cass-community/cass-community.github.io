@@ -80,3 +80,10 @@ This list is for informational purposes only.  We do not expect exact parity in 
 {% for m in foundation_members %}
   {% if m.name == nil %}*Non-members*:{% else %}**{{ m.name }}**:{% endif %} {{ m.items | map: "name" | sort_natural | array_to_sentence_string }}
 {% endfor %}
+
+## Licenses
+
+{% assign licenses = site.software | group_by_exp: "item", "item.license_spdx" | sort_natural: "name" %}
+{% for m in licenses %}
+  {% if m.name == nil %}*No license*:{% else %}**{{ m.name }}**:{% endif %} {{ m.items | map: "name" | sort_natural | array_to_sentence_string }}
+{% endfor %}

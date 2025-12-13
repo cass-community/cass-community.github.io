@@ -60,6 +60,10 @@ target_audience: |
     writing distributed linear algebra and solver libraries
     as well as scientific application developers.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "Apache-2.0 WITH LLVM-exception"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 9534

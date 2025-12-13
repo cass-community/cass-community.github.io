@@ -57,6 +57,10 @@ target_audience: |
     pointers, iterators, and views. zfp arrays allow specifying an exact memory footprint or an 
     error tolerance.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

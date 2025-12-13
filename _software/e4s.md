@@ -54,6 +54,10 @@ target_audience: |
     E4S is useful for a wide variety of people, including AI and scientific software developers and
     users, as well as computer facility staff.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "per member package"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

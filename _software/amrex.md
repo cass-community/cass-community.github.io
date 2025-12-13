@@ -76,6 +76,10 @@ target_audience: |
     micro-fluidics, neutrino quantum kinetics, particle-laden multiphase
     flows, and solid mechanics, among others.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

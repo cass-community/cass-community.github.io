@@ -52,6 +52,10 @@ long_description: |
 target_audience: |
     Science teams interested in a convenient parallel interface for storing and retrieving structured data, as well as passing data between codes, should consider ADIOS. It is widely used in the fusion energy sciences, as well as in the high energy physics and environmental research communities.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "Apache-2.0"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 11410

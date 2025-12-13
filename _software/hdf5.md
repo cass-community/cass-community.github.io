@@ -48,6 +48,10 @@ long_description: |
 target_audience: |
     Science teams interested in a convenient parallel interface for storing and retrieving structured data, as well as passing data between codes, should consider HDF5. It is the most widely used parallel I/O library in the DOE SciDAC community.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 7802

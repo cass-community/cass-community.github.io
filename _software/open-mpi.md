@@ -56,6 +56,10 @@ target_audience: |
     Passing Interface (MPI) standard. It supports point-to-point
     communication, collective operations, one-sided communication, and more.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause-Open-MPI"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id:

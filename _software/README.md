@@ -60,6 +60,15 @@ Input for this field should generally use the YAML syntax for a multi-line strin
 
 * If the product is popular in certain scientific communities, you're welcome to include that information, but put it *after* you provide a general description of the target audience, not before.
 
+## License information
+
+This field should contain the SPDX expression for the applicable license.  In most cases, this will be an SPDX short identifier (https://spdx.org/licenses/), but it may be an actual expression.  The most common expressions will use WITH to add an exception to a short identifier.  In the case of a multiply-licensed package it may be of the form "(id-A OR id-B)" where id-A and id-B are short identifiers. Note that SPDX is meant to be quite specific about the license, so matching is fairly strict. The SPDX website offers a tool to identify the appropriate license from the text (https://tools.spdx.org/app/check_license/), though it can sometimes have a tough time matching text from the wild.  Pay careful attention to variants of licenses which appear as separate entries in the SPDX license list.  For example, BSD-3-Clause vs BSD-3-Clause-LBNL.
+
+** Important guidance:**
+
+* SPDX doesn't provide a simple, succinct way of saying that a product is a collection of packages, each with its own license.  We use the non-standard phrase `per member package` to indicate this.
+* If you have a license that's not in the SPDX license list, they recommend that you request that it be added to the list.  We encourage maintainers to do this, and in the mean time, they should leave this field blank.
+
 ## OpenSSF Best Practices badge information
 
 This field should provide the project ID for the package on https://www.bestpractices.dev/en/projects.  Projects which have not registered for the OpenSSF badging process can leave the entry blank or comment it out altogether.

@@ -48,6 +48,10 @@ long_description: |
 target_audience: |
     Science teams interested in a convenient parallel interface for storing and retrieving structured data should consider PnetCDF. It is widely used in the climate and weather communities, as well as in the fusion energy sciences.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "NetCDF"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

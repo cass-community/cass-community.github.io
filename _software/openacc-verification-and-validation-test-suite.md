@@ -52,6 +52,10 @@ long_description: |
 target_audience: |
     Developers implementing OpenACC compilers, and application developers seeking a better understanding of the OpenACC implementations they are using.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

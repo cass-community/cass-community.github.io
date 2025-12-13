@@ -54,6 +54,10 @@ long_description: |
 target_audience: |
     TAU is intended to be used by application developers, developers of HPC runtime systems, and HPC center staff. 
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "MIT"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

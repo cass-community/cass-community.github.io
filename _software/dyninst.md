@@ -60,6 +60,10 @@ target_audience: |
     Dyninst is intended to support tool builders across a wide variety of areas, including debugging,
     performance profiling, code analysis, testing, and software security.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "LGPL-2.1-or-later"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

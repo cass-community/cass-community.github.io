@@ -59,6 +59,10 @@ target_audience: |
     their applications once, and move them to different HPC systems with
     good performance.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "mpich2"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 10611

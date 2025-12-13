@@ -59,6 +59,10 @@ long_description: |
 target_audience: |
     Anyone needing to solve large, sparse linear systems, particularly those wanting platform portability and GPU support.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 8037

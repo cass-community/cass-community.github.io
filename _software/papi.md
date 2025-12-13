@@ -59,6 +59,10 @@ target_audience: |
     scientific application teams, math library developers, 
     runtime system engineers, and HPC centers.
 #
+# License information, following https://spdx.org/licenses/
+#
+license_spdx: "BSD-3-Clause"
+#
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 

@@ -16,7 +16,6 @@ on:
     #        * * * * *
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 0 7 * *' # midnight on the seventh day (arbitrary) of every month
-    - workflow_dispatch
 
 jobs:
   build:

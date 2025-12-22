@@ -15,6 +15,9 @@ jobs:
       uses: masesgroup/retrieve-changed-files@v3
       with:
         format: 'csv'
+    - run: |
+        echo ${{ steps.files.outputs.added_modified }}
+        cat ${{ steps.files.outputs.added_modified }}
 
     # We maintain the lists of the URLs and URL patterns excluded from checking in separate files so that we can use
     # it in multiple workflows, while easily maintaining consistency.

@@ -33,6 +33,8 @@ jobs:
     - name: urls-checker
       uses: urlstechie/urlchecker-action@0.0.34
       with:
+        # Check only the changed files
+        include_files: ${{ steps.files.outputs.added_modified }}
         # Use common exclude list read in above
         exclude_urls: ${{ steps.ex-urls.outputs.content }}
         exclude_patterns: ${{ steps.ex-patterns.outputs.content }}

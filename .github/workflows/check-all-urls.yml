@@ -16,6 +16,7 @@ on:
     #        * * * * *
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 0 7 * *' # midnight on the seventh day (arbitrary) of every month
+    - workflow_dispatch
 
 jobs:
   build:
@@ -44,6 +45,8 @@ jobs:
         # Use common exclude list read in above
         exclude_urls: ${{ steps.ex-urls.outputs.content }}
         exclude_patterns: ${{ steps.ex-patterns.outputs.content }}
+        # Add yml and json to the default file types to check
+        file_types: ".md,.py,.rst,.html,.yml,.json"
         timeout: 10
         retry_count: 3
         print_all: false

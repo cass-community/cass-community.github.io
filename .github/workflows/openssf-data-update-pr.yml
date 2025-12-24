@@ -1,0 +1,52 @@
+# Update OpenSSF badging data files and create a PR
+name: "Update OpenSSF data"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  openssf-data-update-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Check the data files
+        run: |
+          ls -l _data/openssf
+
+      - name: Find OpenSSF IDs and download their data files
+        run: |
+          bin/get-openssf-data.sh _software/*.md | bin/update-openssf-data.sh
+
+      - name: Check the data files for updates
+        run: |
+          ls -l _data/openssf
+
+      - name: Create pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: Update OpenSSF data
+          branch: ${{ github.actor }}-openssf-data-update
+          branch-suffix: timestamp
+          assignees: ${{ github.actor }}
+          commit-message: "Updating OpenSSF data"
+          body: "Updating OpenSSF data"
+          labels: |
+            content: event
+
+      - name: Check PR results
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+
+      # - name: Merge PR
+      #   if: ${{ steps.cpr.outputs.pull-request-number }}
+      #   env:
+      #     GH_TOKEN: ${{ secrets.PR_MERGE_PAT }}
+      #   run: |
+      #     gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --merge --auto --body "Automatically merging script-generated event"
+

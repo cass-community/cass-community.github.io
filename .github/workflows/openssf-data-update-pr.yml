@@ -12,13 +12,17 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v4
 
+      - name: Check repo clone
+        run: |
+          ls -l 
+
       - name: Check the data files
         run: |
           ls -l _data/openssf
 
       - name: Find OpenSSF IDs and download their data files
         run: |
-          bin/get-openssf-data.sh _software/*.md | bin/update-openssf-data.sh
+          ./bin/get-openssf-data.sh _software/*.md | ./bin/update-openssf-data.sh
 
       - name: Check the data files for updates
         run: |

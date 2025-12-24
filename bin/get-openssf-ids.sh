@@ -8,3 +8,4 @@
 grep -v "^[[:space:]]*#" $* | \
     grep openssf_bestpractices_id: | \
     awk '{if(NF > 1) print $2}'
+    

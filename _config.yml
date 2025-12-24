@@ -180,6 +180,7 @@ exclude:
   - _working-groups/README.md
   - _impacts/TEMPLATE.md
   - _impacts/README.md
+  - bin/
 
 # Configure jekyll-link-attributes plugin
 external_links:

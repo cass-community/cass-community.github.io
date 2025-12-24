@@ -3,6 +3,7 @@
 #   Usage: download-openssf-data.sh id1 id2 ...
 #
 BASE_URL="https://www.bestpractices.dev/en/projects/"
+DEST_DIR="_data/openssf"
 
 if [ -p /dev/stdin ]; then
     # Read the data from the pipe into a variable or process it line by line
@@ -11,7 +12,7 @@ if [ -p /dev/stdin ]; then
 fi
 
 for id in $*; do
-    curl --fail -s "${BASE_URL}${id}.json" -o "_data/openssf/${id}.json"
+    curl --fail -s "${BASE_URL}${id}.json" -o "${DEST_DIR}/${id}.json"
     if [ $? -ne 0 ]; then
         echo "Error downloading data for OpenSSF ID: ${id}" >&2
     else

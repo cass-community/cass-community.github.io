@@ -26,26 +26,9 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v4
 
-      - name: Check scripts
-        run: ls -lR bin
-
-      # - name: Fix permissions
-      #   run: |
-      #     chmod +x bin/get-openssf-ids.sh
-      #     chmod +x bin/download-openssf-data.sh
-
-      # - name: Check scripts again
-      #   run: ls -lR bin
-
-      # - name: Check the data files
-      #   run: ls -l _data/openssf
-
       - name: Find OpenSSF IDs and download their data files
         run: |
           bin/get-openssf-ids.sh _software/*.md | bin/download-openssf-data.sh
-
-      # - name: Check the data files for updates
-      #   run: ls -l _data/openssf
 
       - name: Create pull request
         id: cpr
@@ -58,7 +41,7 @@ jobs:
           commit-message: "Updating OpenSSF data"
           body: "Updating OpenSSF data"
           labels: |
-            content update
+            data update
             Section: software catalog
 
       - name: Check PR results

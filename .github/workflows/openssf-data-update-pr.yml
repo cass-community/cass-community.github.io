@@ -3,6 +3,20 @@ name: "Update OpenSSF data"
 
 on:
   workflow_dispatch:
+  schedule:
+    # Cron syntax has five fields separated by a space, and each field represents a unit of time.
+    #
+    #        ┌───────────── minute (0 - 59)
+    #        │ ┌───────────── hour (0 - 23)
+    #        │ │ ┌───────────── day of the month (1 - 31)
+    #        │ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+    #        │ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+    #        │ │ │ │ │
+    #        │ │ │ │ │
+    #        │ │ │ │ │
+    #        * * * * *
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '42 3 * * SUN' # 3:42 AM every Sunday (arbitrary)
 
 jobs:
   openssf-data-update-pr:
@@ -15,27 +29,27 @@ jobs:
       - name: Check scripts
         run: ls -lR bin
 
-      - name: Fix permissions
-        run: |
-          chmod +x bin/get-openssf-ids.sh
-          chmod +x bin/download-openssf-data.sh
+      # - name: Fix permissions
+      #   run: |
+      #     chmod +x bin/get-openssf-ids.sh
+      #     chmod +x bin/download-openssf-data.sh
 
-      - name: Check scripts again
-        run: ls -lR bin
+      # - name: Check scripts again
+      #   run: ls -lR bin
 
-      - name: Check the data files
-        run: ls -l _data/openssf
+      # - name: Check the data files
+      #   run: ls -l _data/openssf
 
       - name: Find OpenSSF IDs and download their data files
         run: |
           bin/get-openssf-ids.sh _software/*.md | bin/download-openssf-data.sh
 
-      - name: Check the data files for updates
-        run: ls -l _data/openssf
+      # - name: Check the data files for updates
+      #   run: ls -l _data/openssf
 
       - name: Create pull request
         id: cpr
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           title: Update OpenSSF data
           branch: ${{ github.actor }}-openssf-data-update
@@ -44,7 +58,8 @@ jobs:
           commit-message: "Updating OpenSSF data"
           body: "Updating OpenSSF data"
           labels: |
-            content: event
+            content update
+            Section: software catalog
 
       - name: Check PR results
         if: ${{ steps.cpr.outputs.pull-request-number }}

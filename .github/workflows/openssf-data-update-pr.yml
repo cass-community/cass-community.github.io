@@ -14,7 +14,7 @@ jobs:
 
       - name: Check repo clone
         run: |
-          ls -l 
+          ls -lR 
 
       - name: Check the data files
         run: |

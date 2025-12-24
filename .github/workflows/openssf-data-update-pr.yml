@@ -17,8 +17,8 @@ jobs:
 
       - name: Fix permissions
         run: |
-          chmod +x ./bin/get-openssf-data.sh
-          chmod +x ./bin/update-openssf-data.sh
+          chmod +x bin/get-openssf-data.sh
+          chmod +x bin/download-openssf-data.sh
 
       - name: Check scripts again
         run: ls -lR bin
@@ -28,7 +28,7 @@ jobs:
 
       - name: Find OpenSSF IDs and download their data files
         run: |
-          bin/get-openssf-data.sh _software/*.md | bin/update-openssf-data.sh
+          bin/get-openssf-data.sh _software/*.md | bin/download-openssf-data.sh
 
       - name: Check the data files for updates
         run: ls -l _data/openssf

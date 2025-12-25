@@ -74,6 +74,9 @@ collections:
   impacts:
     output: true
     sort_by: date
+  events:
+    output: true
+    sort_by: startdate
 
 defaults:
   # news
@@ -127,6 +130,16 @@ defaults:
       path: "internal/**"
     values:
       sitemap: false
+  # events
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: single
+      classes: wide no-left-sidebar
+      author_profile: false
+      comments: false
+      share: true
 
 footer:
   links:

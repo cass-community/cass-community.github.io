@@ -1,9 +1,41 @@
 {% comment %}
     CHANGES FROM DEFAULT DOCUMENTS-COLLECTION INCLUDE
     * Call ev-archive-single.html include
+    * Accept a `cutoff` parameter to specify when to end the list of events
+      - For upcoming events (forward sort_order), cutoff is the oldest date to include
+      - For past events (reverse sort_order), cutoff is the newest date to include
+
+    TODO
+    * We do not yet support the idea of parent events (e.g. Supercomputing)
+      as on the IDEAS website
+
+  Interpreting dates:
+    Definitions: s = startdate, e = enddate, c = cutoff
+    Situation            Result    Inequalities	   Enddate absent
+    s--e c               past      s < c, e < c    s < c
+    c s--e               upcoming  s >= c, e >= c  s >= c
+    s-c-e (in progress)  upcoming  s < c, e >= c   impossible
+
+  An event can be considered to be past iff both startdate and enddate are in the past. 
+  If there is an endate we have to check it to be certain the event is not in progress 
+  (which we interpret as upcoming because there are still some dates upcoming).
 {% endcomment %}
 
 {% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
+
+{% comment %}
+  Trim events to cutoff
+{% endcomment %}
+{% if include.cutoff %}
+  {% if include.sort_order == "reverse" %}
+    {% assign enddate = entries | where_exp: "item", "item.enddate != nil" | where_exp: "item", "item.enddate < include.cutoff" %}
+    {% assign noenddate = entries | where_exp: "item", "item.enddate == nil" | where_exp: "item", "item.startdate < include.cutoff" %}
+  {% else %}
+    {% assign enddate = entries | where_exp: "item", "item.enddate != nil" | where_exp: "item", "item.enddate >= include.cutoff" %}
+    {% assign noenddate = entries | where_exp: "item", "item.enddate == nil" | where_exp: "item", "item.startdate >= include.cutoff" %}
+  {% endif %}
+  {% assign entries = enddate | concat: noenddate %}
+{% endif %}
 
 {% if include.sort_by %}
   {% assign entries = entries | sort: include.sort_by %}
@@ -12,6 +44,7 @@
 {% if include.sort_order == 'reverse' %}
   {% assign entries = entries | reverse %}
 {% endif %}
+
 {%- for post in entries -%}
   {% include ev-archive-single.html type=include.type %}
 {%- endfor -%}

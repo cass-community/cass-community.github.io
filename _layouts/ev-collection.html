@@ -4,11 +4,23 @@ layout: archive
 {% comment %}
     CHANGES FROM DEFAULT COLLECTION LAYOUT
     * Call ev-documents-collection.html include
+    * Duplicate calls for upcoming and past events
+      - Force forward and reverse `sort_order`
+    * Add cutoff argument
 {% endcomment %}
 
 {{ content }}
 
+{% assign today = site.time | date:"%Y-%m-%d" %}
+
+<h2>Upcoming events</h2>
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
-  {% include ev-documents-collection.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}
+  {% include ev-documents-collection.html collection=page.collection sort_by=page.sort_by sort_order="forward" type=entries_layout cutoff=today %}
+</div>
+
+<h2>Past events</h2>
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include ev-documents-collection.html collection=page.collection sort_by=page.sort_by sort_order="reverse" type=entries_layout cutoff=today %}
 </div>

@@ -32,3 +32,16 @@
     {% assign event_md = event_md | append: "-" | append: end_d %}
   {% endunless %}
 {% endif %}
+
+{% comment %}
+  Clean up so that future invocations are not subject to our leftovers.
+  Remember that there is no scoping for includes in Jekyll.
+{% endcomment %}
+{% assign start_y = nil %}
+{% assign start_m = nil %}
+{% assign start_md = nil %}
+{% assign start_d = nil %}
+{% assign end_y = nil %}
+{% assign end_m = nil %}
+{% assign end_md = nil %}
+{% assign end_d = nil %}

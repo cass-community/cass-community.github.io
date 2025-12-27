@@ -1,9 +1,13 @@
 ---
 title: Events
+excerpt: Organized and presented by CASS
 permalink: /events/
 collection: events
 entries_layout: list
 layout: ev-collection
 classes: wide no-left-sidebar
+header:
+  overlay_filter: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
+  overlay_image: /assets/images/headway-F2KRf_QfCqw-unsplash.jpg
+  caption: 'Photo by <a href="https://unsplash.com/@headwayio">Headway</a> on <a href="https://unsplash.com/photos/crowd-of-people-sitting-on-chairs-inside-room-F2KRf_QfCqw">Unsplash</a>'
 ---
-Events organized and presented by CASS members and the software projects in the portfolio.

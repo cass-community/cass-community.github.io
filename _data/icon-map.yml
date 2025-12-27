@@ -8,6 +8,8 @@
 
 - label: Website
   icon: <i class="fa-solid fa-fw fa-globe"></i>
+- label: Webpage
+  icon: <i class="fa-solid fa-fw fa-globe"></i>
 - label: Repository
   icon: <i class="fa-solid fa-fw fa-code"></i>
 # This is intended to denote a link that will directly download a file
@@ -16,6 +18,8 @@
 # This is intended to denote a link to a page that offers (perhaps multiple) downloads (e.g., versions of a software package)
 - label: Downloads
   icon: <i class="fa-solid fa-fw fa-file-arrow-down"></i>
+- label: Document
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Documentation
   icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: User guide
@@ -38,6 +42,8 @@
   icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Examples
   icon: <i class="fa-regular fa-fw fa-file-code"></i>
+- label: Video
+  icon: <i class="fa-solid fa-fw fa-video"></i>
 - label: Videos
   icon: <i class="fa-solid fa-fw fa-video"></i>
 - label: Tutorials
@@ -111,6 +117,10 @@
   icon: <i class="fa-solid fa-shield"></i>
 - label: Foundation
   icon: <i class="fa-solid fa-building-columns"></i>
+- label: Location
+  icon: <i class="fa-solid fa-location-dot"></i>
+- label: Presentation
+  icon: <i class="fa-solid fa-person-chalkboard"></i>
 
 # Additional ideas (not yet implemented), mostly inspired by
 # https://www.osgeo.org/projects/

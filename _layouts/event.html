@@ -1,0 +1,308 @@
+---
+layout: default
+---
+{% comment %}}
+  CHANGES FROM DEFAULT SINGLE LAYOUT
+  * Set date_format based on site config
+  * Add information around the title
+    - `series`
+    - `type`
+    - `venue`
+  * Call event-sidebar.html instead of sidebar.html
+  * Added code to handle event-specific data
+  * Comment out page__date.html include
+  * Comment out call to social-share.html in favor of putting it in the sidebar
+
+  TODO
+  * Fix breadcrumbs
+  * Decorate headings with FA icons
+  * Decorate sidebar entries with FA icons
+  * Improve vertical positioning of sidebar
+    - Ideally align with start of content
+  * Make series a link, if appropriate
+  * Add CASS Member info to page (maybe)
+
+  * Incorporate fields from sidebar: area, packages, CASS member
+{% endcomment %}
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include event-sidebar.html %}
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.type %}
+            <p class="page__meta">{{ page.type }}</p>
+          {% endif %}
+          {% if page.title -%}
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+          </h1>
+          {%- endif %}
+
+          {% comment %} These need to go in the same paragraph to look reasonable {% endcomment %}
+          {% if page.series or page.venue -%}
+            <p class="page__meta">
+              {%- if page.series -%}
+                Series: {{ page.series }}
+            {%- endif -%}
+            {%- if page.series and page.venue -%}
+              <span style="margin-left:3ch"></span>
+            {%- endif -%}
+            {%- if page.venue -%}
+              {%- capture my-venue -%}{% if page.venue-url %}<a href="{{ page.venue-url }}">{{ page.venue }}</a>{% else %}{{ page.venue }}{% endif %}{%- endcapture -%}
+              Part of: {{ my-venue }}
+            {%- endif -%}
+            </p>
+          {% endif %}
+          
+          {% include page__meta.html %}
+        </header>
+      {% endunless %}
+
+      <section class="page__content" itemprop="text">
+        {% if page.toc %}
+          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
+              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
+            </nav>
+          </aside>
+        {% endif %}
+
+        {% comment %}
+          Start page content
+
+          If there's a video artifact, display it at the top of the page
+          A display-video key set to false will override this, if desired.
+
+          If both playlist and individual video information are given, we
+          prioritize the playlist (presumably the most general)
+        {% endcomment %}
+
+        {% comment %}
+          Unfortunately, the Liquid `default` tag doesn't support booleans properly.
+          Though there is as-yet unreleased update that should (as of 2025-12-26)
+        {% endcomment %}
+        {% if page.display-video != nil %}
+          {% assign my-display-video = page.display-video %}
+        {% else %}
+          {% assign my-display-video = true %}
+        {% endif %}
+
+        {% if my-display-video %}
+          {% assign my-playlist = page.artifacts | find_exp: "item", "item.yt-playlist-id" %}
+          {% assign my-video = page.artifacts | find_exp: "item", "item.yt-video-id" %}
+
+          {% if my-playlist %}
+            {% capture video-id %}videoseries?list={{ my-playlist.yt-playlist-id }}{% endcapture %}
+          {% elsif my-video %}
+            {% capture video-id %}{{ my-video.yt-video-id }}{% endcapture %}
+          {% endif %}
+          {% if video-id %}
+            {% include video id=video-id provider="youtube" %}
+          {% endif %}
+        {% endif %}
+
+        {% comment %}
+          Incorporate description or content from event file
+
+          The general expectation is that an event will have *either* 
+          a description in metadata *or* page content that takes its place.
+
+          For events that are used on multiple websites, it may be useful to
+          have a description for use on the i-p.o site and page content which
+          is used by the other site (it may also use the description).
+        {% endcomment %}
+
+        {% if page.description %}
+          {{ page.description | markdownify }}
+        {% else %}
+          {{ content }}
+        {% endif %}
+    
+        {% comment %}
+          List presenters, moderators, and organizers, if present
+
+          If you don't want any of these to be displayed, you can comment out the metadata keys.
+        {% endcomment %}
+
+        {% if page.presenters %}
+          <h2>{{ page.presenters | size | pluralize: "Presenter", "Presenters" }}</h2>
+          <ul>
+            {% for person in page.presenters %}
+            <li>{{ person.name }}
+              {% if person.affiliation %} ({{ person.affiliation }}){% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if page.panelists %}
+          <h2>{{ page.panelists | size | pluralize: "Panelist", "Panelists" }}</h2>
+          <ul>
+            {% for person in page.panelists %}
+            <li>{{ person.name }}
+              {% if person.affiliation %} ({{ person.affiliation }}){% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if page.moderators %}
+          <h2>{{ page.moderators | size | pluralize: "Moderator", "Moderators" }}</h2>
+          <ul>
+            {% for person in page.moderators %}
+            <li>{{ person.name }}
+              {% if person.affiliation %} ({{ person.affiliation }}){% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if page.organizers %}
+          <h2>{{ page.organizers | size | pluralize: "Organizer", "Organizers" }}</h2>
+          <ul>
+            {% for person in page.organizers %}
+            <li>{{ person.name }}
+              {% if person.affiliation %} ({{ person.affiliation }}){% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% comment %}
+                  List bios for presenters, panelists, moderators, organizers, if present
+
+                  This is a little trickier than just listing the people. It is quite possible bios are not provided, even if the people are listed.  So we need to check for them before we emit the heading.
+        {% endcomment %}
+        
+        {% if page.presenters %}
+          {% assign bios = 0 %}
+          {% for person in page.presenters %}
+            {% if person.bio and person.bio != "" %}
+              {% assign bios = bios | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+
+          {% if bios > 0 %}
+            <h2>{{ bios | pluralize: "Presenter Bio", "Presenter Bios" }}</h2>
+            {% for person in page.presenters %}
+              {{ person.bio | markdownify }}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+
+        {% if page.panelists %}
+          {% assign bios = 0 %}
+          {% for person in page.panelists %}
+            {% if person.bio and person.bio != "" %}
+              {% assign bios = bios | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+
+          {% if bios > 0 %}
+            <h2>{{ bios | pluralize: "Panelist Bio", "Panelist Bios" }}</h2>
+            {% for person in page.panelists %}
+              {{ person.bio | markdownify }}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+
+        {% if page.moderators %}
+          {% assign bios = 0 %}
+          {% for person in page.moderators %}
+            {% if person.bio and person.bio != "" %}
+              {% assign bios = bios | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+
+          {% if bios > 0 %}
+            <h2>{{ bios | pluralize: "Moderator Bio", "Moderator Bios" }}</h2>
+            {% for person in page.moderators %}
+              {{ person.bio | markdownify }}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+
+        {% if page.organizers %}
+          {% assign bios = 0 %}
+          {% for person in page.organizers %}
+            {% if person.bio and person.bio != "" %}
+              {% assign bios = bios | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+
+          {% if bios > 0 %}
+            <h2>{{ bios | pluralize: "Organizer Bio", "Organizer Bios" }}</h2>
+            {% for person in page.organizers %}
+              {{ person.bio | markdownify }}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+      </section>      
+      
+
+      <footer class="page__meta">
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% endif %}
+        {% include page__taxonomy.html %}
+        {% comment %}{% include page__date.html %}{% endcomment %}
+      </footer>
+
+      {% comment %}
+        Commenting out this invocation because we're including it in
+        the sidebar.
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+      {% endcomment %}
+
+      {% include post_pagination.html %}
+    </div>
+
+    {% if site.comments.provider and page.comments %}
+      {% if jekyll.environment == 'production' %}
+        {% include comments.html %}
+      {% else %}
+        <p>
+          Comments are configured with provider: <strong>{{ site.comments.provider }}</strong>,
+          but are disabled in non-production environments.
+        </p>
+      {% endif %}
+    {% endif %}
+  </article>
+
+  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
+  {% if page.id and page.related and site.related_posts.size > 0 %}
+    {% include page__related.html posts=site.related_posts %}
+  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
+  {% elsif page.id and page.related %}
+    {% include page__related.html posts=site.posts %}
+  {% endif %}
+</div>

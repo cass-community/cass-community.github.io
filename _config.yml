@@ -74,6 +74,10 @@ collections:
   impacts:
     output: true
     sort_by: date
+  events:
+    output: true
+    sort_by: startdate
+    permalink: /:collection/:name
 
 defaults:
   # news
@@ -127,6 +131,17 @@ defaults:
       path: "internal/**"
     values:
       sitemap: false
+  # events
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+      # classes: wide no-left-sidebar
+      classes: wide
+      author_profile: false
+      comments: false
+      share: true
 
 footer:
   links:
@@ -194,6 +209,15 @@ highlight_image_dir: /assets/impacts/
 # Base URLs for things we want to reference on the site
 #
 openssf_bp_projects_url: https://www.bestpractices.dev/en/projects
+
+# For use with event artifacts (and perhaps elsewhere) 
+# Base URLs
+doi-resolver-url: https://doi.org
+github-url: https://github.com
+bsswt-url: https://bssw-tutorial.github.io
+
+youtube-watch-url: https://www.youtube.com/watch?v=
+youtube-playlist-url: https://youtube.com/playlist?list=
 
 # Mute some deprecation warnings from older versions of jekyll-sass-converter
 # as suggested by https://github.com/mmistakes/minimal-mistakes/issues/4054#issuecomment-1396536483

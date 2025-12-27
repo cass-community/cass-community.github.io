@@ -1,0 +1,83 @@
+{% comment %}
+  CHANGES FROM DEFAULT ARCHIVE-SINGLE INCLUDE
+  * add definition of date_format, from page__date.html
+  * Add outputs for page variables `type`, `series`, `venue`
+  * Change h2 to h3 to be consistent with h2s on parent page for Upcoming and Past event headlines
+  * Put event date and type/tite/series+venue into <div>s and dislay them side by side
+  * Comment out excerpt
+
+{% endcomment %}
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% include set-event-date startdate=post.startdate enddate=post.enddate %}
+
+<div class="{{ include.type | default: 'list' }}__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src="{{ teaser | relative_url }}" alt="">
+      </div>
+    {% endif %}
+
+    <div style="display: flex">
+      {% comment %}
+        Empirically determined width to accommodate an `event_md` for a range
+        spanning months ("M1 D1-M2 D2").  This might require some adjustment for
+        other display sizes.
+      {% endcomment %}
+      <div style="width: 15%">
+        {% if event_y and event_md %}
+          <h3 style="margin-top: 0.5em"><small>{{ event_y }}</small><br>
+          <span style="line-height: 250%">{{ event_md }}</span></h3>
+        {% endif %}
+      </div>
+
+      <div>
+        {% if post.type %}
+          <p class="page__meta">{{ post.type }}</p>
+        {% endif %}
+
+        <h3 class="archive__item-title no_toc" itemprop="headline" style="margin-top: 0.25em">
+          {% if post.link %}
+            <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+          {% else %}
+            <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+          {% endif %}
+        </h3>
+
+        {% comment %} These need to go in the same paragraph to look reasonable {% endcomment %}
+        {% if post.series or post.venue -%}
+          <p class="page__meta">
+            {%- if post.series -%}
+              Series: {{ post.series }}
+          {%- endif -%}
+          {%- if post.series and post.venue -%}
+            <span style="margin-left:10ch"></span>
+          {%- endif -%}
+          {%- if post.venue -%}
+            Venue: {{ post.venue }}
+          {%- endif -%}
+          </p>
+        {% endif %}
+
+        {% include page__meta.html type=include.type %}
+        {% comment %}
+        {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+        {% endcomment %}
+      </div>
+    </div>
+    <hr>
+  </article>
+</div>

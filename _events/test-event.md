@@ -1,5 +1,5 @@
 ---
-startdate: "2025-03-20"
+startdate: "2024-03-20"
 enddate: "2026-04-19"
 time: "1:00 pm - 2:00 pm EDT" # Ensure that time zone is correct with respect to standard/daylight time
 #

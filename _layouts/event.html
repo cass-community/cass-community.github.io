@@ -14,16 +14,6 @@ layout: default
   * Comment out call to social-share.html in favor of putting it in the sidebar
 
   TODO
-  * Fix breadcrumbs
-  * Decorate headings with FA icons
-  * Decorate sidebar entries with FA icons
-    - artifact labels used (as of 2025-12-27), with proposed icons
-      - (location)          Location
-      - Presentation Slides Presentation
-      - Q&A               Document
-      - Recording         Video
-      - Slides            Presentation
-      - Tutorial Webpage  Webpage
   * Improve vertical positioning of sidebar
     - Ideally align with start of content
   * Make series a link, if appropriate
@@ -156,7 +146,9 @@ layout: default
         {% endcomment %}
 
         {% if page.presenters %}
-          <h2>{{ page.presenters | size | pluralize: "Presenter", "Presenters" }}</h2>
+          {% capture heading %}{{ page.presenters | size | pluralize: "Presenter", "Presenters" }}{% endcapture %}
+          {% capture icon %}{% include icon-map-lookup label=heading %}{% endcapture %}
+          <h2>{{ icon }} {{ heading }}</h2>
           <ul>
             {% for person in page.presenters %}
             <li>{{ person.name }}
@@ -167,7 +159,9 @@ layout: default
         {% endif %}
 
         {% if page.panelists %}
-          <h2>{{ page.panelists | size | pluralize: "Panelist", "Panelists" }}</h2>
+          {% capture heading %}{{ page.panelists | size | pluralize: "Panelist", "Panelists" }}{% endcapture %}
+          {% capture icon %}{% include icon-map-lookup label=heading %}{% endcapture %}
+          <h2>{{ icon }} {{ heading }}</h2>
           <ul>
             {% for person in page.panelists %}
             <li>{{ person.name }}
@@ -178,7 +172,9 @@ layout: default
         {% endif %}
 
         {% if page.moderators %}
-          <h2>{{ page.moderators | size | pluralize: "Moderator", "Moderators" }}</h2>
+          {% capture heading %}{{ page.moderators | size | pluralize: "Moderator", "Moderators" }}{% endcapture %}
+          {% capture icon %}{% include icon-map-lookup label=heading %}{% endcapture %}
+          <h2>{{ icon }} {{ heading }}</h2>
           <ul>
             {% for person in page.moderators %}
             <li>{{ person.name }}
@@ -189,7 +185,9 @@ layout: default
         {% endif %}
 
         {% if page.organizers %}
-          <h2>{{ page.organizers | size | pluralize: "Organizer", "Organizers" }}</h2>
+          {% capture heading %}{{ page.organizers | size | pluralize: "Organizer", "Organizers" }}{% endcapture %}
+          {% capture icon %}{% include icon-map-lookup label=heading %}{% endcapture %}
+          <h2>{{ icon }} {{ heading }}</h2>
           <ul>
             {% for person in page.organizers %}
             <li>{{ person.name }}
@@ -202,71 +200,56 @@ layout: default
         {% comment %}
                   List bios for presenters, panelists, moderators, organizers, if present
 
-                  This is a little trickier than just listing the people. It is quite possible bios are not provided, even if the people are listed.  So we need to check for them before we emit the heading.
+                  This is a little trickier than just listing the people. It is quite possible bios are not provided, even if the people are listed.  
+                  So we need to check for them before we emit the heading.
         {% endcomment %}
         
         {% if page.presenters %}
-          {% assign bios = 0 %}
-          {% for person in page.presenters %}
-            {% if person.bio and person.bio != "" %}
-              {% assign bios = bios | plus: 1 %}
-            {% endif %}
-          {% endfor %}
-
-          {% if bios > 0 %}
-            <h2>{{ bios | pluralize: "Presenter Bio", "Presenter Bios" }}</h2>
-            {% for person in page.presenters %}
-              {{ person.bio | markdownify }}
+          {% assign bios = page.presenters | map: "bio" | compact %}
+          {% capture heading %}{{ bios.size | pluralize: "Presenter bio", "Presenter bios" }}{% endcapture %}
+          {% capture icon %}{% include icon-map-lookup label=heading %}{% endcapture %}
+          {% unless bios.size == 0 %}      
+            <h2>{{ icon }} {{ heading }}</h2>
+            {% for person in bios %}
+              {{ person | markdownify }}
             {% endfor %}
-          {% endif %}
+          {% endunless %}
         {% endif %}
 
         {% if page.panelists %}
-          {% assign bios = 0 %}
-          {% for person in page.panelists %}
-            {% if person.bio and person.bio != "" %}
-              {% assign bios = bios | plus: 1 %}
-            {% endif %}
-          {% endfor %}
-
-          {% if bios > 0 %}
-            <h2>{{ bios | pluralize: "Panelist Bio", "Panelist Bios" }}</h2>
-            {% for person in page.panelists %}
-              {{ person.bio | markdownify }}
+          {% assign bios = page.panelists | map: "bio" | compact %}
+          {% capture heading %}{{ bios.size | pluralize: "Panelist bio", "Panelist bios" }}{% endcapture %}
+          {% capture icon %}{% include icon-map-lookup label=heading %}{% endcapture %}
+          {% unless bios.size == 0 %}      
+            <h2>{{ icon }} {{ heading }}</h2>
+            {% for person in bios %}
+              {{ person | markdownify }}
             {% endfor %}
-          {% endif %}
+          {% endunless %}
         {% endif %}
 
         {% if page.moderators %}
-          {% assign bios = 0 %}
-          {% for person in page.moderators %}
-            {% if person.bio and person.bio != "" %}
-              {% assign bios = bios | plus: 1 %}
-            {% endif %}
-          {% endfor %}
-
-          {% if bios > 0 %}
-            <h2>{{ bios | pluralize: "Moderator Bio", "Moderator Bios" }}</h2>
-            {% for person in page.moderators %}
-              {{ person.bio | markdownify }}
+          {% assign bios = page.moderators | map: "bio" | compact %}
+          {% capture heading %}{{ bios.size | pluralize: "Moderator bio", "Moderator bios" }}{% endcapture %}
+          {% capture icon %}{% include icon-map-lookup label=heading %}{% endcapture %}
+          {% unless bios.size == 0 %}      
+            <h2>{{ icon }} {{ heading }}</h2>
+            {% for person in bios %}
+              {{ person | markdownify }}
             {% endfor %}
-          {% endif %}
+          {% endunless %}
         {% endif %}
 
         {% if page.organizers %}
-          {% assign bios = 0 %}
-          {% for person in page.organizers %}
-            {% if person.bio and person.bio != "" %}
-              {% assign bios = bios | plus: 1 %}
-            {% endif %}
-          {% endfor %}
-
-          {% if bios > 0 %}
-            <h2>{{ bios | pluralize: "Organizer Bio", "Organizer Bios" }}</h2>
-            {% for person in page.organizers %}
-              {{ person.bio | markdownify }}
+          {% assign bios = page.organizers | map: "bio" | compact %}
+          {% capture heading %}{{ bios.size | pluralize: "Organizer bio", "Organizer bios" }}{% endcapture %}
+          {% capture icon %}{% include icon-map-lookup label=heading %}{% endcapture %}
+          {% unless bios.size == 0 %}      
+            <h2>{{ icon }} {{ heading }}</h2>
+            {% for person in bios %}
+              {{ person | markdownify }}
             {% endfor %}
-          {% endif %}
+          {% endunless %}
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}

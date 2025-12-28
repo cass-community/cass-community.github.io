@@ -10,6 +10,14 @@
       url: https://example.com                       # EXPECTED
       note: (additional info)                        # OPTIONAL
       icon: <i class="fa-solid fa-font-awesome"></i> # OPTIONAL
+
+  Several specialized resource types are recognized and URLs 
+  will be generated from the info given.
+    yt-video-id:        YouTube recording
+    yt-playlist-id:     YouTube playlist
+    gh-repo:            GitHub repo
+    doi:                Digital object identifier
+    bsswt-event-label   Event label used on https://bssw-tutorial.github.io/
   ```
   The list can have as many entries as you like.  The url key is
   denoted as "expected" because normally, the URL is the point of
@@ -45,9 +53,14 @@
     {% endif %}
   {% endcapture -%}
   {% capture t -%}
-    {% if l.url %}<a href="{{ l.url }}">{{ l.label }}</a>
-    {% else %}{{ l.label }}
-    {% endif %}
+    {%- if l.yt-video-id -%}<a href="{{ include.yt-url | default: site.youtube-watch-url }}{{ l.yt-video-id }}">
+    {%- elsif l.yt-playlist-id -%}<a href="{{ include.yt-url | default: site.youtube-playlist-url }}{{ l.yt-playlist-id }}">
+    {%- elsif l.gh-repo -%}<a href="{{ include.gh-url | default: site.github-url }}/{{ l.gh-repo }}">
+    {%- elsif l.doi -%}<a href="{{ include.doi-url | default: site.doi-resolver-url }}/{{ l.doi }}">
+    {%- elsif l.bsswt-event-label -%}<a href="{{ include.bsswt-url | default: site.bsswt-url }}/{{ l.bsswt-event-label }}">
+    {%- elsif l.url -%}<a href="{{ l.url }}">{%- endif -%}
+    {{ l.label }}
+    {%- if l.yt-video-id or l.yt-playlist-id or l.gh-repo or l.doi or l.url or l.bsswt-event-label -%}</a>{%- endif -%}
   {% endcapture -%}
   {% capture n -%}
     {% if l.note %}{{ l.note }}{% endif %}

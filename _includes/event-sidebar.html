@@ -12,9 +12,10 @@
 <small>{{ page.time }}</small></h3>
 
 <ul style="list-style: none; padding: 0">
-  {% if page.location %}<li>Location: {{ page.location }}</li>{% endif %}
+  {% capture location_icon %}{% include icon-map-lookup label="Location" %}{% endcapture %}
+  {% if page.location %}<li>{{ location_icon }} Location: {{ page.location }}</li>{% endif %}
   {% if page.artifacts %}
-    {% include emit-artifacts.html artifacts=page.artifacts format="li" %}
+    {% include show-resource-links.html links=page.artifacts start_tag="<li>" end_tag="</li>" %}
   {% endif %}
 </ul>
 

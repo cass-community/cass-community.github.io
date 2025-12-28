@@ -1,6 +1,6 @@
 ---
 title: Events
-excerpt: Organized and presented by CASS
+excerpt: Organized and presented by CASS and affiliates
 permalink: /events/
 collection: events
 entries_layout: list

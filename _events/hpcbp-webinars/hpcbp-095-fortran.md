@@ -30,12 +30,17 @@ artifacts:
   # - label: Recording
   #   format: YouTube
   #   yt-video-id: tzPbndr1u4o
+  #
+  # IMPORTANT: until these resources are actually published, we've removed the protocol
+  # component so that the URL checker will not flag them (it doesn't understand the
+  # semantics of comments).  They will need to be added back when the files are there.
+  #
   # - label: Slides
   #   format: PDF
-  #   url: https://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran.pdf
+  #   url: ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran.pdf
   # - label: Q&A
   #   format: PDF
-  #   url: https://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran-qa.pdf
+  #   url: ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran-qa.pdf
 #
 # Items that change rarely
 #

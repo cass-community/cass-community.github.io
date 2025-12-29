@@ -69,7 +69,7 @@ layout: default
             {%- endif -%}
             {%- if page.venue -%}
               {%- capture my-venue -%}{% if page.venue-url %}<a href="{{ page.venue-url }}">{{ page.venue }}</a>{% else %}{{ page.venue }}{% endif %}{%- endcapture -%}
-              Part of: {{ my-venue }}
+              Venue: {{ my-venue }}
             {%- endif -%}
             </p>
           {% endif %}

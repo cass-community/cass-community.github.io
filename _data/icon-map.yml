@@ -128,10 +128,6 @@
   icon: <i class="fa-solid fa-fw fa-video"></i>
 - label: Playlist
   icon: <i class="fa-solid fa-fw fa-video"></i>
-- label: Presentation
-  icon: <i class="fa-solid fa-person-chalkboard"></i>
-- label: Presentation slides
-  icon: <i class="fa-solid fa-person-chalkboard"></i>
 - label: Slides
   icon: <i class="fa-solid fa-person-chalkboard"></i>
 - label: Q&A

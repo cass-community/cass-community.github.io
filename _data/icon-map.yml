@@ -9,9 +9,9 @@
 # form `<i class-"fa-something fa-else"></i>`
 
 - label: Website
-  icon: <i class="fa-solid fa-fw fa-globe"></i>
+  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
 - label: Webpage
-  icon: <i class="fa-solid fa-fw fa-globe"></i>
+  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
 - label: Repository
   icon: <i class="fa-solid fa-fw fa-code"></i>
 # This is intended to denote a link that will directly download a file
@@ -133,7 +133,13 @@
 - label: Q&A
   icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Tutorial webpage
-  icon: <i class="fa-solid fa-fw fa-globe"></i>
+  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+- label: BoF webpage
+  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+- label: Conference program page
+  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+- label: Summary blog article
+  icon: <i class="fa-regular fa-newspaper"></i>
 #
 # Some icons associated primarily with people in events
 #

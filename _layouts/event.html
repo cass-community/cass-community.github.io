@@ -60,21 +60,16 @@ layout: default
           </h1>
           {%- endif %}
 
-          {% comment %} These need to go in the same paragraph to look reasonable {% endcomment %}
-          {% if page.series or page.venue -%}
-            <p class="page__meta">
-              {%- if page.series -%}
-                Series: {{ page.series }}
-            {%- endif -%}
-            {%- if page.series and page.venue -%}
-              <span style="margin-left:3ch"></span>
-            {%- endif -%}
+
             {%- if page.venue -%}
-              {%- capture my-venue -%}{% if page.venue-url %}<a href="{{ page.venue-url }}">{{ page.venue }}</a>{% else %}{{ page.venue }}{% endif %}{%- endcapture -%}
-              Venue: {{ my-venue }}
+              {%- capture venue_link -%}{% if page.venue-url %}<a href="{{ page.venue-url }}">{{ page.venue }}</a>{% else %}{{ page.venue }}{% endif %}{%- endcapture -%}
+              <p class="page__meta">Venue: {{ venue_link }}</p>
+              {% capture adjustment %}style="margin-top: -0.5em"{% endcapture %}
             {%- endif -%}
-            </p>
-          {% endif %}
+            {% if page.series -%}
+              <p class="page__meta" {{ adjustment }}>Series: {{ page.series }}</p>
+            {%- endif -%}
+
           
           {% include page__meta.html %}
         </header>

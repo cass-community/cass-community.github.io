@@ -57,20 +57,12 @@
           {% endif %}
         </h3>
 
-        {% comment %} These need to go in the same paragraph to look reasonable {% endcomment %}
-        {% if post.series or post.venue -%}
-          <p class="page__meta">
-            {%- if post.series -%}
-              Series: {{ post.series }}
-          {%- endif -%}
-          {%- if post.series and post.venue -%}
-            <span style="margin-left:10ch"></span>
-          {%- endif -%}
-          {%- if post.venue -%}
-            Venue: {{ post.venue }}
-          {%- endif -%}
-          </p>
-        {% endif %}
+        {%- if post.venue -%}
+          <p class="page__meta">Venue: {{ post.venue }}</p>
+        {%- endif -%}
+        {% if post.series -%}
+          <p class="page__meta">Series: {{ post.series }}</p>
+        {%- endif -%}
 
         {% include page__meta.html type=include.type %}
         {% comment %}

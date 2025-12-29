@@ -5,9 +5,6 @@ main:
   - title: "Software"
     description: "Software Products"
     url: /software/
-#
-# Coming attractions...
-#
   # - title: Events
   #   description: "Events organized by CASS"
   #   url: /events/

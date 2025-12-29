@@ -2,12 +2,16 @@
 # for use throughout the site (but especially in the software catalog)
 #
 # Multi-word labels should be in SENTENCE case
+# (though in some cases, we've added title case variants to accommodate
+# multi-site usage)
 #
 # The icon entry should be an HTML reference to a FontAwesome icon of the
 # form `<i class-"fa-something fa-else"></i>`
 
 - label: Website
-  icon: <i class="fa-solid fa-fw fa-globe"></i>
+  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+- label: Webpage
+  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
 - label: Repository
   icon: <i class="fa-solid fa-fw fa-code"></i>
 # This is intended to denote a link that will directly download a file
@@ -16,6 +20,8 @@
 # This is intended to denote a link to a page that offers (perhaps multiple) downloads (e.g., versions of a software package)
 - label: Downloads
   icon: <i class="fa-solid fa-fw fa-file-arrow-down"></i>
+- label: Document
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Documentation
   icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: User guide
@@ -38,6 +44,8 @@
   icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Examples
   icon: <i class="fa-regular fa-fw fa-file-code"></i>
+- label: Video
+  icon: <i class="fa-solid fa-fw fa-video"></i>
 - label: Videos
   icon: <i class="fa-solid fa-fw fa-video"></i>
 - label: Tutorials
@@ -111,6 +119,63 @@
   icon: <i class="fa-solid fa-shield"></i>
 - label: Foundation
   icon: <i class="fa-solid fa-building-columns"></i>
+#
+# Typical event artifacts
+#
+- label: Location
+  icon: <i class="fa-solid fa-location-dot"></i>
+- label: Recording
+  icon: <i class="fa-solid fa-fw fa-video"></i>
+- label: Playlist
+  icon: <i class="fa-solid fa-fw fa-video"></i>
+- label: Slides
+  icon: <i class="fa-solid fa-person-chalkboard"></i>
+- label: Q&A
+  icon: <i class="fa-regular fa-fw fa-file-lines"></i>
+- label: Tutorial webpage
+  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+- label: BoF webpage
+  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+- label: Conference program page
+  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+- label: Summary blog article
+  icon: <i class="fa-regular fa-newspaper"></i>
+#
+# Some icons associated primarily with people in events
+#
+
+- label: Presenter
+  icon: <i class="fa-solid fa-user"></i>
+- label: Moderator
+  icon: <i class="fa-solid fa-user"></i>
+- label: Panelist
+  icon: <i class="fa-solid fa-user"></i>
+- label: Organizer
+  icon: <i class="fa-solid fa-user"></i>
+- label: Presenters
+  icon: <i class="fa-solid fa-users"></i>
+- label: Moderators
+  icon: <i class="fa-solid fa-users"></i>
+- label: Panelists
+  icon: <i class="fa-solid fa-users"></i>
+- label: Organizers
+  icon: <i class="fa-solid fa-users"></i>
+- label: Presenter bio
+  icon: <i class="fa-solid fa-user-pen"></i>
+- label: Presenter bios
+  icon: <i class="fa-solid fa-user-pen"></i>
+- label: Moderator bio
+  icon: <i class="fa-solid fa-user-pen"></i>
+- label: Moderator bios
+  icon: <i class="fa-solid fa-user-pen"></i>
+- label: Panelist bio
+  icon: <i class="fa-solid fa-user-pen"></i>
+- label: Panelist bios
+  icon: <i class="fa-solid fa-user-pen"></i>
+- label: Organizer bio
+  icon: <i class="fa-solid fa-user-pen"></i>
+- label: Organizer bios
+  icon: <i class="fa-solid fa-user-pen"></i>
 
 # Additional ideas (not yet implemented), mostly inspired by
 # https://www.osgeo.org/projects/

@@ -1,0 +1,89 @@
+{% comment %}
+    CHANGES FROM DEFAULT DOCUMENTS-COLLECTION INCLUDE
+    * Call ev-archive-single.html include
+    * Accept a `cutoff` parameter to specify when to end the list of events
+      - For upcoming events (forward sort_order), cutoff is the oldest date to include
+      - For past events (reverse sort_order), cutoff is the newest date to include
+    * Add "no events found" message as appropriate
+    * Accept a `limit` parameter to show at most that number of events
+    * Accept a `more_url` parameter to link a message that there are unshown events
+
+    TODO
+    * We do not yet support the idea of parent events (e.g. Supercomputing)
+      as on the IDEAS website
+
+  Interpreting dates:
+    Definitions: s = startdate, e = enddate, c = cutoff
+    Situation            Result    Inequalities	   Enddate absent
+    s--e c               past      s < c, e < c    s < c
+    c s--e               upcoming  s >= c, e >= c  s >= c
+    s-c-e (in progress)  upcoming  s < c, e >= c   impossible
+
+  An event can be considered to be past iff both startdate and enddate are in the past. 
+  If there is an endate we have to check it to be certain the event is not in progress 
+  (which we interpret as upcoming because there are still some dates upcoming).
+{% endcomment %}
+
+{% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
+{% assign limit = include.limit | default: entries.size %}
+
+{% comment %}
+  Trim events to cutoff
+{% endcomment %}
+{% if include.cutoff %}
+  {% if include.sort_order == "reverse" %}
+    {% assign enddate = entries | where_exp: "item", "item.enddate != nil" | where_exp: "item", "item.enddate < include.cutoff" %}
+    {% assign noenddate = entries | where_exp: "item", "item.enddate == nil" | where_exp: "item", "item.startdate < include.cutoff" %}
+  {% else %}
+    {% assign enddate = entries | where_exp: "item", "item.enddate != nil" | where_exp: "item", "item.enddate >= include.cutoff" %}
+    {% assign noenddate = entries | where_exp: "item", "item.enddate == nil" | where_exp: "item", "item.startdate >= include.cutoff" %}
+  {% endif %}
+  {% assign entries = enddate | concat: noenddate %}
+{% endif %}
+
+{% if include.sort_by %}
+  {% assign entries = entries | sort: include.sort_by %}
+{% endif %}
+
+{% if include.sort_order == 'reverse' %}
+  {% assign entries = entries | reverse %}
+{% endif %}
+
+{% if entries != nil and entries.size > 0 %}
+  {%- for post in entries limit: limit -%}
+    {% include ev-archive-single.html type=include.type %}
+  {%- endfor -%}
+	{% assign remaining = entries.size | minus: limit %}
+	{% if remaining > 0 %}
+    <div style="display: flex">
+    {% comment %}
+      Position the message where event titles are displayed.
+      The widith of the empty <div> should match that in
+      ev-archive-single.html
+    {% endcomment %}
+    {% if include.more_url %}
+        {% capture message %}<a href='{{ include.more_url }}'>see {{remaining }} more {{ remaining | pluralize: "event", "events" }}</a>{% endcapture %}
+    {% else %}
+        {% capture message %}plus {{remaining }} more {{ remaining | pluralize: "event", "events" }} not shown{% endcapture %}
+    {% endif %}
+    <div style="width: 15%">
+    </div>
+    <div>
+      <p><em>{{ message }}</em></p>
+    </div>
+  </div>
+	{% endif %}
+{% else %}
+  <div style="display: flex">
+    {% comment %}
+      Position the message where event titles are displayed.
+      The widith of the empty <div> should match that in
+      ev-archive-single.html
+    {% endcomment %}
+    <div style="width: 15%">
+    </div>
+    <div>
+      <p><em>no events found</em></p>
+    </div>
+  </div>
+{% endif %}

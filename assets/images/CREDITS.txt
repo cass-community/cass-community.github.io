@@ -15,4 +15,6 @@ thisisengineering-uyfohHiTxho-unsplash.jpg			Photo by <a href="https://unsplash.
 warpx-long-efield-ascent-vtkm-v2.jpg				Credit: Axel Huebl (Berkeley Lab)
 								Caption: WarpX: longitudinal electric field in a laser-plasma accelerator rendered with the ECP software libraries Ascent & Viskores as the simulation was running.
 
-wes-lewis-zt6OxRORM2g-unsplash.jpg					Photo by <a href="https://unsplash.com/@westhmus">wes lewis</a> on <a href="https://unsplash.com/photos/group-of-people-taking-photo-zt6OxRORM2g">Unsplash</a>
+wes-lewis-zt6OxRORM2g-unsplash.jpg				Photo by <a href="https://unsplash.com/@westhmus">wes lewis</a> on <a href="https://unsplash.com/photos/group-of-people-taking-photo-zt6OxRORM2g">Unsplash</a>
+
+headway-F2KRf_QfCqw-unsplash.jpg				Photo by <a href="https://unsplash.com/@headwayio">Headway</a> on <a href="https://unsplash.com/photos/crowd-of-people-sitting-on-chairs-inside-room-F2KRf_QfCqw">Unsplash</a>

@@ -1,0 +1,45 @@
+{% comment %}
+  Custom sidebar for event pages
+
+  Displays event date, location, and artifacts
+{% endcomment %}
+<div class="sidebar">
+
+{% include set-event-date startdate=page.startdate enddate=page.enddate %}
+
+<h3 ><small>{{ event_y }}</small><br>
+<span style="line-height: 250%">{{ event_md }}</span><br>
+<small>{{ page.time }}</small></h3>
+
+<ul style="list-style: none; padding: 0">
+  {% capture location_icon %}{% include icon-map-lookup label="Location" %}{% endcapture %}
+  {% if page.location %}<li>{{ location_icon }} Location: {{ page.location }}</li>{% endif %}
+  {% if page.artifacts %}
+    {% include show-resource-links.html links=page.artifacts start_tag="<li>" end_tag="</li>" %}
+  {% endif %}
+</ul>
+
+{% comment %}
+  Show registration link
+
+  If the link is provided and if the event is upcoming
+{% endcomment %}
+
+{% if page.enddate %}
+  {% include upcoming-event event=page.enddate %}
+{% elsif page.startdate %}
+  {% include upcoming-event event=page.startdate %}
+{% else %}
+  {% assign upcoming = false %}
+{% endif %}
+
+{% if upcoming and page.registration-url %}
+  <a class="btn btn--inverse btn--large" href="{{ page.registration-url }}">Register for the Event</a>
+{% endif %}
+
+{% comment %}
+  Including here rather than at the bottom of the main content
+{% endcomment %}
+{% if page.share %}{% include social-share.html %}{% endif %}
+
+</div>

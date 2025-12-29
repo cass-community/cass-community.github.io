@@ -8,8 +8,16 @@
   resource_link_name:
     - label: Resource label                          # REQUIRED
       url: https://example.com                       # EXPECTED
-      note: (additional info)                        # OPTIONAL
+      note: additional info                          # OPTIONAL
+      format: additional info                        # OPTIONAL, DEPRECATED
       icon: <i class="fa-solid fa-font-awesome"></i> # OPTIONAL
+Note that the `format` key is for backward compatibility with the
+artifact structure used on the IDEAS website.  Its use in new events
+is discouraged.
+
+The primary difference between `format` and `note` is that we render
+`format` as "(format)", whereas `note` leaves any decoration up to
+the content creator.  If both keys are present, `note` takes precedence.
 
   Several specialized resource types are recognized and URLs 
   will be generated from the info given.
@@ -61,6 +69,7 @@
     {%- if l.yt-video-id or l.yt-playlist-id or l.doi or l.url or l.bsswt-event-label -%}</a>{%- endif -%}
   {% endcapture -%}
   {% capture n -%}
+    {% if l.format %}({{ l.format }}){% endif %}
     {% if l.note %}{{ l.note }}{% endif %}
   {% endcapture -%}
   {{ start_tag }}{{ i | strip }} {{ t | strip }}{% if n %} {{ n | strip  }}{% endif %}{{ end_tag }}

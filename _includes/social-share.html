@@ -1,0 +1,47 @@
+{% comment %}
+  Parameters
+    compact: Make buttons more compact by showing only logos, not names (OPTIONAL, default: false)
+    class: Specify additional class options for the buttons (OPTIONAL)
+            This option allows *additional* CSS classes to be added to the button specification.
+            It is primarily intended to support size specifications (`btn--x-large`, `btn--large`, `btn--small`). 
+
+  CHANGES FROM DEFAULT SOCIAL-SHARE.HTML
+  * Changed order
+  * Added Mastodon
+  * Added email
+  * Added optional "compact" parameter
+  * Added optional "class" parameter
+{% endcomment %}
+{% comment %} Work around inconsistent treatment of booleans by `default` filter {% endcomment %}
+{% if include.compact == nil %}
+  {% assign compact = false %}
+{% else %}
+  {% assign compact = include.compact %}
+{% endif %}
+{% assign class = include.class | default: "" %}
+<section class="page__share">
+  <h4 class="page__share-title">{{ site.data.ui-text[site.locale].share_on_label | default: "Share on" }}</h4>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" class="btn btn--linkedin {{ class }}" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>{% unless compact %}<span> LinkedIn</span>{% endunless %}
+  </a>
+
+  <a href="https://mastodon.social/share?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" class="btn btn--mastodon {{ class }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Mastodon">
+    <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>{% unless compact %}<span> Mastodon</span>{% endunless %}
+  </a>
+  
+  <a href="https://bsky.app/intent/compose?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" class="btn btn--bluesky {{ class }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i>{% unless compact %}<span> Bluesky</span>{% endunless %}
+  </a>
+
+  <a href="https://x.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" class="btn btn--x {{ class }}" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i>{% unless compact %}<span> X</span>{% endunless %}
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" class="btn btn--facebook {{ class }}" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i>{% unless compact %}<span> Facebook</span>{% endunless %}
+  </a>
+
+  <a href="mailto:?subject=CASS event: {{ page.title }}&body={{ page.url | absolute_url | url_encode }}" class="btn btn--email btn--primary {{ class }}" aria-label="Share on Email" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Email">
+    <i class="fas fa-fw fa-envelope" aria-hidden="true"></i>{% unless compact %}<span> Email</span>{% endunless %}
+</section>

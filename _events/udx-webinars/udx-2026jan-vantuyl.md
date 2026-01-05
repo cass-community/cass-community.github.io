@@ -11,6 +11,9 @@ presenters:
     affiliation: Academic Data Science Alliance
   - name: Elle O’Brien
     affiliation: Michigan School of Information
+    bio: |
+      Elle O'Brien is a researcher and lecturer at the University of Michigan School of Information. She is also the director of the Michigan Institute for Data Science's graduate certificate program. 
+
 #
 registration-url: https://lbnl.zoom.us/meeting/register/uecckzcDSO6FIaQuMMhMvg
 #

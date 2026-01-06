@@ -18,6 +18,7 @@ header:
 {% capture meetings_icon %}{% include icon-map-lookup label="Meetings" %}{% endcapture %}
 
 {% include breaking-news-notice.html %}
+{% include upcoming-events-notice.html %}
 
 The **Consortium for the Advancement of Scientific Software (CASS)** is committed to the stewardship and advancement of the current and future ecosystem of scientific computing software in support of competitiveness and innovation through the advancement of science. These stories illustrate some of the impacts of software in the CASS portfolio.
 

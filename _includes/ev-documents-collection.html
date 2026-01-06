@@ -41,38 +41,19 @@
   {% assign entries = enddate | concat: noenddate %}
 {% endif %}
 
-{% if include.sort_by %}
-  {% assign entries = entries | sort: include.sort_by %}
-{% endif %}
-
-{% if include.sort_order == 'reverse' %}
-  {% assign entries = entries | reverse %}
-{% endif %}
+{% comment %}
+  If the input and/or filtering leave the list of entries empty
+  the sorting process will fail.  So instead we just issue a message.
+{% endcomment %}
 
 {% if entries != nil and entries.size > 0 %}
-  {%- for post in entries limit: limit -%}
-    {% include ev-archive-single.html type=include.type %}
-  {%- endfor -%}
-	{% assign remaining = entries.size | minus: limit %}
-	{% if remaining > 0 %}
-    <div style="display: flex">
-    {% comment %}
-      Position the message where event titles are displayed.
-      The widith of the empty <div> should match that in
-      ev-archive-single.html
-    {% endcomment %}
-    {% if include.more_url %}
-        {% capture message %}<a href='{{ include.more_url }}'>see {{remaining }} more {{ remaining | pluralize: "event", "events" }}</a>{% endcapture %}
-    {% else %}
-        {% capture message %}plus {{remaining }} more {{ remaining | pluralize: "event", "events" }} not shown{% endcapture %}
-    {% endif %}
-    <div style="width: 15%">
-    </div>
-    <div>
-      <p><em>{{ message }}</em></p>
-    </div>
-  </div>
-	{% endif %}
+  {% if include.sort_by %}
+    {% assign entries = entries | sort: include.sort_by %}
+  {% endif %}
+
+  {% if include.sort_order == 'reverse' %}
+    {% assign entries = entries | reverse %}
+  {% endif %}
 {% else %}
   <div style="display: flex">
     {% comment %}
@@ -86,4 +67,28 @@
       <p><em>no events found</em></p>
     </div>
   </div>
+{% endif %}
+
+{%- for post in entries limit: limit -%}
+  {% include ev-archive-single.html type=include.type %}
+{%- endfor -%}
+{% assign remaining = entries.size | minus: limit %}
+{% if remaining > 0 %}
+  <div style="display: flex">
+  {% comment %}
+    Position the message where event titles are displayed.
+    The widith of the empty <div> should match that in
+    ev-archive-single.html
+  {% endcomment %}
+  {% if include.more_url %}
+      {% capture message %}<a href='{{ include.more_url }}'>see {{remaining }} more {{ remaining | pluralize: "event", "events" }}</a>{% endcapture %}
+  {% else %}
+      {% capture message %}plus {{remaining }} more {{ remaining | pluralize: "event", "events" }} not shown{% endcapture %}
+  {% endif %}
+  <div style="width: 15%">
+  </div>
+  <div>
+    <p><em>{{ message }}</em></p>
+  </div>
+</div>
 {% endif %}

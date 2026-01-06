@@ -1,0 +1,41 @@
+{% comment %}
+  upcoming-events-notice.html
+
+  Displays a number of upcoming events in a notice box.  If there are no events that fit the parameters, nothing is displayed.
+
+  Parameters
+      limit: The maximum number of events to be displayed (Default: 3)
+
+{% endcomment %}
+
+{% assign event_collection = include.collection | default: 'events' %}
+{% assign event_sort_by = include.sort_by | default: 'startdate' %}
+{% assign event_sort_order = include.sort_order | default: 'forward' %}
+{% assign event_layout = include.entries_layout | default: 'list' %}
+{% assign event_class = include.class | default: 'notice notice--primary' %}
+
+{% capture event_icon %}{% include icon-map-lookup label="Meetings" %}{% endcapture %}
+
+{% assign today = site.time | date:"%Y-%m-%d" %}
+
+{% assign entries = include.entries | default: site[event_collection] | where_exp: "post", "post.hidden != true" %}
+{% assign limit = include.limit | default: 3 %}
+
+{% comment %}
+  Trim events to cutoff
+{% endcomment %}
+{% assign enddate = entries | where_exp: "item", "item.enddate != nil" | where_exp: "item", "item.enddate >= today" %}
+{% assign noenddate = entries | where_exp: "item", "item.enddate == nil" | where_exp: "item", "item.startdate >= today" %}
+{% assign entries = enddate | concat: noenddate %}
+
+{% if entries.size != 0 %}
+  <div class="{{ event_class }}">
+    <h2 style="margin-top: 0">Upcoming events</h2>
+
+    <div class="entries-{{ event_layout }}">
+  {% include ev-documents-collection.html entries=entries sort_by=event_sort_by sort_order=event_sort_order type=entries_layout limit=event_limit cutoff=today %}
+    </div>
+
+    <p style="margin-top: 1em"><strong>{{ event_icon }} See all <a href="{{ "/events/" | relative_url }}">CASS events...</a></strong></p>
+  </div>
+{% endif %}

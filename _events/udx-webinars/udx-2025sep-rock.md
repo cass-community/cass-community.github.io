@@ -49,10 +49,8 @@ activities:
 ---
 *User/Developer Experience Webinars feature speakers who highlight best practices and challenges for usable scientific software. Have a suggestion for a future meeting? Use [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSe0ss98Bh1otRaleBii_LcADeGeGvluav6O3oxFIwZo6d4Xzg/viewform) to propose ideas.*
 
-**Abstract:**  Effective documentation is crucial for the success of any software project, but it's especially vital in the world of academic and scientific research. In this talk, leaders from The Good Docs Project will explain why documentation matters, including helping users quickly onboard, streamlining troubleshooting efforts, and accelerating problem-solving.
+Effective documentation is crucial for the success of any software project, but it's especially vital in the world of academic and scientific research. In this talk, leaders from The Good Docs Project will explain why documentation matters, including helping users quickly onboard, streamlining troubleshooting efforts, and accelerating problem-solving.
 
 They will then break down the core principles that set truly great documentation apart, including being task-focused, well-structured, and written from the user's point of view. We'll also leave you with some practical strategies for integrating documentation seamlessly into your existing development workflow and processes using the docs-as-code framework. This will empower you and your colleagues to maintain high-quality docs alongside your code, without the extra overhead.
 
 Whether you're new to writing documentation or looking for ways to enhance your existing practices, this talk will empower you to take your software documentation to the next level.
-
-

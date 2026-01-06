@@ -12,7 +12,7 @@
 {% assign news_sort_by = include.sort_by | default: 'date' %}
 {% assign news_sort_order = include.sort_order | default: 'reverse' %}
 {% assign news_layout = include.entries_layout | default: 'list' %}
-{% assign news_class = include.class | default: 'notice notice--primary' %}
+{% assign news_class = include.class | default: 'notice notice--info' %}
 {% assign news_look_back = include.look_back | default: 30 %}
 
 {% capture news_icon %}{% include icon-map-lookup label="News" %}{% endcapture %}

@@ -19,7 +19,7 @@ jobs:
 
       # - name: Check the file is there
       #   run: |
-      #     ls -l Events/${{ inputs.event-file }}.md || :
+      #     ls -l _events/hpcbp-webinars/${{ inputs.event-file }}.md || :
 
       - name: Download the new event article
         uses: carlosperate/download-file-action@v2
@@ -43,7 +43,8 @@ jobs:
           commit-message: "Adding or updating HPC-BP webinar event from the ideas-productivity.org website"
           body: "Adding or updating HPC-BP webinar event from the ideas-productivity.org website"
           labels: |
-            content: event
+            Section: events
+            content update
 
       - name: Check PR results
         if: ${{ steps.cpr.outputs.pull-request-number }}

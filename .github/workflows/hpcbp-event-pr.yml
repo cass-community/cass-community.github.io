@@ -24,7 +24,7 @@ jobs:
       - name: Download the new event article
         uses: carlosperate/download-file-action@v2
         with:
-          file-url: https://raw.githubusercontent.com/ideas-productivity/ideas-productivity.github.io/refs/heads/main/_events/hpcbp-webinars/${{ inputs.event-file }}
+          file-url: https://raw.githubusercontent.com/ideas-productivity/ideas-productivity.github.io/refs/heads/main/_events/hpcbp-webinars/${{ inputs.event-file }}.md
           location: 'Events'
           file-name: ${{ inputs.event-file }}.md
 

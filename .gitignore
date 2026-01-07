@@ -4,3 +4,4 @@ _site
 .jekyll-metadata
 _events/udx-webinars/blank.md
 vendor
+.DS_Store

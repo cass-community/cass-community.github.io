@@ -9,6 +9,8 @@ title: "The State of AI Use among Research Software Engineers"
 presenters:
   - name: Steve Van Tuyl
     affiliation: Academic Data Science Alliance
+    bio: |
+      Steve Van Tuyl is a Program Manager with the Alliance for Data Science and AI, where he supports academic institutions to launch, grow, and evolve their data science and AI initiatives through strategic guidance, community expertise, and resources grounded in real institutional practice. He previously worked in academic libraries on digital repository and research data services.
   - name: Elle O’Brien
     affiliation: Michigan School of Information
     bio: |
@@ -17,16 +19,23 @@ presenters:
 #
 registration-url: https://lbnl.zoom.us/meeting/register/uecckzcDSO6FIaQuMMhMvg
 #
-# artifacts:
-#   - label: Recording
-#     format: YouTube
-#     yt-video-id: FIXME
-#   - label: Slides
-#     format: FIXME
-#     url: FIXME
-#
-#
-#
+artifacts:
+  - label: Recording
+    format: YouTube
+    yt-video-id: lRruD_LZFJM
+  - label: Slides
+    # format: PDF
+    note: "- Van Tuyl (PDF)"
+    doi: 10.5281/zenodo.18166308
+    # url: https://zenodo.org/records/18166308
+  - label: Slides
+    # format: PDF
+    doi: 10.5281/zenodo.18166368
+    # url: https://zenodo.org/records/18166368
+    note: " - O'Brien (PDF)"
+
+
+
 # Items that change rarely
 organizers:
   - name: Johanna (Hannah) Cohoon

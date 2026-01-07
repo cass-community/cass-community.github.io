@@ -26,10 +26,12 @@ artifacts:
   - label: Slides
     # format: PDF
     note: "- Van Tuyl (PDF)"
-    url: https://zenodo.org/records/18166308
+    doi: 10.5281/zenodo.18166308
+    # url: https://zenodo.org/records/18166308
   - label: Slides
-    # format: PDF 
-    url: https://zenodo.org/records/18166368
+    # format: PDF
+    doi: 10.5281/zenodo.18166368
+    # url: https://zenodo.org/records/18166368
     note: " - O'Brien (PDF)"
 
 

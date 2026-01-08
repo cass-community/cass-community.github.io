@@ -113,7 +113,7 @@ additional_resource_links:
     url: https://hpctoolkit.org/software.html
   # Link no longer exists
   # - label: Documentation
-  #   url: https://hpctoolkit.org/documentation.html
+  #   url: XXXXX://hpctoolkit.org/documentation.html
   # This looks like a logical replacement for a documentation link
   - label: User manual
     url: https://hpctoolkit.gitlab.io/hpctoolkit/

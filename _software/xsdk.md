@@ -107,7 +107,7 @@ end_user_resource_links:
   # Webpage no longer exists
   # - label: Documentation
   #   note: (installation instructions)
-  #   url: https://xsdk.info/installing-the-software/
+  #   url: XXXXX://xsdk.info/installing-the-software/
   - label: Issue tracker
     url: https://github.com/xsdk-project/xsdk-issues/issues
 #

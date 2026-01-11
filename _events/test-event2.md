@@ -1,10 +1,10 @@
 ---
 published: false
-startdate: "2026-03-20"
-enddate: "2027-04-25"
+startdate: "2026-03-30"
+enddate: "2026-04-30"
 time: "1:00 pm - 2:00 pm EDT" # Ensure that time zone is correct with respect to standard/daylight time
 #
-title: "Special test entry"
+title: "Special test entry number two"
 #
 presenters:
   - name: Helen Kershaw

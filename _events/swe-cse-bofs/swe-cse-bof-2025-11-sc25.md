@@ -16,7 +16,7 @@ parent-event-file: parentconf-2025-11-16-sc25
 venue: "The International Conference for High-Performance Computing, Networking, Storage, and Analysis (SC25)"
 venue-type: "conference"
 venue-url: https://sc25.supercomputing.org/
-location: "St. Louis, Missouri"
+location: "St. Louis, Missouri, and online"
 #
 registration-url: "https://sc25.supercomputing.org/attend/registration/"
 #

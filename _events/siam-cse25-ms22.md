@@ -8,6 +8,9 @@ type: Minisymposium
 series: 
   - "Technical Sessions and Meetings"
 #
+venue: "SIAM Conference on Computational Science and Engineering (CSE25)"
+venue-type: "conference"
+venue-url: https://www.siam.org/conferences-events/past-event-archive/cse25/
 location: Ft. Worth, Texas
 #
 activities:

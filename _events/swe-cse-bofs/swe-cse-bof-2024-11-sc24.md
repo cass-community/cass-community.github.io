@@ -17,7 +17,7 @@ parent-event-file: parentconf-2024-11-17-sc24
 venue: "The International Conference for High-Performance Computing, Networking, Storage, and Analysis (SC24)"
 venue-type: "conference"
 venue-url: https://sc24.supercomputing.org/
-location: "Atlanta, Georgia"
+location: "Atlanta, Georgia, and online"
 #
 registration-url: "https://sc24.supercomputing.org/attend/registration/"
 #

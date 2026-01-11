@@ -1,0 +1,61 @@
+{% comment %}
+  Set `display_date` for event
+
+  Consolidate common months and years for compact presentation.
+  For long dates, can optionally insert a <br> between start and end.
+
+  Cases (s = start, e = end)
+    Ms Ds, Ys (no enddate)
+    Ms Ds-De, Ys (only days differ)
+    Ms Ds-Me De, Ys (months differ)
+    Ms Ds, Ys - Me De, Ye (all differ)
+
+  Parameters
+    startdate: start date of event (REQUIRED)
+    enddate: end date of event (OPTIONAL)
+    insertbr: insert an HTML <br> tag in the case where
+      all elements differ (OPTIONAL, default: false)
+{% endcomment %}
+{% if include.insertbr %}
+  {% assign br = "<br>" %}
+{% else %}
+  {% assign br = "" %}
+{% endif %}
+{% if include.startdate %}
+  {% assign start_y = include.startdate | date: "%Y" %}
+  {% assign start_m = include.startdate | date: "%b" %}
+  {% assign start_d = include.startdate | date: "%d" %}
+{% endif %}
+
+{% if include.enddate %}
+  {% assign end_y = include.enddate | date: "%Y" %}
+  {% assign end_m = include.enddate | date: "%b" %}
+  {% assign end_d = include.enddate | date: "%d" %}
+
+  {% comment %} completely different {% endcomment %}
+  {% if start_y != end_y %}
+    {% capture display_date %}{{ start_m }} {{ start_d }}, {{ start_y }}{{ br }}-{{ end_m }} {{ end_d }}, {{ end_y }}{% endcapture %}
+
+    {% comment %} common year, different months {% endcomment %}
+  {% elsif start_m != end_m %}
+    {% capture display_date %}{{ start_m }} {{ start_d }}-{{ end_m }} {{ end_d }}, {{ start_y }}{% endcapture %}
+  
+  {% comment %} common month, year, different days {% endcomment %}
+  {% else %}
+    {% capture display_date %}{{ start_m }} {{ start_d }}-{{ end_d }}, {{ start_y }}{% endcapture %}
+  {% endif %}
+{% else %}
+  {% comment %} no enddate {% endcomment %}
+  {% capture display_date %}{{ start_m }} {{ start_d }}, {{ start_y }}{% endcapture %}
+{% endif %}
+
+{% comment %}
+  Clean up so that future invocations are not subject to our leftovers.
+  Remember that there is no scoping for includes in Jekyll.
+{% endcomment %}
+{% assign start_y = nil %}
+{% assign start_m = nil %}
+{% assign start_d = nil %}
+{% assign end_y = nil %}
+{% assign end_m = nil %}
+{% assign end_d = nil %}

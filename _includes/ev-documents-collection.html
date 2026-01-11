@@ -7,6 +7,8 @@
     * Add "no events found" message as appropriate
     * Accept a `limit` parameter to show at most that number of events
     * Accept a `more_url` parameter to link a message that there are unshown events
+    * Accept a `show_time` parameter to show the event time (default: false) 
+    * Accept a `show_registration` parameter to show a registration button (default: false)
 
     TODO
     * We do not yet support the idea of parent events (e.g. Supercomputing)
@@ -26,6 +28,17 @@
 
 {% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
 {% assign limit = include.limit | default: entries.size %}
+
+{% if include.show_time %}
+  {% assign show_time = true %}
+{% else %}
+  {% assign show_time = false %}
+{% endif %}
+{% if include.show_registration %}
+  {% assign show_registration = true %}
+{% else %}
+  {% assign show_registration = false %}
+{% endif %}
 
 {% comment %}
   Trim events to cutoff
@@ -61,7 +74,7 @@
       The widith of the empty <div> should match that in
       ev-archive-single.html
     {% endcomment %}
-    <div style="width: 15%">
+    <div style="width: 25%">
     </div>
     <div>
       <p><em>no events found</em></p>
@@ -70,7 +83,7 @@
 {% endif %}
 
 {%- for post in entries limit: limit -%}
-  {% include ev-archive-single.html type=include.type %}
+  {% include ev-archive-single.html type=include.type show_time=show_time show_registration=show_registration %}
 {%- endfor -%}
 {% assign remaining = entries.size | minus: limit %}
 {% if remaining > 0 %}
@@ -85,7 +98,7 @@
   {% else %}
       {% capture message %}plus {{remaining }} more {{ remaining | pluralize: "event", "events" }} not shown{% endcapture %}
   {% endif %}
-  <div style="width: 15%">
+  <div style="width: 25%">
   </div>
   <div>
     <p><em>{{ message }}</em></p>

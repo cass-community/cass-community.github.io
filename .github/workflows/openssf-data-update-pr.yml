@@ -26,10 +26,21 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v4
 
+      - name: Check initial data files
+        run: |
+          ls -l _data/openssf || :
+          md5sum _data/openssf/* || :
+        
       - name: Find OpenSSF IDs and download their data files
         run: |
+          bin/get-openssf-ids.sh _/software/*.md
           bin/get-openssf-ids.sh _software/*.md | bin/download-openssf-data.sh
 
+      - name: Check final data files
+        run: |
+          ls -l _data/openssf || :
+          md5sum _data/openssf/* || :
+            
       - name: Create pull request
         id: cpr
         uses: peter-evans/create-pull-request@v8

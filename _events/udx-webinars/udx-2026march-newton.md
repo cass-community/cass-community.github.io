@@ -62,5 +62,5 @@ activities:
 ---
 *User/Developer Experience Webinars feature speakers who highlight best practices and challenges for usable scientific software. Have a suggestion for a future meeting? Use [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSe0ss98Bh1otRaleBii_LcADeGeGvluav6O3oxFIwZo6d4Xzg/viewform) to propose ideas.*
 
-**Abstract:** FIXME
+<!-- **Abstract:** FIXME -->
 

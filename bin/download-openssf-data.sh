@@ -12,7 +12,7 @@ if [ -p /dev/stdin ]; then
 fi
 
 for id in $*; do
-    curl --fail -s "${BASE_URL}${id}.json" -o "${DEST_DIR}/${id}.json"
+    curl "${BASE_URL}${id}.json" -o "${DEST_DIR}/${id}.json"
     if [ $? -ne 0 ]; then
         echo "Error downloading data for OpenSSF ID: ${id}" >&2
     else

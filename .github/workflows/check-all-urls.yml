@@ -44,8 +44,12 @@ jobs:
         # Use common exclude list read in above
         exclude_urls: ${{ steps.ex-urls.outputs.content }}
         exclude_patterns: ${{ steps.ex-patterns.outputs.content }}
-        # Add yml and json to the default file types to check
-        file_types: ".md,.py,.rst,.html,.yml,.json"
+        # Add yml to the default file types to check
+        #
+        # Currently, our json files are downloaded from
+        # elsewhere and have many URLs over which we have no
+        # control, so we don't check those.
+        file_types: ".md,.py,.rst,.html,.yml"
         timeout: 10
         retry_count: 3
         print_all: false

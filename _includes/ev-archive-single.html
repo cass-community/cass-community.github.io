@@ -5,8 +5,22 @@
   * Change h2 to h3 to be consistent with h2s on parent page for Upcoming and Past event headlines
   * Put event date and type/tite/series+venue into <div>s and dislay them side by side
   * Comment out excerpt
+  * Accept a `show_time` parameter to show the event time (default: false) 
+  * Accept a `show_registration` parameter to show a registration button (default: false)  
 
 {% endcomment %}
+
+{% if include.show_time %}
+  {% assign show_time = true %}
+{% else %}
+  {% assign show_time = false %}
+{% endif %}
+{% if include.show_registration %}
+  {% assign show_registration = true %}
+{% else %}
+  {% assign show_registration = false %}
+{% endif %}
+
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
 
 {% if post.header.teaser %}
@@ -21,7 +35,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-{% include set-event-date startdate=post.startdate enddate=post.enddate %}
+{% include set-display-date startdate=post.startdate enddate=post.enddate insertbr=true %}
 
 <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
@@ -33,18 +47,22 @@
 
     <div style="display: flex">
       {% comment %}
-        Empirically determined width to accommodate an `event_md` for a range
+        Empirically determined width to accommodate a `display_date` for a range
         spanning months ("M1 D1-M2 D2").  This might require some adjustment for
         other display sizes.
       {% endcomment %}
-      <div style="width: 15%">
-        {% if event_y and event_md %}
-          <h3 style="margin-top: 0.5em"><small>{{ event_y }}</small><br>
-          <span style="line-height: 250%">{{ event_md }}</span></h3>
+      <div style="width: 25%">
+        {% if display_date %}
+          <h3 style="margin-top: 0.5em">{{ display_date }}
+            {% if show_time and post.time %}<br><span style="line-height: 250%"><small>{{ post.time }}</small></span>{% endif %}
+          </h3>
+        {% endif %}
+        {% if show_registration and post.registration-url %}
+          <a class="btn btn--inverse btn--small" href="{{ post.registration-url }}">Register for the Event</a>
         {% endif %}
       </div>
 
-      <div>
+      <div style="width: 75%">
         {% if post.type %}
           <p class="page__meta">{{ post.type }}</p>
         {% endif %}
@@ -59,6 +77,9 @@
 
         {%- if post.venue -%}
           <p class="page__meta">Venue: {{ post.venue }}</p>
+        {%- endif -%}
+        {% if post.location -%}
+          <p class="page__meta">Location: {{ post.location }}</p>
         {%- endif -%}
         {% if post.series -%}
           <p class="page__meta">Series: {{ post.series }}</p>

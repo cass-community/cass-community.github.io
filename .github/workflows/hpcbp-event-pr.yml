@@ -19,18 +19,18 @@ jobs:
 
       # - name: Check the file is there
       #   run: |
-      #     ls -l Events/${{ inputs.event-file }}.md || :
+      #     ls -l _events/hpcbp-webinars/${{ inputs.event-file }}.md || :
 
       - name: Download the new event article
         uses: carlosperate/download-file-action@v2
         with:
-          file-url: https://raw.githubusercontent.com/ideas-productivity/ideas-productivity.github.io/refs/heads/main/_events/hpcbp-webinars/${{ inputs.event-file }}
-          location: 'Events'
+          file-url: https://raw.githubusercontent.com/ideas-productivity/ideas-productivity.github.io/refs/heads/main/_events/hpcbp-webinars/${{ inputs.event-file }}.md
+          location: '_events/hpcbp-webinars'
           file-name: ${{ inputs.event-file }}.md
 
       # - name: Check the file is there
       #   run: |
-      #     ls -l Events/${{ inputs.event-file }}.md || :
+      #     ls -l _events/hpcbp-webinars/${{ inputs.event-file }}.md || :
 
       - name: Create pull request
         id: cpr
@@ -40,10 +40,11 @@ jobs:
           branch: ${{ github.actor }}-hpcbp-new-event
           branch-suffix: timestamp
           assignees: ${{ github.actor }}
-          commit-message: "Adding new HPC-BP webinar event from the ideas-productivity.org website"
-          body: "Adding new HPC-BP webinar event from the ideas-productivity.org website"
+          commit-message: "Adding or updating HPC-BP webinar event from the ideas-productivity.org website"
+          body: "Adding or updating HPC-BP webinar event from the ideas-productivity.org website"
           labels: |
-            content: event
+            Section: events
+            content update
 
       - name: Check PR results
         if: ${{ steps.cpr.outputs.pull-request-number }}
@@ -51,10 +52,12 @@ jobs:
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
           echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
 
-      - name: Merge PR
-        if: ${{ steps.cpr.outputs.pull-request-number }}
-        env:
-          GH_TOKEN: ${{ secrets.PR_MERGE_PAT }}
-        run: |
-          gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --merge --auto --body "Automatically merging script-generated event"
+      # Hold off on the auto-merge until we're confident that the rest is working properly
+      # NOTE: requires special privs to merge PRs (expecting a "PR_MERGE_PAT" secret)
+      # - name: Merge PR
+      #   if: ${{ steps.cpr.outputs.pull-request-number }}
+      #   env:
+      #     GH_TOKEN: ${{ secrets.PR_MERGE_PAT }}
+      #   run: |
+      #     gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --merge --auto --body "Automatically merging script-generated event"
             

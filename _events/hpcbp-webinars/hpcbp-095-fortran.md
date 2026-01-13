@@ -30,17 +30,12 @@ artifacts:
   # - label: Recording
   #   format: YouTube
   #   yt-video-id: tzPbndr1u4o
-  #
-  # IMPORTANT: until these resources are actually published, we've removed the protocol
-  # component so that the URL checker will not flag them (it doesn't understand the
-  # semantics of comments).  They will need to be added back when the files are there.
-  #
   # - label: Slides
   #   format: PDF
-  #   url: ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran.pdf
+  #   url: XXXXX://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran.pdf
   # - label: Q&A
   #   format: PDF
-  #   url: ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran-qa.pdf
+  #   url: XXXXX://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran-qa.pdf
 #
 # Items that change rarely
 #
@@ -80,7 +75,7 @@ open-source [LLVM flang](https://flang.llvm.org) compiler and the [Caffeine](htt
 developed by CLaSS and our collaborators.  The talk will conclude with a
 description of the planned Fortran 2028 support for generic programming via
 type-safe templates and the powerful ramifications of this technology in our
-development a formally verifiable, domain-specific language embedded in Fortran
+development of a formally verifiable, domain-specific language embedded in Fortran
 2028 via a type system being developed for the [MOLE](https://github.com/rouson/mole/tree/extended-gauss-divergence/example) PDE solver library.
 One recurring theme will be the ability to write thousands of lines of code
 manipulating large collections of data with few or no loops.

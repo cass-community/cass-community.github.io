@@ -1,7 +1,4 @@
 ---
-# As of 2025-10-01, this product is no longer receiving stewardship support from FASTMath
-published: false
-#
 # Product information for CASS website product catalog
 #
 # INSTRUCTIONS
@@ -23,9 +20,8 @@ published: false
 #                           the areas that were used by ECP ST, except that anything that was categorized as
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
-#                           We also support the values used in e4s.yml files, though we prefer those above. 
-#   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
-#                           organizations) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The name(s) of the CASS member organization(s) (aka software stewardship
+#                           organization(s)) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
 #   description:            (string) REQUIRED A short description of your software.  The `description` is always shown immediately 
 #                           after the `name` and they should be considered together as, in effect constructing a sentence-length 
@@ -43,27 +39,32 @@ published: false
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: xSDK
+name: PyTUQ
 area: mathlibs
 cass_members:
-  - FASTMath
-description: The Extreme-scale Scientific Software Development Kit
+    - FASTMath
+description: Library for tools and workflows for uncertainty quantification in computational models
 long_description: |
-    xSDK is a collection of related, complimentary, and interoperable math libraries installable via spack package manager. The current xSDK release includes 26 math libraries: AMReX, ArborX, ButterFlyPACK, DataTransferKit, deal.ii, ExaGO, Ginkgo, heFFTe, HiOp, hypre, libEnsemble, MAGMA, MFEM, Omega_h, PETSc/TAO, PHIST, PLASMA, preCICE, PUMI, SLATE, SLEPc, STRUMPACK, SUNDIALS, SuperLU, TASMANIAN, and Trilinos.
+    The Python Toolkit for Uncertainty Quantification (PyTUQ) is a lightweight Python library 
+    for a range of uncertainty quantification tasks and workflows. 
+    Features include conventional tools such as polynomial chaos machinery with mixed bases, 
+    global sensitivity analysis, quadrature point generation, 
+    linear regression, Bayesian inference with various flavors of Markov chain Monte Carlo. 
+    PyTUQ also includes advanced methods such as Bayesian compressed sensing, 
+    sampling-based Rosenblatt transformation and embedded model error calibration.
 target_audience: |
-    Computational Scientists and Engineers;
-    Numerical Analysts;
-    High-Performance Computing Practitioners;
-    Software Developers of Scientific Applications;
-    Educators and Students.
+    Computational scientists for any domain should be able to use PyTUQ's functionalities 
+    for various UQ-related activities relevant to their computational models.
 #
 # License information, following https://spdx.org/licenses/
 #
-license_spdx: "per-member-package"
+license_spdx: "BSD-3-Clause"
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 
+#
+foundation_membership: 
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
@@ -76,8 +77,8 @@ openssf_bestpractices_id:
 #                       - package2
 #                       - package3
 #
-#e4s_product: 
-spack_name: xsdk
+# e4s_product: 
+spack_name: py-pytuq
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These are OPTIONAL lists of resource links that you can provide to make your catalog entry more useful.
@@ -96,24 +97,25 @@ spack_name: xsdk
 #
 # For additional information, see _software/README.md.
 #
-# Website redirects to GitHub organization (link below)
-# additional_resource_links:
+additional_resource_links:
 #   - label: Website
-#     url: https://xsdk.info/
+#     url: 
+  - label: Repository
+    url: https://github.com/sandialabs/pytuq
+#   - label: Downloads
+#     url: 
+  - label: Documentation
+    url: https://sandialabs.github.io/pytuq/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #
-end_user_resource_links:
-  # Webpage no longer exists
-  # - label: Documentation
-  #   note: (installation instructions)
-  #   url: XXXXX://xsdk.info/installing-the-software/
-  - label: Issue tracker
-    url: https://github.com/xsdk-project/xsdk-issues/issues
+# end_user_resource_links:
+#   - label: 
+#     url: 
 #
 # A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)
 #
-developer_resource_links:
-  - label: Repository
-    url: https://github.com/xsdk-project
+# developer_resource_links:
+#   - label: 
+#     url: 
 ---

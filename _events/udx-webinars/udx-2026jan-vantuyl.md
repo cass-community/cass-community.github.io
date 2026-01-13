@@ -23,12 +23,16 @@ artifacts:
   - label: Recording
     format: YouTube
     yt-video-id: lRruD_LZFJM
-  - label: Van Tuyl Slides
-    format: PDF 
-    url: https://zenodo.org/records/18166308
-  - label: O'Brien Slides
-    format: PDF 
-    url: https://zenodo.org/records/18166368
+  - label: Slides
+    # format: PDF
+    note: "- Van Tuyl (PDF)"
+    doi: 10.5281/zenodo.18166308
+    # url: https://zenodo.org/records/18166308
+  - label: Slides
+    # format: PDF
+    doi: 10.5281/zenodo.18166368
+    # url: https://zenodo.org/records/18166368
+    note: " - O'Brien (PDF)"
 
 
 

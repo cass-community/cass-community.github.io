@@ -18,7 +18,7 @@ series:
 venue: "2026 CASS BoF Days"
 #
 activities:
-  - "FastMath"
+  - "FASTMath"
 #
 registration-url: https://www.zoomgov.com/meeting/register/NMA8y_PdR2WnvBlMqfrHlA
 #

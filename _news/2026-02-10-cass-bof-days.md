@@ -16,7 +16,7 @@ Sessions will be either 60 or 90 minutes long. Participation is free and open to
 We'll update this page when registration opens, in the next couple of weeks.
 {% endcomment %}
 
-CASS BoF Days provides opportunities for to bring communities together for Birds-of-a-Feather (BoF) sessions around topics of interest.  Participation is free and open to the public, however, registration is required for each event.  Follow the links below for details.
+CASS BoF Days provides opportunities to bring communities together for Birds-of-a-Feather (BoF) sessions around topics of interest.  Participation is free and open to the public, however, registration is required for each event.  Follow the links below for details.
 
 {% assign today = site.time | date:"%Y-%m-%d" %}
 

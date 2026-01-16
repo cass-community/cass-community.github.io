@@ -54,6 +54,7 @@
   {% assign entries = enddate | concat: noenddate %}
 {% endif %}
 
+
 {% comment %}
   If the input and/or filtering leave the list of entries empty
   the sorting process will fail.  So instead we just issue a message.
@@ -80,6 +81,62 @@
       <p><em>no events found</em></p>
     </div>
   </div>
+{% endif %}
+
+{% comment %}
+  If we're showing times, we want events on the same day to appear ordered in time.
+  So we use the Jekyll group_by filter to access each day's events and sort them.
+
+  Note that even if we're display events in reverse order by date, I think that the
+  times within the date need to be in forward order.  So that's what we do.  Fortunately,
+  the group_by filter will take things in the order it finds them, so if we sort the whole
+  array before this, we'll get the result we desire.
+
+  However, because we generally use 12 hour time representation, just sorting on the `time`
+  field won't give correct results.  So we need to convert the times in the `time` field
+  to 24 hour representation.  We ignore timezones.
+
+  There should be no spaces between the minutes and the meridian for this to work properly.
+{% endcomment %}
+
+{% if show_time %}
+  {% assign entries_by_date = entries | group_by: "startdate" %}
+  {% assign entries = "" | split: "," %}{% comment %} We will reconstruct `entries` {% endcomment %}
+
+  {% comment %}
+    For each day, look at all of the items
+
+    Create an array `ta` of strings containing the following:
+      * The 24 hour representation of start and end times
+      * The index of the item
+    Note that the dash is irrelevant to this purpose and we ignore the timezone.
+
+    Sort the array, so it is ordered by time.  If start times are the same, end times
+    will define the result.  If both times are the same, then the index would define
+    the result, but that's fine.
+    
+    Loop over the sorted times and extract the index.
+    Use the indices to add the items to `entries` in the sorted order.
+  {% endcomment %}
+  {% for e in entries_by_date %}
+    {% assign tsort = "" | split: "," %}
+    {% for i in e.items %}
+      {% assign ta = i.time | split: " "  %}
+      {% capture tandi %}times {{ ta[0] | date: "%T" }} {{ ta[2] | date: "%T" }} {{ forloop.index0 }}{% endcapture %}
+      {% assign tsort = tsort | push: tandi %}
+    {% endfor %}
+    {% assign tsort = tsort | sort %}
+    {% for tandi in tsort %}
+      {% comment %}
+        The only thing we care about now is the index in e.items
+        associated with the ordered entries.  Note that when we
+        extract it, it is initially a string and needs to be
+        converted to an integer (by doing a math operation on it)
+      {% endcomment %}
+      {% assign i = tandi | split: " " | last | plus: 0 %}
+      {% assign entries = entries | push: e.items[i] %}
+    {% endfor %}
+  {% endfor %}
 {% endif %}
 
 {%- for post in entries limit: limit -%}

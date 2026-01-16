@@ -33,7 +33,7 @@
     <h2 style="margin-top: 0">Upcoming events</h2>
 
     <div class="entries-{{ event_layout }}">
-  {% include ev-documents-collection.html entries=entries sort_by=event_sort_by sort_order=event_sort_order type=entries_layout limit=event_limit cutoff=today %}
+  {% include ev-documents-collection.html entries=entries sort_by=event_sort_by sort_order=event_sort_order type=entries_layout limit=limit cutoff=today %}
     </div>
 
     <p style="margin-top: 1em"><strong>{{ event_icon }} See all <a href="{{ "/events/" | relative_url }}">CASS events...</a></strong></p>

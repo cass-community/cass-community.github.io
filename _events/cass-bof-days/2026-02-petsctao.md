@@ -19,6 +19,7 @@ venue: "2026 CASS BoF Days"
 #
 activities:
   - "FASTMath"
+  - "PESO"
 #
 registration-url: https://argonne.zoomgov.com/meeting/register/ay4bMcRgSZaZ-l7u9AzAzQ
 #
@@ -39,10 +40,10 @@ presenters:
     affiliation: Argonne National Laboratory
   - name: Hong Zhang
     affiliation: Argonne National Laboratory
-  - name: Barry Smith
-    affiliation: Argonne National Laboratory
   - name: Mark Adams
     affiliation: Lawrence Berkeley National Laboratory
+  - name: Barry Smith
+    affiliation: Argonne National Laboratory
 #
 # artifacts:
 #   - label: Slides

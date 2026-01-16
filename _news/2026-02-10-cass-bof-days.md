@@ -1,7 +1,7 @@
 ---
 # title: "Save the dates for CASS BoF Days, coming February 10-12, 2026"
 title: "Register now for CASS BoF Days, coming February 10-12, 2026"
-last_modified_at: 2026-01-15
+last_modified_at: 2026-01-16
 # published: false
 ---
 {% comment %}

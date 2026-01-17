@@ -6,10 +6,13 @@
 <div class="sidebar">
 
 {% include set-event-date startdate=page.startdate enddate=page.enddate %}
+{% include set-display-date startdate=page.startdate enddate=page.enddate insertbr=true %}
 
-<h3 ><small>{{ event_y }}</small><br>
-<span style="line-height: 250%">{{ event_md }}</span><br>
-<small>{{ page.time }}</small></h3>
+{% if display_date %}
+  <h3 style="margin-top: 0.5em">{{ display_date }}
+    {% if page.time %}<br><span style="line-height: 250%"><small>{{ page.time }}</small></span>{% endif %}
+  </h3>
+{% endif %}
 
 <ul style="list-style: none; padding: 0">
   {% capture location_icon %}{% include icon-map-lookup label="Location" %}{% endcapture %}

@@ -26,7 +26,7 @@ charter:
   membership: Open
   reporting: Annually
   status: Active
-  status_date: 2026-01-10
+  status_date: 2025-12-19
 #
 chair: # Can be more than one person
   - Hannah Cohoon

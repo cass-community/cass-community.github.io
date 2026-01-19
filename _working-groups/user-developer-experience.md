@@ -12,24 +12,37 @@ description: Promote improved user-developer experiences
 #
 charter:
   purpose: |
-    The User-Developer Experience (UDX) Working Group (WG) brings together groups and individuals interested in science of scientific software development and use.  The UDX WG provides a forum for discussions on understanding and improving how users and developers interact with and experience scientific software. The UDX WG discussions focus on both the libraries and tools used while creating code as well as the software produced through those efforts. Topics include how documentation is presented and maintained; how applications are updated and installed; how code contributions from dispersed developers are managed and integrated; how tasks are arranged into workflows; how web, desktop, and command line interfaces are leveraged; how organizational policies are navigated, and beyond.
+    The User/Developer Experience (UDX) Working Group (WG) brings together groups and individuals interested in the science of scientific software development and use. UDX encompasses the experiences stakeholders have with libraries and tools used when creating code, as well as the end-user experience for software produced through those efforts. 
+
+    The UDX WG organizes bi-monthly webinars to improve understanding of how users and developers interact with and experience scientific software. Webinars include content like tutorials, research talks, and experience reports; these are opportunities to better understand the status quo of user and developer experiences in research software, as well as opportunities for research software engineers (RSEs) and PIs to learn to assess or address UDX themselves. 
+
+    In addition to webinars, the WG will host bi-monthly discussions open to anyone interested in UDX. To forge connections across the scientific software community, members of other software stewardship and research software organizations (e.g. PESO, US-RSE) are encouraged to attend. Discussions will be guided by community members and are expected to be informal, serving as opportunities to gather feedback or as a forum to share ideas and perspectives. 
+
+    Topics for discussions and webinars include how documentation is presented and maintained; how applications are updated and installed; how code contributions from dispersed developers are managed and integrated; how tasks are arranged into workflows; how web, desktop, and command line interfaces are leveraged; how organizational policies are navigated, and beyond.
+
   relationships: |
-    We will interact with the [Metrics](metrics) and [Impact Framework](impact-framework) WGs if we discover information that could inform efforts of these WGs or can ourselves benefit from their progress.
+    We will interact with the Metrics and Impact Framework WGs if we discover information that could inform efforts of these WGs or can ourselves benefit from their progress.  We will interact with the Software Ecosystem WG to improve the quality of ecosystem products and community activities.
   lifetime: Standing. Subject to annual review of needs and purpose.
   membership: Open
   reporting: Annually
-  status: Provisional
-  status_date: 2025-01-10
+  status: Active
+  status_date: 2025-12-19
 #
 chair: # Can be more than one person
   - Hannah Cohoon
   - Drew Paine
 #
-meeting_schedule: First Tuesday of odd months, beginning 6 May 2025, at 12:00pm Eastern
+meeting_schedule: Webinars on First Tuesday of odd months at 12:00pm Eastern; Informal discussion on First Tuesday of even months at 12:00pm Eastern
 #
 # A way of easily providing additional resource/links
 #
 additional_resource_links:
+  - label: Working Group Event Calendar 
+    url: https://calendar.google.com/calendar/u/0?cid=Y181YjFjNzU0MDE5MmU5ZTY2OTE1MDlkMGFjMWQzOWIzNmY3ZGIxNDNlNzRhMTBhMTRhOWEzY2Q3MDVmMTI1NzhmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20
+    icon: <i class="fa-solid fa-pen-to-square"></i>
+  - label: Webinar Recordings
+    url: https://www.youtube.com/@CASS.community/playlists
+    icon: <i class="fa-brands fa-youtube"></i>
   - label: CASS Slack channel
     note: "#wg-udx"
     url: https://softwareecosy-91t5745.slack.com/archives/C076WTT3BPB

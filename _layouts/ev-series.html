@@ -2,18 +2,19 @@
 layout: archive
 ---
 {% comment %}
-    CHANGES FROM DEFAULT COLLECTION LAYOUT
-    * Call ev-documents-collection.html include
-    * Duplicate calls for upcoming and past events
-      - Force forward and reverse `sort_order`
-    * Add cutoff argument
+    CHANGES FROM EV-COLLECTION LAYOUT
+    * This layout should exactly follow the ev-collection.html layout, EXCEPT
+    * We need to fix the collection to be `events` in the body.
+      - Unfortunately, the `page.collection` variable gets set to `event-series`
+        and I've found no way to override it (frontmatter settings of `collection`
+        are ignored.)
 {% endcomment %}
 
 {{ content }}
 
 {% assign today = site.time | date:"%Y-%m-%d" %}
 
-{% assign my_entries = site[page.collection] | where_exp: "post", "post.hidden != true" %}
+{% assign my_entries = site.events | where_exp: "post", "post.hidden != true" %}
 
 {% if page.series %}
   {% assign my_entries = my_entries | where: "series", page.series %}

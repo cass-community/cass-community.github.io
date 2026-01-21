@@ -82,7 +82,7 @@
           <p class="page__meta">Location: {{ post.location }}</p>
         {%- endif -%}
         {% if post.series -%}
-          <p class="page__meta">Series: {{ post.series }}</p>
+          <p class="page__meta">Series: {% include linkify-series.html series=post.series %}</p>
         {%- endif -%}
 
         {% include page__meta.html type=include.type %}

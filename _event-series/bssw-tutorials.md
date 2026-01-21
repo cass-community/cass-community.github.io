@@ -1,17 +1,6 @@
 ---
 title: Better Scientific Software Tutorials
 series: "BSSw Tutorials"
-# excerpt: Organized and presented by CASS and affiliates
-gallery:
-  - image_path: /assets/people/Bernholdt-David.jpg
-    alt: "David Bernholdt (ORNL)"
-    title: "David Bernholdt (ORNL)"
-  - image_path: /assets/people/Dhruv-Akash.jpg
-    alt: "Akash Dhruv (ANL)"
-    title: "Akash Dhruv (ANL)"
-  - image_path: /assets/people/Dubey-Anshu.png
-    alt: "Anshu Dubey (ANL)"
-    title: "Anshu Dubey (ANL)"
 ---
 The Better Scientific Software (BSSw) tutorials focus on issues of developer productivity, software sustainability, and reproducibility in scientific research software, particularly targeting high-performance computers.
 

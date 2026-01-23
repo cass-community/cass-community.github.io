@@ -71,6 +71,8 @@ foundation_membership:
 #                       - package3
 #
 e4s_product: 
+    - pumi
+    - omega-h
 spack_name:  
     - pumi
     - omega-h

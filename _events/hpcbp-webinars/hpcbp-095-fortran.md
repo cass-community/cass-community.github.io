@@ -27,15 +27,15 @@ bsswio-topics: ["software engineering", "high-performance computing (hpc)", "onl
 registration-url: https://www.zoomgov.com/meeting/register/VNMWsQl6SjeYrHAfFh-miA
 #
 artifacts:
-  # - label: Recording
-  #   format: YouTube
-  #   yt-video-id: tzPbndr1u4o
-  # - label: Slides
-  #   format: PDF
-  #   url: XXXXX://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran.pdf
-  # - label: Q&A
-  #   format: PDF
-  #   url: XXXXX://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran-qa.pdf
+  - label: Recording
+    format: YouTube
+    yt-video-id: DKV2Whf4MKg
+  - label: Slides
+    format: PDF
+    url: https://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran.pdf
+  - label: Q&A
+    format: PDF
+    url: https://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-095-fortran-qa.pdf
 #
 # Items that change rarely
 #

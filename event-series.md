@@ -12,9 +12,5 @@ header:
   overlay_image: /assets/images/headway-F2KRf_QfCqw-unsplash.jpg
   caption: 'Photo by <a href="https://unsplash.com/@headwayio">Headway</a> on <a href="https://unsplash.com/photos/crowd-of-people-sitting-on-chairs-inside-room-F2KRf_QfCqw">Unsplash</a>'
 ---
-Events organized by CASS, its members, and affiliates, are organized into several series. Select a series to see events in that particular series or go to the [main events page]({% link events.md %}) for *all* events.
-
-The current event series are:
-
-{% assign series = site.events | map: "series" | sort | uniq %}
-{{ series | inspect }}
+<p align="right"><a href="{% link events.md %}" class="btn btn--inverse">Explore <em>all</em> events</a></p>
+Events organized by CASS, its members, and affiliates, are organized into several series. Select a series below to see events in that particular series.

@@ -196,6 +196,7 @@ exclude:
   - _impacts/TEMPLATE.md
   - _impacts/README.md
   - bin/
+  - favicon.zip
 
 # Configure jekyll-link-attributes plugin
 external_links:

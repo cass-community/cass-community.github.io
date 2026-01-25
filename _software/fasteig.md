@@ -113,3 +113,6 @@ spack_name:
 #   - label: 
 #     url: 
 ---
+## Availability
+
+FASTEig is working towards its initial public release, expected by summer 2026. This page will be updated with full details of the package at that time. Until then, direct any questions to [Chao Yang](mailto:cyang@lbl.gov).

@@ -122,12 +122,13 @@ layout: default
           <h2 id="package-links">{{ package_icon }} Package links</h2>
           <ul style="list-style: none; padding: 0">
           {% if page.e4s_product %}
-            {% assign e4s = page.e4s_product | upcase | prepend: "https://e4s-project.github.io/DocPortal.html?search=" %}
-            <li>E4S: <a href="{{ e4s }}">{{ page.e4s_product }}</a></li>
+            <li>E4S: 
+            {% for name in page.e4s_product %}
+              {% assign e4s = name | prepend: "https://e4s-project.github.io/DocPortal.html?search=" %}
+              <a href="{{ e4s }}">{{ name }}</a>{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+            </li>
           {% endif %}
-          {% comment %}
-              Handle the possibility of multiple Spack packages
-          {% endcomment %}
           {% if page.spack_name %}
             <li>Spack: 
             {% for name in page.spack_name %}

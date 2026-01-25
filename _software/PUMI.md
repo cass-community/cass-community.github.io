@@ -45,9 +45,9 @@ cass_members:
     - FASTMath
 description: Provides support for unstructured mesh workflows including mesh adaption, hybrid particle-mesh calculations, and solution transfer
 long_description: |
-    The PUMI Components provide support for a range of unstructured mesh workflows, such as mesh adaption, particle-in-cell calculations, and developing support for field-transfer and parallel control of coupled applications. The PUMI components are an integrated set of codes that make up each of these pieces as follows: [PUMI](https://github.com/SCOREC/core) provides unstructured mesh adaptation on CPUs, while [Omega_h](https://github.com/SCOREC/omega_h) supports similar functionality on GPUs.  [PUMIPic](https://github.com/SCOREC/pumi-pic), provides parallel infrastructure for Particle-in-Cell calculations. And, [PCMS](https://github.com/SCOREC/pcms) provides parallel control and field transfer to support coupling independent applications.
+    The PUMI Components provide support for a range of unstructured mesh workflows, such as mesh adaption, particle-in-cell calculations, and developing support for field-transfer and parallel control of coupled applications. The PUMI components are an integrated set of codes that make up each of these pieces as follows: [PUMI](https://github.com/SCOREC/core) provides unstructured mesh adaptation on CPUs, while [Omega_h](https://github.com/SCOREC/omega_h) supports similar functionality on GPUs.  [PUMIPic](https://github.com/SCOREC/pumi-pic), provides parallel infrastructure for particle-in-cell calculations. And, [PCMS](https://github.com/SCOREC/pcms) provides parallel control and field transfer to support coupling independent applications.
 target_audience: |
-    Science and engineering application developers who need performant infrastructure for unstructured mesh workflows. The PUMI components are widely across a wide range of application domains including Fusion/Plasma models, Land and Sea Ice, FEM-based solid and fluid simulations, etc.
+    Science and engineering application developers who need performant infrastructure for unstructured mesh workflows. The PUMI components are widely across a wide range of application domains including fusion/plasma models, land and sea ice, FEM-based solid and fluid simulations, etc.
 #
 # License information, following https://spdx.org/licenses/
 #
@@ -72,7 +72,7 @@ foundation_membership:
 #
 e4s_product: 
     - pumi
-    - omega-h
+    - omega_h
 spack_name:  
     - pumi
     - omega-h

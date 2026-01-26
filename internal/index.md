@@ -14,10 +14,13 @@ header:
 
 *The resources linked from this page are intended for internal use by CASS members. Nothing in the internal tree should be linked from any public webpage.*
 
-- [Calendar](calendar): due dates for Steering Committee actions
+- [Calendar]({% link internal/calendar.md %}): due dates for Steering Committee actions
   - Office elections
   - Working group reviews
-- [Software](software): information about the software packages in the CASS portfolio
+- [Events]({% link internal/events.md %}): information about CASS events
+  - Event series
+  - Unique event venues
+- [Software]({% link internal/software.md %}): information about the software packages in the CASS portfolio
   - Software by CASS member
   - Availability of spack packages
   - Availability in E4S

@@ -1,0 +1,27 @@
+{% comment %}
+  linkify-series.html -- Add link to event-series page
+
+  Given an event series, link the series name to the
+  appropriate page in the `event-series` collection.
+
+  Parameters
+    series: The event series to be linkified (REQUIRED)
+
+  NOTE
+    For reasons unknown, a basic `where` filter operation doesn't seem to work
+    properly (passes all members of the collection). It seems that a `where_exp`
+    does work, but we have to construct the expression for it.
+
+    Also, if there's no match for the series, the returned `url` is strange.
+    It is `true` and non-nil and not the empty string ("").  But there is no
+    visible content.  So instead, we test on the size of the url array, which
+    is 0 if there is no match, and 1 if there is.
+{% endcomment %}
+
+{% capture expr %}item.series == '{{ include.series }}'{% endcapture %}
+{% assign url = site.event-series | where_exp: "item", expr | map: "url" %}
+{% if url.size == 1 %}
+  <a href="{{ url }}">{{ include.series }}</a>
+{% else %}
+  {{ include.series }}
+{% endif %}

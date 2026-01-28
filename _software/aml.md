@@ -42,28 +42,14 @@
 name: AML
 area: devtools
 cass_members:
-    - RAPIDS
+  - RAPIDS
 description: Building blocks for advanced memory management
 long_description: |
-	AML is a memory management library designed to ease the use of complex
-	memory topologies and complex data layout optimizations for
-	high-performance computing applications. It provides
-	locality-preserving abstractions to application developers. In
-	particular, AML aims to expose flexible interfaces to describe and
-	reason about how applications deal with data layout, tiling of data,
-	placement of data across hardware topologies, and affinity between work
-	and data.
+  AML is a memory management library designed to ease the use of complex memory topologies and complex data layout optimizations for high-performance computing applications. It provides locality-preserving abstractions to application developers. In particular, AML aims to expose flexible interfaces to describe and reason about how applications deal with data layout, tiling of data placement of data across hardware topologies, and affinity between work and data.
+
+  AML is organized as a collection of abstractions, presented as building blocks, used to develop explicit memory and data management policies. The goals of AML are composability -- application developers and performance experts should be able to pick and choose the building blocks to use depending on their specific needs and flexibility -- users should be able to customize, replace, or change the configuration of each building block as much as possible.
 target_audience: |
-	AML is organized as a collection of abstractions, presented as building
-	blocks, used to develop explicit memory and data management policies.
-	The goals of AML are composability -- application developers and
-	performance experts should be able to pick and choose the building
-	blocks to use depending on their specific needs and flexibility --
-	users should be able to customize, replace, or change the configuration
-	of each building block as much as possible.  AML is intended mainly for
-	application developers and programming models and runtime system
-	developpers looking to accelerate the design of new portable
-	optimization methods.
+  AML is intended mainly for application developers and programming models and runtime system developers looking to accelerate the design of new portable optimization methods.
 #
 # License information, following https://spdx.org/licenses/
 #
@@ -87,7 +73,7 @@ foundation_membership:
 #                       - package3
 #
 e4s_product: aml
-spack_name:  aml
+spack_name: aml
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These are OPTIONAL lists of resource links that you can provide to make your catalog entry more useful.
@@ -104,10 +90,8 @@ spack_name:  aml
 #   Which would appear as (in pseudo-markdown):
 #     {{ icon }} [{{ label }}]({{ url }}) {{ note }}
 #
-# For additional information, see _software/README.md.
-#
 additional_resource_links:
-  - label: Website
+  - label: Documentation
     url: https://argo-aml.readthedocs.io
   - label: Repository
     url: https://github.com/anlsys/aml

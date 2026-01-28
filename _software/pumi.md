@@ -99,7 +99,17 @@ additional_resource_links:
   - label: Website
     url: https://scorec.rpi.edu/software
   - label: Repository
-    url: https://github.com/SCOREC
+    url: https://github.com/SCOREC/core
+    note: (PUMI core)
+  - label: Repository
+    url: https://github.com/SCOREC/omega_h
+    note: (Omega_h)
+  - label: Repository
+    url: https://github.com/SCOREC/pumi-pic
+    note: (PUMIPic)
+  - label: Repository
+    url: https://github.com/SCOREC/pcms
+    note: (PCMS)
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

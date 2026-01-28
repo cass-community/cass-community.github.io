@@ -70,9 +70,10 @@ foundation_membership:
 #                       - package2
 #                       - package3
 #
-e4s_product: 
-    - pumi
-    - omega_h
+# Commenting these out until the E4S packages get updated
+# e4s_product: 
+#     - core
+#     - omega_h
 spack_name:  
     - pumi
     - omega-h

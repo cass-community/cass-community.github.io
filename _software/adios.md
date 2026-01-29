@@ -95,5 +95,5 @@ additional_resource_links:
   - label: Downloads
     url: https://github.com/ornladios/ADIOS2/releases
   - label: Documentation
-    url: https://adios2.readthedocs.io/en/v2.10.2/
+    url: https://adios2.readthedocs.io/en/latest/
 ---

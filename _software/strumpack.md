@@ -115,13 +115,10 @@ additional_resource_links:
     url: https://portal.nersc.gov/project/sparse/strumpack/
   - label: Repository
     url: https://github.com/pghysels/STRUMPACK
-  #
-  # Commenting out for now, since it duplicates the repo link
-  #
-  # - label: Downloads
-  #   url: https://github.com/pghysels/STRUMPACK
+  - label: Downloads
+    url: https://github.com/pghysels/STRUMPACK/releases
   - label: Documentation
-    url: https://portal.nersc.gov/project/sparse/strumpack/v7.1.0/index.html
+    url: https://portal.nersc.gov/project/sparse/strumpack/master/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

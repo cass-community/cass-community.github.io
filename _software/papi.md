@@ -100,7 +100,8 @@ additional_resource_links:
   - label: Repository
     url: https://github.com/icl-utk-edu/papi
   - label: Downloads
-    url: https://github.com/icl-utk-edu/papi
+    note: (historical; clone repository for use)
+    url: https://github.com/icl-utk-edu/papi/wiki/PAPI-Releases
   - label: Documentation
     url: https://github.com/icl-utk-edu/papi/wiki
 ---

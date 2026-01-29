@@ -95,7 +95,7 @@ additional_resource_links:
   - label: Repository
     url: https://github.com/UO-OACISS/tau2
   - label: Downloads
-    url: https://github.com/UO-OACISS/tau2
+    url: https://www.cs.uoregon.edu/research/tau/downloads.php
   - label: Documentation
     url: https://www.cs.uoregon.edu/research/tau/docs.php
 ---

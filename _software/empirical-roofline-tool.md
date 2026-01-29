@@ -99,5 +99,6 @@ additional_resource_links:
   # - label: Downloads
   #   url: 
   - label: Documentation
+    note: (PDF)
     url: https://bitbucket.org/berkeleylab/cs-roofline-toolkit/raw/09663aad764d3c6cefa4d9de1f1213b5f03af9df/Empirical_Roofline_Tool-1.1.0/ERT_Users_Manual.pdf
 ---

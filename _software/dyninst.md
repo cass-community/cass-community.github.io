@@ -101,7 +101,7 @@ additional_resource_links:
   - label: Repository
     url: https://github.com/dyninst/dyninst/
   - label: Downloads
-    url: https://github.com/dyninst/dyninst/
+    url: https://github.com/dyninst/dyninst/releases
   - label: Documentation
-    url: https://github.com/dyninst/dyninst/releases/latest
+    note: "— manuals are included in each release; see release notes for details"
 ---

@@ -11,8 +11,8 @@ time: "11:00am - 12:30pm EST"
 #
 location: Online
 #
-type: Birds-of-a-Feather Session 
-series: 
+type: Birds-of-a-Feather Session
+series:
   - "CASS BoF Days"
 #
 venue: "2026 CASS BoF Days"
@@ -24,26 +24,27 @@ activities:
 registration-url: https://argonne.zoomgov.com/meeting/register/ay4bMcRgSZaZ-l7u9AzAzQ
 #
 presenters:
-  - name: Junchao Zhang 
-    affiliation: Argonne National Laboratory
-  - name: Satish Balay
-    affiliation: Argonne National Laboratory
-  - name: Emil M. Constantinescu
-    affiliation: Argonne National Laboratory
-  - name: Lois Curfman McInnes
+  - name: Barry Smith
     affiliation: Argonne National Laboratory
   - name: Richard Tran Mills
     affiliation: Argonne National Laboratory
-  - name: Todd Munson
-    affiliation: Argonne National Laboratory
   - name: Hansol Suh
     affiliation: Argonne National Laboratory
-  - name: Hong Zhang
+  - name: Junchao Zhang
     affiliation: Argonne National Laboratory
+  - name: Vincent Robert
+    affiliation: CEA Paris-Saclay and Sorbonne Université
+  - name: Bahaâ Sidi
+    affiliation: EDF R&D, ENPC, and Sorbonne Université
+  - name: Xiaodong Liu
+    affiliation: Remcom Inc
+  - name: Jeremy L Thompson
+    affiliation: University of Colorado Boulder
+  - name: Darsh Nathawani
+    affiliation: Louisiana State University
   - name: Mark Adams
     affiliation: Lawrence Berkeley National Laboratory
-  - name: Barry Smith
-    affiliation: Argonne National Laboratory
+
 #
 # artifacts:
 #   - label: Slides

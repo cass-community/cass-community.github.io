@@ -92,8 +92,8 @@ openssf_bestpractices_id:
 
 additional_resource_links:
   # Website currently broken.  Waiting on Sam Williams to supply a new URL when it is ready
-  # - label: Website
-  #   url: XXXXX://crd.lbl.gov/divisions/amcr/computer-science-amcr/par/research/roofline/software/ert/
+  - label: Website
+    url: https://amcr.lbl.gov/departments/computer-science-department/ppan/roofline-performance-model/empirical-roofline-tool-ert/
   - label: Repository
     url: https://bitbucket.org/berkeleylab/cs-roofline-toolkit/src/master/
   # - label: Downloads

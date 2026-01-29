@@ -100,5 +100,5 @@ additional_resource_links:
   - label: Downloads
     url: https://github.com/LLNL/zfp/releases
   - label: Documentation
-    url: https://zfp.readthedocs.io/en/release1.0.1/
+    url: https://zfp.readthedocs.io/
 ---

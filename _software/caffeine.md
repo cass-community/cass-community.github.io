@@ -89,12 +89,11 @@ spack_name:  null
 # For additional information, see _software/README.md.
 
 additional_resource_links:
-  - label: Website
-    url: https://go.lbl.gov/caffeine
   - label: Repository
-    url: https://github.com/BerkeleyLab/caffeine.git
+    url: https://go.lbl.gov/caffeine
   - label: Downloads
-    url: https://github.com/berkeleylab/caffeine
+    url: https://github.com/BerkeleyLab/caffeine/releases
   - label: Documentation
+    note: (PRIF specification)
     url: https://go.lbl.gov/prif
 ---

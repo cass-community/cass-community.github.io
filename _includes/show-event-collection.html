@@ -1,0 +1,76 @@
+{% comment %}
+  show-event-collection.html -- top-level utility to display a collection of events
+  
+  Takes an array of event entries, splits it by date into upcoming and past, and displays the two lists.
+
+  Parameters
+  entries: an array of event entries to display (REQUIRED)
+    Note that the caller is welcome to filter the entries array to include, 
+    for example, only particular event series.
+
+  heading: HTML tag name for upcoming and past headings (default: "h2")
+    H2 headings should work if the lists are the main content of the page, but can
+    be changed if necessary.
+
+  The defaults for these parameters will give the "standard" presentation, but can be changed for special situations
+
+  cutoff: date when upcoming events become past (default: site.time)
+  upcoming: heading text for upcoming event list (default: "Upcoming events")
+  past: heading text for past event list (default: "Past events")
+
+  sort_by: event field to sort by (default: nil)
+  upcoming_sort_order: order in which to present upcoming events (default: "forward")
+  past_sort_order: order in which to present past events (default: "reverse")
+
+  upcoming_time: show time for upcoming events (default: true)
+  upcoming_registration: show registration button for upcoming events (default: true)
+  past_time: show time for past events (default: false)
+  past_registration: show registration button for past events (default: false)
+
+  upcoming_limit: maximum number of upcoming events to show, followed by a message indicating that there are more (default: entries.size)
+  upcoming_more_url: url to link to full list if the are unshown upcoming events (default: nil)
+  past_limit: maximum number of past events to show, followed by a message indicating that there are more (default: entries.size)
+  past_more_url: url to link to full list if the are unshown past events (default: nil)
+
+  entries_layout: list or grid layout for lists (default: "list")
+
+{% endcomment %}
+{% assign my_heading =  include.heading | default: "h2" %}
+{% assign my_cutoff = include.cutoff | default: site.time | date: "%Y-%m-%d" %}
+{% assign my_upcoming = include.upcoming | default: "Upcoming events" %}
+{% assign my_past = include.past | default: "Past events" %}
+
+{% assign my_sort_by = include.sort_by | default: nil %}
+{% assign my_upcoming_sort_order = include.upcoming_sort_order | default: "forward" %}
+{% assign my_past_sort_order = include.past_sort_order | default: "reverse" %}
+
+{% comment %} `default: true` doesn't work when the original is `false` {% endcomment %}
+{% assign my_upcoming_time = true %}
+{% if include.upcoming_time == false %}{% assign my_upcoming_time = false %}{% endif %}
+{% assign my_upcoming_registration = true %}
+{% if include.upcoming_registration == false %}{% assign my_upcoming_registration = false %}{% endif %}
+
+{% comment %} But `default: false` works fine {% endcomment %}
+{% assign my_past_time = include.past_time | default: false %}
+{% assign my_past_registration = include.past_registration | default: false %}
+
+{% assign my_upcoming_limit = include.upcoming_limit | default: include.entries.size %}
+{% assign my_upcoming_more_url = include.upcoming_more_url | default: nil %}
+{% assign my_past_limit = include.past_limit | default: include.entries.size %}
+{% assign my_past_more_url = include.past_more_url | default: nil %}
+{% assign my_layout = include.entries_layout | default: "list" %}
+
+{% assign my_upcoming_id = my_upcoming | slugify %}
+{% assign my_past_id = my_past | slugify %}
+
+<{{ my_heading }} id={{ my_upcoming_id }}>{{ my_upcoming }}</{{ my_heading }}>
+<div class="entries-{{ my_layout }}">
+  {% include ev-documents-collection.html entries=my_entries sort_by=my_sort_by sort_order=my_upcoming_sort_order type=my_layout cutoff=my_cutoff 
+    show_time=my_upcoming_time show_registration=my_upcoming_registration limit=my_upcoming_limit more_url=my_upcoming_more_url %}
+</div>
+
+<{{ my_heading }} id={{ my_past_id }}>{{ my_past }}</{{ my_heading }}>
+<div class="entries-{{ my_layout }}">
+  {% include ev-documents-collection.html entries=my_entries sort_by=my_sort_by sort_order=my_past_sort_order type=my_layout cutoff=my_cutoff 
+        show_time=my_past_time show_registration=my_past_registration limit=my_past_limit more_url=my_past_more_url %}
+</div>

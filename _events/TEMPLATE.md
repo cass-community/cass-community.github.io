@@ -1,0 +1,12 @@
+---
+startdate:
+enddate:
+time: 
+#
+registration_url:
+location:
+#
+type:
+series:
+activities: 
+---

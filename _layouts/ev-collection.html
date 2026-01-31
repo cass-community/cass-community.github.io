@@ -3,15 +3,27 @@ layout: archive
 ---
 {% comment %}
     CHANGES FROM DEFAULT COLLECTION LAYOUT
-    * Call ev-documents-collection.html include
-    * Duplicate calls for upcoming and past events
-      - Force forward and reverse `sort_order`
-    * Add cutoff argument
+    * Support frontmatter settings of event source
+      - `collection` defaults to "events"
+      - However `event_collection` gets priority because if we're trying
+        to display an event listing from within another collection (e.g., the events-series collection),
+        Jekyll will set the `page.collection` variable to the parent collection (e.g., "event-series")
+        which is *not* overridden by directly setting the collection in the frontmatter.
+    * Filter the events by `series` if present
+    * Use show-event-collection.html to display the upcoming and past event lists with all of the
+      appropriate defaults
 {% endcomment %}
 
 {{ content }}
 
-{% assign my_entries = site[page.collection] | where_exp: "post", "post.hidden != true" %}
+{% if page.event_collection %}
+  {% assign my_collection = page.event_collection %}
+{% elsif page.collection %}
+  {% assign my_collection = page.collection %}
+{% else %}
+  {% assign my_collection = "events" %}
+{% endif %}
+{% assign my_entries = site[my_collection] | where_exp: "post", "post.hidden != true" %}
 
 {% if page.series %}
   {% assign my_entries = my_entries | where: "series", page.series %}

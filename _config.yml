@@ -151,9 +151,9 @@ defaults:
       path: ""
       type: event-series
     values:
-      layout: ev-series
+      layout: ev-collection
       classes: wide no-left-sidebar
-      # collection: events
+      event_collection: events
       entries_layout: list
       author_profile: false
       comments: false

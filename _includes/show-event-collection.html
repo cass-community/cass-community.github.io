@@ -63,13 +63,13 @@
 {% assign my_upcoming_id = my_upcoming | slugify %}
 {% assign my_past_id = my_past | slugify %}
 
-<{{ my_heading }} id={{ my_upcoming_id }}>{{ my_upcoming }}</{{ my_heading }}>
+<{{ my_heading }} id="{{ my_upcoming_id }}">{{ my_upcoming }}</{{ my_heading }}>
 <div class="entries-{{ my_layout }}">
   {% include ev-documents-collection.html entries=my_entries sort_by=my_sort_by sort_order=my_upcoming_sort_order type=my_layout cutoff=my_cutoff 
     show_time=my_upcoming_time show_registration=my_upcoming_registration limit=my_upcoming_limit more_url=my_upcoming_more_url %}
 </div>
 
-<{{ my_heading }} id={{ my_past_id }}>{{ my_past }}</{{ my_heading }}>
+<{{ my_heading }} id="{{ my_past_id }}">{{ my_past }}</{{ my_heading }}>
 <div class="entries-{{ my_layout }}">
   {% include ev-documents-collection.html entries=my_entries sort_by=my_sort_by sort_order=my_past_sort_order type=my_layout cutoff=my_cutoff 
         show_time=my_past_time show_registration=my_past_registration limit=my_past_limit more_url=my_past_more_url %}

@@ -12,8 +12,6 @@ layout: archive
 
 {{ content }}
 
-{% assign today = site.time | date:"%Y-%m-%d" %}
-
 {% assign my_entries = site.events | where_exp: "post", "post.hidden != true" %}
 
 {% if page.series %}

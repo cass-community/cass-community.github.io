@@ -101,7 +101,9 @@ Bad examples:
 
 The url at which readers can register for the event, or which provides more information about the registration process. The field is expected for most upcoming events, but may be omitted if you're adding past events for completeness. If the event is hosted in a larger venue (i.e., a conference), it is probably the overall venue registration link.
 
-If the `registration_url` is present, the site will generally render it as a button labeled "Register for the event".
+If the `registration_url` is present and the event is in the future, the site will generally render it as a button labeled "Register for the event". For past events, the `registration_url` is not shown, even if it is present.
+
+*Technical note:* It is common for registration URLs to "rot" (become unresponsive) more quickly than most of the other links likely to appear in an event file. The link checker action for the CASS website is setup to ignore the patterns associated with registration links teleconferencing tools we often work with, but there are many others. It may become necessary to remove rotten `registration_url`s from past events if they start triggering the link checker.
 
 #### `location` (REQUIRED)
 
@@ -164,10 +166,129 @@ At present, the `activities` field is not displayed on any public pages, and the
 
 This data is not currently validated in any way. However, for member organizations, you are strongly encouraged to match the `site.data.organization.members.short_name` entries found in the `_data/organization.yml` file). Working group names probably ought to be standardized against the `name` in the `_working-groups` collection, but current WG-led events don't conform.
 
-### Venue information
+### Venue information (optional)
 
-### People information
+Venue pertains to the parent conference, workshop, or other event of which the CASS event is part. Since many CASS events are standalone, the venue information is overall optional. The REQUIRED/optional notations below are based on the assumption that you have chosen to provide venue information.
 
-### Artifact information
+#### `venue` (REQUIRED)
 
-### Event body
+The is the name of the host event or institution.
+
+*Style note:* We generally use the full formal name of the host conference conference rather than common abbreviations. For example, "SIAM Conference on Computational Science and Engineering (CSE25)" rather than "CSE25". This will be more useful to readers who aren't insiders and may not know the conference shorthand.
+
+Additionally, the `venue` should be specific to a single instance of the host event. Usually that means including the year or something similar. For example, "SIAM Conference on Computational Science and Engineering (CSE23)" and "SIAM Conference on Computational Science and Engineering (CSE25)" are two distinct venues, as they should be. Whereas "SIAM Conference on Computational Science and Engineering" isn't.
+
+#### `venue-url` (optional)
+
+A link to the hosting venue's website. If it is provided, the venue name will be rendered as a hyperlink.
+
+This should *not* be a link to the individual CASS event within the venue – that can be included in the `artifacts` field.
+
+#### `venue-type` (bssw-tutorial.github.io)
+
+You may see the `venue-type` field in many events. It is not presently used on the CASS website, and it is not necessary to provide it. It is used on the <https://bssw-tutorial.github.io> site, depending on the nature of the venue and what reads reasonably.
+
+Typical values include:
+
+- "conference"
+- "summer school"
+
+### People information (optional)
+
+The CASS event format recognizes a number of different groups of people who might be involved in an event. The are rendered on the event page below the body content.
+
+The people categories are as follows (and displayed in this order on the event page):
+
+- `presenters`
+- `panelists`
+- `moderators`
+- `organizers`
+
+The data structures are the same in all cases, and support the following sub-fields:
+
+- `name` (REQUIRED) – the full name of the individual
+- `affiliation` (optional) – the full name of the individual's institutional affiliation. Multiple affiliations can be separated with commas
+- `bio` (optional) – a short biographical sketch of the individual. Usually input in the form of a YAML block scalar (see example)
+
+Note that when rendered on the site the bios are separated from the names and affiliations. In other words, we see the names and affiliations of the presenters, then panelists, etc., followed by the bios of the presenters, then panelists, etc.  By moving the "bulky" text lower on the page, we can more readily see the essentials of all the people involved.
+
+To give a full picture, here is an example of a single person's information:
+
+```yaml
+presenters:
+  - name: Helen Kershaw
+    affiliation: NSF National Center for Atmospheric Research
+    bio: |
+      Helen Kershaw is the Lead Software Engineer for the Data Assimilation Research Testbed, a widely used, open-source community software facility for data assimilation. Helen has a PhD in Mechanical Engineering from the University of Canterbury, New Zealand, and a Geophysical Science degree from the University of Leeds, UK. Helen has worked for a geophysical survey company that flew gravity and magnetic surveys and worked for several years in the Center for Computation and Visualization at Brown University before joining NSF NCAR.  Helen is one of the 2023 Better Scientific Software Fellows.
+```
+
+Of course the `name`, `affiliation`, and `bio` fields can be repeated as many times as necessary to list all the people in categpry.  Note the leading `-` in front of the `name` key.
+
+*Style notes:* names should be full names without titles – titles can be mentioned in the bio. Affiliations should be full institutional names rather than abbreviations (e.g., "NSF National Center for Atmospheric Research" rather than "NCAR"). Bios should *not* call out the individual's name by bolding, italicizing, or other decoration. 
+
+Whenever feasible, please check with the people involved to ensure that the information is presented as they prefer rather than assuming you know. For example, someone may prefer to include their middle initial in their name. Some people hyphenate double-barreled surnames, while others do not.
+
+#### Additional people information used on other sites
+
+You may see a variety of additional fields in people information used on other sites.
+
+`helpers` is another category of people, sometimes used on the bssw-tutorial.github.io site.
+
+`short_affil` is used on the bssw-tutorial.github.io site where a more compact version of the affiliation is sometimes needed (e.g., "NCAR")
+
+`github-id` is used on the ideas-productivity.org site (to generate content for the <https://bssw.io> site) and the bssw-tutorial.github.io site.
+
+### Artifact information (optional)
+
+The `artifacts` data structure is a flexible way to capture artifacts from an event so that they can be rendered systematically and consistently.  Events are not required to have artifacts, but we encourage you to structure your events (the actual events, not these files) to produce artifacts and to capture them in the event file. This makes useful information available even to those who are not able to participate in the event. Most artifacts are added after the event is over, though some useful artifacts are available earlier.
+
+Generally, entries in the `artifacts` structure involve a hyperlinked label with annotations following. You can include as many different artifacts as you need, in whatever order you consider most appropriate. On the website, artifacts are presented in a sidebar to the left of the main body of the event.
+
+#### The basic artifact entry
+
+The basic artifact entry looks like:
+
+```yaml
+artifacts:
+  - label: label text
+    url: https://example.com/my_artifact
+    note: note text
+    icon: <i class="fa-solid fa-font-awesome"></i>
+```
+
+which would be rendered as '<i class="fa-solid fa-font-awesome"></i> [label text](https://example.com/my_artifact) note text'. (Unforunately, the icon doesn't render in this context.)
+
+`label` is required, while the others are optional. Yes, even the `url` is optional – you can create an artifact entry that is merely text, without a link if necessary.
+
+The `icon` is optional, but if your `label` matches a label in the `_data/icon-map.yml` file, the corresponding icon from that file will be used.  This is the preferred mode of operation in most cases. If you're not seeing the icons you expect, double check your label.  Matches are exact (including case sensitivity).  If you want to specify your own icon, it should be from the [Font Awesome](https://fontawesome.com) free collection.
+
+`format` is a deprecated alternative to `note` that you may see in some existing events. It places the text in parentheses (i.e., "(note text)").  Obviously you can use `note` and put the parentheses into the note text if you want them.
+
+#### Specialized artifact types
+
+The `artifacts` structure also supports a number of specialized resource types from which it will product urls. The advantage of using specialized resources where they are appropriate is that special processing can be applied.
+
+The following specialized resource types are currently recognized:
+
+- `yt-video-id` for YouTube recordings. In addition to being rendered in the artifact list, when YouTube video artifacts are available, they are displayed at the top of the event page, before the body content.
+- `yt-playlist-id` for YouTube playlists. Playlists are treated like videos and displayed at the top of the event page, before the body content.
+- `doi` for digital object identifiers.  We always prefer DOI links over generic urls because they come with guarantees of permanence.
+- `bsswt-event-label` for the event labels used on the bssw-tutorial.github.io site.  On the CASS site, this produces a link to the appropriate tutorial page on bssw-tutorial.github.io. Its real value is that on the bssw-tutorial site itself, artifacts of this type are recognized and ignored so that the tutorial page will not link to itself while allowing the same file to be used on other sites.
+
+#### Best practices for artifacts
+
+Use the standard labels wherever possible (those in `_data/icon-map.yml`). This helps provide a consistent visual language of icons to represent different kinds of artifacts. If you're not seeing the icon you expect (or not seeing icons at all), double check that your `label` exactly matches a `label` in `_data/icon-map.yml`. You can use the `note` field to provide additional information to augment the necessarily generic `label`.
+
+Prefer `doi`s to regular `url`s where DOIs are available. DOIs come with guarantees of permanence.
+
+If your event is part of a venue with its own program information, you are encouraged to create an artifact linking to the appropriate program page. However, this should be a page specific to your event or an anchor on a page that points specifically to your event.  Such an artifact is generally available well before the event takes place and can be useful in connecting readers to additional information.
+
+Do *not* use artifacts to link to registration sites – there is a separate `registration_url` field (see above) which gets special processing.
+
+Order your artifacts by their expected value to readers, with the most useful on top. Before an event, a link to the conference program page is probably the most useful (and likely the only) artifact. Afterwards, videos and then slides, or other documents, are probably more useful than the conference program page.
+
+### Event body (optional)
+
+Generally, the body of the event (after the YAML frontmatter) contains the abstract for, or a description of the event.
+
+*Style note:* We do not include the word "Abstract" or "Description" at the start of the text.

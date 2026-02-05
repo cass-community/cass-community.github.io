@@ -36,7 +36,15 @@ presenters:
   - name: Francesca Bonaiti
     affiliation: Michigan State University
   - name: Brett Buckner
-    affiliation: Mathworks   
+    affiliation: Mathworks
+#
+organizers:
+  - name: Cody Balos
+    affiliation: Lawrence Livermore National Laboratory
+  - name: David Gardner
+    affiliation: Lawrence Livermore National Laboratory
+  - name: Carol Woodward
+    affiliation: Lawrence Livermore National Laboratory    
 #
 # artifacts:
 #   - label: Slides
@@ -59,5 +67,3 @@ Agenda:
 - “Dynamics of atomic nuclei with SUNDIALS," Francesca Bonaiti (MSU)
 - "Integrating SUNDIALS into MATLAB," Brett Buckner (Mathworks)
 - Discussion
-  
-Organizers: Cody Balos (LLNL), David Gardner (LLNL), and Carol Woodward (LLNL)

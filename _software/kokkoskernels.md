@@ -107,7 +107,7 @@ additional_resource_links:
   - label: Downloads
     url: https://github.com/kokkos/kokkos-kernels/releases
   - label: Documentation
-    url: https://github.com/kokkos/kokkos-kernels/wiki
+    url: https://kokkos.org/kokkos-kernels/docs/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

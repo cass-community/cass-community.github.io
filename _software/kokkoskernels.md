@@ -68,6 +68,8 @@ license_spdx: "Apache-2.0 WITH LLVM-exception"
 #
 openssf_bestpractices_id: 9534
 #
+foundation_membership: High Performance Software Foundation
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
 #   e4s_product:    (string) If your product is in E4S, list its e4S name here (may be different than `name`). If your

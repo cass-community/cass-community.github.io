@@ -45,5 +45,5 @@ CASS and its member organizations work with our software product teams to improv
 **{{ handshake_icon }} Become a [member of CASS]({{ "/about/" | relative_url }}).** We welcome projects and organizations with similar scientific software stewardship missions to consider membership in CASS.
 
 ## Sponsors
-{% capture funding %}{% include funding-ack-content em=false %}{% endcapture %}
+{% capture funding %}{% include content/funding-ack em=false %}{% endcapture %}
 {{ funding | strip | markdownify }}

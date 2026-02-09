@@ -192,12 +192,13 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 exclude:
-  - _software/TEMPLATE.md
-  - _software/README.md
-  - _working-groups/TEMPLATE.md
-  - _working-groups/README.md
-  - _impacts/TEMPLATE.md
   - _impacts/README.md
+  - _impacts/TEMPLATE.md
+  - _includes/content/README.md
+  - _software/README.md
+  - _software/TEMPLATE.md
+  - _working-groups/README.md
+  - _working-groups/TEMPLATE.md
   - bin/
   - favicon.zip
 

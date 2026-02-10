@@ -9,9 +9,9 @@
 # form `<i class-"fa-something fa-else"></i>`
 
 - label: Website
-  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+  icon: <i class="fa-solid fa-fw fa-globe"></i>
 - label: Webpage
-  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+  icon: <i class="fa-solid fa-fw fa-globe"></i>
 - label: Repository
   icon: <i class="fa-solid fa-fw fa-code"></i>
 # This is intended to denote a link that will directly download a file

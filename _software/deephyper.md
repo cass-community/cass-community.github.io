@@ -20,9 +20,8 @@
 #                           the areas that were used by ECP ST, except that anything that was categorized as
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
-#                           We also support the values used in e4s.yml files, though we prefer those above. 
-#   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
-#                           organizations) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The name(s) of the CASS member organization(s) (aka software stewardship
+#                           organization(s)) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
 #   description:            (string) REQUIRED A short description of your software.  The `description` is always shown immediately 
 #                           after the `name` and they should be considered together as, in effect constructing a sentence-length 
@@ -40,44 +39,25 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: STRUMPACK
-area: mathlibs
+name: DeepHyper
+area: ai
 cass_members:
-  - FASTMath
-description: Low-rank STRUctured Matrix PACKage for both dense and sparse matrices.
+    - RAPIDS
+description: A hyperparameter optimization library
 long_description: |
-  STRUMPACK is a software library providing linear algebra routines and linear system
-  solvers for sparse and dense rank-structured linear systems.
-  For dense linear systems, STRUMPACK has support for the Hierarchically Semi-Separable (HSS),
-  Block Low Rank (BLR), Hierarchically Off-Diagonal Low Rank (HODLR), Butterfly and
-  Hierarchically Off-Diagonal Butterfly (HODBF) rank-structured matrix formats.
-  In sparse direct solvers based on multifrontal LU factorization, the fill-in in the
-  triangular factors often has low-rank structure. Hence, the sparse linear solve
-  algorithms in STRUMPACK exploit the different dense rank-structured matrix formats
-  to compress the fill-in. This leads to purely algebraic, fast and scalable
-  (both with problem size and compute cores) approximate direct solvers or preconditioners.
-  The sparse solver in STRUMPACK can also be used as an exact direct solver,
-  which delivers good performance and distributed
-  memory scalability and provides excellent GPU support in CUDA, HIP and SYCL.
-  STRUMPACK also provides preconditioned GMRES and BiCGStab iterative solvers.
-
+    DeepHyper is first and foremost a hyperparameter optimization (HPO) library for single and multi-objective optimization. By leveraging this core HPO functionality, DeepHyper also provides neural architecture search, multi-fidelity and ensemble capabilities. With DeepHyper, users can easily perform these tasks on a single machine or distributed across multiple machines, making it ideal for use in a variety of environments.
 target_audience: |
-  The rank-structured matrices appear in many applications, e.g., the Boundary Element
-  Method for discretization of integral equations, structured matrices like Toeplitz
-  and Cauchy, kernel and covariance matrices etc. For the sparse linear systems,
-  these preconditioners are mostly aimed at those systems coome from the
-  discretization of a partial differential equation, but are not limited to any
-  particular type of problem.
-  The various comopressing formats can be useful as strong approximate
-  factorization preconditioners for an iterative solver.
+    Machine Learning developers and researchers or engineers interested in black-box optimization (e.g., for software autotuning, automated algorithm configuration, automated experimental design).
 #
 # License information, following https://spdx.org/licenses/
 #
-license_spdx: "BSD-3-Clause-LBNL"
+license_spdx: BSD-3-Clause
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 
+#
+foundation_membership: 
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
@@ -90,8 +70,8 @@ openssf_bestpractices_id:
 #                       - package2
 #                       - package3
 #
-e4s_product: STRUMPACK
-spack_name:  strumpack
+e4s_product: deephyper
+spack_name: py-deephyper
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These are OPTIONAL lists of resource links that you can provide to make your catalog entry more useful.
@@ -111,14 +91,10 @@ spack_name:  strumpack
 # For additional information, see _software/README.md.
 #
 additional_resource_links:
-  - label: Website
-    url: https://portal.nersc.gov/project/sparse/strumpack/
   - label: Repository
-    url: https://github.com/pghysels/STRUMPACK
-  - label: Downloads
-    url: https://github.com/pghysels/STRUMPACK/releases
+    url: https://github.com/deephyper/deephyper/
   - label: Documentation
-    url: https://portal.nersc.gov/project/sparse/strumpack/master/
+    url: https://deephyper.readthedocs.io/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

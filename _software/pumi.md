@@ -20,9 +20,8 @@
 #                           the areas that were used by ECP ST, except that anything that was categorized as
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
-#                           We also support the values used in e4s.yml files, though we prefer those above. 
-#   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
-#                           organizations) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The name(s) of the CASS member organization(s) (aka software stewardship
+#                           organization(s)) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
 #   description:            (string) REQUIRED A short description of your software.  The `description` is always shown immediately 
 #                           after the `name` and they should be considered together as, in effect constructing a sentence-length 
@@ -40,44 +39,25 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: STRUMPACK
+name: PUMI Components
 area: mathlibs
 cass_members:
-  - FASTMath
-description: Low-rank STRUctured Matrix PACKage for both dense and sparse matrices.
+    - FASTMath
+description: Provides support for unstructured mesh workflows including mesh adaption, hybrid particle-mesh calculations, and solution transfer
 long_description: |
-  STRUMPACK is a software library providing linear algebra routines and linear system
-  solvers for sparse and dense rank-structured linear systems.
-  For dense linear systems, STRUMPACK has support for the Hierarchically Semi-Separable (HSS),
-  Block Low Rank (BLR), Hierarchically Off-Diagonal Low Rank (HODLR), Butterfly and
-  Hierarchically Off-Diagonal Butterfly (HODBF) rank-structured matrix formats.
-  In sparse direct solvers based on multifrontal LU factorization, the fill-in in the
-  triangular factors often has low-rank structure. Hence, the sparse linear solve
-  algorithms in STRUMPACK exploit the different dense rank-structured matrix formats
-  to compress the fill-in. This leads to purely algebraic, fast and scalable
-  (both with problem size and compute cores) approximate direct solvers or preconditioners.
-  The sparse solver in STRUMPACK can also be used as an exact direct solver,
-  which delivers good performance and distributed
-  memory scalability and provides excellent GPU support in CUDA, HIP and SYCL.
-  STRUMPACK also provides preconditioned GMRES and BiCGStab iterative solvers.
-
+    The PUMI Components provide support for a range of unstructured mesh workflows, such as mesh adaption, particle-in-cell calculations, and developing support for field-transfer and parallel control of coupled applications. The PUMI components are an integrated set of codes that make up each of these pieces as follows: [PUMI](https://github.com/SCOREC/core) provides unstructured mesh adaptation on CPUs, while [Omega_h](https://github.com/SCOREC/omega_h) supports similar functionality on GPUs.  [PUMIPic](https://github.com/SCOREC/pumi-pic), provides parallel infrastructure for particle-in-cell calculations. And, [PCMS](https://github.com/SCOREC/pcms) provides parallel control and field transfer to support coupling independent applications.
 target_audience: |
-  The rank-structured matrices appear in many applications, e.g., the Boundary Element
-  Method for discretization of integral equations, structured matrices like Toeplitz
-  and Cauchy, kernel and covariance matrices etc. For the sparse linear systems,
-  these preconditioners are mostly aimed at those systems coome from the
-  discretization of a partial differential equation, but are not limited to any
-  particular type of problem.
-  The various comopressing formats can be useful as strong approximate
-  factorization preconditioners for an iterative solver.
+    Science and engineering application developers who need performant infrastructure for unstructured mesh workflows. The PUMI components are widely across a wide range of application domains including fusion/plasma models, land and sea ice, FEM-based solid and fluid simulations, etc.
 #
 # License information, following https://spdx.org/licenses/
 #
-license_spdx: "BSD-3-Clause-LBNL"
+license_spdx: BSD-3-Clause
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 
+#
+foundation_membership: 
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
@@ -90,8 +70,14 @@ openssf_bestpractices_id:
 #                       - package2
 #                       - package3
 #
-e4s_product: STRUMPACK
-spack_name:  strumpack
+# Commenting these out until the E4S packages get updated
+# e4s_product: 
+#     - core
+#     - omega_h
+spack_name:  
+    - pumi
+    - omega-h
+
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These are OPTIONAL lists of resource links that you can provide to make your catalog entry more useful.
@@ -112,13 +98,19 @@ spack_name:  strumpack
 #
 additional_resource_links:
   - label: Website
-    url: https://portal.nersc.gov/project/sparse/strumpack/
+    url: https://scorec.rpi.edu/software
   - label: Repository
-    url: https://github.com/pghysels/STRUMPACK
-  - label: Downloads
-    url: https://github.com/pghysels/STRUMPACK/releases
-  - label: Documentation
-    url: https://portal.nersc.gov/project/sparse/strumpack/master/
+    url: https://github.com/SCOREC/core
+    note: (PUMI core)
+  - label: Repository
+    url: https://github.com/SCOREC/omega_h
+    note: (Omega_h)
+  - label: Repository
+    url: https://github.com/SCOREC/pumi-pic
+    note: (PUMIPic)
+  - label: Repository
+    url: https://github.com/SCOREC/pcms
+    note: (PCMS)
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

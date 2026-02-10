@@ -145,6 +145,9 @@ defaults:
 
 footer:
   links:
+    - label: "YouTube"
+      icon: "fa-brands fa-youtube"
+      url: https://www.youtube.com/@CASS.community
     - label: "Announcement list signup"
       icon: "fas fa-fw fa-envelopes-bulk"
       url: http://eepurl.com/iRiSnY
@@ -189,13 +192,15 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 exclude:
-  - _software/TEMPLATE.md
-  - _software/README.md
-  - _working-groups/TEMPLATE.md
-  - _working-groups/README.md
-  - _impacts/TEMPLATE.md
   - _impacts/README.md
+  - _impacts/TEMPLATE.md
+  - _includes/content/README.md
+  - _software/README.md
+  - _software/TEMPLATE.md
+  - _working-groups/README.md
+  - _working-groups/TEMPLATE.md
   - bin/
+  - favicon.zip
 
 # Configure jekyll-link-attributes plugin
 external_links:

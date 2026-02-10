@@ -68,6 +68,8 @@ license_spdx: "Apache-2.0 WITH LLVM-exception"
 #
 openssf_bestpractices_id: 9534
 #
+foundation_membership: High Performance Software Foundation
+#
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
 #   e4s_product:    (string) If your product is in E4S, list its e4S name here (may be different than `name`). If your
@@ -107,7 +109,7 @@ additional_resource_links:
   - label: Downloads
     url: https://github.com/kokkos/kokkos-kernels/releases
   - label: Documentation
-    url: https://github.com/kokkos/kokkos-kernels/wiki
+    url: https://kokkos.org/kokkos-kernels/docs/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #

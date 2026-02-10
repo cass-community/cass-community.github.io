@@ -88,11 +88,11 @@ spack_name: ascent
 # For additional information, see _software/README.md.
 
 additional_resource_links:
-  - label: Website
-    url: https://ascent.readthedocs.io/en/latest/
   - label: Repository
     url: https://github.com/Alpine-DAV/ascent
   - label: Downloads
     url: https://github.com/Alpine-DAV/ascent/releases 
+  - label: Documentation
+    url: https://alpine-dav.github.io/ascent/
 ---
 

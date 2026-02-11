@@ -58,7 +58,7 @@ target_audience:
 #
 # License information, following https://spdx.org/licenses/
 #
-license_spdx: "MIT"
+license_spdx: "Apache-2.0 OR MIT"
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #

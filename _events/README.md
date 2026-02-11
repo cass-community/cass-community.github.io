@@ -33,6 +33,16 @@ Regardless whether they're in the main directory or a subdirectory, event files 
 
 ### Using the draft event capability
 
+*Not yet supported on the CASS website.*
+
+## Rendering of events on the website
+
+These screenshots illustrate how events are rendered on the CASS website (subject to change – hopefully the screenshots would also be updated). They're meant to help connect the content that you see on the screen with the descriptions of the input that generates them, below.
+
+### Event collection listing
+
+### Individual event pages
+
 ## Event file contents
 
 ### Overview
@@ -96,6 +106,9 @@ Bad examples:
 - "9:45 am - 11:25 am CST" (spaces between time and meridian)
 - "1:00pm-2:00pm EDT" (no spaces around dash)
 - "1:00pm - 2:00pm ET" (not a proper timzone designation)
+- "1:00pm = 2:00pm" (timezone missing)
+- "1pm-2pm EST" (not using complete HH:MMp time designations)
+- "1:00 - 2:00pm MDT" (not using complete HH:MMp time designations)
 
 #### `registration_url` (optional)
 
@@ -256,13 +269,17 @@ artifacts:
     icon: <i class="fa-solid fa-font-awesome"></i>
 ```
 
-which would be rendered as '<i class="fa-solid fa-font-awesome"></i> [label text](https://example.com/my_artifact) note text'. (Unforunately, the icon doesn't render in this context.)
+which would be rendered as 'icon [label text](https://example.com/my_artifact) note text'. (Unforunately, the icon doesn't render in this context.)
 
 `label` is required, while the others are optional. Yes, even the `url` is optional – you can create an artifact entry that is merely text, without a link if necessary.
 
 The `icon` is optional, but if your `label` matches a label in the `_data/icon-map.yml` file, the corresponding icon from that file will be used.  This is the preferred mode of operation in most cases. If you're not seeing the icons you expect, double check your label.  Matches are exact (including case sensitivity).  If you want to specify your own icon, it should be from the [Font Awesome](https://fontawesome.com) free collection.
 
+The `note` field is optional, and is used to provide additional context to the artifact entry which is not part of the linked text. It is often used to indicate the format of the file at the given URL (e.g. "(PDF)" or "(PPTX)" or "(ZIP)"). In these cases, the parentheses are conventional.  If you have multiple artifacts using the same label (e.g., multiple "Slides" or "Conference program page" entries), the `note` field is generally used to distinguish the similar entries. For example, adding the name of the speaker (and perhaps also the format), such as "- Van Tuyl (PDF)" or "- O'Brien (PDF)" (see <https://cass.community/events/udx-2026jan-vantuyl>), or adding details about the minisymposium comprising a multi-part SIAM conference session, such as "(part 1)" and "(part 2)" (see <https://cass.community/events/siam-cse25-ms87>). Note that when the artifact entries are rendered on the website, there is always a space between the `label` text and the `note` text.
+
 `format` is a deprecated alternative to `note` that you may see in some existing events. It places the text in parentheses (i.e., "(note text)").  Obviously you can use `note` and put the parentheses into the note text if you want them.
+
+*Style note:* because the artifacts are generally rendered in a relatively narrow sidebar, all text should be as succinct as possible.  It is okay if the line wraps, but it looks better if it doesn't.
 
 #### Specialized artifact types
 
@@ -270,9 +287,9 @@ The `artifacts` structure also supports a number of specialized resource types f
 
 The following specialized resource types are currently recognized:
 
-- `yt-video-id` for YouTube recordings. In addition to being rendered in the artifact list, when YouTube video artifacts are available, they are displayed at the top of the event page, before the body content.
-- `yt-playlist-id` for YouTube playlists. Playlists are treated like videos and displayed at the top of the event page, before the body content.
-- `doi` for digital object identifiers.  We always prefer DOI links over generic urls because they come with guarantees of permanence.
+- `yt-video-id` for YouTube recordings. In addition to being rendered in the artifact list, when YouTube video artifacts are available, they are embedded at the top of the event page, before the body content.
+- `yt-playlist-id` for YouTube playlists. Playlists are treated like videos and embedded at the top of the event page, before the body content.
+- `doi` for digital object identifiers. We always prefer DOI links over generic urls because they come with guarantees of permanence.
 - `bsswt-event-label` for the event labels used on the bssw-tutorial.github.io site.  On the CASS site, this produces a link to the appropriate tutorial page on bssw-tutorial.github.io. Its real value is that on the bssw-tutorial site itself, artifacts of this type are recognized and ignored so that the tutorial page will not link to itself while allowing the same file to be used on other sites.
 
 #### Best practices for artifacts
@@ -285,7 +302,7 @@ If your event is part of a venue with its own program information, you are encou
 
 Do *not* use artifacts to link to registration sites – there is a separate `registration_url` field (see above) which gets special processing.
 
-Order your artifacts by their expected value to readers, with the most useful on top. Before an event, a link to the conference program page is probably the most useful (and likely the only) artifact. Afterwards, videos and then slides, or other documents, are probably more useful than the conference program page.
+Order your artifacts by their expected value to readers, with the most useful on top. Before an event, a link to the conference program page is probably the most useful (and likely the only) artifact. Afterward, videos and then slides, or other documents, are probably more useful than the conference program page.
 
 ### Event body (optional)
 

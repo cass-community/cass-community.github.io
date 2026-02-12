@@ -14,7 +14,7 @@ This serves as a guide to anyone creating or working with events on the CASS web
 
 ## How to contribute
 
-We prefer to work use the usual GitHub pull request workflow (see [parent page](../contributing#contribution-workflow)).
+We prefer to use the usual GitHub pull request workflow (see [parent page](../contributing#contribution-workflow)).
 
 ### Templates
 

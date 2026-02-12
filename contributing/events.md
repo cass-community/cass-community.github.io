@@ -56,7 +56,7 @@ Note that CASS event files are often used in the construction of other website t
 
 - The <https://ideas-productivity.org/> (IDEAS) site uses the same event files
 - The <https://bssw-tutorial.github.io/> (BSSw tutorial) site uses a pure YAML data file which is trivially converted into an IDEAS/CASS event file by adding the frontmatter delineators (`---`) before and after the file contents.
-- The event pages on the <https://bit.ly/swe-cse-bof/> (SWE-CSE BoF) site are also structured to work as IDEAS/CASS events.
+- The event pages on the <https://bit.ly/swe-cse-bof> (SWE-CSE BoF) site are also structured to work as IDEAS/CASS events.
 
 Such files often contain information which is not processed by the CASS site, but is used on these other sites. This interoperability is extremely useful in terms of reducing the level of effort required for events to appear in multiple relevant sites. Please be careful in modifying content which isn't used on the CASS site.
 

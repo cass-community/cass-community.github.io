@@ -20,9 +20,8 @@
 #                           the areas that were used by ECP ST, except that anything that was categorized as
 #                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
 #                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
-#                           We also support the values used in e4s.yml files, though we prefer those above. 
-#   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
-#                           organizations) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
+#   cass_member:            (list) REQUIRED The name(s) of the CASS member organization(s) (aka software stewardship
+#                           organization(s)) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
 #   description:            (string) REQUIRED A short description of your software.  The `description` is always shown immediately 
 #                           after the `name` and they should be considered together as, in effect constructing a sentence-length 
@@ -40,29 +39,25 @@
 # the text of the value starting on the following line.  The entirety of the value should be indented by 2-4 spaces from the
 # left margin.  The value ends at the next outdented text (or comment).
 #
-name: hypre
-area: mathlibs
+name: DeepHyper
+area: ai
 cass_members:
-  - FASTMath
-description: High-performance linear solvers library
+    - RAPIDS
+description: A hyperparameter optimization library
 long_description: |
-    The hypre software library provides high performance preconditioners and solvers with focus on multigrid methods for 
-    the solution of large, sparse linear systems of equations on massively parallel computers. The library features a 
-    variety of interfaces that allow users to describe their problems in a natural way, including a structured, a semi- 
-    structured and a linear-algebraic interface. Its state-of-the-art preconditioners and solvers have been proven 
-    scalable on more than a million processes. 
-target_audience: 
-    The hypre library is used in many application codes, including fusion applications, subsurface simulations, wind farm 
-    simulations, combustion simulations, and more. It is Nvidia, AMD and Intel GPU-enabled. It can also be used at the 
-    small scale and for research in academia.
+    DeepHyper is first and foremost a hyperparameter optimization (HPO) library for single and multi-objective optimization. By leveraging this core HPO functionality, DeepHyper also provides neural architecture search, multi-fidelity and ensemble capabilities. With DeepHyper, users can easily perform these tasks on a single machine or distributed across multiple machines, making it ideal for use in a variety of environments.
+target_audience: |
+    Machine Learning developers and researchers or engineers interested in black-box optimization (e.g., for software autotuning, automated algorithm configuration, automated experimental design).
 #
 # License information, following https://spdx.org/licenses/
 #
-license_spdx: "Apache-2.0 OR MIT"
+license_spdx: BSD-3-Clause
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
 openssf_bestpractices_id: 
+#
+foundation_membership: 
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
@@ -75,8 +70,8 @@ openssf_bestpractices_id:
 #                       - package2
 #                       - package3
 #
-e4s_product: hypre
-spack_name: hypre
+e4s_product: deephyper
+spack_name: py-deephyper
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These are OPTIONAL lists of resource links that you can provide to make your catalog entry more useful.
@@ -96,14 +91,10 @@ spack_name: hypre
 # For additional information, see _software/README.md.
 #
 additional_resource_links:
-  - label: Website
-    url: http://www.llnl.gov/casc/hypre/
   - label: Repository
-    url: https://github.com/hypre-space/hypre
-#   - label: Downloads
-#     url: 
+    url: https://github.com/deephyper/deephyper/
   - label: Documentation
-    url: https://hypre.readthedocs.io/
+    url: https://deephyper.readthedocs.io/
 #
 # A set of resources specifically aimed at users of the software (OPTIONAL)
 #
@@ -113,8 +104,7 @@ additional_resource_links:
 #
 # A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)
 #
-developer_resource_links:
-  - label: Documentation
-    note: for developers
-    url: https://github.com/hypre-space/hypre/wiki
+# developer_resource_links:
+#   - label: 
+#     url: 
 ---

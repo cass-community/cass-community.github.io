@@ -78,6 +78,10 @@ collections:
     output: true
     sort_by: startdate
     permalink: /:collection/:name
+  event-series:
+    output: true
+    sort_by: title
+    permalink: /:collection/:title
 
 defaults:
   # news
@@ -139,6 +143,18 @@ defaults:
       layout: event
       # classes: wide no-left-sidebar
       classes: wide
+      author_profile: false
+      comments: false
+      share: true
+  # event series
+  - scope:
+      path: ""
+      type: event-series
+    values:
+      layout: ev-collection
+      classes: wide no-left-sidebar
+      event_collection: events
+      entries_layout: list
       author_profile: false
       comments: false
       share: true

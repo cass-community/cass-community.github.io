@@ -57,4 +57,14 @@ additional_resource_links:
   - label: "US-RSE #wg-ux Ways to Get Involved"
     url: https://usrse.slack.com/canvas/C0664AMJBKQ?focus_section_id=temp:C:VaZ842fac9ea4954c8b84b1c4638
     icon: <i class="fa-regular fa-file-lines"></i>
+event_collection: events
+series: "User/Developer Experience Webinars"
 ---
+{% capture seminars_icon %}{% include icon-map-lookup label="Seminars" %}{% endcapture %}
+
+## {{ seminars_icon}} {{ page.series }}
+
+{% assign my_entries = site.events | where_exp: "post", "post.hidden != true" %}
+{% assign my_entries = my_entries | where: "series", page.series %}
+
+{% include show-event-collection.html entries=my_entries heading="h3" %}

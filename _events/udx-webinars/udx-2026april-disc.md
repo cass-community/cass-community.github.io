@@ -21,7 +21,7 @@ title: "UDX Discussion Hour: Software Webpages"
 #       FIXME
 #
 moderators:
-  - - name: Johanna (Hannah) Cohoon
+  - name: Johanna (Hannah) Cohoon
     affiliation: Lawrence Berkeley National Lab
     github-id: jlcohoon
     bio: |
@@ -57,6 +57,5 @@ activities:
   - "UDX Working Group" 
 #
 ---
-
-**Abstract:** The User/Developer Experience (UDX) Working group hosts a regular discussion hour on UDX topics to complement our every-other-month webinars. This month, we will discuss webpages for HPC software products: Who should they target? What should they include? What issues do you have maintaining them? What issues do you have when visiting them? Together, we will surface common usability issues and goals for scientific software websites along with strategies for successful sites. Through this informal discussion, we can begin identifying support needs for software teams as they build websites to promote their work. Join if you have or need a website for a scientific software product!
+The User/Developer Experience (UDX) Working group hosts a regular discussion hour on UDX topics to complement our every-other-month webinars. This month, we will discuss webpages for HPC software products: Who should they target? What should they include? What issues do you have maintaining them? What issues do you have when visiting them? Together, we will surface common usability issues and goals for scientific software websites along with strategies for successful sites. Through this informal discussion, we can begin identifying support needs for software teams as they build websites to promote their work. Join if you have or need a website for a scientific software product!
 

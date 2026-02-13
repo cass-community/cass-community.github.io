@@ -33,6 +33,7 @@ presenters:
 # artifacts:
 #   - label: Slides
 #     url: /assets/artifacts/cass-bof-days/
+#     note: "(PDF)"
 ---
 Do you write GPU-accelerated applications? Do you want to measure and analyze the performance of a GPU-accelerated application at large scale? Are you interested in analyzing and optimizing the performance of GPU kernels in a GPU-accelerated application? If so, this session is for you.
 

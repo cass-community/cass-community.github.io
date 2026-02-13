@@ -32,5 +32,6 @@ presenters:
 # artifacts:
 #   - label: Slides
 #     url: /assets/artifacts/cass-bof-days/
+#     note: "(PDF)"
 ---
 Abstract goes here

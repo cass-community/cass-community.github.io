@@ -31,6 +31,7 @@ presenters:
 # artifacts:
 #   - label: Slides
 #     url: /assets/artifacts/cass-bof-days/
+#     note: "(PDF)"
 ---
 The people who develop and maintain research software have a number of roles, each of which requires a set of competencies, ranging from software-focused work in design, implementation, testing, and optimization to user-focused work such as documentation, support, and training to community-focused work such as outreach and engagement to business-focused work such as project management, fundraising, and reporting. Each competency is based on a set of skills, which can apply to multiple competencies. No one starts with all the skills they need, or is competent in all the areas they need to be. Much skill development happens today via mentoring and on-the-job training, as well as more formal training.
 

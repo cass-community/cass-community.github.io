@@ -133,11 +133,11 @@
 - label: Q&A
   icon: <i class="fa-regular fa-fw fa-file-lines"></i>
 - label: Tutorial webpage
-  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+  icon: <i class="fa-solid fa-fw fa-globe"></i>
 - label: BoF webpage
-  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+  icon: <i class="fa-solid fa-fw fa-globe"></i>
 - label: Conference program page
-  icon: <i class="fa-solid fa-arrow-up-right-from-square"></i>
+  icon: <i class="fa-solid fa-fw fa-globe"></i>
 - label: Summary blog article
   icon: <i class="fa-regular fa-newspaper"></i>
 #

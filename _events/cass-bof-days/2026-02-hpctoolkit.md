@@ -32,7 +32,7 @@ presenters:
 #
 artifacts:
   - label: Slides
-    url: /assets/artifacts/cass-bof-days/CASS-BOF-HPCToolkit-2026-02.pdf
+    url: /assets/artifacts/cass-bof-days/2026-02-hpctoolkit.pdf
     note: "(PDF)"
 ---
 Do you write GPU-accelerated applications? Do you want to measure and analyze the performance of a GPU-accelerated application at large scale? Are you interested in analyzing and optimizing the performance of GPU kernels in a GPU-accelerated application? If so, this session is for you.

@@ -87,6 +87,16 @@ Rob Ross:
   short_affil: ANL
   email: rross@anl.gov
 
+Panos Stinis:
+  affiliation: Pacific Northwest National Laboratory
+  short_affil: PNNL
+  email: panagiotis.stinis@pnnl.gov
+
+Miro Stoyanov:
+  affiliation: Oak Ridge National Laboratory
+  short_affil: ORNL
+  email: stoyanovmk@ornl.gov
+
 Keita Teranishi:
   affiliation: Oak Ridge National Laboratory
   short_affil: ORNL
@@ -111,3 +121,8 @@ Carol Woodward:
   affiliation: Lawrence Livermore National Laboratory
   short_affil: LLNL
   email: woodward6@llnl.gov
+
+Guannan Zhang:
+  affiliation: Oak Ridge National Laboratory
+  short_affil: ORNL
+  email: zhangg@ornl.gov

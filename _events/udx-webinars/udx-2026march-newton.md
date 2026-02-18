@@ -9,8 +9,8 @@ title: "AI teamwork and tooling for RSEs"
 presenters:
   - name: Olivia Newton
     affiliation: University of Montana
-#     bio: |
-#       FIXME
+     bio: |
+        Olivia B. Newton is a researcher and instructor at the University of Montana, where she examines teamwork in science and engineering. Alongside her research, she teaches courses on Python and statistics.
   - name: Andrew Schmeder
     affiliation: Lawrence Berkeley National Lab
 #     bio: |
@@ -64,3 +64,8 @@ activities:
 
 <!-- **Abstract:** FIXME -->
 
+**Olivia Newton presents:** A survey of teamwork, AI, and their integration in scientific computing: Preliminary findings
+
+Abstract: We report results of survey and interview research conducted with 79 scientists and software professionals to better understand current practices, needs, and challenges related to teamwork and AI use in scientific computing. Study participants reported mixed awareness of best practices for effective teamwork and expressed interest in training on topics across team science, software engineering, and AI use. Although most participants reported using AI, less than half indicated that their teams engage in conversations about policies for AI use in their collaborative work. Our results further suggest that there is no clear consensus on the best applications for AI in scientific computing to date. Lastly, we discuss the ways that AI is altering team dynamics and development processes. Together, these findings highlight opportunities to strengthen cross-disciplinary collaboration and team-based scientific software practices.
+
+**Andrew Schmeder** will present an agentic command line tool for data discovery. Abstract coming soon.

@@ -5,6 +5,3 @@ _site
 _events/udx-webinars/blank.md
 vendor
 .DS_Store
-
-#Ignore vscode AI rules
-.github/instructions/codacy.instructions.md

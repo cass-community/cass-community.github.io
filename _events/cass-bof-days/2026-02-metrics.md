@@ -28,10 +28,14 @@ presenters:
   - name: Scot Breitenfeld 
     affiliation: The HDF Group
 #
-# artifacts:
-#   - label: Slides
-#     url: /assets/artifacts/cass-bof-days/
-#     note: "(PDF)"
+artifacts:
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-metrics.pdf
+    note: "(PDF)"
+  - label: Spreadsheet
+    url: /assets/artifacts/cass-bof-days/2026-02-metrics.xlsx
+    note: "(Excel)"
+#
 ---
 CASS, through the CASS Impact Framework Working Group, aims to help software sustainability organizations (SSOs) understand the status and progress made by supported software projects and the effect those improvements have had on its ability to support scientific discovery. One way of doing this is by identifying and collecting metrics that can help manage stewardship activities.
 

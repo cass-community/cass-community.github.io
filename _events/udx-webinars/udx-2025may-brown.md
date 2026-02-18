@@ -11,7 +11,7 @@ presenters:
     affiliation: Virginia Tech
     #github-id: FIXME
     bio: |
-      Dr. Chris Brown is an Assistant Professor in the Department of Computer Science at Virginia Tech. His research combines empirical methods, human-centered studies, interdisciplinary concepts, and automated tools to equip developers with evidence-based tools and practices that improve programming behaviors, boost productivity, and support better decision-making—ultimately contributing to more effective and trustworthy software development. He leads the “Code World, No Blanket” research group and teaching software engineering-related coursesat Virginia Tech.
+      Dr. Chris Brown is an Assistant Professor in the Department of Computer Science at Virginia Tech. His research combines empirical methods, human-centered studies, interdisciplinary concepts, and automated tools to equip developers with evidence-based tools and practices that improve programming behaviors, boost productivity, and support better decision-making—ultimately contributing to more effective and trustworthy software development. He leads the “Code World, No Blanket” research group and teaching software engineering-related courses at Virginia Tech.
 
 #
 #

@@ -11,3 +11,4 @@ header:
   overlay_image: /assets/images/headway-F2KRf_QfCqw-unsplash.jpg
   caption: 'Photo by <a href="https://unsplash.com/@headwayio">Headway</a> on <a href="https://unsplash.com/photos/crowd-of-people-sitting-on-chairs-inside-room-F2KRf_QfCqw">Unsplash</a>'
 ---
+<p align="right"><a href="{% link event-series.md %}" class="btn btn--inverse">Explore events by series</a></p>

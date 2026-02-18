@@ -52,6 +52,15 @@ members:
     sc_reps:
       - Todd Munson
     focus_area: Scalable mathematical libraries
+  - short_name: LEADS
+    name: "LEADS: LEarning-Accelerated Domain Science"
+    website: https://www.pnnl.gov/projects/leads-institute
+    membership_level: core
+    leads: 
+      - Panos Stinis
+    sc_reps: 
+      - Miro Stoyanov
+    focus_area: Innovative, scalable and customized scientific machine learning
   - short_name: PESO
     name: Partnering for Scientific-Software Ecosystem Opportunities
     website: https://pesoproject.org/

@@ -1,32 +1,14 @@
-# cass-community-new
+# cass-community.github.io
 
-New website (work in progress) for the Consortium for the Advancement of Scientific Software (CASS)
+The website for the Consortium for the Advancement of Scientific Software (CASS)
 
 ## Core tools
 
 This website uses Jekyll and the Minimal Mistakes theme and is hosted on GitHub Pages with a custom domain at <https://cass.community>.
 
-## Contributing
+## How to contribute
 
-If you're familiar with Jekyll and the GitHub pull request process, feel free to propose your own changes in the form of a pull request. (Please test your changes with a local Jekyll installation before submitting the pull request.) Otherwise, you're probably best off submitting an issue to the GitHub repository, or reaching out to the point of contact to discuss your needs.
-
-## Content conventions
-
-* (Page) Titles (h1) should be in title case
-
-* All other headings (h2+) should be in sentence case
-
-* Heading levels should be used in sequence (e.g., h4 inside h3 inside h2).  Don't skip levels because you don't like how a heading level is rendered.  This impedes accessibility.
-
-* Generally avoid going deep in headings unless there is a strong reason.  If you think you need h4 or higher, give it some more thought.
-
-* Refer to "CASS member organizations", not "SSOs" or such 
-  * The phrase "software stewardship organization" should only be used in describing the type of projects/organizations that are members of CASS.
-
-* We must avoid the appearance that we are a "DOE-only" organization.  It happens that all of the founding members are DOE-funded projects, but we are open to any project/organization with a software stewardship mission compatible with our Charter joining.  Don't use DOE-specific or exclusive language.
-
-* When linking to papers and such, use DOIs wherever possible.
-  * Note that many publisher sites list the DOI and provide a link, but often that link is to a publisher site, not to the DOI resolver (`https://doi.org/`).  We should only link to the DOI resolver site.
+The website provides a contributor's guide at <http://cass.community/contributing/>.
 
 ## Key data files and their usage
 
@@ -72,9 +54,6 @@ When rendering the site, use `_include/software-areas-lookup` to access the `sit
 
 If there is no mapping for the given `area`, it should be rendered as given, in red font to call out that there's a problem.
 
-## Software catalog
-
-The `_software` collection is presented on the `/software/` page, with individual pages in the `/software/` directory.  Documentation for contributions to this collection can be found in the `_software/README.md` and `_software/PRODUCT_TEMPLATE.md` files.
-
 ## Point of contact
-David Bernholdt (@bernhold) is the primary point of contact for the <https://cass.community> website.
+
+David Bernholdt (@bernhold) is the primary maintainer for the <https://cass.community> website.

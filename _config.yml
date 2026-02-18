@@ -42,7 +42,7 @@ minimal_mistakes_skin: "air"
 #subtitle:   A federation of member organizations dedicated to the stewardship and advancement of the scientific software ecosystem.
 name: The CASS Community
 
-repository: cass-community/cass-community-new
+repository: cass-community/cass-community.github.io
 repo_host: https://github.com
 
 # Set the logo image
@@ -78,6 +78,10 @@ collections:
     output: true
     sort_by: startdate
     permalink: /:collection/:name
+  event-series:
+    output: true
+    sort_by: title
+    permalink: /:collection/:title
 
 defaults:
   # news
@@ -142,6 +146,18 @@ defaults:
       author_profile: false
       comments: false
       share: true
+  # event series
+  - scope:
+      path: ""
+      type: event-series
+    values:
+      layout: ev-collection
+      classes: wide no-left-sidebar
+      event_collection: events
+      entries_layout: list
+      author_profile: false
+      comments: false
+      share: true
 
 footer:
   links:
@@ -192,6 +208,9 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 exclude:
+  - _events/README.md
+  - _events/TEMPLATE.md
+  - _software/TEMPLATE.md
   - _impacts/README.md
   - _impacts/TEMPLATE.md
   - _includes/content/README.md

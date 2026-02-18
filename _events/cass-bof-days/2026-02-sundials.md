@@ -49,6 +49,7 @@ organizers:
 # artifacts:
 #   - label: Slides
 #     url: /assets/artifacts/cass-bof-days/
+#     note: "(PDF)"
 ---
 The goal of this BoF session is to help connect SUNDIALS software developers with users and developers from applications. The session will start with an overview of the SUNDIALS suite emphasizing new features.  The session will continue with brief presentations from SUNDIALS application users.  
 

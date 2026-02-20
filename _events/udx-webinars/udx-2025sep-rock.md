@@ -12,7 +12,7 @@ presenters:
     #github-id: FIXME
     bio: |
       Alyssa Rock has been a technical writer for more than a decade with a specialty in writing for open source software. Currently, she works as a technical writer for Cribl, the data engine for IT and security. When she's not at work, she's usually volunteering with The Good Docs Project where community members from every part of the world come together to improve documentation in open source software and beyond.
-  - name: AlyCarrie Wattula
+  - name: Carrie Wattula
     affiliation: The Good Docs Project
     #github-id: FIXME
     #bio: | 

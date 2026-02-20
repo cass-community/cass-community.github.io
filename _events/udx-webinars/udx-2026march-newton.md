@@ -9,8 +9,8 @@ title: "AI teamwork and tooling for RSEs"
 presenters:
   - name: Olivia Newton
     affiliation: University of Montana
-     bio: |
-        Olivia B. Newton is a researcher and instructor at the University of Montana, where she examines teamwork in science and engineering. Alongside her research, she teaches courses on Python and statistics.
+    bio: |
+      Olivia B. Newton is a researcher and instructor at the University of Montana, where she examines teamwork in science and engineering. Alongside her research, she teaches courses on Python and statistics.
   - name: Andrew Schmeder
     affiliation: Lawrence Berkeley National Lab
 #     bio: |

@@ -13,9 +13,12 @@ presenters:
       Olivia B. Newton is a researcher and instructor at the University of Montana, where she examines teamwork in science and engineering. Alongside her research, she teaches courses on Python and statistics.
   - name: Andrew Schmeder
     affiliation: Lawrence Berkeley National Lab
-#     bio: |
-#       FIXME
-# #
+    bio: |
+      Andrew Schmeder is a Science IT Consultant at Berkeley Lab where he helps scientists utilize high-performance computing and AI inference services to facilitate basic energy science and deep-tech research. He is the creator of the Lab’s CBorg AI Services Portal, and a member of the AmSC Intelligent Interfaces Group. His expertise includes full stack web development, agentic AI, LLM inference servers, Kubernetes application development, scientific programming, patent strategy, real-time signal processing, microelectronics, graphic design, and more.
+
+      Email: awschmeder@lbl.gov | LinkedIn: https://linkedin.com/in/andrew-schmeder 
+
+#
 # panelists:
 #   - name: FIXME
 #     affiliation: FIXME
@@ -68,4 +71,6 @@ activities:
 
 Abstract: We report results of survey and interview research conducted with 79 scientists and software professionals to better understand current practices, needs, and challenges related to teamwork and AI use in scientific computing. Study participants reported mixed awareness of best practices for effective teamwork and expressed interest in training on topics across team science, software engineering, and AI use. Although most participants reported using AI, less than half indicated that their teams engage in conversations about policies for AI use in their collaborative work. Our results further suggest that there is no clear consensus on the best applications for AI in scientific computing to date. Lastly, we discuss the ways that AI is altering team dynamics and development processes. Together, these findings highlight opportunities to strengthen cross-disciplinary collaboration and team-based scientific software practices.
 
-**Andrew Schmeder** will present an agentic command line tool for data discovery. Abstract coming soon.
+**Andrew Schmeder presents:** Scientific Coding with AI - SciCode Bench Insights & Agentic Workflows
+
+Abstract: Can LLMs actually perform “PhD-level” tasks - specifically in scientific coding - as claimed by AI companies? Recent advances have enabled the majority of UI and infrastructure code to be automated using AI, but can it write scientific code? In this short talk, we will review the results from running the SciCode benchmark on 60 different model configurations over the past 9 months on Berkeley Lab’s CBorg AI inference gateway. Insights regarding evals, optimizing inference costs, performance of open-weight versus commercial flagship models, and measuring the rate of model improvement will be discussed. In the second half, we will look at a demo of an autonomous scientific agent that can perform data discovery, data transfers and data analysis via a chat interface.

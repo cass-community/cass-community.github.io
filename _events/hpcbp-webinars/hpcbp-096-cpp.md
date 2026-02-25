@@ -1,12 +1,12 @@
 ---
 startdate: "2026-02-18"
-time: "1:00 pm - 2:00 pm EDT" # Ensure that time zone is correct with respect to standard/daylight time
+time: "1:00 pm - 2:00 pm EST" # Ensure that time zone is correct with respect to standard/daylight time
 #
 title: "Modernizing C++ Interfaces with Concepts, Constraints and std::mdspan"
 #
 presenters:
   - name: Christian Trott
-    affiliation: Sandia National Laboratory
+    affiliation: Sandia National Laboratories
     github-id: crtrott
     bio: |
       Christian Trott is a High Performance Computing expert at Sandia National Laboratories, where he co-leads the Kokkos core team, developing performance portability solutions for engineering and science applications. He heads Sandia's delegation to the ISO C++ committee and is a principal author of features like mdspan and linear algebra. Recently, he helped establish the High Performance Software Foundation and serves on its governing board. Christian advises application teams on redesigning their codes with Kokkos for next-generation supercomputers. Before joining Sandia, Christian earned a doctorate in theoretical physics from the University of Technology Ilmenau.
@@ -15,15 +15,15 @@ bsswio-topics: ["software engineering", "high-performance computing (hpc)", "onl
 registration-url: https://www.zoomgov.com/meeting/register/OtBDoWACSOSiVftdtUUe7w
 #
 artifacts:
-  # - label: Recording
-  #   format: YouTube
-  #   yt-video-id: tzPbndr1u4o
-  # - label: Slides
-  #   format: PDF
-  #   url: XXXXX://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-096-cpp.pdf
-  # - label: Q&A
-  #   format: PDF
-  #   url: XXXXX://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-096-cpp-qa.pdf
+  - label: Recording
+    format: YouTube
+    yt-video-id: AbHpRnnpUk0
+  - label: Slides
+    format: PDF
+    url: https://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-096-cpp.pdf
+  - label: Q&A
+    format: PDF
+    url: https://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-096-cpp-qa.pdf
 #
 # Items that change rarely
 #

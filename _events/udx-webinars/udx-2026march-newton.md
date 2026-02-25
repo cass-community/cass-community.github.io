@@ -14,9 +14,7 @@ presenters:
   - name: Andrew Schmeder
     affiliation: Lawrence Berkeley National Lab
     bio: |
-      Andrew Schmeder is a Science IT Consultant at Berkeley Lab where he helps scientists utilize high-performance computing and AI inference services to facilitate basic energy science and deep-tech research. He is the creator of the Lab’s CBorg AI Services Portal, and a member of the AmSC Intelligent Interfaces Group. His expertise includes full stack web development, agentic AI, LLM inference servers, Kubernetes application development, scientific programming, patent strategy, real-time signal processing, microelectronics, graphic design, and more.
-
-      Email: awschmeder@lbl.gov | LinkedIn: https://linkedin.com/in/andrew-schmeder 
+      Andrew Schmeder is a Science IT Consultant at Berkeley Lab where he helps scientists utilize high-performance computing and AI inference services to facilitate basic energy science and deep-tech research. He is the creator of the Lab’s CBorg AI Services Portal, and a member of the AmSC Intelligent Interfaces Group. His expertise includes full stack web development, agentic AI, LLM inference servers, Kubernetes application development, scientific programming, patent strategy, real-time signal processing, microelectronics, graphic design, and more. Email: <mailto:awschmeder@lbl.gov>, LinkedIn: <https://linkedin.com/in/andrew-schmeder>.
 
 #
 # panelists:

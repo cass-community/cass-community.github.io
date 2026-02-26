@@ -49,22 +49,22 @@ organizers:
 artifacts:
   - label: Slides
     url: /assets/artifacts/cass-bof-days/2026-02-sundials-overview.pdf
-    note: "(PDF)"
+    note: "- Overview (PDF)"
   - label: Slides
     url: /assets/artifacts/cass-bof-days/2026-02-sundials-newfeatures.pdf
-    note: "(PDF)"
+    note: "- New features (PDF)"
   - label: Slides
     url: /assets/artifacts/cass-bof-days/2026-02-sundials-python.pdf
-    note: "(PDF)"
+    note: "- Python (PDF)"
   - label: Slides
     url: /assets/artifacts/cass-bof-days/2026-02-sundials-amrex.pdf
-    note: "(PDF)"
-  - label: Slides
-    url: /assets/artifacts/cass-bof-days/2026-02-sundials-nuclei.pdf
-    note: "(PDF)"
+    note: "- AMReX (PDF)"
   - label: Slides
     url: /assets/artifacts/cass-bof-days/2026-02-sundials-fusion.pdf
-    note: "(PDF)"
+    note: "- Fusion (PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-nuclei.pdf
+    note: "- Nuclei (PDF)"
 ---
 The goal of this BoF session is to help connect SUNDIALS software developers with users and developers from applications. The session will start with an overview of the SUNDIALS suite emphasizing new features.  The session will continue with brief presentations from SUNDIALS application users.  
 

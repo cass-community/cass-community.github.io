@@ -46,10 +46,25 @@ organizers:
   - name: Carol Woodward
     affiliation: Lawrence Livermore National Laboratory    
 #
-# artifacts:
-#   - label: Slides
-#     url: /assets/artifacts/cass-bof-days/
-#     note: "(PDF)"
+artifacts:
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-overview.pdf
+    note: "(PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-newfeatures.pdf
+    note: "(PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-python.pdf
+    note: "(PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-amrex.pdf
+    note: "(PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-nuclei.pdf
+    note: "(PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-fusion.pdf
+    note: "(PDF)"
 ---
 The goal of this BoF session is to help connect SUNDIALS software developers with users and developers from applications. The session will start with an overview of the SUNDIALS suite emphasizing new features.  The session will continue with brief presentations from SUNDIALS application users.  
 

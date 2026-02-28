@@ -5,19 +5,19 @@
 #
 # The `description` should be very terse, so that it fits reasonably in a sidebar
 
-- name: Artificial intelligence
-  description: Libraries and tools that directly support artificial intelligence research and research using artificial intelligence
-- name: AI building blocks
-  description: "Software which provides capabilities often used in artificial intelligence-based workflows"
-- name: Uses AI
-  description: "Software that uses artificial intelligence techniques internally"
-- name: Data and visualization
+Artificial intelligence:
+  description: Directly support artificial intelligence research and research using artificial intelligence
+AI building blocks:
+  description: "Provide capabilities often used in artificial intelligence-based workflows"
+Uses AI:
+  description: "Use artificial intelligence techniques internally"
+Data and visualization:
   description: Provide capabilities for analyzing, visualizing, compressing, moving, and managing data
-- name: Development tools
+Development tools:
   description: Help address performance challenges and faciliate efficient support of the latest HPC node architectures 
-- name: Mathematical libraries
+Mathematical libraries:
   description: Scalable libraries supporting the latest HPC architectures for coupled systems, ensemble calculations, and more
-- name: Programming models and runtimes
+Programming models and runtimes:
   description: Support intra-node and inter-node concurrency on current and next-generation HPC node architectures
-- name: Software ecosystem and delivery
+Software ecosystem and delivery:
   description: Provide software build, test, and integration tools, and containers environments 

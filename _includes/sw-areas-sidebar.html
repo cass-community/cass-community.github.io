@@ -12,26 +12,28 @@
 {% endcomment %}
 {% capture area_icon %}{% include icon-map-lookup label="Area" %}{% endcapture %}
 
-{% comment %}
-  Assemble the list of software area names actually being used in the catalog
-{% endcomment %}
-{% include sw-areas-used %}
+{% assign areas = "" | split: "," %}
+{% for s in site.software %}
+  {% assign areas = areas | concat: s.areas %}
+{% endfor %}
+{% assign area_names = areas | group_by_exp: "item", "item" | sort_natural %}
 
 <h3>{{ area_icon }} Areas</h3>
-<p><em>Number of products in parentheses</em></p>
+<p><em>Number of products in parentheses.
+  Products may appear in multiple areas.</em></p>
 <ul style="list-style: none; padding: 0">
-  {% for a in area_names %}
-    {% capture d %}{% include sw-areas-lookup values=a input="name" output="description" sep="|" %}{% endcapture %}
-    {% assign d = d | strip_newlines | split: "|" | first %}
-    {% if links %}
-      {% assign u = a | slugify | prepend: "#" | prepend: link_target | relative_url %}
-      {% capture h %}<a href="{{ u }}">{{ a }}</a>{% endcapture %}
-    {% else %}
-      {% capture h %}{{ a }}{% endcapture %}
-    {% endif %}
-    <li><strong>{{ h }}</strong> ({{ area_counts[forloop.index0] }})</li>
-    <p><em>{{ d }}</em></p>
-  {% endfor %}
+{% for a in area_names %}
+  {% assign an = a.name %}
+  {% if links %}
+    {% assign u = an | slugify | prepend: "#" | prepend: link_target | relative_url %}
+    {% capture h %}<a href="{{ u }}">{{ an }}</a>{% endcapture %}
+  {% else %}
+    {% capture h %}{{ an }}{% endcapture %}
+  {% endif %}
+  {% assign d = site.data.sw-areas-new[ an ].description %}
+  <li><strong>{{ h }}:</strong> ({{ a.size }})</li>
+  <p><em>{{ d }}</em></p>
+{% endfor %}
 </ul>
 
 </div>

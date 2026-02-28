@@ -40,33 +40,26 @@ An experiement in filtering the collection (implemented in sw-documents-collecti
   {% assign entries = filtered_entries | uniq %}
 {% endif %}
 
-{% comment %}
-  Assemble the list of software area names actually being used in the catalog.
-  Also returns the counts for each area.
-
-  We need to loop over the names and map to the short_names to filter the collection.
-{% endcomment %}
-{% include sw-areas-used %}
-
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 
+{% assign areas = "" | split: "," %}
+{% for s in site.software %}
+  {% assign areas = areas | concat: s.areas %}
+{% endfor %}
+{% assign area_names = areas | group_by_exp: "item", "item" | sort_natural %}
+
 {% for a in area_names %}
-  {% assign count = area_counts[forloop.index0] %}
-  {% assign filtered_entries = "" | split: "," %}
-  {% capture sn %}{% include sw-areas-lookup values=a input="name" output="short_name" %}{% endcapture %}
-  {% assign sn = sn | strip_newlines | split: "|" | uniq | sort_natural %}
-  {% for s in sn %}
-    {% assign e = entries | where: "area", s %}
-    {% assign filtered_entries = filtered_entries | concat: e | compact %}
-  {% endfor %}
+  {% assign an = a.name %}
+  {% assign count = a.size %}
+  {% assign filtered_entries = entries | where_exp: "item", "item.areas contains an" %}
   {% if page.sort_by %}
     {% assign filtered_entries = filtered_entries | sort: page.sort_by %}
   {% endif %}
   {% if page.sort_order == 'reverse' %}
     {% assign filtered_entries = filtered_entries | reverse %}
   {% endif %}
-  <section id="{{ a | slugify }}" class="taxonomy__section">
-    <h2 class="archive__subtitle">{{ a }} <span class="taxonomy__count">({{ count }})</span></h2>
+  <section id="{{ an | slugify }}" class="taxonomy__section">
+    <h2 class="archive__subtitle">{{ an }} <span class="taxonomy__count">({{ count }})</span></h2>
     <div class="entries-{{ entries_layout }}">
       {% for post in filtered_entries %}
         {% include sw-archive-single.html type=entries_layout %}

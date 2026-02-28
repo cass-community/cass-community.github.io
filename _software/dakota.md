@@ -89,7 +89,8 @@ foundation_membership:
 #                       - package3
 #
 # e4s_product: 
-# spack_name:  
+# This Spack package exists, but is currently unmaintained.  So we're going to defer showing it for now.
+# spack_name: dakota 
 #
 # ADDITIONAL PRODUCT INFORMATION
 #   These are OPTIONAL lists of resource links that you can provide to make your catalog entry more useful.

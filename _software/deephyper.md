@@ -41,6 +41,8 @@
 #
 name: DeepHyper
 area: ai
+areas:
+  - Artificial intelligence
 cass_members:
     - RAPIDS
 description: A hyperparameter optimization library

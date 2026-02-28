@@ -41,6 +41,8 @@
 #
 name: AML
 area: devtools
+areas:
+  - Development tools
 cass_members:
   - RAPIDS
 description: Building blocks for advanced memory management

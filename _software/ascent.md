@@ -40,6 +40,8 @@
 #
 name: Ascent
 area: dataviz
+areas:
+  - Data and visualization
 cass_members:
   - RAPIDS
 description: A featherweight in situ visualization and analysis tool designed to be integrated with applications to reduce I/O overhead

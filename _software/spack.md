@@ -1,6 +1,8 @@
 ---
 name: Spack
 area: sweco
+areas:
+  - Software ecosystem and delivery
 cass_members:
   - PESO
 description: A flexible package manager that supports multiple versions, configurations, platforms, and compilers

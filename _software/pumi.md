@@ -41,6 +41,8 @@
 #
 name: PUMI Components
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
     - FASTMath
 description: Provides support for unstructured mesh workflows including mesh adaption, hybrid particle-mesh calculations, and solution transfer

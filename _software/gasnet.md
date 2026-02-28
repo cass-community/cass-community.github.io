@@ -40,6 +40,8 @@
 #
 name: GASNet
 area: pmr
+areas:
+  - Programming models and runtimes
 cass_members:
   - S4PST
 description: A network-independent, high-performance communications middleware

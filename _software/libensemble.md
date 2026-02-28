@@ -42,6 +42,8 @@
 #
 name: libEnsemble
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: A Python toolkit for coordinating asynchronous and dynamic ensembles of calculations

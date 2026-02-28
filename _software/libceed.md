@@ -45,6 +45,8 @@ published: false
 #
 name: libCEED
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members: 
   - FASTMath
 description: "Fast algebra for element-based discretizations"

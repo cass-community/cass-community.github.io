@@ -42,6 +42,8 @@
 #
 name: MFEM
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: High-performance finite element library

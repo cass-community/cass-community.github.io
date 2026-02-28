@@ -40,6 +40,8 @@
 #
 name: Fiats
 area: ai
+areas:
+  - Artificial intelligence
 cass_members:
   - S4PST
 description: A deep learning library for use in high-performance computing applications in modern Fortran

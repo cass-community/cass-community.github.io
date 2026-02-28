@@ -40,6 +40,8 @@
 #
 name: TAU
 area: devtools
+areas:
+  - Development tools
 cass_members:
   - RAPIDS
   - STEP

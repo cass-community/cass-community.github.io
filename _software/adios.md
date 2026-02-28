@@ -40,6 +40,8 @@
 #
 name: ADIOS
 area: dataviz
+areas:
+  - Data and visualization
 cass_members:
   - RAPIDS
 description: Provides a simple, flexible way for scientists to describe the data in their code that may need to be written, read, or processed

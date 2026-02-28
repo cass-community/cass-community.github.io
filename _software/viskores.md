@@ -40,6 +40,8 @@
 #
 name: Viskores
 area: dataviz
+areas:
+  - Data and visualization
 cass_members:
   - RAPIDS
 description: A performance-portable visualization library leveraged by production tools such as ParaView and VisIt

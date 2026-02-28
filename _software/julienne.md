@@ -40,6 +40,8 @@
 #
 name: Julienne
 area: devtools
+areas:
+  - Development tools
 cass_members:
   - S4PST
 description: A modern Fortran correctness-checking framework supporting expressive idioms for writing assertions and tests

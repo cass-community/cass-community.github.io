@@ -42,6 +42,8 @@
 #
 name: Kokkos Kernels
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: Performance portable math kernels of the Kokkos Ecosystem.

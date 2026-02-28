@@ -40,6 +40,8 @@
 #
 name: Dyninst
 area: devtools
+areas:
+  - Development tools
 cass_members:
   - STEP
 description: A toolkit for binary analysis, instrumentation, and code modification across a variety of CPU and GPU architectures

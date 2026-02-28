@@ -45,6 +45,8 @@ published: false
 #
 name: MAGMA
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: A library for BLAS and LAPACK on GPUs

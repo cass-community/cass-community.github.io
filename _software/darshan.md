@@ -40,6 +40,8 @@
 #
 name: Darshan
 area: devtools
+areas:
+  - Development tools
 cass_members:
   - STEP
 description: A lightweight I/O characterization tool that transparently captures I/O access pattern information from HPC applications

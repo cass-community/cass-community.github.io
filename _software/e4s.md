@@ -40,6 +40,8 @@
 #
 name: E4S
 area: sweco
+areas:
+  - Software ecosystem and delivery
 cass_members:
   - PESO
 description: The Extreme-Scale Scientific Software Stack

@@ -45,6 +45,8 @@ published: false
 #
 name: Trilinos
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: Collection of reusable scientific software libraries

@@ -42,6 +42,8 @@
 #
 name: OpenACC Verification and Validation Test Suite 
 area: pmr
+areas:
+  - Programming models and runtimes
 cass_members:
     - S4PST 
 description: A test suite for OpenACC implementations

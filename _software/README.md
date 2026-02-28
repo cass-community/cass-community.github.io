@@ -26,6 +26,18 @@ If you need an area that is not already defined, please work with the [point of 
 
 Note that the `Area` key (note capitalization) in the `e4s.yml` file is similar to our `area` (lowercase), but it does not use the same short_names that we do, and is not a controlled vocabulary.  In the future, we plan to discuss with the E4S DocPortal team how to merge this information.
 
+## `areas` *(controlled vocabulary)*
+
+Area is the term we're using for the topical category of the software product.  Our labels have evolved from those employed by [ECP ST](https://www.exascaleproject.org/research/#software) except that what was *NNSA Software* under ECP should now be categorized under the more appropriate topical area.  Additional labels have been added as needed.
+
+Areas are a *controlled vocabulary*, defined in the file `_data/sw-areas-new.yml`. We use the `name` values for the product's `area`s.  Exact matches are required in spelling and case.  By convention, area `name`s should always be in *sentence case*.  Values that are not recognized will generally be rendered as "missing data" in red to indicate an error.
+
+Each product is expected to be in at least one area.  Multiple areas are supported, and should be listed in priority order -- which area label is the *most* relevant, *second most* relevant, etc.
+
+If you need an area that is not already defined, please work with the [point of contact](../README.md#point-of-contact) for the website on the necessary enhancements.
+
+Note that the `Area` key (note capitalization) in the `e4s.yml` file is similar to our `areas` (lowercase), but it is not a controlled vocabulary.  In the future, we plan to discuss with the E4S DocPortal team how to merge this information.
+
 ## `cass_members` *(controlled vocabulary)*
 
 This field should be a YAML list of the the CASS member organization(s) (also known as software stewardship organization(s), or SSOs) which are providing stewardship support for the product.  In most cases, there is only one such SSO, but it is possible for there to be more.  Using the list structure supports this.  Note that you *cannot* use the form `cass_members: SSO` -- the SSO will not be picked up properly.

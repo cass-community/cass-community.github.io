@@ -45,6 +45,8 @@ published: false
 #
 name: xSDK
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: The Extreme-scale Scientific Software Development Kit

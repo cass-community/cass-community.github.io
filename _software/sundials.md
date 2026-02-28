@@ -42,6 +42,8 @@
 #
 name: SUNDIALS
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description:  A library of time integrators and nonlinear solvers for ordinary differential equations (ODEs), differential-algebraic equations (DAEs), and nonlinear algebraic systems

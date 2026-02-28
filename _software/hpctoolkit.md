@@ -40,6 +40,8 @@
 #
 name: HPCToolkit
 area: devtools
+areas:
+  - Development tools
 cass_members:
   - STEP
 description: A toolkit that supports measurement, analysis, attribution, and inspection of application performance on CPU and GPU-accelerated architectures

@@ -40,6 +40,8 @@
 #
 name: MPICH
 area: pmr
+areas:
+  - Programming models and runtimes
 cass_members:
   - S4PST
 description: A high performance open-source implementation of the Message Passing Interface (MPI) standard

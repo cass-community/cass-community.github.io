@@ -42,6 +42,8 @@
 #
 name: PETSc/TAO
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: The Portable, Extensible Toolkit for Scientific Computation

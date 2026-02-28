@@ -1,6 +1,8 @@
 ---
 name: chipStar
 area: pmr
+areas:
+  - Programming models and runtimes
 cass_members:
   - S4PST
 description: A tool for compiling and running HIP/CUDA on SPIR-V via OpenCL or Level Zero APIs

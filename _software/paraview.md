@@ -40,6 +40,8 @@
 #
 name: ParaView
 area: dataviz
+areas:
+  - Data and visualization
 cass_members:
   - RAPIDS
 description: A tool for data analysis and visualization at scale

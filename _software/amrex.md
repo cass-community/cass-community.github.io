@@ -42,6 +42,8 @@
 #
 name: AMReX
 area: mathlibs # Original submission: Co-design
+areas:
+  - Mathematical libraries # Original submission: Co-design
 cass_members:
   - FASTMath
 description: Software framework for block structured AMR

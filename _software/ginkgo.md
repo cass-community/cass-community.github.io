@@ -45,6 +45,8 @@ published: false
 #
 name: Ginkgo
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: High-performance linear algebra library for manycore systems, with a focus on sparse solution of linear systems

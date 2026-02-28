@@ -40,6 +40,8 @@
 #
 name: Empirical Roofline Tool
 area: devtools
+areas:
+  - Development tools
 cass_members:
   - RAPIDS
 description: Automates generation of roofline model for architecture-specific performance analysis and optimization 

@@ -40,6 +40,8 @@
 #
 name: UPC++
 area: pmr
+areas:
+  - Programming models and runtimes
 cass_members:
   - S4PST
 description: A C++ library that supports Partitioned Global Address Space (PGAS) programming

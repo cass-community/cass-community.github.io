@@ -40,6 +40,8 @@
 #
 name: DIY
 area: dataviz
+areas:
+  - Data and visualization
 cass_members:
   - RAPIDS
 description: A block-parallel library for writing scalable parallel algorithms

@@ -40,6 +40,8 @@
 #
 name: PAPI
 area: devtools
+areas:
+  - Development tools
 cass_members:
   - STEP
 description: A universal interface for hardware counters to monitor software performance

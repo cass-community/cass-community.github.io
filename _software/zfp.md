@@ -40,6 +40,8 @@
 #
 name: zfp
 area: dataviz
+areas:
+  - Data and visualization
 cass_members:
   - RAPIDS
 description: An open-source library for compressed floating-point and integer arrays that support high-throughput random access read and write 

@@ -40,6 +40,8 @@
 #
 name: Legion
 area: pmr
+areas:
+  - Programming models and runtimes
 cass_members:
   - S4PST
 description: A task-based programming model and runtime

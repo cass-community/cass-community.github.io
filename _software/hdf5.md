@@ -40,6 +40,8 @@
 #
 name: HDF5
 area: dataviz
+areas:
+  - Data and visualization
 cass_members:
   - RAPIDS
 description: A parallel I/O library for high performance access to self-describing HDF5 datasets

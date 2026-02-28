@@ -1,0 +1,23 @@
+# These are the "areas" used in the software catalog
+# They are derived from the areas used in ECP ST (https://www.exascaleproject.org/research/#software)
+#
+# The `name` should be in *sentence case*.  Software catalog entries must exactly match these names
+#
+# The `description` should be very terse, so that it fits reasonably in a sidebar
+
+- name: Artificial intelligence
+  description: Libraries and tools that directly support artificial intelligence research and research using artificial intelligence
+- name: AI building blocks
+  description: "Software which provides capabilities often used in artificial intelligence-based workflows"
+- name: Uses AI
+  description: "Software that uses artificial intelligence techniques internally"
+- name: Data and visualization
+  description: Provide capabilities for analyzing, visualizing, compressing, moving, and managing data
+- name: Development tools
+  description: Help address performance challenges and faciliate efficient support of the latest HPC node architectures 
+- name: Mathematical libraries
+  description: Scalable libraries supporting the latest HPC architectures for coupled systems, ensemble calculations, and more
+- name: Programming models and runtimes
+  description: Support intra-node and inter-node concurrency on current and next-generation HPC node architectures
+- name: Software ecosystem and delivery
+  description: Provide software build, test, and integration tools, and containers environments 

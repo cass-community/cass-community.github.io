@@ -42,6 +42,8 @@
 #
 name: hypre
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: High-performance linear solvers library

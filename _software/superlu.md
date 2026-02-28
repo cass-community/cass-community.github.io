@@ -42,6 +42,8 @@
 #
 name: SuperLU
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: Sparse direct solver and preconditioner based on supernodal sparse LU factorization

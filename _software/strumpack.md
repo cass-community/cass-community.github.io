@@ -42,6 +42,8 @@
 #
 name: STRUMPACK
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: Low-rank STRUctured Matrix PACKage for both dense and sparse matrices.

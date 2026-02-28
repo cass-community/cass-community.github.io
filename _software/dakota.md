@@ -41,6 +41,8 @@
 #
 name: Dakota
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
     - FASTMath
 description: Software for black-box, ensemble analysis of computationally costly simulations

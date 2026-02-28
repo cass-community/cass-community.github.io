@@ -41,6 +41,8 @@
 #
 name: PyTUQ
 area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
     - FASTMath
 description: Library for tools and workflows for uncertainty quantification in computational models

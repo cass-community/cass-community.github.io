@@ -40,6 +40,8 @@
 #
 name: VisIt
 area: dataviz
+areas:
+  - Data and visualization
 cass_members:
   - RAPIDS
 description: An open source, interactive, scalable, visualization, animation and analysis tool.

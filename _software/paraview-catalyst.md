@@ -40,6 +40,8 @@
 #
 name: ParaView Catalyst
 area: dataviz
+areas:
+  - Data and visualization
 cass_members:
   - RAPIDS
 description: A tool for in situ data analysis and visualization at scale

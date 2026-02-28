@@ -40,6 +40,8 @@
 #
 name: PnetCDF
 area: dataviz
+areas:
+  - Data and visualization
 cass_members:
   - RAPIDS
 description: An I/O library for high-performance parallel access to self-describing netCDF datasets

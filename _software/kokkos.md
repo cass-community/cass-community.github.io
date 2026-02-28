@@ -42,6 +42,8 @@
 #
 name: Kokkos
 area: pmr
+areas:
+  - Programming models and runtimes
 cass_members:
   - S4PST
 description: Performance portability programming model

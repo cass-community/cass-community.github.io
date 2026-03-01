@@ -35,24 +35,7 @@ Person One:
 
 ### `_data/sw-areas.yml`
 
-This file contains the "areas" used in the software catalog.  The list is keyed to the locally-defined `short_name` for each area (short and all lowercase). The list maps the short_names to a consistent set of human-friendly `name`s, as used in the ECP ST area, as well as terse `description`s.
-
-#### Data structure details
-
-In the initial implementation of the site, we allowed multiple `short_name`s to map to the same area `name`.  We've since changed to limit it to a 1:1 mapping so that we can have the default sort for the software collection be by `area`.  Some of the processing code still supports the many-to-one mapping, but we'll eliminate that over time in favor of simpler code.
-
-The `name` values should be in sentence case
-
-#### Rendering details
-
-When rendering the site, use `_include/software-areas-lookup` to access the `site.data.software-areas` structure systematically.  The function takes a specification of the `input` key, the `values` to lookup, and the key to `output` the corresponding values from.  Any of the keys in the structure can be used as inputs or outputs (currently `short_name`, `name`, and `description`).  Note that because of limitations of Jekyll and Liquid, the result returned is not an array, but a text string which must be converted into an array. The general use case looks like this:
-
-```
-{% capture a %}{% include sw-areas-lookup values=values input="name" output="short_name" sep="|" %}{% endcapture %}
-{% assign a = a | strip_newlines | split: "|" %}
-```
-
-If there is no mapping for the given `area`, it should be rendered as given, in red font to call out that there's a problem.
+This file contains the "areas" used in the software catalog. The list of areas is based on the ECP ST areas, but has been revised and expanded. Areas should be in *sentence case* and should be kept very short. Each area has a terse `description` of the content of the area, which should be in *sentence case* and should *not* end with a period.  
 
 ## Point of contact
 

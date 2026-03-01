@@ -3,7 +3,7 @@ title: Software
 excerpt: View by Areas
 permalink: /software/
 collection: software
-sort_by: area
+sort_by: name
 entries_layout: grid
 layout: sw-collection-areas
 # layout: splash # Default: home, but that includes a list of posts

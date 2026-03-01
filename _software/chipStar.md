@@ -1,6 +1,5 @@
 ---
 name: chipStar
-area: pmr
 areas:
   - Programming models and runtimes
 cass_members:

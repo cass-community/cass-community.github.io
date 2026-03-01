@@ -8,29 +8,17 @@ Note that both keys and values are *case sensitive* unless otherwise stated.
 
 If you're working on the rendering of the site, the top-level [README.md](../README.md) also provides relevant information.
 
-## `name` *(string)*
+## `name` *(string)* REQUIRED
 
 This is the name you want to be shown for your software product.  It should be short and simple -- generally just the name or acronym by which your product is known to the public, not a "title"-like string. Extra descriptive words should be worked into the `description` field rather than included here. If your software is known by an acronym, put the expansion in the `description` or `long_description` fields, or vice versa.
 
 Generally, the value of the `name` field will be rendered as a heading or a title, but the next line will be the `description` field.
 
-## `area` *(controlled vocabulary)*
-
-Area is the term we're using for the topical category of the software product.  For the present, we're using the same ones employed by [ECP ST](https://www.exascaleproject.org/research/#software) except that what was *NNSA Software* under ECP should now be categorized under the more appropriate topical area.
-
-Areas are a *controlled vocabulary*, defined in the file `_data/sw-areas.yml`. We use the `short_name` values for the product's `area`, which the site will map to appropriate `name`s and `description`s. Values that are not recognized will generally be rendered as "missing data" in red to indicate an error.
-
-Each product is expected to be in *exactly one area*.  If this needs to change, please work with the [point of contact](../README.md#point-of-contact) for the website on the necessary enhancements.
-
-If you need an area that is not already defined, please work with the [point of contact](../README.md#point-of-contact) for the website on the necessary enhancements.
-
-Note that the `Area` key (note capitalization) in the `e4s.yml` file is similar to our `area` (lowercase), but it does not use the same short_names that we do, and is not a controlled vocabulary.  In the future, we plan to discuss with the E4S DocPortal team how to merge this information.
-
-## `areas` *(controlled vocabulary)*
+## `areas` *(controlled vocabulary)* REQUIRED
 
 Area is the term we're using for the topical category of the software product.  Our labels have evolved from those employed by [ECP ST](https://www.exascaleproject.org/research/#software) except that what was *NNSA Software* under ECP should now be categorized under the more appropriate topical area.  Additional labels have been added as needed.
 
-Areas are a *controlled vocabulary*, defined in the file `_data/sw-areas-new.yml`. We use the `name` values for the product's `area`s.  Exact matches are required in spelling and case.  By convention, area `name`s should always be in *sentence case*.  Values that are not recognized will generally be rendered as "missing data" in red to indicate an error.
+Areas are a *controlled vocabulary*, defined in the file `_data/sw-areas-new.yml`. Exact matches are required in spelling and case.  By convention, area names should always be in *sentence case*.  
 
 Each product is expected to be in at least one area.  Multiple areas are supported, and should be listed in priority order -- which area label is the *most* relevant, *second most* relevant, etc.
 
@@ -38,13 +26,13 @@ If you need an area that is not already defined, please work with the [point of 
 
 Note that the `Area` key (note capitalization) in the `e4s.yml` file is similar to our `areas` (lowercase), but it is not a controlled vocabulary.  In the future, we plan to discuss with the E4S DocPortal team how to merge this information.
 
-## `cass_members` *(controlled vocabulary)*
+## `cass_members` *(controlled vocabulary)* REQUIRED
 
 This field should be a YAML list of the the CASS member organization(s) (also known as software stewardship organization(s), or SSOs) which are providing stewardship support for the product.  In most cases, there is only one such SSO, but it is possible for there to be more.  Using the list structure supports this.  Note that you *cannot* use the form `cass_members: SSO` -- the SSO will not be picked up properly.
 
 The SSO names are a *controlled vocabulary*, defined in `members` structure in the file `_data/organization.yml`. We use the `short_name` values for the product's `cass_member` values, which the site will usually display as-is, but via the `members` structure, can also map into other information.  The `short_name` values correspond to the acronyms used by the member organizations and are case sensitive (e.g. "S4PST", not "s4pst").
 
-## `description` *(string)*
+## `description` *(string)* REQUIRED
 
 The `description` should be a short string of text that provides enough information about the product to determine whether or not it might interest them.  The `description` is always shown immediately after the `name` and they should be considered together as, in effect constructing a sentence-length description of the product with the form `name: desciption`.  However it does not need to be a complete sentence in the grammatical sense.
 
@@ -56,13 +44,13 @@ The description is used in small areas (such as the grid view of the catalog, an
 * The description` *should* be in sentence case.
 * The `description` *should not* end with a period.
 
-## `long_description` *(paragraph text)*
+## `long_description` *(paragraph text)* REQUIRED
 
 This field should provide a semi-technical description of the product and its capabilities or key features.  It should target a reasonably knowledgable reader who might want to know what distinguishes this product from others.  The `long_description` should be approximately one paragraph in length.
 
 Input for this field should generally use the YAML syntax for a multi-line string, denoted by the pipe ("|") character on the line with the key.  The syntax actually supports multiple paragraphs, if needed.  Paragraph breaks are expressed with a blank line, as usual in Markdown.  The YAML processor will keep reading the input as long as the indentation continues.
 
-## `target_audience` *(paragraph text)*
+## `target_audience` *(paragraph text)* REQUIRED
 
 This field should provide an explanation of who should be interested in this product.  The target is for someone with less specific domain knowledge than the `long_description`, and doesn't need to distinguish this product from others.  It should be approximately one paragraph in length.
 
@@ -72,7 +60,7 @@ Input for this field should generally use the YAML syntax for a multi-line strin
 
 * If the product is popular in certain scientific communities, you're welcome to include that information, but put it *after* you provide a general description of the target audience, not before.
 
-## License information
+## `license_spdx` *(string)* OPTIONAL
 
 This field should contain the SPDX expression for the applicable license.  In most cases, this will be an SPDX short identifier (https://spdx.org/licenses/), but it may be an actual expression.  The most common expressions will use WITH to add an exception to a short identifier.  In the case of a multiply-licensed package it may be of the form "id-A OR id-B" where id-A and id-B are short identifiers. Note that SPDX is meant to be quite specific about the license, so matching is fairly strict. The SPDX website offers a tool to identify the appropriate license from the text (https://tools.spdx.org/app/check_license/), though it can sometimes have a tough time matching text from the wild. Often, cutting out text that's clearly extraneous to the license (such as copyright assertions or funding acknowledgements) Pay careful attention to variants of licenses which appear as separate entries in the SPDX license list.  For example, BSD-3-Clause vs BSD-3-Clause-LBNL.
 
@@ -81,11 +69,11 @@ This field should contain the SPDX expression for the applicable license.  In mo
 * SPDX doesn't provide a simple, succinct way of saying that a product is a collection of packages, each with its own license.  We use the non-standard phrase `per-member-package` to indicate this.  The hyphens are important to give the expression the same form as an SPDX license identifier, so it can be parsed in the same way.
 * If you have a license that's not in the SPDX license list, they recommend that you request that it be added to the list.  We encourage maintainers to do this, and in the mean time, they should leave this field blank.
 
-## OpenSSF Best Practices badge information
+## `openssf_bestpractices_id` *(number)* Optional
 
 This field should provide the project ID for the package on https://www.bestpractices.dev/en/projects.  Projects which have not registered for the OpenSSF badging process can leave the entry blank or comment it out altogether.
 
-## Foundation membership information
+## `foundation_membership` *(controlled vocabulary)* Optional
 
 This field should provide the full name of the software foundation the project is affiliated with. The foundation name should appear in `_data/foundations.yml` along with a short name or abbreviation and a URL for the foundation.  Projects which are not members of software foundations can leave the entry blank or comment it out altogether.
 
@@ -103,22 +91,22 @@ If you would like to provide information about other packaging of your product, 
 * Generally, if the product has a Spack package and/or is available through the E4S distribution, this information should be provided.  
 * In the rare cases where these are not *recommended* ways to access the product, the preference is to list the packaging information, but provide a brief explanation in the `long_description` as to the recommended approach. *Rationale:* On the assumption that visitors may find out about the packages being available from other sources, this approach provides better transparency -- acknowledging their existence, but recommending a different approach in practice.
 
-### `e4s_product` *(string)*
+### `e4s_product` *(string)* Optional
 
 The concept of the product name in the E4S is not well defined, at present, particularly with respect to capitalization. In constructing the query for the DocPortal, the site forces the provided `e4s_product` name to uppercase (which triggers the DocPortal to *open* the record matching the query, showing its details immediately).  Consequently, the capitalization of the `e4s_product` value does not matter, currently.  However this may change in the future.  The best practice recommendation, therefore, is to use the product team's preferred capitalization in the `e4s_product` value.
 
 If the product is not part of E4S, this key should be commented out.
 
-### `spack_name` *(string)*
+### `spack_name` *(string)* Optional
 
 If the product does not have a Spack package, this key should be commented out.
 
 ## Resource link lists
 
 What we're calling "resource link lists" are generic data structure that makes it easy to express links to resources or artifacts in a simple, but flexible manner.  The catalog currently supports three such lists:
-* `additional_resource_links`
-* `end_user_resource_links`
-* `developer_resource_links`
+* `additional_resource_links` Optional
+* `end_user_resource_links` Optional
+* `developer_resource_links` Optional
 
 Each of these has fundamentally the same schema, they are are just labeled differently when rendered on the site.  The intent is to allow the contributor to identify resources that specifically target end-users of the product, or developers of the product, or more generic resources without such connotations.
 

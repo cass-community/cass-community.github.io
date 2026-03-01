@@ -1,6 +1,5 @@
 ---
 name: Spack
-area: sweco
 areas:
   - Software ecosystem and delivery
 cass_members:

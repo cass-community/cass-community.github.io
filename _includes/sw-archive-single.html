@@ -39,11 +39,17 @@
     {% capture area_icon %}{% include icon-map-lookup label="Area" %}{% endcapture %}
   
     {% comment %}
-    `area` is required, so if it isn't present or isn't one of the recognized areas from 
-    `_data/sw-areas.yml`, we'll show the heading with a red "missing data" marker.
+    `areaa` is required, so if it isn't present we'll show the heading with a red "missing data" marker.
     {% endcomment %}
-    {% capture a %}{% include sw-areas-lookup values = post.area input="short_name" output="name" %}{% endcapture %}
-    {% assign a = a | strip_newlines | split: "|" | default: '<em><font color="red">missing data</font></em>' %}
-    <p class="archive__item-excerpt" itemprop="area">{{ area_icon }} {{ a }}</p>
+
+    <p class="archive__item-excerpt" itemprop="area">
+      {% if post.areas %}
+        {% for a in post.areas %}
+          {{ area_icon }} {{ a }}{% unless forloop.last %}<br>{% endunless %}
+        {% endfor %}
+      {% else %}
+        <em><font color="red">{{ area_icon }} missing data</font></em>
+      {% endif %}
+    </p>
   </article>
 </div>

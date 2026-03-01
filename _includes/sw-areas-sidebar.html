@@ -14,7 +14,9 @@
 
 {% assign areas = "" | split: "," %}
 {% for s in site.software %}
-  {% assign areas = areas | concat: s.areas %}
+  {% if s.areas %}
+    {% assign areas = areas | concat: s.areas %}
+  {% endif %}
 {% endfor %}
 {% assign area_names = areas | group_by_exp: "item", "item" | sort_natural %}
 

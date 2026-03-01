@@ -44,7 +44,9 @@ An experiement in filtering the collection (implemented in sw-documents-collecti
 
 {% assign areas = "" | split: "," %}
 {% for s in site.software %}
-  {% assign areas = areas | concat: s.areas %}
+  {% if s.areas %}
+    {% assign areas = areas | concat: s.areas %}
+  {% endif %}
 {% endfor %}
 {% assign area_names = areas | group_by_exp: "item", "item" | sort_natural %}
 
@@ -53,7 +55,7 @@ An experiement in filtering the collection (implemented in sw-documents-collecti
   {% assign count = a.size %}
   {% assign filtered_entries = entries | where_exp: "item", "item.areas contains an" %}
   {% if page.sort_by %}
-    {% assign filtered_entries = filtered_entries | sort: page.sort_by %}
+    {% assign filtered_entries = filtered_entries | sort_natural: page.sort_by %}
   {% endif %}
   {% if page.sort_order == 'reverse' %}
     {% assign filtered_entries = filtered_entries | reverse %}

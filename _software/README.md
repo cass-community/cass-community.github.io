@@ -18,7 +18,7 @@ Generally, the value of the `name` field will be rendered as a heading or a titl
 
 Area is the term we're using for the topical category of the software product.  Our labels have evolved from those employed by [ECP ST](https://www.exascaleproject.org/research/#software) except that what was *NNSA Software* under ECP should now be categorized under the more appropriate topical area.  Additional labels have been added as needed.
 
-Areas are a *controlled vocabulary*, defined in the file `_data/sw-areas-new.yml`. Exact matches are required in spelling and case.  By convention, area names should always be in *sentence case*.  
+Areas are a *controlled vocabulary*, defined in the file `_data/sw-areas.yml`. Exact matches are required in spelling and case.  By convention, area names should always be in *sentence case*.  
 
 Each product is expected to be in at least one area.  Multiple areas are supported, and should be listed in priority order -- which area label is the *most* relevant, *second most* relevant, etc.
 

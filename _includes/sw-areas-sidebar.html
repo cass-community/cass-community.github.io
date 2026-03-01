@@ -32,7 +32,7 @@
   {% else %}
     {% capture h %}{{ an }}{% endcapture %}
   {% endif %}
-  {% assign d = site.data.sw-areas-new[ an ].description %}
+  {% assign d = site.data.sw-areas[ an ].description %}
   <li><strong>{{ h }}:</strong> ({{ a.size }})</li>
   <p><em>{{ d }}</em></p>
 {% endfor %}

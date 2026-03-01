@@ -20,7 +20,7 @@
 #   name:                   (string) REQUIRED The name under which your product should appear in the catalog
 #   areas:                  (list) REQUIRED Each product must be associated with at least one area; multiple areas should be listed as appropriate.
 #                           Multiple areas should be listed in priority order -- the most relevant label, second most, etc.
-#                           The recognized area labels are defined in `_data/sw-areas-new.yml`, and entries here must exactly match the `name` in that
+#                           The recognized area labels are defined in `_data/sw-areas.yml`, and entries here must exactly match the `name` in that
 #                           file, including both spelling and case.
 #   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
 #                           organizations) you are associated with. Values include: "fastmath", "PESO", "rpids", "S4PST", "STEP".

@@ -187,6 +187,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-link-attributes
 #  - liquid_pluralize # We use it, but not as a gem
+#  - jekyll-keys-filter # We use it, but not as a gem
 
 # Exclude from processing.
 # The following items will not be processed, by default.

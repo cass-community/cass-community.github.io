@@ -13,11 +13,97 @@ header:
 ---
 *The resources linked from this page are intended for internal use by CASS members. Nothing in the internal tree should be linked from any public webpage.*
 
+## Software by areas
+
+{% assign areas = site.software | where_exp: "item", "item.areas != nil" | group_by_exp: "item", "item.areas | array_to_sentence_string" | sort_natural: "name" %}
+{% for a in areas %}
+  **{{ a.name }}**: {{ a.items | map: "name" | sort_natural | array_to_sentence_string }}
+{% endfor %}
+
+{% comment %}
+  Check for any packages without areas – this is an error
+{% endcomment %}
+{% assign no_areas = site.software | where: "areas", nil %}
+{% if no_areas.size != 0 %}
+  <p><font color="red"><strong>ERROR: no areas listed</strong>: {{ no_areas | map: "name" | sort_natural | array_to_sentence_string }}</font></p>
+{% endif %}
+
+{% comment %}
+  Check for use of areas which are not defined in `_data/sw-areas.yml`
+
+  These could be typos or they could be things that need to be added to the `sw-areas.yml`
+{% endcomment %}
+{% assign areas_used = "" | split: "," %}
+{% for s in site.software %}
+  {% if s.areas %}
+    {% assign areas_used = areas_used | concat: s.areas %}
+  {% endif %}
+{% endfor %}
+{% assign areas_used = areas_used | sort_natural | uniq %}
+
+{% assign areas_defined = site.data.sw-areas | keys sort_natural | uniq %}
+
+{% assign bad_areas = "" | split: "," %}
+{% for a in areas_used %}
+  {% unless areas_defined contains a %}
+    {% assign bad_areas = bad_areas | push: a %}
+  {% endunless %}
+{% endfor %}
+{% assign bad_areas = bad_areas | sort_natural | uniq %}
+{% if bad_areas.size != 0 %}
+  <p><font color="red"><strong>ERROR: areas not in <code>_data/sw-areas.yml</code></strong></font></p>
+  <ul>
+    {% for a in bad_areas %}
+      <li><font color="red">"{{ a }}": {{ site.software | where_exp: "item", "item.areas contains a" | map: "name" sort_natural | array_to_sentence_string }}</font></li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% comment %}
+  Check for areas which are defined in `_data/sw-areas.yml` but not used
+
+  This is just informational, it is not an error
+{% endcomment %}
+{% assign areas_not_used = "" | split: "," %}
+{% for a in areas_defined %}
+  {% unless areas_used contains a %}
+    {% assign areas_not_used = areas_not_used | push: a %}
+  {% endunless %}
+{% endfor %}
+{% if areas_not_used.size != 0 %}
+*Defined areas not used by any package (not an error)*: {{ areas_not_used | sort_natural | array_to_sentence_string }}
+{% endif %}
+
 ## Software by CASS member
 
 {% assign cass_members = site.software | group_by_exp: "item", "item.cass_members | array_to_sentence_string" | sort_natural: "name" %}
 {% for m in cass_members %}
   **{{ m.name }}**: {{ m.items | map: "name" | sort_natural | array_to_sentence_string }}
+{% endfor %}
+
+## Licenses
+
+{% assign licenses = site.software | group_by_exp: "item", "item.license_spdx" | sort_natural: "name" %}
+{% for m in licenses %}
+  {% if m.name == nil %}*No license*:{% else %}**{{ m.name }}**:{% endif %} {{ m.items | map: "name" | sort_natural | array_to_sentence_string }}
+{% endfor %}
+
+## OpenSSF Best Practices badge status
+
+{% assign projects = site.software | where_exp: "item", "item.openssf_bestpractices_id != nil" | sort_natural: "name" %}
+
+| Package | OpenSSF project ID<br>(Link to OpenSSF page) | Tiered percentage | Badge level | Date of last update 
+|:--------|---------------------------------------------:|------------------:|:----------: |-------------------:
+{% for p in projects %}
+  {%- assign project_data = site.data.openssf | where: "id", p.openssf_bestpractices_id -%}
+  | {{ p.name }} | [{{ p.openssf_bestpractices_id }}]({{ site.openssf_bp_projects_url }}/{{ p.openssf_bestpractices_id }}) | {{ project_data[0].tiered_percentage }}% | {{ project_data[0].badge_level }} | {{ project_data[0].updated_at | date: "%F" }}
+{% endfor %}
+
+## Foundation memberships
+
+{% assign foundation_members = site.software | group_by_exp: "item", "item.foundation_membership" | sort_natural: "name" %}
+{% for m in foundation_members %}
+  {% if m.name == nil %}*Non-members*:{% else %}**{{ m.name }}**:{% endif %} {{ m.items | map: "name" | sort_natural | array_to_sentence_string }}
 {% endfor %}
 
 ## Spack package availability
@@ -61,29 +147,4 @@ This list is for informational purposes only.  We do not expect exact parity in 
 {% for s in sw %}
   {%- assign highlights = site.impacts | where_exp: "item", "item.software_mentioned contains s.name" -%}
 | [{{ s.name }}]({{ s.url }}{% if highlights.size > 0 %}#impact-stories{% endif %}) | {{ highlights.size }}
-{% endfor %}
-
-## OpenSSF Best Practices badge status
-
-{% assign projects = site.software | where_exp: "item", "item.openssf_bestpractices_id != nil" | sort_natural: "name" %}
-
-| Package | OpenSSF project ID<br>(Link to OpenSSF page) | Tiered percentage | Badge level | Date of last update 
-|:--------|---------------------------------------------:|------------------:|:----------: |-------------------:
-{% for p in projects %}
-  {%- assign project_data = site.data.openssf | where: "id", p.openssf_bestpractices_id -%}
-  | {{ p.name }} | [{{ p.openssf_bestpractices_id }}]({{ site.openssf_bp_projects_url }}/{{ p.openssf_bestpractices_id }}) | {{ project_data[0].tiered_percentage }}% | {{ project_data[0].badge_level }} | {{ project_data[0].updated_at | date: "%F" }}
-{% endfor %}
-
-## Foundation memberships
-
-{% assign foundation_members = site.software | group_by_exp: "item", "item.foundation_membership" | sort_natural: "name" %}
-{% for m in foundation_members %}
-  {% if m.name == nil %}*Non-members*:{% else %}**{{ m.name }}**:{% endif %} {{ m.items | map: "name" | sort_natural | array_to_sentence_string }}
-{% endfor %}
-
-## Licenses
-
-{% assign licenses = site.software | group_by_exp: "item", "item.license_spdx" | sort_natural: "name" %}
-{% for m in licenses %}
-  {% if m.name == nil %}*No license*:{% else %}**{{ m.name }}**:{% endif %} {{ m.items | map: "name" | sort_natural | array_to_sentence_string }}
 {% endfor %}

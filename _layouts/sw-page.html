@@ -74,11 +74,15 @@ layout: default
           </aside>
         {% endif %}
 
-        {% if page.area %}
-          {% capture a %}{% include sw-areas-lookup values = page.area input="short_name" output="name" %}{% endcapture %}
-          {% assign a = a | strip_newlines | split: "|" | default: '<em><font color="red">missing data</font></em>' %}
-          {% assign u = a[0] | slugify | prepend: "/software#" | relative_url %}
-          <p id="area"><strong>{{ area_icon }} Area:</strong> <a href="{{ u }}">{{ a }}</a></p>
+        {% if page.areas %}
+          <p id="area"><strong>{{ area_icon }} {{ page.areas | size | pluralize: "Area", "Areas" }}:</strong>
+            {% for a in page.areas %}
+              {% assign u = a | slugify | prepend: "/software#" | relative_url %}
+              <a href="{{ u }}">{{ a }}</a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </p>
+        {% else %}
+          <p id="area"><em><font color="red"><strong>{{ area_icon }} Area:</strong> missing data</font></em></p>
         {% endif %}
 
         {% if page.cass_members %}

@@ -58,5 +58,5 @@ activities:
 ---
 *User/Developer Experience Webinars feature speakers who highlight best practices and challenges for usable scientific software. Have a suggestion for a future meeting? Use [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSe0ss98Bh1otRaleBii_LcADeGeGvluav6O3oxFIwZo6d4Xzg/viewform) to propose ideas.*
 
-**Abstract:** In safety-critical environments, every second counts, and human attention is limited. Leah Kim, UX designer at Fermilab, shares lessons from redesigning the Alarms application used by accelerator operators. Through observation, empathy, and iterative design, she explores how understanding cognitive load, attention, and operational context can guide interfaces that help users focus on what truly matters, reduce stress, and support safe decision-making.
+In safety-critical environments, every second counts, and human attention is limited. Leah Kim, UX designer at Fermilab, shares lessons from redesigning the Alarms application used by accelerator operators. Through observation, empathy, and iterative design, she explores how understanding cognitive load, attention, and operational context can guide interfaces that help users focus on what truly matters, reduce stress, and support safe decision-making.
 

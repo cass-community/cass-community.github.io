@@ -1,1 +1,1 @@
-https://youtube.com/playlist?list=
+https://youtube.com/playlist?list=,https://www.bestpractices.dev/en/projects

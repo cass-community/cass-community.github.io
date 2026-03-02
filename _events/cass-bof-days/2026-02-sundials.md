@@ -46,10 +46,25 @@ organizers:
   - name: Carol Woodward
     affiliation: Lawrence Livermore National Laboratory    
 #
-# artifacts:
-#   - label: Slides
-#     url: /assets/artifacts/cass-bof-days/
-#     note: "(PDF)"
+artifacts:
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-overview.pdf
+    note: "- Overview (PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-newfeatures.pdf
+    note: "- New features (PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-python.pdf
+    note: "- Python (PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-amrex.pdf
+    note: "- AMReX (PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-fusion.pdf
+    note: "- Fusion (PDF)"
+  - label: Slides
+    url: /assets/artifacts/cass-bof-days/2026-02-sundials-nuclei.pdf
+    note: "- Nuclei (PDF)"
 ---
 The goal of this BoF session is to help connect SUNDIALS software developers with users and developers from applications. The session will start with an overview of the SUNDIALS suite emphasizing new features.  The session will continue with brief presentations from SUNDIALS application users.  
 
@@ -60,11 +75,11 @@ The goals of this session will be:
 3. Identify features needed for further SUNDIALS development.
 
 Agenda:
-- "Overview of SUNDIALS," Carol Woodward (LLNL)
-- "New Features in SUNDIALS," Daniel Reynolds (UMBC)
-- "Python Interfaces in SUNDIALS," David Gardner (LLNL)
-- “Using SUNDIALS to Efficiently Drive Time-Integration in AMReX-Based PDE Solvers,” Andy Nonaka (LBNL)
-- “Towards near-real-time discontinuous Galerkin gyrokinetic simulations of fusion plasmas: collisions via super time stepping,” Manaure Francisquez (PPPL)
-- “Dynamics of atomic nuclei with SUNDIALS," Francesca Bonaiti (MSU)
+- "[Overview of SUNDIALS](/assets/artifacts/cass-bof-days/2026-02-sundials-overview.pdf)," Carol Woodward (LLNL)
+- "[New Features in SUNDIALS](/assets/artifacts/cass-bof-days/2026-02-sundials-newfeatures.pdf)," Daniel Reynolds (UMBC)
+- "[Python Interfaces in SUNDIALS](/assets/artifacts/cass-bof-days/2026-02-sundials-python.pdf)," David Gardner (LLNL)
+- “[Using SUNDIALS to Efficiently Drive Time-Integration in AMReX-Based PDE Solvers](/assets/artifacts/cass-bof-days/2026-02-sundials-amrex.pdf),” Andy Nonaka (LBNL)
+- “[Towards near-real-time discontinuous Galerkin gyrokinetic simulations of fusion plasmas: collisions via super time stepping](/assets/artifacts/cass-bof-days/2026-02-sundials-fusion.pdf),” Manaure Francisquez (PPPL)
+- “[Dynamics of atomic nuclei with SUNDIALS](/assets/artifacts/cass-bof-days/2026-02-sundials-nuclei.pdf)," Francesca Bonaiti (MSU)
 - "Integrating SUNDIALS into MATLAB," Brett Buckner (Mathworks)
 - Discussion

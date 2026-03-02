@@ -19,11 +19,10 @@ published: false
 #
 # BASIC PRODUCT INFORMATION (ALL REQUIRED)
 #   name:                   (string) REQUIRED The name under which your product should appear in the catalog
-#   area:                   (string) REQUIRED The technical area of the product.  For now, we are using
-#                           the areas that were used by ECP ST, except that anything that was categorized as
-#                           NNSA Software under ECP should instead be listed under the appropriate "real" area:
-#                           Values include: "dataviz", "devtools", "mathlibs", "pmr", "sweco".
-#                           We also support the values used in e4s.yml files, though we prefer those above.
+#   areas:                  (list) REQUIRED Each product must be associated with at least one area; multiple areas should be listed as appropriate.
+#                           Multiple areas should be listed in priority order -- the most relevant label, second most, etc.
+#                           The recognized area labels are defined in `_data/sw-areas.yml`, and entries here must exactly match the `name` in that
+#                           file, including both spelling and case.
 #   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
 #                           organizations) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
@@ -44,7 +43,8 @@ published: false
 # left margin.  The value ends at the next outdented text (or comment).
 #
 name: MAGMA
-area: mathlibs
+areas:
+  - Mathematical libraries
 cass_members:
   - FASTMath
 description: A library for BLAS and LAPACK on GPUs

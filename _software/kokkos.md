@@ -44,6 +44,7 @@ areas:
   - Programming models and runtimes
 cass_members:
   - S4PST
+  - RAPIDS
 description: Performance portability programming model
 long_description: |
     Kokkos (Core) provides the C++ programming model at the heart of the Kokkos Performance Portability Ecosystem.

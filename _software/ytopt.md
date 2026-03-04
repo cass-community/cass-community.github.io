@@ -41,8 +41,8 @@
 #
 name: ytopt
 areas:
-  - Artificial intelligence
   - Development tools
+  - Uses AI
 cass_members:
     - RAPIDS
 description: Machine-learning-based autotuning and hyperparameter optimization framework

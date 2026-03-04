@@ -41,8 +41,8 @@
 #
 name: ChatVis
 areas:
-  - Artificial intelligence
   - Data and visualization
+  - Uses AI
 cass_members:
     - RAPIDS
 description: Scientific visualization agent and benchmark

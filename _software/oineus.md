@@ -41,8 +41,8 @@
 #
 name: Oineus
 areas:
-  - Artificial intelligence
   - Data and visualization
+  - Artificial intelligence
 cass_members:
     - RAPIDS
 description: A computational topology library

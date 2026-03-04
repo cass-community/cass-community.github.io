@@ -41,8 +41,8 @@
 #
 name: Chimbuko
 areas:
-  - Artificial intelligence
   - Development tools
+  - Uses AI
 cass_members:
     - RAPIDS
 description: Performance analysis and visualization framework for scientific workflows

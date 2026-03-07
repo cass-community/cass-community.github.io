@@ -155,6 +155,7 @@ defaults:
       classes: wide no-left-sidebar
       event_collection: events
       entries_layout: list
+      back_to_top: true
       author_profile: false
       comments: false
       share: true

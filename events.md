@@ -6,6 +6,7 @@ collection: events
 entries_layout: list
 layout: ev-collection
 classes: wide no-left-sidebar
+back_to_top: true
 header:
   overlay_filter: rgba(0, 146, 202, 0.75) # Same color as "air" skin footer
   overlay_image: /assets/images/headway-F2KRf_QfCqw-unsplash.jpg

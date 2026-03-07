@@ -95,3 +95,40 @@
     }
   }
 }
+
+/* A back-to-top icon that sticks to the bottom right corner.
+   MM already has a .back-to-top class, for non-sticky text links.
+   So this needs to be different.
+
+   Basic implementation from: https://github.com/mmistakes/minimal-mistakes/issues/1731
+   Additional styling ideas based on https://www.fabriziomusacchio.com/blog/2022-06-30-Markdown_back_to_top_button/
+
+   I've experimented with various background colors and white seems best to me.  $light-gray and even $lighter-gray don't
+   stand out enough for my taste.  White matches the color used on .btn--inverse.  Though we haven't derived it in the same way.
+
+   HTML side it implemented in _includes/back-to-top-sticky.html, which is included in default.html and controlled
+   by a frontmatter setting `back_to_top: true` to make it easy to use or not.
+
+   Room for improvement:
+    https://theosoti.com/short/back-to-top/ and https://codepen.io/theosoti/pen/KwdzKGx referenced therein have the
+    icon sliding in and out as you start scrolling down, which I kind of like.
+*/
+
+.back-to-top-sticky {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  z-index: 10;
+
+  display:          inline-flex;
+  color:            $muted-text-color;
+  cursor:           pointer;
+  align-items:      center;
+  justify-content:  center;
+  margin:           0em 2em 2em 0em;
+  border-radius:    50%;
+  padding:          .25em;
+  width:            2em;
+  height:           2em;
+  background-color: white;
+}

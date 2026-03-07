@@ -59,6 +59,7 @@ additional_resource_links:
     icon: <i class="fa-regular fa-file-lines"></i>
 event_collection: events
 series: "User/Developer Experience Webinars"
+back_to_top: true
 ---
 {% capture seminars_icon %}{% include icon-map-lookup label="Seminars" %}{% endcapture %}
 

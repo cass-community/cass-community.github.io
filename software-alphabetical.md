@@ -6,6 +6,7 @@ collection: software
 sort_by: name
 entries_layout: grid
 layout: sw-collection
+back_to_top: true
 # layout: splash # Default: home, but that includes a list of posts
 classes: wide
 header:

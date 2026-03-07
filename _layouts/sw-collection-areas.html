@@ -67,6 +67,10 @@ An experiement in filtering the collection (implemented in sw-documents-collecti
         {% include sw-archive-single.html type=entries_layout %}
       {% endfor %}
     </div>
-    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+    {% if page.back_to_top %}
+      <div style="clear: both"></div>
+    {% else %}
+      <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+    {% endif %}
   </section>
 {% endfor %}

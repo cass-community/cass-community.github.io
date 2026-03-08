@@ -1,0 +1,59 @@
+# Update SPDX license data files and create a PR
+name: "Update SPDX data"
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to update to (expected format "v<VERSION>")'
+        required: true
+        type: string
+jobs:
+  spdx-data-update-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Check initial data files
+        run: |
+          ls -l _data/spdx_license_data_list || :
+          md5sum _data/spdx_license_data_list/* || :
+        
+      - name: Download new SPDX data and extract files of interest
+        run: |
+          bin/update-spdx-json.sh ${{ inputs.tag }} $RUNNER_TEMP
+
+      - name: Check final data files
+        run: |
+          ls -l _data/spdx_license_data_list || :
+          md5sum _data/spdx_license_data_list/* || :
+            
+      - name: Create pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v8
+        with:
+          title: Update SPDX data
+          branch: ${{ github.actor }}-spdx-data-update
+          branch-suffix: timestamp
+          assignees: ${{ github.actor }}
+          commit-message: "Updating SPDX data to ${{ inputs.tag }}"
+          body: "Updating SPDX data"
+          labels: |
+            data update
+            Section: software catalog
+
+      - name: Check PR results
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+
+      # - name: Merge PR
+      #   if: ${{ steps.cpr.outputs.pull-request-number }}
+      #   env:
+      #     GH_TOKEN: ${{ secrets.PR_MERGE_PAT }}
+      #   run: |
+      #     gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --merge --auto --body "Automatically merging scripted data update"
+

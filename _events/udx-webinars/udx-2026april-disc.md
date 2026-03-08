@@ -54,7 +54,7 @@ type: Open Discussion
 series:
   - "User/Developer Experience Webinars"
 activities:
-  - "UDX Working Group" 
+  - "User-Developer Experience" 
 #
 ---
 The User/Developer Experience (UDX) Working group hosts a regular discussion hour on UDX topics to complement our every-other-month webinars. 

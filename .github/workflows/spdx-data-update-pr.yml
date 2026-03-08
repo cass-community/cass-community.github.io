@@ -18,7 +18,7 @@ jobs:
 
       - name: Check initial data files
         run: |
-          ls -l _data/spdx_list_license_data || :
+          ls -l _data/spdx_license_list_data || :
           md5sum _data/spdx_license_list_data/* || :
         
       - name: Download new SPDX data and extract files of interest
@@ -27,7 +27,7 @@ jobs:
 
       - name: Check final data files
         run: |
-          ls -l _data/spdx_list_license_data || :
+          ls -l _data/spdx_license_list_data || :
           md5sum _data/spdx_license_list_data/* || :
             
       - name: Create pull request

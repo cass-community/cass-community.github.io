@@ -1,4 +1,4 @@
-#!/bin/bash -xv
+#!/bin/bash
 # Download SPDX license list data release, extract JSON files, update repo
 #   Usage: update-spdx-json.sh tag tempdir
 #

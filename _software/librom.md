@@ -43,7 +43,7 @@ areas:
   - Artificial intelligence
 cass_members:
   - LEADS
-description: A lightweight, scalable C++ library for a wide range of data-driven physical simulation methods
+description: A reduced-order modeling library for a wide range of data-driven physical simulation methods
 long_description: |
     libROM is a lightweight, scalable C++ library for data-driven physical simulation methods
     from the intrusive projection-based reduced order models to non-intrusive black-box approaches.

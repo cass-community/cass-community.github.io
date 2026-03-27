@@ -81,10 +81,11 @@ This field should provide the full name of the software foundation the project i
 
 These fields are used to connect the CASS catalog entry to information on the product in the [E4S DocPortal](https://e4s-project.github.io/DocPortal.html) and [Spack package listing](https://packages.spack.io/), respectively.  In both cases, the values provided are used as a query string to look up the specific package information.
 
-
 In the future, we may mine the `e4s.yml` and Spack package files for information to display directly on the CASS catalog page.
 
 If you would like to provide information about other packaging of your product,  please discuss it with the point of contact for the website. It is likely that we'd want to identify other packaging tools that are widely enough used to be worth supporting, and/or develop an abstraction that will allow us to process a list of packages similarly to the way we process resource link lists (see below).
+
+If your product does not have a Spack package or is not a member of E4S (or you do not wish to provide information), you can leave the entry blank or comment it out altogether.
 
 **Important guidance:**
 

@@ -21,7 +21,7 @@
 #                           The recognized area labels are defined in `_data/sw-areas.yml`, and entries here must exactly match the `name` in that
 #                           file, including both spelling and case.
 #   cass_member:            (list) REQUIRED The name(s) of the CASS member organization(s) (aka software stewardship
-#                           organization(s)) you are associated with. Values include: "FASTMath", "PEOS", "RAPIDS", "S4PST", "STEP".
+#                           organization(s)) you are associated with. Values include: "FASTMath", "LEADS", "PEOS", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: COLABS, CORSA, SWAS)
 #   description:            (string) REQUIRED A short description of your software.  The `description` is always shown immediately 
 #                           after the `name` and they should be considered together as, in effect constructing a sentence-length 
@@ -68,9 +68,10 @@ foundation_membership:
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.
 #   e4s_product:    (string) If your product is in E4S, list its e4S name here (may be different than `name`). If your
-#                   product is not in E4S, comment out this entry.
-#   spack_name:     (string) The name of your spack package(s), if available.  If you don't have a Spack package, comment out this
-#                   entry. If your product has multiple Spack packages, list them using YAML list syntax:
+#                   product is not in E4S, leave empty or comment out the entry.
+#   spack_name:     (string) The name of your spack package(s), if available.  If you don't have a Spack package, leave 
+#                   empty or comment out the entry. If your product has multiple Spack packages, list them using YAML 
+#                   list syntax:
 #                   spack_name:
 #                       - package1
 #                       - package2

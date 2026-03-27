@@ -58,7 +58,7 @@ license_spdx: "Apache-2.0 OR MIT"
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
-openssf_bestpractices_id: nil
+openssf_bestpractices_id: 
 #
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
@@ -68,7 +68,7 @@ openssf_bestpractices_id: nil
 #   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
 #                   If your product does not have a Spack package, uncomment and set the value to `nil`
 #
-e4s_product: nil
+e4s_product: 
 spack_name: librom
 #
 # ADDITIONAL PRODUCT INFORMATION
@@ -92,9 +92,10 @@ additional_resource_links:
     url: https://www.librom.net/
   - label: Repository
     url: https://github.com/llnl/libROM
-    note: the Python module is in a separate repository
-  - label: Python module
+    note: "(main library)"
+  - label: Repository
     url: https://github.com/llnl/pylibROM
+    note: "(Python interface)"
   - label: Documentation
     url: https://librom.readthedocs.io/en/latest/index.html
 ---

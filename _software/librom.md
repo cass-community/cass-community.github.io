@@ -12,10 +12,6 @@
 #   product's entry in the catalog.  To provide optional items, please uncomment the keys and complete
 #   the value appropriately.
 #
-#   Some keys are specifically chosen to match those in the e4s.yaml schema (ignoring case)
-#   with the expectation that they should have the same content (and probably will eventually be merged).
-#
-#
 # BASIC PRODUCT INFORMATION (ALL REQUIRED)
 #   name:                   (string) REQUIRED The name under which your product should appear in the catalog
 #   areas:                  (list) REQUIRED Each product must be associated with at least one area; multiple areas should be listed as appropriate.
@@ -23,11 +19,11 @@
 #                           The recognized area labels are defined in `_data/sw-areas.yml`, and entries here must exactly match the `name` in that
 #                           file, including both spelling and case.
 #   cass_member:            (list) REQUIRED The names of the CASS member organizations (aka software stewardship
-#                           organizations) you are associated with. Values include: "fastmath", "PESO", "RAPIDS", "S4PST", "STEP".
+#                           organizations) you are associated with. Values include: "FASTMath", "LEADS", "PESO", "RAPIDS", "S4PST", "STEP".
 #                           (other CASS members are not stewarding software products, as far as we know: colabs, corsa, swas)
 #   description:            (string) REQUIRED A one-sentence description of your software.  To be used as a
 #                           "subtitle", following the `name`.
-#   long_description:       (multiline string) REQUIRED A one-paragraph description of your software. A brief, moderately technical description
+#   long_description:       (multiline string) REQUIRED A one-paragr aph description of your software. A brief, moderately technical description
 #                           of your software's primary features and capabilities.
 #   target_audience:        (multiline string) REQUIRED A one-paragraph description of who should be interested in your software.  This should be
 #                           less technical than the description -- meant to guide someone who's inexpert or just trying to
@@ -63,12 +59,10 @@ openssf_bestpractices_id:
 # PACKAGING INFORMATION
 #   This information is used to connect your product with its E4S and Spack packages, if available.  It is only
 #   needed under certain conditions:
-#   e4s_product:    (string) Needed if the E4S name for your product is different than your preferred `name` of the product.
-#                   If your product is not in E4S, uncomment and set the value to `nil`
-#   spack_name:     (string) Needed if the Spack package name differs from the `e4s_product` name.
-#                   If your product does not have a Spack package, uncomment and set the value to `nil`
+#   e4s_product:    (string) If your product is not in E4S, leave empty or comment out the key
+#   spack_name:     (string) If your product does not have a Spack package, leave empty or comment out the key
 #
-e4s_product: 
+e4s_product:
 spack_name: librom
 #
 # ADDITIONAL PRODUCT INFORMATION

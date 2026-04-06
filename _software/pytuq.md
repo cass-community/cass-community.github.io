@@ -42,9 +42,10 @@
 name: PyTUQ
 areas:
   - Mathematical libraries
+  - AI building blocks
 cass_members:
     - FASTMath
-description: Library for tools and workflows for uncertainty quantification in computational models
+description: Library for tools and workflows for uncertainty quantification in computational models; includes agentic_mcmc  
 long_description: |
     The Python Toolkit for Uncertainty Quantification (PyTUQ) is a lightweight Python library 
     for a range of uncertainty quantification tasks and workflows. 

@@ -42,9 +42,10 @@
 name: PETSc/TAO
 areas:
   - Mathematical libraries
+  - AI building blocks
 cass_members:
   - FASTMath
-description: The Portable, Extensible Toolkit for Scientific Computation
+description: The Portable, Extensible Toolkit for Scientific Computation; includes petscagent-bench
 long_description: |
     PETSc, the Portable, Extensible Toolkit for Scientific Computation, includes a large suite of scalable parallel linear and nonlinear equation solvers, ordinary differential equation (ODE) integrators for application codes written in C, C++, Fortran, and Python. PETSc also contains TAO, the Toolkit for Advanced Optimization, software library. PETSc contains interfaces to many third-party packages including hypre, SuperLU, ML, and Zoltan as well as most open source numerical libraries including ParMETIS and MUMPS. PETSc is also used by many simulation frameworks including Deal.II, MOOSE, libMesh, Fluidity, FEniCS, pyClaw, and PetIGA. PETSc supports MPI, and GPUs through CUDA, HIP, Kokkos, as well as hybrid MPI-GPU parallelism.
 target_audience: |

@@ -42,9 +42,10 @@
 name: libEnsemble
 areas:
   - Mathematical libraries
+  - AI building blocks
 cass_members:
   - FASTMath
-description: A Python toolkit for coordinating asynchronous and dynamic ensembles of calculations
+description: A Python toolkit for coordinating asynchronous and dynamic ensembles of calculations; includes ensemble_agent for agentic workflows
 long_description: |
   Adaptive, portable, and scalable software for connecting "deciders" to experiments or simulations.
   libEnsemble is effective at solving design, decision, and inference problems on parallel resources.

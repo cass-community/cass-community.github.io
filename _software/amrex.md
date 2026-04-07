@@ -42,9 +42,10 @@
 name: AMReX
 areas:
   - Mathematical libraries # Original submission: Co-design
+  - AI building blocks
 cass_members:
   - FASTMath
-description: Software framework for block structured AMR
+description: Software framework for block structured AMR; includes AMReXAgent for agentic workflows
 long_description: |
     AMReX is a C++-based software framework that supports the development of
     structured mesh algorithms for solving systems of partial differential

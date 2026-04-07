@@ -16,7 +16,7 @@ jobs:
 # This is a variant of superbrothers/close-pull-request, which only does pull_request events,
 # not pull_request_target events.  Ideally, the capabilities will some day be merged, since
 # the *only* distinction is a test on the type of event!
-    - uses: SiliconLabs/close-pull-request-target@v2.2
+    - uses: superbrothers/close-pull-request@v3
       with:
         comment: "The preview branch does not accept pull requests.  To contribute to the CASS website make your PR against the main branch.  Thanks"
       env:

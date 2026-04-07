@@ -42,6 +42,7 @@
 name: FASTEig
 areas:
   - Mathematical libraries
+  - Uses AI
 cass_members:
     - FASTMath
 description: Software for solving large-scale eigenvalue problems

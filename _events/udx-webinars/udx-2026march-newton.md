@@ -37,13 +37,13 @@ registration-url: https://lbnl.zoom.us/meeting/register/uecckzcDSO6FIaQuMMhMvg
 artifacts:
   - label: Recording
     format: YouTube
-    yt-video-id: https://www.youtube.com/watch?v=Xq93CVDCuds&list=PLuRqdw_3qoIgeWHux8-oK-XyvBvO_KcJZ&index=1
+    yt-video-id: Xq93CVDCuds
   - label: Slides
     note: "- Newton (PDF)"
-    url: https://zenodo.org/records/19101680
+    url: https://doi.org/10.5281/zenodo.19101680
   - label: Slides
     note: "- Schmeder (PDF)"
-    url: https://zenodo.org/records/19101706
+    url: https://doi.org/10.5281/zenodo.19101706
 #
 # Items that change rarely
 organizers:

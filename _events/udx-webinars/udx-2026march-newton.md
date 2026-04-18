@@ -34,15 +34,16 @@ presenters:
 #
 registration-url: https://lbnl.zoom.us/meeting/register/uecckzcDSO6FIaQuMMhMvg
 #
-# artifacts:
-#   - label: Recording
-#     format: YouTube
-#     yt-video-id: FIXME
-#   - label: Slides
-#     format: FIXME
-#     url: FIXME
-#
-#
+artifacts:
+  - label: Recording
+    format: YouTube
+    yt-video-id: Xq93CVDCuds
+  - label: Slides
+    note: "- Newton (PDF)"
+    url: https://doi.org/10.5281/zenodo.19101680
+  - label: Slides
+    note: "- Schmeder (PDF)"
+    url: https://doi.org/10.5281/zenodo.19101706
 #
 # Items that change rarely
 organizers:

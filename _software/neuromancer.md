@@ -39,7 +39,7 @@ areas:
   - Artificial intelligence
 cass_members:
   - LEADS
-description: Pytorch-based framework for solving parametric constrained optimization problems, physics-informed system identification, and parametric model predictive control.
+description: PyTorch-based framework for solving parametric constrained optimization problems, physics-informed system identification, and parametric model predictive control
 long_description: |
     Neural Modules with Adaptive Nonlinear Constraints and Efficient Regularizations (NeuroMANCER)
     is an open-source differentiable programming (DP) library for solving parametric constrained
@@ -53,7 +53,7 @@ target_audience: |
 #
 # License information, following https://spdx.org/licenses/
 #
-license_spdx: "3-clause BSD license"
+license_spdx: "BSD-3-Clause"
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
@@ -87,10 +87,10 @@ spack_name:
 additional_resource_links:
   - label: Repository
     url: https://github.com/pnnl/neuromancer
-    note: "(main repository)"
-  - label: Website
+    # note: "(main repository)"
+  - label: Download
     url: https://pypi.org/project/neuromancer/
-    note: "(Python PIP installer)"
+    note: "(PyPI package)"
   - label: Documentation
     url: https://pnnl.github.io/neuromancer/
 ---

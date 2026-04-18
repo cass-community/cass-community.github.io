@@ -83,7 +83,7 @@ license_spdx: "BSD-3-Clause"
 #
 # OpenSSF Best Practices project ID (as found on https://www.bestpractices.dev/en/projects)
 #
-openssf_bestpractices_id: 
+openssf_bestpractices_id: 11299
 #
 foundation_membership: High Performance Software Foundation
 #

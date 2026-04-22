@@ -34,7 +34,7 @@ jobs:
 
       - name: Create pull request
         id: cpr
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           title: Add new HPC-BP webinar event
           branch: ${{ github.actor }}-hpcbp-new-event
@@ -52,12 +52,11 @@ jobs:
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
           echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
 
-      # Hold off on the auto-merge until we're confident that the rest is working properly
       # NOTE: requires special privs to merge PRs (expecting a "PR_MERGE_PAT" secret)
-      # - name: Merge PR
-      #   if: ${{ steps.cpr.outputs.pull-request-number }}
-      #   env:
-      #     GH_TOKEN: ${{ secrets.PR_MERGE_PAT }}
-      #   run: |
-      #     gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --merge --auto --body "Automatically merging script-generated event"
+      - name: Merge PR
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        env:
+          GH_TOKEN: ${{ secrets.PR_MERGE_PAT }}
+        run: |
+          gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --merge --auto --body "Automatically merging script-generated event"
             

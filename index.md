@@ -16,6 +16,7 @@ header:
 {% capture chat_icon %}{% include icon-map-lookup label="Chat" %}{% endcapture %}
 {% capture handshake_icon %}{% include icon-map-lookup label="Handshake" %}{% endcapture %}
 {% capture meetings_icon %}{% include icon-map-lookup label="Meetings" %}{% endcapture %}
+{% capture slack_icon %}{% include icon-map-lookup label="Slack" %}{% endcapture %}
 
 {% include breaking-news-notice.html %}
 {% include upcoming-events-notice.html %}
@@ -37,6 +38,9 @@ The current CASS software portfolio focuses on freely available libraries and to
 CASS and its member organizations work with our software product teams to improve the quality, sustainability, and interoperability of the software products in our ecosystem -- essential for a robust and trustworthy scientific software ecosystem.  We also collaborate with the broader community to leverage these reusable software libraries and tools to advance science. There are many ways you can get involved. DOE sponsorship is *not* required to participate or join.
 
 **{{ mailinglist_icon }} [Join our announcement mailing list](http://eepurl.com/iRiSnY)** for updates on CASS events and news.
+
+**{{ slack_icon }} [Join our Slack workspace](https://docs.google.com/forms/d/e/1FAIpQLSdNFFp9pdc2BhK4AY6UlugRA0Ydqr-GOGCccvAo_NBD3z5VwQ/viewform?usp=publish-editor
+)** to discuss with the CASS community and working groups.
 
 **{{ membership_icon }} Participate in our [working groups]({{ "/working-groups/" | relative_url }}).** Working groups are the primary means by which we organize members of the CASS community to advance our stewardship efforts. Most CASS working groups welcome public participation.  Working group topics include: software foundations, ecosystem integration, metrics, user-developer experience, and the scientific software workforce.
 

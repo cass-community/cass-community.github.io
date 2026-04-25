@@ -165,6 +165,9 @@ footer:
     - label: "YouTube"
       icon: "fa-brands fa-youtube"
       url: https://www.youtube.com/@CASS.community
+    - label: "Slack signup"
+      icon: "fa-brands fa-slack"
+      url: https://docs.google.com/forms/d/e/1FAIpQLSdNFFp9pdc2BhK4AY6UlugRA0Ydqr-GOGCccvAo_NBD3z5VwQ/viewform?usp=publish-editor
     - label: "Announcement list signup"
       icon: "fas fa-fw fa-envelopes-bulk"
       url: http://eepurl.com/iRiSnY

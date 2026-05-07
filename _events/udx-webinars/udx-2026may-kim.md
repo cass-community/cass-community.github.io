@@ -33,13 +33,16 @@ presenters:
 #
 registration-url: https://lbnl.zoom.us/meeting/register/uecckzcDSO6FIaQuMMhMvg
 #
-# artifacts:
-#   - label: Recording
-#     format: YouTube
-#     yt-video-id: FIXME
-#   - label: Slides
-#     format: FIXME
-#     url: FIXME
+artifacts:
+  - label: Recording
+    format: YouTube
+    yt-video-id: bAMD1jjZJcY
+  - label: Slides
+    note: "- Morrison (PDF)"
+    url: https://doi.org/10.5281/zenodo.20072623
+  - label: Slides
+    note: "- Kim (PDF)"
+    url: https://doi.org/10.5281/zenodo.20072740
 #
 #
 #

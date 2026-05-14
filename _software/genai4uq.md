@@ -39,7 +39,7 @@ areas:
   - Artificial intelligence
 cass_members:
   - LEADS
-description: A Python package for forward and inverse uncertainty quantification in model calibration, parameter estimation, and ensemble forecasting.
+description: A Python package for forward and inverse uncertainty quantification in model calibration, parameter estimation, and ensemble forecasting
 long_description: |
     GenAI4UQ leverages a generative AI-based conditional modeling framework to address limitations
     of traditional inverse modeling techniques, such as Markov Chain Monte Carlo (MCMC) methods.
@@ -87,8 +87,8 @@ spack_name:
 additional_resource_links:
   - label: Repository
     url: https://github.com/patrickfan/GenAI4UQ
-    note: "(main repository)"
+    # note: "(main repository)"
   - label: Documentation
-    url: https://arxiv.org/abs/2412.07026
-    note: "Paper describing the methodology"
+    url: https://doi.org/10.48550/arXiv.2412.07026
+    note: "(methodology paper)"
 ---

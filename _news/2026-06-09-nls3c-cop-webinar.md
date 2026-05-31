@@ -1,5 +1,5 @@
 ---
-title: "CASS to be featured in NLS³C Community of Practice Webinar"
+title: "CASS to Be Featured in NLS³C Community of Practice Webinar"
 last_modified_at: 2026-05-31
 ---
 

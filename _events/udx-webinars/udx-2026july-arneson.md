@@ -15,16 +15,13 @@ presenters:
 
 registration-url: https://lbnl.zoom.us/meeting/register/uecckzcDSO6FIaQuMMhMvg
 #
-# artifacts:
-#   - label: Recording
-#     format: YouTube
-#     yt-video-id: FIXME
-#   - label: Slides
-#     note: "- XXNAMEXX (PDF)"
-#     url: FIXME
-#   - label: Slides
-#   note: "- XXNAMEXX (PDF)"
-#   url: FIXME
+artifacts:
+   - label: Recording
+     format: YouTube
+     yt-video-id: vkzg1XGkiWo
+   - label: Slides
+     note: "- Arneson (PDF)"
+     url: https://zenodo.org/records/21300919
 #
 #
 #

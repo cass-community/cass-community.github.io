@@ -20,7 +20,7 @@ artifacts:
      format: YouTube
      yt-video-id: vkzg1XGkiWo
    - label: Slides
-     note: "- Arneson (PDF)"
+     note: "(PDF)"
      url: https://zenodo.org/records/21300919
 #
 #

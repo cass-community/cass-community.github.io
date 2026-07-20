@@ -1,7 +1,7 @@
 {% comment %}
   breaking-news-notice.html
 
-  Displays recent news items in a notice box.  If there are no news items that fit the parameters, nothing is displayed.
+  Displays recent news items in a notice box. If there are no news items that fit the parameters, nothing is displayed.
 
   Parameters
       look_back: the number of days in the past items are still considered "recent" (default: 30)
@@ -28,12 +28,19 @@
   in the past up to `news_look_back` days ago.
 
   Unfortunately, filtering the collection array using where_exp doesn't
-  work when we're comparing dates.  So we need to manually create the
+  work when we're comparing dates. So we need to manually create the
   filtered array.
+
+  Use the newer of the item date (which Jekyll extracts from the filename) or the
+  `last_modified_at` frontmatter entry.
 {% endcomment %}
 {% assign breaking_news = "" | split: "," %}
 {% for i in site[news_collection] %}
   {% assign idate = i.date | date: "%s" | plus: 0 %}
+  {% assign ilma = i.last_modified_at | date: "%s" | plus: 0 %}
+  {% if ilma > idate %}
+    {% assign idate = ilma %}
+  {% endif %}
   {% if idate >= back_date %}
     {% assign breaking_news = breaking_news | push: i %}
   {% endif %}

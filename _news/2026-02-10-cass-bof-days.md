@@ -1,7 +1,7 @@
 ---
 # title: "Save the dates for CASS BoF Days, coming February 10-12, 2026"
 # title: "Register now for CASS BoF Days, coming February 10-12, 2026"
-title: "In Case You Missed It: 2026 CASS BoF Days"
+title: "2026 CASS BoF Days"
 last_modified_at: 2026-02-27
 ---
 The 2026 CASS BoF Days hosted 15 community-led Birds-of-a-Feather (BoF) sessions over the course of three days (10-12 February), with a total of 780 registrations! The event pages linked below have been updated with the slides presented during the sessions<sup>&dagger;</sup>, so you can catch up if you weren't able to attend or want to take another look (the sessions were *not* recorded, sorry). We appreciate everyone who organized and attended this year's BoFs, as well as those who worked behind the scenes to facilitate them!

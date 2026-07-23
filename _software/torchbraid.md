@@ -87,6 +87,8 @@ additional_resource_links:
   - label: Repository
     https://github.com/Multilevel-NN/torchbraid
     # note: "(main repository)"
+  - label: Documentation
+    https://dl.acm.org/doi/10.1145/3759244
   - label: GPU-Aware Documentation
     url: https://github.com/Multilevel-NN/torchbraid?tab=readme-ov-file#gpu-direct-communication
 ---

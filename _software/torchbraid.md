@@ -39,7 +39,7 @@ areas:
   - Artificial intelligence
 cass_members:
   - LEADS
-description: This package implements a layer-parallel approach to training neural ODEs, and neural networks.
+description: This package implements a layer-parallel approach to training neural ODEs, and neural networks
 long_description: |
     Algorithmically multigrid-in-time is used to expose parallelism in the forward and backward
     propagation phases used to compute the gradient.
@@ -48,7 +48,7 @@ long_description: |
     TorchBraid uses direct GPU communication when running simulations on GPUs, a CUDA-aware MPI
     implementation is required for multi-GPU support.
 target_audience: |
-    Science teams interested layer-parallel approach to training of neural netrowks.
+    Science teams interested layer-parallel approach to training of neural networks.
 #
 # License information, following https://spdx.org/licenses/
 #
@@ -85,10 +85,10 @@ spack_name:
 
 additional_resource_links:
   - label: Repository
-    https://github.com/Multilevel-NN/torchbraid
+    url: https://github.com/Multilevel-NN/torchbraid
     # note: "(main repository)"
   - label: Documentation
-    https://dl.acm.org/doi/10.1145/3759244
+    url: https://dl.acm.org/doi/10.1145/3759244
   - label: GPU-Aware Documentation
     url: https://github.com/Multilevel-NN/torchbraid?tab=readme-ov-file#gpu-direct-communication
 ---

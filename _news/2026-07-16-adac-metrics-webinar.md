@@ -1,7 +1,6 @@
 ---
 title: "CASS Metrics and Impact Framework Efforts Discussed in ADAC Webinar"
 last_modified_at: 2026-07-20
-published: false
 ---
 
 The July webinar for the [Accelerated Data Analytics and Computing Institute](https://adac.ornl.gov/) (ADAC) Portability, Sustainability, and Integration (PSI) Working Group featured a presentation by Gregory R. Watson on "Using Metrics to Improve the Sustainability of Scientific Software", Co-authored Greg leads the [CASS Metrics]({% link _working-groups/metrics.md %}) WG as well as CASS member [CORSA](https://corsa.center/). Co-author David E. Bernholdt leads the [CASS Impact Framework]({% link _working-groups/impact-framework.md %}) WG.
@@ -15,5 +14,5 @@ The July webinar for the [Accelerated Data Analytics and Computing Institute](ht
 <ul style="list-style: none; padding: 0">
   <li>{{ location_icon }} Online</li>
   <li>{{ calendar_icon }} Thu 16 July, 2026, 9:00 am - 10:00 am EDT</li>
-  <li>{{ slides_icon }} <a href="/assets/artifacts/2026-06-09-nls3c-cop-webinar-like-minded-organizations.pdf">Slides</a></li>
+  <li>{{ slides_icon }} <a href="/assets/artifacts/2026-07-16-adac-metrics.pdf">Slides</a></li>
 </ul>

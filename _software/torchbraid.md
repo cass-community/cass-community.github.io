@@ -87,8 +87,12 @@ additional_resource_links:
   - label: Repository
     url: https://github.com/Multilevel-NN/torchbraid
     # note: "(main repository)"
+  # A peer-reviewed paper is not generally considered documentation for a software package -- the purpose is quite different
+  # - label: Documentation 
+  #   url: https://dl.acm.org/doi/10.1145/3759244
+  # We're going to link to the whole README as documentation, so we don't need to bring out specific section
+  # - label: GPU-Aware Documentation
+  #   url: https://github.com/Multilevel-NN/torchbraid?tab=readme-ov-file#gpu-direct-communication
   - label: Documentation
-    url: https://dl.acm.org/doi/10.1145/3759244
-  - label: GPU-Aware Documentation
-    url: https://github.com/Multilevel-NN/torchbraid?tab=readme-ov-file#gpu-direct-communication
+    url: https://github.com/Multilevel-NN/torchbraid/blob/master/README.md
 ---

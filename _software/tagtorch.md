@@ -39,7 +39,7 @@ areas:
   - Artificial intelligence
 cass_members:
   - LEADS
-description: This package provides a comprehensive suite of tools for analyzing and leveraging symmetry, equivariance, and topological properties in PyTorch deep learning models
+description: A comprehensive suite of tools for analyzing and leveraging symmetry, equivariance, and topological properties in PyTorch deep learning models
 long_description: |
     Topology, Algebra, and Geometry Torch (TAGTorch) is an open-source PyTorch library that provides
     reusable implementations of geometry-, topology-, and symmetry-based methods for machine

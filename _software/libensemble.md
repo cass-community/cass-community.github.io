@@ -119,7 +119,8 @@ end_user_resource_links:
   - label: Slack
     url: https://libensemble.slack.com/
   - label: Mailing list
-    url: https://lists.mcs.anl.gov/mailman/listinfo/libensemble 
+    url: https://mailman.cels.anl.gov/mailman3/lists/libensemble.lists.mcs.anl.gov/
+    # url: https://lists.mcs.anl.gov/mailman/listinfo/libensemble # Prior to 2026-08 CELS/MCS mailing list changes
 #
 # A set of resources specifically aimed at developers/contributors to the software (OPTIONAL)
 #

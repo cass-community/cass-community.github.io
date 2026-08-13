@@ -41,7 +41,7 @@ chair: # Can be more than one person
 #
 # A simple statement of the meeting schedule, if you have one
 #
-meeting_schedule: "3:00pm-3:50pm ET, every 2nd Tuesday, including Jan 14, 2025"
+meeting_schedule: "3:00pm-3:50pm ET, 2nd Tuesday of alternating (even numbered) months, including Oct 13, 2026"
 #
 # A way of easily providing additional resource/links
 #

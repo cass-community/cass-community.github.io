@@ -14,16 +14,16 @@ presenters:
 bsswio-topics: ["documentation", "reproducibility", "continuous integration testing", "online learning"]
 registration-url: https://www.zoomgov.com/meeting/register/ugpHzidAR62enyg3BkMP7g
 #
-# artifacts:
-#   - label: Recording
-#     format: YouTube
-#     yt-video-id: 9Mp9SbA0fdU
-#   - label: Slides
-#     format: PDF
-#     url: https://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-099-tutorials.pdf
-#   - label: Q&A
-#     format: PDF
-#     url: https://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-099-tutorials-qa.pdf
+artifacts:
+  - label: Recording
+    format: YouTube
+    yt-video-id: Kx0f4gHETlg
+  - label: Slides
+    format: PDF
+    url: https://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-099-tutorials.pdf
+  - label: Q&A
+    format: PDF
+    url: https://ideas-productivity.org/assets/artifacts/hpcbp/hpcbp-099-tutorials-qa.pdf
 #
 # Items that change rarely
 #

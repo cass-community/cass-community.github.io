@@ -86,6 +86,8 @@ members:
     membership_level: core
     leads: 
       - Keita Teranishi
+      - William F. Godoy
+      - Pedro Valero-Lara
     sc_reps:
       - Seyong Lee
     focus_area: Programming models and runtimes

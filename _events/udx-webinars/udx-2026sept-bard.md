@@ -19,18 +19,18 @@ presenters:
 #
 #
 #
-registration-url:  https://lbnl.zoom.us/meeting/register/uecckzcDSO6FIaQuMMhMvg
+# registration-url:  https://lbnl.zoom.us/meeting/register/uecckzcDSO6FIaQuMMhMvg
 #
-# artifacts:
-#   - label: Recording
-#     format: YouTube
-#     yt-video-id: FIXME
-#   - label: Slides
-#     note: "- XXNAMEXX (PDF)"
-#     url: FIXME
-#   - label: Slides
-#   note: "- XXNAMEXX (PDF)"
-#   url: FIXME
+artifacts:
+   - label: Recording
+     format: YouTube
+     yt-video-id: BSPeC15o5VU
+   - label: Slides
+     note: "- Bard slides (PDF)"
+     url: https://zenodo.org/records/22257965
+   - label: Slides
+     note: "- Cohoon slides (PDF)"
+     url: https://zenodo.org/records/22257820
 # #
 #
 #

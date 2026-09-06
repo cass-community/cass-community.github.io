@@ -1,6 +1,6 @@
 ---
 title: "Applications Open for the 2027 BSSw Fellowship Program"
-last_modified_at: 2026-09-08
+expires: 2026-10-30
 ---
 
 Do you have a great idea on how to make scientific software BETTER and want to share it with the community?

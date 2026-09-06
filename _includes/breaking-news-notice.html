@@ -3,8 +3,17 @@
 
   Displays recent news items in a notice box. If there are no news items that fit the parameters, nothing is displayed.
 
-  Parameters
-      look_back: the number of days in the past items are still considered "recent" (default: 30)
+  News posts may include frontmatter entries to control whether the post appears in the notice box.
+    expires: The date after which the post should not appear in the notice box.
+    last_modified_at: The date to which the `look_back` parameter is compared.  If the key is not present, Jekyll
+      extracts a date from the filename of the post which is used instead.
+
+  The `expires` key takes precedence over the `last_modified_at` key in deciding to display a post in the notice box.
+
+Note that these dates affect only the display in the notice box, not the display in the News collection itself.
+
+Parameters
+  look_back: the number of days in the past items are still considered "recent" (default: 30)
 
 {% endcomment %}
 
@@ -20,6 +29,7 @@
 {% comment %}
   Convert look_back into a date we can compare to
 {% endcomment %}
+{% assign now = site.time | date: "%s" | plus: 0 %}
 {% assign seconds_back = news_look_back | times: 86400 %}
 {% assign back_date = site.time | date: "%s" | minus: seconds_back | plus: 0 %}
 
@@ -31,18 +41,28 @@
   work when we're comparing dates. So we need to manually create the
   filtered array.
 
-  Use the newer of the item date (which Jekyll extracts from the filename) or the
-  `last_modified_at` frontmatter entry.
+  If the post has an `expires` date, we use that to decide whether to include it.
+  Otherwise, we compare the newer of the `date` or `last_modified_at` date with the `look_back` date and
+  include it if it is within the look_back period. The `date` value is what Jekyll 
+  extracts from the filename.
+
 {% endcomment %}
 {% assign breaking_news = "" | split: "," %}
 {% for i in site[news_collection] %}
-  {% assign idate = i.date | date: "%s" | plus: 0 %}
-  {% assign ilma = i.last_modified_at | date: "%s" | plus: 0 %}
-  {% if ilma > idate %}
-    {% assign idate = ilma %}
-  {% endif %}
-  {% if idate >= back_date %}
-    {% assign breaking_news = breaking_news | push: i %}
+  {% if i.expires %}
+    {% assign iexpires = i.expires | date: "%s" | plus: 0 %}
+    {% if iexpires > now %}
+      {% assign breaking_news = breaking_news | push: i %}
+    {% endif %}
+  {% else %}
+    {% assign idate = i.date | date: "%s" | plus: 0 %}
+    {% assign ilma = i.last_modified_at | date: "%s" | plus: 0 %}
+    {% if ilma > idate %}
+      {% assign idate = ilma %}
+    {% endif %}
+    {% if idate >= back_date %}
+      {% assign breaking_news = breaking_news | push: i %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 

@@ -34,7 +34,7 @@ charter:
   membership: Open
   reporting: Quarterly
   status: Active
-  status_date: 2025-09-09
+  status_date: 2026-09-08
 #
 chair: # Can be more than one person
   - Lois Curfman McInnes

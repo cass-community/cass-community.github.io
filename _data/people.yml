@@ -28,6 +28,11 @@ Berk Geveci:
   short_affil: Kitware
   email: berk.geveci@kitware.com
 
+William F. Godoy:
+  affiliation: Oak Ridge National Laboratory
+  short_affil: ORNL
+  email: godoywf@ornl.gov
+
 Michael A. Heroux:
   affiliation: ParaTools
   short_affil: ParaTools
@@ -106,6 +111,11 @@ Terry Turton:
   affiliation: Los Alamos National Laboratory
   short_affil: LANL
   email: tlturton@lanl.gov
+
+Pedro Valero-Lara:
+  affiliation: Oak Ridge National Laboratory
+  short_affil: ORNL
+  email: valerolarap@ornl.gov
 
 Greg Watson:
   affiliation: Oak Ridge National Laboratory

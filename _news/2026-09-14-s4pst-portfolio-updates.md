@@ -1,10 +1,10 @@
 ---
-title: "S4PST Portfolio for FY27/28"
-last_modified_at: 2026-08-31
+title: "S4PST Updates Portfolio for FY27/28"
+last_modified_at: 2026-09-14
 ---
 
 The Stewardship and Advancement of Programming Systems and Tools ([S4PST](https://s4pst.org/)) 
-is pleased to announce the new portfolio for Fiscal Years (FY) 2027 and 2028. The following changes aim to align with the mission to deliver an impactful portfolio of programming systems and tools for the U.S. DOE.
+is pleased to announce its updated portfolio for Fiscal Years (FY) 2027 and 2028. The following changes aim to align with the mission to deliver an impactful portfolio of programming systems and tools for the U.S. DOE.
 
 Changes:
 

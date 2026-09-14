@@ -27,5 +27,5 @@
   {% assign url = person[link] -%}
 {% endif -%}
 {% if url %}<a href="{{ url }}">{{ name }}</a>{% else %}{{ name }}{% endif -%}
-{% if include.affiliation %} ({{ person.affiliation }}){% endif -%}
-{% if include.short_affil %} ({{ person.short_affil }}){% endif -%}
+{% if include.affiliation and person.affiliation %} ({{ person.affiliation }}){% endif -%}
+{% if include.short_affil and person.short_affil %} ({{ person.short_affil }}){% endif -%}

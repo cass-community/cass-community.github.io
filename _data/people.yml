@@ -36,7 +36,10 @@ William F. Godoy:
 Michael A. Heroux:
   affiliation: ParaTools
   short_affil: ParaTools
-  email: mheroux@csbsju.edu # mheroux@paratools.com doesn't work well for Mike
+  email: mheroux@acm.org # mheroux@paratools.com doesn't work well for Mike
+  homepage: https://maherou.github.io/
+  linkedin: https://www.linkedin.com/in/michael-heroux-763590
+  github: https://github.com/maherou
 
 Terry Jones:
   name: Terry Jones

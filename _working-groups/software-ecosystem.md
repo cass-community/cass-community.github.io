@@ -43,10 +43,13 @@ additional_resource_links:
   - label: Slack channel
     note: "#wg-ecosystem"
     url: https://softwareecosy-91t5745.slack.com/archives/C07CBNGJ7UN
-  - label: Working Group Mail list
+  - label: Working group mail list
+    icon: '<i class="fa-solid fa-fw fa-envelopes-bulk"></i>'
     note: "Subscribe to this groups.io list to join"
     url: https://groups.io/g/cass-sci-soft-ecosystem-wg
-  - label: Teatime Mail list
+  - label: Teatime mail list
+    icon: '<i class="fa-solid fa-fw fa-envelopes-bulk"></i>'
     note: "Subscribe to this groups.io list to join"
-    url: cass-scisoft-genai-teatime+subscribe@groups.io
+    # url: mailto:cass-scisoft-genai-teatime+subscribe@groups.io
+    url: https://groups.io/g/cass-scisoft-genai-teatime
 ---

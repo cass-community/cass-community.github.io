@@ -41,7 +41,7 @@ header:
 {% endfor %}
 {% assign areas_used = areas_used | sort_natural | uniq %}
 
-{% assign areas_defined = site.data.sw-areas | keys sort_natural | uniq %}
+{% assign areas_defined = site.data.sw-areas | keys | sort_natural | uniq %}
 
 {% assign bad_areas = "" | split: "," %}
 {% for a in areas_used %}
@@ -54,7 +54,7 @@ header:
   <p><font color="red"><strong>ERROR: areas not in <code>_data/sw-areas.yml</code></strong></font></p>
   <ul>
     {% for a in bad_areas %}
-      <li><font color="red">"{{ a }}": {{ site.software | where_exp: "item", "item.areas contains a" | map: "name" sort_natural | array_to_sentence_string }}</font></li>
+      <li><font color="red">"{{ a }}": {{ site.software | where_exp: "item", "item.areas contains a" | map: "name" | sort_natural | array_to_sentence_string }}</font></li>
     {% endfor %}
   </ul>
 {% endif %}

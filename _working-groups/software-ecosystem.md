@@ -42,14 +42,13 @@ meeting_schedule: Webinars 12-1 pm ET on first Monday of even months, working me
 additional_resource_links:
   - label: Slack channel
     note: "#wg-ecosystem"
-    url: https://softwareecosy-91t5745.slack.com/archives/C07CBNGJ7UN
+    url: https://softwareecosy-91t5745.slack.com/archives/C076BK498RL
   - label: Working group mail list
     icon: '<i class="fa-solid fa-fw fa-envelopes-bulk"></i>'
-    note: "Subscribe to this groups.io list to join"
+    note: 'Subscribe to this groups.io list to join, or join by email by sending a blank message to <a href="mailto:cass-sci-soft-ecosystem-wg+subscribe@groups.io">cass-sci-soft-ecosystem-wg+subscribe@groups.io</a> (no account required)'
     url: https://groups.io/g/cass-sci-soft-ecosystem-wg
   - label: Teatime mail list
     icon: '<i class="fa-solid fa-fw fa-envelopes-bulk"></i>'
-    note: "Subscribe to this groups.io list to join"
-    # url: mailto:cass-scisoft-genai-teatime+subscribe@groups.io
+    note: 'Subscribe to this groups.io list to join, or join by email by sending a blank message to <a href="mailto:cass-scisoft-genai-teatime+subscribe@groups.io">cass-scisoft-genai-teatime+subscribe@groups.io</a> (no account required)'
     url: https://groups.io/g/cass-scisoft-genai-teatime
 ---

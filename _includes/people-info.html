@@ -21,7 +21,8 @@
 {% if link == "email" and person.email -%}
   {% assign url = "mailto:" | append: person.email -%}
   {% if subject %}
-    {% assign url = url | append: "?subject=" | append: subject %}
+    {% assign encoded_subject = subject | uri_escape %}
+    {% assign url = url | append: "?subject=" | append: encoded_subject %}
   {% endif -%}
 {% else -%}
   {% assign url = person[link] -%}

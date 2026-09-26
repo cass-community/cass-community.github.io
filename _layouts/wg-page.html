@@ -82,7 +82,7 @@ layout: default
         {% endif %}
         {% assign url = nil %}
         {% if email %}
-          {% capture url %}mailto:{{ email }}?subject={{ subject }}{% endcapture %}
+          {% capture url %}mailto:{{ email }}?subject={{ subject | uri_escape }}{% endcapture %}
         {% endif %}
 
         {% if page.charter.status == "Retired" %}

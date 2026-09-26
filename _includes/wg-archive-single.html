@@ -51,7 +51,7 @@
     {% endif %}
     {% assign url = nil %}
     {% if email %}
-      {% capture url %}mailto:{{ email }}?subject={{ subject }}{% endcapture %}
+      {% capture url %}mailto:{{ email }}?subject={{ subject | uri_escape }}{% endcapture %}
     {% endif %}
 
     {% unless post.charter.status == "Retired" %}

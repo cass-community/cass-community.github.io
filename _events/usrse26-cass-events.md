@@ -4,7 +4,7 @@ startdate: "2026-10-19"
 enddate: "2026-10-21"
 # time:
 #
-type: Conference Events
+type: Conference Activities
 series:
   - "Technical Sessions and Meetings"
 #

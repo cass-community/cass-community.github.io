@@ -16,7 +16,7 @@ parent-event-file: parentconf-2025-11-16-sc25
 venue: "The International Conference for High-Performance Computing, Networking, Storage, and Analysis (SC25)"
 venue-type: "conference"
 venue-url: https://sc25.supercomputing.org/
-location: "St. Louis, Missouri, and online"
+location: "St. Louis, Missouri"
 #
 registration-url: "https://sc25.supercomputing.org/attend/registration/"
 #
@@ -77,9 +77,9 @@ presenters:
     url: /assets/2025-11-sc25-bof/08-cosden-bridges.pdf
 #
 artifacts:
-  # - label: Summary blog article
-  #   url: "https://bssw.io/blog_posts/reflecting-on-our-community-the-sc24-bof-on-scientific-software-and-the-people-who-make-it-happen-building-communities-of-practice"
-  #   format: BSSw.io
+  - label: Summary blog article
+    url: "https://bssw.io/blog_posts/reflecting-on-our-community-the-sc25-bof-on-scientific-software-and-the-people-who-make-it-happen-building-our-communities-and-practices"
+    format: BSSw.io
   - label: BoF webpage
     url: "https://betterscientificsoftware.github.io/swe-cse-bof/2025-11-sc25-bof"
   - label: Conference program page
@@ -119,14 +119,15 @@ We're preparing the notes for publication.  We'll update here soon.
 {% endcomment %}
 
 {% comment %}
-{% endcomment %}
+
 We're writing a summary blog article for [Bssw.io](https://bssw.io/blog_posts).  We'll update here when it is published.
 
 In the meantime, you can read the [notes](bof-notes).
-
+{% endcomment %}
 
 {% comment %}
-We've published a blog article on the Better Scientific Software resource site (<https://bssw.io>) based on this BoF: [Reflecting on Our Community: The SC24 BoF on Scientific Software and the People Who Make it Happen: Building Communities of Practice](https://bssw.io/blog_posts/reflecting-on-our-community-the-sc24-bof-on-scientific-software-and-the-people-who-make-it-happen-building-communities-of-practice)
+{% endcomment %}
+We've published a blog article on the Better Scientific Software resource site (<https://bssw.io>) based on this BoF: [Reflecting on Our Community: The SC25 BoF on Scientific Software and the People Who Make It Happen: Building Our Communities and Practices](https://bssw.io/blog_posts/reflecting-on-our-community-the-sc25-bof-on-scientific-software-and-the-people-who-make-it-happen-building-our-communities-and-practices)
 
 Alternatively, you can read the [summary notes](bof-notes).
-{% endcomment %}
+

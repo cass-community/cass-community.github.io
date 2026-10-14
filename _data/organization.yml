@@ -117,16 +117,19 @@ members:
 officers:
   - position: Chair
     name: David Bernholdt
-    elected: 2025-10-14
+    elected: 2026-10-13
+    # elected: 2025-10-14
     # elected: 2024-10-07
   - position: Vice-Chair
     name: Jim Willenbring
-    elected: 2025-10-14
+    elected: 2026-10-13
+    # elected: 2025-10-14
     # name: Terry Turton
     # elected: 2024-10-07
   - position: Secretary
     name: Elaine Raybourn
-    elected: 2025-10-14
+    elected: 2026-10-13
+    # elected: 2025-10-14
     # name: Todd Munson
     # elected: 2024-10-07
 

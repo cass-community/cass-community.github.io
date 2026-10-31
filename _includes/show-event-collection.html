@@ -40,7 +40,7 @@
 {% assign my_upcoming = include.upcoming | default: "Upcoming events" %}
 {% assign my_past = include.past | default: "Past events" %}
 
-{% assign my_sort_by = include.sort_by | default: nil %}
+{% assign my_sort_by = include.sort_by | default: "startdate" %}
 {% assign my_upcoming_sort_order = include.upcoming_sort_order | default: "forward" %}
 {% assign my_past_sort_order = include.past_sort_order | default: "reverse" %}
 

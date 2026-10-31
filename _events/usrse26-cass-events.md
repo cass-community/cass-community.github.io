@@ -23,8 +23,6 @@ activities:
 artifacts:
   - label: Conference program
     url: https://us-rse.org/usrse26/program/
-  - label: Registration
-    url: https://us-rse.org/usrse26/attend/registration/
 ---
 Join us at [USRSE'26](https://us-rse.org/usrse26/), 19-21 October 2026, in San Jose, California, where you'll find events throughout the conference program related to CASS member organizations and their activities!
 

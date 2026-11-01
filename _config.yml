@@ -224,6 +224,7 @@ exclude:
   - _working-groups/README.md
   - _working-groups/TEMPLATE.md
   - bin/
+  - skills/
   - favicon.zip
 
 # Configure jekyll-link-attributes plugin

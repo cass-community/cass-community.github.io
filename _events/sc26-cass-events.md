@@ -34,7 +34,7 @@ Join us at [SC26](https://sc26.supercomputing.org/), 15-20 November 2026, in Chi
   </tr>
 </thead>
 <tbody>
-<tr><td style='white-space: nowrap'>Sun. Nov. 15<br>8:30am-5:00pm</td><td style='white-space: nowrap'>Tutorial</td><td><a href='https://sc26.conference-program.com/presentation/?id=tut146&sess=sess185'>A Tutorial for Kokkos: Performance Portability for C++ Applications and Libraries</a></td><td style='white-space: nowrap'>S4PST</td></tr>
+<tr><td style='white-space: nowrap'>Sun. Nov. 15<br>8:30am-5:00pm</td><td style='white-space: nowrap'>Tutorial</td><td><a href='https://sc26.conference-program.com/presentation/?id=tut146&sess=sess185'>A Tutorial for Kokkos: Performance Portability for C++ Applications and Libraries</a></td><td style='white-space: nowrap'>S4PST, FASTMath</td></tr>
 <tr><td style='white-space: nowrap'>Sun. Nov. 15<br>8:30am-5:00pm</td><td style='white-space: nowrap'>Tutorial</td><td><a href='https://sc26.conference-program.com/presentation/?id=tut164&sess=sess181'>Using Containers to Accelerate HPC</a></td><td style='white-space: nowrap'>PESO</td></tr>
 <tr><td style='white-space: nowrap'>Sun. Nov. 15<br>9:00am-5:30pm</td><td style='white-space: nowrap'>Workshop</td><td><a href='https://sc26.conference-program.com/session/?sess=sess108'>The 9th Annual Parallel Applications Workshop, Alternatives to MPI+X (PAW-ATM)</a></td><td style='white-space: nowrap'>S4PST</td></tr>
 <tr><td style='white-space: nowrap'>Sun. Nov. 15<br>10:30am-10:45am</td><td style='white-space: nowrap'>Paper</td><td><a href='https://sc26.conference-program.com/presentation/?id=ws_xloop111&sess=sess117'>Drava: An Event-Driven Runtime for Scientific Pipelines with Agentic Configuration Optimization</a></td><td style='white-space: nowrap'>RAPIDS</td></tr>

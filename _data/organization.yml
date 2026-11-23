@@ -41,7 +41,8 @@ members:
     leads: 
       - Greg Watson
     sc_reps:
-      - Greg Watson
+      # - Greg Watson
+      - Daniel S. Katz
     focus_area: Pathways to foundations and software sustainability metrics
   - short_name: FASTMath
     name: Frameworks, Algorithms and Scalable Technologies for Mathematics
